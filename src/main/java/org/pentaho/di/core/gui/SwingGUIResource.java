@@ -45,7 +45,6 @@ import org.pentaho.di.core.plugins.StepPluginType;
 import org.pentaho.di.core.svg.SvgImage;
 import org.pentaho.di.core.svg.SvgSupport;
 import org.pentaho.di.job.JobMeta;
-import org.pentaho.reporting.libraries.base.util.WaitingImageObserver;
 
 public class SwingGUIResource {
   private static LogChannelInterface log = new LogChannel( "SwingGUIResource" );

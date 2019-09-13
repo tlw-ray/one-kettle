@@ -15,7 +15,7 @@
 * Copyright (c) 2002-2017 Hitachi Vantara..  All rights reserved.
 */
 
-package org.pentaho.reporting.libraries.base.util;
+package org.pentaho.di.core.gui;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -72,7 +72,7 @@ public class WaitingImageObserver implements ImageObserver {
    *
    * @param image the image to observe (<code>null</code> not permitted).
    */
-  public WaitingImageObserver( final Image image ) {
+  public WaitingImageObserver(final Image image ) {
     this( image, MAX_LOADTIME_DEFAULT );
   }
 
@@ -82,7 +82,7 @@ public class WaitingImageObserver implements ImageObserver {
    *
    * @param image the image to observe (<code>null</code> not permitted).
    */
-  public WaitingImageObserver( final Image image, final long maxLoadTime ) {
+  public WaitingImageObserver(final Image image, final long maxLoadTime ) {
     if ( image == null ) {
       throw new NullPointerException();
     }
