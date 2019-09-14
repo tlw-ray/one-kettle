@@ -2729,7 +2729,8 @@ public class TransGraph extends AbstractGraph implements XulEventHandler, Redraw
           StepMetaInterface stepMetaInterface = stepMeta.getStepMetaInterface();
           String activeReferencedObjectDescription = stepMetaInterface.getActiveReferencedObjectDescription();
           if ( getActiveSubtransformation( this, stepMeta ) != null && activeReferencedObjectDescription != null ) {
-            action = new Action( activeReferencedObjectDescription, Action.AS_DROP_DOWN_MENU ) {
+//            action = new Action( activeReferencedObjectDescription, Action.AS_DROP_DOWN_MENU ) {
+            action = new Action( activeReferencedObjectDescription, Action.AS_UNSPECIFIED ) {
               @Override
               public void run() {
                 openMapping( stepMeta, -1 ); // negative by convention
@@ -2746,7 +2747,8 @@ public class TransGraph extends AbstractGraph implements XulEventHandler, Redraw
             for ( int i = 0; i < referencedObjects.length; i++ ) {
               final int index = i;
               String referencedObject = referencedObjects[ i ];
-              action = new Action( referencedObject, Action.AS_DROP_DOWN_MENU ) {
+//              action = new Action( referencedObject, Action.AS_DROP_DOWN_MENU ) {
+              action = new Action( referencedObject, Action.AS_UNSPECIFIED ) {
                 @Override
                 public void run() {
                   openMapping( stepMeta, index );

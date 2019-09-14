@@ -89,7 +89,9 @@ public class JfaceMenuitem extends SwtElement implements XulMenuitem {
   }
 
   private Action initAction( Element self, Action alternativeAction ) {
-    int style = Action.AS_DROP_DOWN_MENU;
+//    int style = Action.AS_DROP_DOWN_MENU;
+    //under linux the action all has dropdown menu
+    int style = Action.AS_UNSPECIFIED;
     if ( self != null && "checkbox".equals( self.getAttributeValue( "type" ) ) ) {
       style = Action.AS_CHECK_BOX;
     }
