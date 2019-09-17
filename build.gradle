@@ -20,7 +20,12 @@ sourceCompatibility = 1.8
 repositories {
     mavenLocal()
     maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
-    maven { url "http://nexus.pentaho.org/content/groups/omni/"}
+    maven { url "http://nexus.pentaho.org/content/groups/omni/" }
+}
+
+task copyToLib(type: Copy) {
+    into "$buildDir/output/libs"
+    from configurations.runtime
 }
 
 dependencies {
@@ -167,7 +172,6 @@ dependencies {
             libraries.'h2',
             libraries.'hamcrest-core',
             libraries.'javassist',
-//            libraries.'junit',
             libraries.'java-hamcrest',
             libraries.'mockito-all',
             libraries.'mockito-core',

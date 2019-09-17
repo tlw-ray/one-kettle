@@ -604,7 +604,7 @@ ext.libraries = [
         "wstx-asl": "org.codehaus.woodstox:wstx-asl:${versions.wstx}",
         "xalan": "xalan:xalan:${versions.xalan}",
         "xercesImpl": "xerces:xercesImpl:${versions.xerces}",
-        "xml-apis": "xml-apis:xml-apis-ext:${versions.xml_apis}",
+        "xml-apis": "xml-apis:xml-apis:${versions.xml_apis}",
         "xbean-spring": "org.apache.xbean:xbean-spring:${versions.xbean_spring}",
         "xmlbeans": "org.apache.xmlbeans:xmlbeans:${versions.xmlbeans}",
         "xmlenc": "xmlenc:xmlenc:${versions.xmlenc}",

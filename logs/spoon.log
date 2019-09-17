@@ -4,5 +4,5 @@ log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more in
 TLW: PluginRegistry load plugin: interface org.pentaho.di.core.encryption.TwoWayPasswordEncoderInterface
 TLW: PluginRegistry load plugin: interface org.pentaho.di.trans.step.StepMetaInterface
 TLW: PluginRegistry load plugin: interface org.pentaho.di.trans.step.StepMetaInterface
-2019/09/14 08:55:57 - Spoon - Spoon  已经结束.
+2019/09/17 23:23:57 - Spoon - Spoon  已经结束.
 stopping
