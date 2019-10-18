@@ -45,7 +45,7 @@ public class DisplayInvocationHandler<T> implements InvocationHandler {
   @SuppressWarnings( "unchecked" )
   public static <T> T forObject( Class<T> iface, T delegate, Display display, LogChannelInterface log,
       boolean asyncForVoid ) {
-    return (T) Proxy.newProxyInstance( delegate.getClass().getClassLoader(), (Class<?>[]) ClassUtils.getAllInterfaces(
+    return (T) Proxy.newProxyInstance( delegate.getClass().getClassLoader(), ClassUtils.getAllInterfaces(
         delegate.getClass() ).toArray( new Class<?>[] {} ), new DisplayInvocationHandler<T>( display, delegate, log,
           asyncForVoid ) );
   }

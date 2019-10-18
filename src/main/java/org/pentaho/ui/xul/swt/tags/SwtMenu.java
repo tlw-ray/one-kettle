@@ -77,7 +77,7 @@ public class SwtMenu extends AbstractSwtXulContainer implements XulMenu {
   private void addMenuChildren( Menu menuParent, List<XulComponent> children ) {
     for ( Element comp : children ) {
 
-      for ( XulComponent compInner : ( (SwtMenupopup) comp ).getChildNodes() ) {
+      for ( XulComponent compInner : comp.getChildNodes() ) {
         if ( compInner instanceof XulMenu ) {
           MenuItem item = new MenuItem( menuParent, SWT.CASCADE );
           Menu flyout = new Menu( shell, SWT.DROP_DOWN );

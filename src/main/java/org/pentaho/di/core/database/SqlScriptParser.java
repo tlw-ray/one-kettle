@@ -39,9 +39,9 @@ public class SqlScriptParser {
 
   enum MODE {
     SQL, LINE_COMMENT, BLOCK_COMMENT, STRING
-  };
+  }
 
-  private boolean usingBackslashAsEscapeCharForQuotation;
+    private boolean usingBackslashAsEscapeCharForQuotation;
   /**
    * @param usingBackslashAsEscapeCharForQuotation use backslash as escape char for quotation (\')
    */

@@ -398,10 +398,7 @@ public class MySQLDatabaseMeta extends BaseDatabaseMeta implements DatabaseInter
     if ( tableName.startsWith( "sys" ) ) {
       return true;
     }
-    if ( tableName.equals( "dtproperties" ) ) {
-      return true;
-    }
-    return false;
+      return tableName.equals("dtproperties");
   }
 
   /**

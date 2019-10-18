@@ -35,7 +35,7 @@ public interface XulCaption extends XulComponent {
    * 
    * @return the title that this caption represents.
    */
-  public String getLabel();
+  String getLabel();
 
   /**
    * Applies the parameter label to the groupbox widget.
@@ -43,5 +43,5 @@ public interface XulCaption extends XulComponent {
    * @param label
    *          The title to set on the groupbox.
    */
-  public void setLabel( String label );
+  void setLabel(String label);
 }

@@ -42,7 +42,7 @@ public interface IThemeManager {
    * 
    * @return List of themes
    */
-  public List<String> getSystemThemeIds();
+  List<String> getSystemThemeIds();
 
   /**
    * Returns the named theme or null if not found.

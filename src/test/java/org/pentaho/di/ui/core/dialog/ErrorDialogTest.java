@@ -54,7 +54,7 @@ public class ErrorDialogTest {
 
     dialog.handleException( "argMessage", e, text, details );
 
-    assertEquals( text.toString(), e.getMessage().toString() );
+    assertEquals( text.toString(), e.getMessage());
 
   }
 
@@ -74,7 +74,7 @@ public class ErrorDialogTest {
 
     Throwable cause = e.getCause();
 
-    assertEquals(  text.toString(), cause.getMessage().toString() );
+    assertEquals(  text.toString(), cause.getMessage());
 
   }
 
@@ -93,7 +93,7 @@ public class ErrorDialogTest {
 
     dialog.handleException( "argMessage", e, text, details );
 
-    assertEquals(  text.toString(), e.getMessage().toString() );
+    assertEquals(  text.toString(), e.getMessage());
 
   }
 

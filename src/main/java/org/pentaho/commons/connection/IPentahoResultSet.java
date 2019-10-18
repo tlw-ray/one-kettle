@@ -56,7 +56,7 @@ public interface IPentahoResultSet extends IDisposable {
    * 
    * @return true if the resultset can be scrolled through.
    */
-  public boolean isScrollable();
+  boolean isScrollable();
 
   /**
    * Returns the value of the specified row and the specified column from within the resultset.
@@ -67,28 +67,28 @@ public interface IPentahoResultSet extends IDisposable {
    *          the column index.
    * @return the value.
    */
-  public Object getValueAt( int row, int column );
+  Object getValueAt(int row, int column);
 
   /**
    * Get a rowCount from the resultset.
    * 
    * @return the row count.
    */
-  public int getRowCount();
+  int getRowCount();
 
   /**
    * Returns the rowCount from the result set.
    * 
    * @return
    */
-  public int getColumnCount();
+  int getColumnCount();
 
   /**
    * Returns a memory copy of the results
    * 
    * @return memory copy of the results
    */
-  public IPentahoResultSet memoryCopy();
+  IPentahoResultSet memoryCopy();
 
   /**
    * Get a column of data.
@@ -97,7 +97,7 @@ public interface IPentahoResultSet extends IDisposable {
    *          the zero based column number
    * @return array represeting a column of data. 0th element is the first column
    */
-  public Object[] getDataColumn( int column );
+  Object[] getDataColumn(int column);
 
   /**
    * Get a specified row of data
@@ -106,5 +106,5 @@ public interface IPentahoResultSet extends IDisposable {
    *          the zero base row number
    * @return array representing a row of data. 0th element is the top row
    */
-  public Object[] getDataRow( int row );
+  Object[] getDataRow(int row);
 }

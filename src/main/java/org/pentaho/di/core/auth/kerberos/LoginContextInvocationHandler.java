@@ -54,8 +54,8 @@ public class LoginContextInvocationHandler<T> implements InvocationHandler {
 
   @SuppressWarnings( "unchecked" )
   public static <T> T forObject( T delegate, LoginContext loginContext, Set<Class<?>> interfacesToDelegate ) {
-    return (T) Proxy.newProxyInstance( delegate.getClass().getClassLoader(), ( (List<Class<?>>) ClassUtils
-        .getAllInterfaces( delegate.getClass() ) ).toArray( new Class<?>[] {} ),
+    return (T) Proxy.newProxyInstance( delegate.getClass().getClassLoader(), ClassUtils
+        .getAllInterfaces( delegate.getClass() ).toArray( new Class<?>[] {} ),
         new LoginContextInvocationHandler<Object>( delegate, loginContext, interfacesToDelegate ) );
   }
 
@@ -80,7 +80,7 @@ public class LoginContextInvocationHandler<T> implements InvocationHandler {
       } );
     } catch ( PrivilegedActionException e ) {
       if ( e.getCause() instanceof InvocationTargetException ) {
-        throw ( (InvocationTargetException) e.getCause() ).getCause();
+        throw e.getCause().getCause();
       }
       throw e;
     }

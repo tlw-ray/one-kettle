@@ -30,13 +30,13 @@ import org.w3c.dom.Node;
  */
 public interface NamedClusterOsgi extends VariableSpace {
 
-  public static final String NAMED_CLUSTERS_FS_OPTION = "namedClustersFSOption";
+  String NAMED_CLUSTERS_FS_OPTION = "namedClustersFSOption";
 
-  public static final String NAMED_CLUSTER_FS_OPTION = "namedClusterFSOption";
+  String NAMED_CLUSTER_FS_OPTION = "namedClusterFSOption";
 
-  public static final String NAMED_CLUSTER_XML_TAG = "namedClusterTag";
+  String NAMED_CLUSTER_XML_TAG = "namedClusterTag";
 
-  public static final String KNOX_GATEWAY_ROOT = "KnoxGatewayRoot";
+  String KNOX_GATEWAY_ROOT = "KnoxGatewayRoot";
 
   String getName();
 

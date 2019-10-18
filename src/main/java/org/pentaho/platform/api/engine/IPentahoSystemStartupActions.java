@@ -24,13 +24,13 @@ import java.util.List;
 
 public interface IPentahoSystemStartupActions {
 
-  public void sessionStartup( final IPentahoSession session );
+  void sessionStartup(final IPentahoSession session);
 
-  public void sessionStartup( final IPentahoSession session, IParameterProvider sessionParameters );
+  void sessionStartup(final IPentahoSession session, IParameterProvider sessionParameters);
 
-  public void globalStartup();
+  void globalStartup();
 
-  public void globalStartup( final IPentahoSession session );
+  void globalStartup(final IPentahoSession session);
 
   /**
    * Registers server actions that will be invoked when a session is created. NOTE: it is completely up to the
@@ -40,14 +40,14 @@ public interface IPentahoSystemStartupActions {
    * @param actions
    *          the server actions to execute on session startup
    */
-  public void setSessionStartupActions( List<ISessionStartupAction> actions );
+  void setSessionStartupActions(List<ISessionStartupAction> actions);
 
-  public void clearGlobals();
+  void clearGlobals();
 
-  public Object putInGlobalAttributesMap( final Object key, final Object value );
+  Object putInGlobalAttributesMap(final Object key, final Object value);
 
-  public Object removeFromGlobalAttributesMap( final Object key );
+  Object removeFromGlobalAttributesMap(final Object key);
 
-  public IParameterProvider getGlobalParameters();
+  IParameterProvider getGlobalParameters();
 
 }

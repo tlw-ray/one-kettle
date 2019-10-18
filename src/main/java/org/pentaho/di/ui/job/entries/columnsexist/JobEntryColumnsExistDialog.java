@@ -272,7 +272,7 @@ public class JobEntryColumnsExistDialog extends JobEntryDialog implements JobEnt
     wlFields.setLayoutData( fdlFields );
 
     int rows = jobEntry.getArguments() == null ? 1
-      : ( jobEntry.getArguments().length == 0 ? 0 : jobEntry.getArguments().length );
+      : (jobEntry.getArguments().length);
 
     final int FieldsRows = rows;
 
@@ -534,7 +534,7 @@ public class JobEntryColumnsExistDialog extends JobEntryDialog implements JobEnt
             BaseMessages.getString( PKG, "System.Dialog.AvailableSchemas.Message" ) );
           String d = dialog.open();
           if ( d != null ) {
-            wSchemaname.setText( Const.NVL( d.toString(), "" ) );
+            wSchemaname.setText( Const.NVL(d, "" ) );
           }
 
         } else {

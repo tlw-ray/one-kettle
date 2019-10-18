@@ -37,12 +37,12 @@ public interface IPentahoSession extends ILogger, IAuditable {
   /**
    * Key for searching the tenant ID.
    */
-  public static final String TENANT_ID_KEY = "org.pentaho.tenantId"; //$NON-NLS-1$
+  String TENANT_ID_KEY = "org.pentaho.tenantId"; //$NON-NLS-1$
 
   /**
    * Roles that are authorized in current session.
    */
-  public static final String SESSION_ROLES = "roles"; //$NON-NLS-1$
+  String SESSION_ROLES = "roles"; //$NON-NLS-1$
 
   /**
    * Gets the name for this session, for example if this is an authenticated HTTP or Portlet session, the name will be
@@ -50,14 +50,14 @@ public interface IPentahoSession extends ILogger, IAuditable {
    * 
    * @return Returns the name for this session.
    */
-  public String getName();
+  String getName();
 
   /**
    * Gets the ID for this session. This is typically a GUID or semi-unique string.
    * 
    * @return Returns the ID for this session.
    */
-  public String getId();
+  String getId();
 
   /**
    * Sets the name of the action sequence document that the session is currently performing.
@@ -65,7 +65,7 @@ public interface IPentahoSession extends ILogger, IAuditable {
    * @param actionName
    *          The name of the action sequence document.
    */
-  public void setActionName( String actionName );
+  void setActionName(String actionName);
 
   /**
    * Sets the name of the process for which an action sequence is being performed.
@@ -73,13 +73,13 @@ public interface IPentahoSession extends ILogger, IAuditable {
    * @param processId
    *          The name of the process.
    */
-  public void setProcessId( String processId );
+  void setProcessId(String processId);
 
   /**
    * Destroys any resources owned by the session object.
    * 
    */
-  public void destroy();
+  void destroy();
 
   /**
    * Gets the value of a named session attribute.
@@ -88,7 +88,7 @@ public interface IPentahoSession extends ILogger, IAuditable {
    *          The name of the attribute.
    * @return Returns the value of the attribute.
    */
-  public Object getAttribute( String attributeName );
+  Object getAttribute(String attributeName);
 
   /**
    * Sets the value of the session attribute.
@@ -98,7 +98,7 @@ public interface IPentahoSession extends ILogger, IAuditable {
    * @param value
    *          The value of the attribute.
    */
-  public void setAttribute( String attributeName, Object value );
+  void setAttribute(String attributeName, Object value);
 
   /**
    * Removes an attribute from the session and returns it.
@@ -107,7 +107,7 @@ public interface IPentahoSession extends ILogger, IAuditable {
    *          The name of the attribute to remove.
    * @return Returns the value of the removed attribute.
    */
-  public Object removeAttribute( String attributeName );
+  Object removeAttribute(String attributeName);
 
   /**
    * Returns an enumeration of the names of the attributes stored in the session.
@@ -115,21 +115,21 @@ public interface IPentahoSession extends ILogger, IAuditable {
    * @return Returns the enumeration of the attributes names.
    */
   @SuppressWarnings( "rawtypes" )
-  public Iterator getAttributeNames();
+  Iterator getAttributeNames();
 
   /**
    * Gets the locale of the session.
    * 
    * @return Returns the locale of the session.
    */
-  public Locale getLocale();
+  Locale getLocale();
 
   /**
    * Gets whether the session is known to be authenticated or not.
    * 
    * @return Returns true if the session is authenticated.
    */
-  public boolean isAuthenticated();
+  boolean isAuthenticated();
 
   /**
    * Sets the name of the session and indicates that the session is authenticated. If this is an HTTP or Portlet session
@@ -138,30 +138,30 @@ public interface IPentahoSession extends ILogger, IAuditable {
    * @param name
    *          The name of the session.
    */
-  public void setAuthenticated( String name );
+  void setAuthenticated(String name);
 
   /**
    * Sets the indication that the user is no longer authenticated.
    */
-  public void setNotAuthenticated();
+  void setNotAuthenticated();
 
   /**
    * Toggles on an alert condition indicating that the background execution of a task has completed during this session.
    * 
    */
-  public void setBackgroundExecutionAlert();
+  void setBackgroundExecutionAlert();
 
   /**
    * Checks the status of a background execution task.
    * 
    * @return Returns true if a background execution has triggered an alert.
    */
-  public boolean getBackgroundExecutionAlert();
+  boolean getBackgroundExecutionAlert();
 
   /**
    * Toggles off the background execution alert status.
    * 
    */
-  public void resetBackgroundExecutionAlert();
+  void resetBackgroundExecutionAlert();
 
 }

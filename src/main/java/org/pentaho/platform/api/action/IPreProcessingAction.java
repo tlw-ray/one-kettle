@@ -40,6 +40,6 @@ public interface IPreProcessingAction extends IAction {
    * @throws ActionPreProcessingException
    *           if the Action is not able to proceed with execution
    */
-  public void doPreExecution() throws ActionPreProcessingException;
+  void doPreExecution() throws ActionPreProcessingException;
 
 }

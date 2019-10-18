@@ -1179,8 +1179,7 @@ public class JobEntryMailDialog extends JobEntryDialog implements JobEntryDialog
     wlFields.setLayoutData( fdlFields );
 
     int rows =
-      jobEntry.embeddedimages == null ? 1 : ( jobEntry.embeddedimages.length == 0
-        ? 0 : jobEntry.embeddedimages.length );
+      jobEntry.embeddedimages == null ? 1 : (jobEntry.embeddedimages.length);
     final int FieldsRows = rows;
 
     ColumnInfo[] colinf =
@@ -1211,7 +1210,7 @@ public class JobEntryMailDialog extends JobEntryDialog implements JobEntryDialog
     // Add the file to the list of files...
     SelectionAdapter selA = new SelectionAdapter() {
       public void widgetSelected( SelectionEvent arg0 ) {
-        wFields.add( new String[] { wImageFilename.getText(), wContentID.getText() } );
+        wFields.add(wImageFilename.getText(), wContentID.getText());
         wImageFilename.setText( "" );
         wContentID.setText( "" );
         wFields.removeEmptyRows();

@@ -441,8 +441,7 @@ public class GetRepositoryNamesDialog extends BaseStepDialog implements StepDial
     // Add the file to the list of files...
     SelectionAdapter selA = new SelectionAdapter() {
       public void widgetSelected( SelectionEvent arg0 ) {
-        wDirectoryList.add( new String[] {
-          wDirectory.getText(), wNameMask.getText(), wExcludeFilemask.getText(), "Y", } );
+        wDirectoryList.add(wDirectory.getText(), wNameMask.getText(), wExcludeFilemask.getText(), "Y");
         wDirectory.setText( "" );
         wNameMask.setText( "" );
         wDirectoryList.removeEmptyRows();

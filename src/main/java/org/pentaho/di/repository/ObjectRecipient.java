@@ -24,15 +24,15 @@ package org.pentaho.di.repository;
 
 public interface ObjectRecipient {
 
-  public static enum Type {
-    USER, ROLE, SYSTEM_ROLE;
+  enum Type {
+    USER, ROLE, SYSTEM_ROLE
   }
 
-  public String getName();
+  String getName();
 
-  public void setName( String name );
+  void setName(String name);
 
-  public Type getType();
+  Type getType();
 
-  public void setType( Type type );
+  void setType(Type type);
 }

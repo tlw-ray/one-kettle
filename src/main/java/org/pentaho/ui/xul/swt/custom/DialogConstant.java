@@ -24,7 +24,7 @@ public enum DialogConstant {
 
   private int value;
 
-  private DialogConstant( int val ) {
+  DialogConstant(int val) {
     this.value = val;
   }
 

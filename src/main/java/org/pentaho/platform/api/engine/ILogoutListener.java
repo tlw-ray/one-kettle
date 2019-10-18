@@ -30,5 +30,5 @@ public interface ILogoutListener {
    * @param session
    *          Performs any logout actions based on this session.
    */
-  public void onLogout( IPentahoSession session );
+  void onLogout(IPentahoSession session);
 }

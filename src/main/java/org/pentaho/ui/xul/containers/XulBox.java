@@ -36,12 +36,12 @@ public interface XulBox extends XulContainer {
    *          Valid values are horizontal or vertical
    * @see org.pentaho.ui.xul.util.Orient
    */
-  public void setOrient( String orient );
+  void setOrient(String orient);
 
   /**
    * 
    * @return the box's orientation setting, as a string.
    */
-  public String getOrient();
+  String getOrient();
 
 }

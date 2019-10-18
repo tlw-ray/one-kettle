@@ -1736,9 +1736,7 @@ public class TransGraph extends AbstractGraph implements XulEventHandler, Redraw
             } else if ( areaType != null && areaType.belongsToTransContextMenu() ) {
               StepMeta selectedStepMeta = (StepMeta) areaOwner.getParent();
               return selectedStepMeta == stepMeta;
-            } else if ( areaOwner.getExtensionAreaType() != null ) {
-              return true;
-            }
+            } else return areaOwner.getExtensionAreaType() != null;
           }
         }
         return false;
@@ -2068,7 +2066,7 @@ public class TransGraph extends AbstractGraph implements XulEventHandler, Redraw
 
   @Override
   public boolean setFocus() {
-    return ( canvas != null ) ? canvas.setFocus() : false;
+    return (canvas != null) && canvas.setFocus();
   }
 
   public void renameStep( StepMeta stepMeta, String stepname ) {
@@ -3378,11 +3376,7 @@ public class TransGraph extends AbstractGraph implements XulEventHandler, Redraw
     double angle_point = Math.atan2( y - y1, x - x1 ) + Math.PI;
 
     // Same angle, or close enough?
-    if ( angle_point >= angle_line - 0.01 && angle_point <= angle_line + 0.01 ) {
-      return true;
-    }
-
-    return false;
+      return angle_point >= angle_line - 0.01 && angle_point <= angle_line + 0.01;
   }
 
   private SnapAllignDistribute createSnapAllignDistribute() {

@@ -37,13 +37,13 @@ public interface XulScript {
    * @param src
    *          String name of class or script
    */
-  public void setSrc( String src );
+  void setSrc(String src);
 
   /**
    * 
    * @return the class or script String identifier
    */
-  public String getSrc();
+  String getSrc();
 
   /**
    * The id to associate this class with. This id is later appended to the beginning of each event hookup method
@@ -52,11 +52,11 @@ public interface XulScript {
    * @param id
    *          Id of this event handler class.
    */
-  public void setId( String id );
+  void setId(String id);
 
   /**
    * 
    * @return The id of this class or script.
    */
-  public String getId();
+  String getId();
 }

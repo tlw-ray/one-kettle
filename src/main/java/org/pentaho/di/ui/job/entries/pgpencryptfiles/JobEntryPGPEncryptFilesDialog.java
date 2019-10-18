@@ -673,8 +673,7 @@ public class JobEntryPGPEncryptFilesDialog extends JobEntryDialog implements Job
     wlFields.setLayoutData( fdlFields );
 
     int rows =
-      jobEntry.source_filefolder == null ? 1 : ( jobEntry.source_filefolder.length == 0
-        ? 0 : jobEntry.source_filefolder.length );
+      jobEntry.source_filefolder == null ? 1 : (jobEntry.source_filefolder.length);
     final int FieldsRows = rows;
 
     ColumnInfo[] colinf =
@@ -722,9 +721,8 @@ public class JobEntryPGPEncryptFilesDialog extends JobEntryDialog implements Job
     SelectionAdapter selA = new SelectionAdapter() {
       @Override
       public void widgetSelected( SelectionEvent arg0 ) {
-        wFields.add( new String[] {
-          JobEntryPGPEncryptFiles.actionTypeDesc[0], wSourceFileFolder.getText(), wWildcard.getText(), null,
-          wDestinationFileFolder.getText() } );
+        wFields.add(JobEntryPGPEncryptFiles.actionTypeDesc[0], wSourceFileFolder.getText(), wWildcard.getText(), null,
+                wDestinationFileFolder.getText());
         wSourceFileFolder.setText( "" );
         wDestinationFileFolder.setText( "" );
         wWildcard.setText( "" );

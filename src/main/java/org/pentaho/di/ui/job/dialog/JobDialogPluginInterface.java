@@ -29,11 +29,11 @@ import org.pentaho.di.core.logging.LogTableInterface;
 import org.pentaho.di.job.JobMeta;
 
 public interface JobDialogPluginInterface {
-  public void addTab( JobMeta jobMeta, Shell shell, CTabFolder tabFolder );
+  void addTab(JobMeta jobMeta, Shell shell, CTabFolder tabFolder);
 
-  public void getData( JobMeta jobMeta );
+  void getData(JobMeta jobMeta);
 
-  public void ok( JobMeta jobMeta );
+  void ok(JobMeta jobMeta);
 
-  public void showLogTableOptions( JobMeta jobMeta, LogTableInterface logTable, Composite wLogOptionsComposite );
+  void showLogTableOptions(JobMeta jobMeta, LogTableInterface logTable, Composite wLogOptionsComposite);
 }

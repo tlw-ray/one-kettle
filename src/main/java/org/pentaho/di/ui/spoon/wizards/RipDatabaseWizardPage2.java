@@ -266,7 +266,7 @@ public class RipDatabaseWizardPage2 extends WizardPage {
 
       public void dragSetData( DragSourceEvent event ) {
         String[] ti = wListSource.getSelection();
-        String data = new String();
+        String data = "";
         for ( int i = 0; i < ti.length; i++ ) {
           data += ti[i] + Const.CR;
         }

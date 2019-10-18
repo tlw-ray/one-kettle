@@ -72,7 +72,7 @@ public class UserDefinedJavaClassCodeSnippits {
 
     private String description;
 
-    private Category( String description ) {
+    Category(String description) {
       this.description = description;
     }
 

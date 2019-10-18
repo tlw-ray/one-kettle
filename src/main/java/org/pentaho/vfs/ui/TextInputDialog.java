@@ -87,11 +87,7 @@ public class TextInputDialog {
     cancel.setText(Messages.getString("TextInputDialog.cancel")); //$NON-NLS-1$
     SelectionListener listener = new SelectionListener() {
       public void widgetSelected(SelectionEvent e) {
-        if (e.getSource() == ok) {
-          okPressed = true;
-        } else {
-          okPressed = false;
-        }
+          okPressed = e.getSource() == ok;
         enteredText = textInput.getText();
         dialog.close();
       }

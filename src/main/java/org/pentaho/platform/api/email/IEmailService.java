@@ -30,12 +30,12 @@ public interface IEmailService {
    * @param emailConfiguration
    *          the email configuration to save as the current email configuration
    */
-  public void setEmailConfig( final IEmailConfiguration emailConfiguration );
+  void setEmailConfig(final IEmailConfiguration emailConfiguration);
 
   /**
    * Retrieves the current email configuration
    */
-  public IEmailConfiguration getEmailConfig();
+  IEmailConfiguration getEmailConfig();
 
   /**
    * Generates a test email via the specficied email configuration
@@ -43,7 +43,7 @@ public interface IEmailService {
    * @param emailConfig
    *          the email configuration to use for sending the testing email
    */
-  public String sendEmailTest( final IEmailConfiguration emailConfig );
+  String sendEmailTest(final IEmailConfiguration emailConfig);
 
-  public boolean isValid();
+  boolean isValid();
 }

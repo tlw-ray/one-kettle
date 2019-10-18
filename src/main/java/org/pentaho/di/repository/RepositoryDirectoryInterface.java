@@ -35,7 +35,7 @@ public interface RepositoryDirectoryInterface extends RepositoryObjectInterface 
    *
    * @return list of child directories
    */
-  public List<RepositoryDirectoryInterface> getChildren();
+  List<RepositoryDirectoryInterface> getChildren();
 
   /**
    * sets the list of child directories
@@ -43,14 +43,14 @@ public interface RepositoryDirectoryInterface extends RepositoryObjectInterface 
    * @param children
    *          list of child directories
    */
-  public void setChildren( List<RepositoryDirectoryInterface> children );
+  void setChildren(List<RepositoryDirectoryInterface> children);
 
   /**
    * Returns a list of child files
    *
    * @return list of child files
    */
-  public List<RepositoryElementMetaInterface> getRepositoryObjects();
+  List<RepositoryElementMetaInterface> getRepositoryObjects();
 
   /**
    * sets the list of child files
@@ -58,15 +58,15 @@ public interface RepositoryDirectoryInterface extends RepositoryObjectInterface 
    * @param children
    *          list of child files
    */
-  public void setRepositoryObjects( List<RepositoryElementMetaInterface> children );
+  void setRepositoryObjects(List<RepositoryElementMetaInterface> children);
 
   /**
    * If true, this directory should be shown in UIs. Not necessarily persisted. Each repository implementation decides
    * whether to mark each directory as visible.
    */
-  public boolean isVisible();
+  boolean isVisible();
 
-  public String[] getPathArray();
+  String[] getPathArray();
 
   /**
    * Find a directory using the path to the directory with file.separator between the dir-names.
@@ -75,7 +75,7 @@ public interface RepositoryDirectoryInterface extends RepositoryObjectInterface 
    *          The path to the directory
    * @return The directory if one was found, null if nothing was found.
    */
-  public RepositoryDirectoryInterface findDirectory( String path );
+  RepositoryDirectoryInterface findDirectory(String path);
 
   /**
    * Find the sub-directory with a certain ID
@@ -84,7 +84,7 @@ public interface RepositoryDirectoryInterface extends RepositoryObjectInterface 
    *          the directory ID to look for.
    * @return The RepositoryDirectory if the ID was found, null if nothing could be found.
    */
-  public RepositoryDirectoryInterface findDirectory( ObjectId id_directory );
+  RepositoryDirectoryInterface findDirectory(ObjectId id_directory);
 
   /**
    * Find the directory by following the path of strings
@@ -93,9 +93,9 @@ public interface RepositoryDirectoryInterface extends RepositoryObjectInterface 
    *          The path to the directory we're looking for.
    * @return The directory if one can be found, null if no directory was found.
    */
-  public RepositoryDirectoryInterface findDirectory( String[] path );
+  RepositoryDirectoryInterface findDirectory(String[] path);
 
-  public ObjectId[] getDirectoryIDs();
+  ObjectId[] getDirectoryIDs();
 
   /**
    * Describe the complete path to ( and including) this directory, separated by the
@@ -103,14 +103,14 @@ public interface RepositoryDirectoryInterface extends RepositoryObjectInterface 
    *
    * @return The complete path to this directory.
    */
-  public String getPath();
+  String getPath();
 
   /**
    * Counts the number of subdirectories in this directory.
    *
    * @return The number of subdirectories
    */
-  public int getNrSubdirectories();
+  int getNrSubdirectories();
 
   /**
    * Get a subdirectory on a certain position.
@@ -119,23 +119,23 @@ public interface RepositoryDirectoryInterface extends RepositoryObjectInterface 
    *          The subdirectory position
    * @return The subdirectory with on a certain position
    */
-  public RepositoryDirectory getSubdirectory( int i );
+  RepositoryDirectory getSubdirectory(int i);
 
   /**
    * Check whether or not this is the root of the directory trees. (default)
    *
    * @return true if this is the root directory node. False if it is not.
    */
-  public boolean isRoot();
+  boolean isRoot();
 
   /**
    * Find the root of the directory tree starting from this directory.
    *
    * @return the root of the directory tree
    */
-  public RepositoryDirectoryInterface findRoot();
+  RepositoryDirectoryInterface findRoot();
 
-  public void clear();
+  void clear();
 
   /**
    * Add a subdirectory to this directory.
@@ -143,7 +143,7 @@ public interface RepositoryDirectoryInterface extends RepositoryObjectInterface 
    * @param subdir
    *          The subdirectory to add.
    */
-  public void addSubdirectory( RepositoryDirectoryInterface subdir );
+  void addSubdirectory(RepositoryDirectoryInterface subdir);
 
   /**
    * Change the parent of this directory. (move directory)
@@ -151,14 +151,14 @@ public interface RepositoryDirectoryInterface extends RepositoryObjectInterface 
    * @param parent
    *          The new parent of this directory.
    */
-  public void setParent( RepositoryDirectoryInterface parent );
+  void setParent(RepositoryDirectoryInterface parent);
 
   /**
    * get the parent directory for this directory.
    *
    * @return The parent directory of null if this is the root directory.
    */
-  public RepositoryDirectoryInterface getParent();
+  RepositoryDirectoryInterface getParent();
 
   /**
    * Set the database ID for this object in the repository.
@@ -166,7 +166,7 @@ public interface RepositoryDirectoryInterface extends RepositoryObjectInterface 
    * @param id
    *          the database ID for this object in the repository.
    */
-  public void setObjectId( ObjectId id );
+  void setObjectId(ObjectId id);
 
   /**
    * Set the directory name (rename)
@@ -174,10 +174,10 @@ public interface RepositoryDirectoryInterface extends RepositoryObjectInterface 
    * @param directoryname
    *          The new directory name
    */
-  public void setName( String directoryname );
+  void setName(String directoryname);
 
-  public String getPathObjectCombination( String transName );
+  String getPathObjectCombination(String transName);
 
-  public RepositoryDirectoryInterface findChild( String name );
+  RepositoryDirectoryInterface findChild(String name);
 
 }

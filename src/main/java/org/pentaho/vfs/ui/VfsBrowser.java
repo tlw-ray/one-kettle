@@ -640,7 +640,7 @@ public class VfsBrowser extends Composite {
             .getName().getFriendlyURI().equals(itemName)))) {
       return treeItem;
     }
-    TreeItem children[] = treeItem.getItems();
+      TreeItem[] children = treeItem.getItems();
     for (int i = 0; children != null && i < children.length; i++) {
       TreeItem foundItem = findTreeItemByName(children[i], itemName);
       if (foundItem != null) {
@@ -655,7 +655,7 @@ public class VfsBrowser extends Composite {
     // this can result in a huge performance hit
     // the idea here is to allow someone to select (from history) a node
     // that has already been loaded
-    TreeItem children[] = fileSystemTree.getItems();
+      TreeItem[] children = fileSystemTree.getItems();
     for (int i = 0; children != null && i < children.length; i++) {
       TreeItem foundItem = findTreeItemByName(children[i], itemName);
       if (foundItem != null) {

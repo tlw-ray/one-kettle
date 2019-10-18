@@ -23,43 +23,43 @@ package org.pentaho.platform.api.scheduler;
 import java.util.Date;
 
 public interface IJobSchedule {
-  public String getName();
+  String getName();
 
-  public void setName( String name );
+  void setName(String name);
 
-  public String getFullname();
+  String getFullname();
 
-  public void setFullname( String fullname );
+  void setFullname(String fullname);
 
-  public String getTriggerName();
+  String getTriggerName();
 
-  public void setTriggerName( String triggerName );
+  void setTriggerName(String triggerName);
 
-  public String getTriggerGroup();
+  String getTriggerGroup();
 
-  public void setTriggerGroup( String triggerGroup );
+  void setTriggerGroup(String triggerGroup);
 
-  public int getTriggerState();
+  int getTriggerState();
 
-  public void setTriggerState( int triggerState );
+  void setTriggerState(int triggerState);
 
-  public Date getNextFireTime();
+  Date getNextFireTime();
 
-  public void setNextFireTime( Date nextFireTime );
+  void setNextFireTime(Date nextFireTime);
 
-  public Date getPreviousFireTime();
+  Date getPreviousFireTime();
 
-  public void setPreviousFireTime( Date previousFireTime );
+  void setPreviousFireTime(Date previousFireTime);
 
-  public String getJobName();
+  String getJobName();
 
-  public void setJobName( String jobName );
+  void setJobName(String jobName);
 
-  public String getJobGroup();
+  String getJobGroup();
 
-  public void setJobGroup( String jobGroup );
+  void setJobGroup(String jobGroup);
 
-  public String getJobDescription();
+  String getJobDescription();
 
-  public void setJobDescription( String jobDescription );
+  void setJobDescription(String jobDescription);
 }

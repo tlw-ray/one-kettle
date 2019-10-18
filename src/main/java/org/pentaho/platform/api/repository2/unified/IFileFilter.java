@@ -22,6 +22,6 @@ package org.pentaho.platform.api.repository2.unified;
 
 public interface IFileFilter {
 
-  public boolean accept( RepositoryFile file );
+  boolean accept(RepositoryFile file);
 
 }

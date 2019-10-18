@@ -36,33 +36,33 @@ public interface IActionSequence extends ISequenceDefinition {
    * @return list of ActionDefinitions
    */
   @SuppressWarnings( "rawtypes" )
-  public List getActionDefinitionsAndSequences();
+  List getActionDefinitionsAndSequences();
 
   /**
    * If the ActionSequence contains a loop, returns the parameter that the execution should loop on.
    * 
    * @return the parameter to loop on, if looping is defined, otherwise null
    */
-  public String getLoopParameter();
+  String getLoopParameter();
 
   /**
    * If the ActionSequence contains a loop, returns the parameter that the execution should loop on.
    * 
    * @return the parameter to loop on, if looping is defined, otherwise null
    */
-  public boolean getLoopUsingPeek();
+  boolean getLoopUsingPeek();
 
   /**
    * Returns whether the ActionSequence has a loop in its definition.
    * 
    * @return true if looping is defined, otherwise false
    */
-  public boolean hasLoop();
+  boolean hasLoop();
 
   /**
    * @return The conditional execution object that determines whether a set of actions will be executed.
    */
-  public IConditionalExecution getConditionalExecution();
+  IConditionalExecution getConditionalExecution();
 
   /**
    * Sets the ConditionalExecution object that determines whether a set of actions will be executed.
@@ -70,5 +70,5 @@ public interface IActionSequence extends ISequenceDefinition {
    * @param value
    *          The ConditionalExecution object
    */
-  public void setConditionalExecution( IConditionalExecution value );
+  void setConditionalExecution(IConditionalExecution value);
 }

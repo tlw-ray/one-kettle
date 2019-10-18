@@ -22,5 +22,5 @@ package org.pentaho.platform.api.engine;
 
 @Deprecated
 public interface IPermissionRecipient {
-  public String getName();
+  String getName();
 }

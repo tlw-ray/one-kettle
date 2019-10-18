@@ -214,39 +214,38 @@ public class ScriptAddedFunctions {
     }
   }
 
-  public static Object getFiscalDate( ScriptEngine actualContext, Bindings actualObject, Object[] ArgList,
-    Object FunctionContext ) {
-
-    if ( ArgList.length == 2 ) {
-      try {
-        if ( isNull( ArgList ) ) {
-          return null;
-        } else if ( isUndefined( ArgList ) ) {
-          return undefinedValue;
-        }
-        java.util.Date dIn = (java.util.Date) ArgList[0];
-        Calendar startDate = Calendar.getInstance();
-        Calendar fisStartDate = Calendar.getInstance();
-        Calendar fisOffsetDate = Calendar.getInstance();
-        startDate.setTime( dIn );
-        Format dfFormatter = new SimpleDateFormat( "dd.MM.yyyy" );
-        String strOffsetDate = (String) ArgList[1] + String.valueOf( startDate.get( Calendar.YEAR ) );
-        java.util.Date dOffset = (java.util.Date) dfFormatter.parseObject( strOffsetDate );
-        fisOffsetDate.setTime( dOffset );
-
-        String strFisStartDate = "01.01." + String.valueOf( startDate.get( Calendar.YEAR ) + 1 );
-        fisStartDate.setTime( (java.util.Date) dfFormatter.parseObject( strFisStartDate ) );
-        int iDaysToAdd = (int) ( ( startDate.getTimeInMillis() - fisOffsetDate.getTimeInMillis() ) / 86400000 );
-        fisStartDate.add( Calendar.DATE, iDaysToAdd );
-        return fisStartDate.getTime();
-      } catch ( Exception e ) {
-        throw new RuntimeException( e.toString() );
-      }
-    } else {
-      throw new RuntimeException( "The function call getFiscalDate requires 2 arguments." );
-    }
-
-  }
+//  public static Object getFiscalDate( ScriptEngine actualContext, Bindings actualObject, Object[] ArgList,
+//    Object FunctionContext ) {
+//
+//    if ( ArgList.length == 2 ) {
+//      try {
+//        if ( isNull( ArgList ) ) {
+//          return null;
+//        } else if ( isUndefined( ArgList ) ) {
+//          return undefinedValue;
+//        }
+//        java.util.Date dIn = (java.util.Date) ArgList[0];
+//        Calendar startDate = Calendar.getInstance();
+//        Calendar fisStartDate = Calendar.getInstance();
+//        Calendar fisOffsetDate = Calendar.getInstance();
+//        startDate.setTime( dIn );
+//        Format dfFormatter = new SimpleDateFormat( "dd.MM.yyyy" );
+//        String strOffsetDate = ArgList[1] + startDate.get(Calendar.YEAR);
+//        java.util.Date dOffset = (java.util.Date) dfFormatter.parseObject( strOffsetDate );
+//        fisOffsetDate.setTime( dOffset );
+//
+//        String strFisStartDate = "01.01." + (startDate.get(Calendar.YEAR) + 1);
+//        fisStartDate.setTime( (java.util.Date) dfFormatter.parseObject( strFisStartDate ) );
+//        int iDaysToAdd = (int) ( ( startDate.getTimeInMillis() - fisOffsetDate.getTimeInMillis() ) / 86400000 );
+//        fisStartDate.add( Calendar.DATE, iDaysToAdd );
+//        return fisStartDate.getTime();
+//      } catch ( Exception e ) {
+//        throw new RuntimeException( e.toString() );
+//      }
+//    } else {
+//      throw new RuntimeException( "The function call getFiscalDate requires 2 arguments." );
+//    }
+//  }
 
   public static double getProcessCount( ScriptEngine actualContext, Bindings actualObject, Object[] ArgList,
     Object FunctionContext ) {
@@ -1661,7 +1660,7 @@ public class ScriptAddedFunctions {
     if ( ArgList.length == 2 ) {
       try {
         InetAddress addr = InetAddress.getByName( (String) ArgList[0] );
-        if ( ( (String) ArgList[1] ).equals( "IP" ) ) {
+        if ( ArgList[1].equals( "IP" ) ) {
           sRC = addr.getHostName();
         } else {
           sRC = addr.getHostAddress();
@@ -1966,12 +1965,12 @@ public class ScriptAddedFunctions {
           if ( fileObject.exists() ) {
             if ( fileObject.getType() == FileType.FILE ) {
               if ( !fileObject.delete() ) {
-                new RuntimeException( "We can not delete file [" + (String) ArgList[0] + "]!" );
+                new RuntimeException( "We can not delete file [" + ArgList[0] + "]!" );
               }
             }
 
           } else {
-            new RuntimeException( "file [" + (String) ArgList[0] + "] can not be found!" );
+            new RuntimeException( "file [" + ArgList[0] + "] can not be found!" );
           }
         } catch ( IOException e ) {
           throw new RuntimeException( "The function call deleteFile is not valid." );
@@ -2005,7 +2004,7 @@ public class ScriptAddedFunctions {
           if ( !fileObject.exists() ) {
             fileObject.createFolder();
           } else {
-            new RuntimeException( "folder [" + (String) ArgList[0] + "] already exist!" );
+            new RuntimeException( "folder [" + ArgList[0] + "] already exist!" );
           }
         } catch ( IOException e ) {
           throw new RuntimeException( "The function call createFolder is not valid." );
@@ -2051,13 +2050,13 @@ public class ScriptAddedFunctions {
               }
               boolean destinationExists = fileDestination.exists();
               // Let's copy the file...
-              if ( ( destinationExists && overwrite ) || !destinationExists ) {
+              if (!destinationExists || overwrite) {
                 FileUtil.copyContent( fileSource, fileDestination );
               }
 
             }
           } else {
-            new RuntimeException( "file to copy [" + (String) ArgList[0] + "] can not be found!" );
+            new RuntimeException( "file to copy [" + ArgList[0] + "] can not be found!" );
           }
         } catch ( IOException e ) {
           throw new RuntimeException( "The function call copyFile throw an error : " + e.toString() );
@@ -2103,10 +2102,10 @@ public class ScriptAddedFunctions {
             if ( file.getType().equals( FileType.FILE ) ) {
               filesize = file.getContent().getSize();
             } else {
-              new RuntimeException( "[" + (String) ArgList[0] + "] is not a file!" );
+              new RuntimeException( "[" + ArgList[0] + "] is not a file!" );
             }
           } else {
-            new RuntimeException( "file [" + (String) ArgList[0] + "] can not be found!" );
+            new RuntimeException( "file [" + ArgList[0] + "] can not be found!" );
           }
           return filesize;
         } catch ( IOException e ) {
@@ -2146,10 +2145,10 @@ public class ScriptAddedFunctions {
             if ( file.getType().equals( FileType.FILE ) ) {
               isafile = true;
             } else {
-              new RuntimeException( "[" + (String) ArgList[0] + "] is not a file!" );
+              new RuntimeException( "[" + ArgList[0] + "] is not a file!" );
             }
           } else {
-            new RuntimeException( "file [" + (String) ArgList[0] + "] can not be found!" );
+            new RuntimeException( "file [" + ArgList[0] + "] can not be found!" );
           }
           return isafile;
         } catch ( IOException e ) {
@@ -2189,10 +2188,10 @@ public class ScriptAddedFunctions {
             if ( file.getType().equals( FileType.FOLDER ) ) {
               isafolder = true;
             } else {
-              new RuntimeException( "[" + (String) ArgList[0] + "] is not a folder!" );
+              new RuntimeException( "[" + ArgList[0] + "] is not a folder!" );
             }
           } else {
-            new RuntimeException( "folder [" + (String) ArgList[0] + "] can not be found!" );
+            new RuntimeException( "folder [" + ArgList[0] + "] can not be found!" );
           }
           return isafolder;
         } catch ( IOException e ) {
@@ -2229,10 +2228,10 @@ public class ScriptAddedFunctions {
           file = KettleVFS.getFileObject( (String) ArgList[0] );
           String Filename = null;
           if ( file.exists() ) {
-            Filename = file.getName().getBaseName().toString();
+            Filename = file.getName().getBaseName();
 
           } else {
-            new RuntimeException( "file [" + (String) ArgList[0] + "] can not be found!" );
+            new RuntimeException( "file [" + ArgList[0] + "] can not be found!" );
           }
 
           return Filename;
@@ -2270,10 +2269,10 @@ public class ScriptAddedFunctions {
           file = KettleVFS.getFileObject( (String) ArgList[0] );
           String Extension = null;
           if ( file.exists() ) {
-            Extension = file.getName().getExtension().toString();
+            Extension = file.getName().getExtension();
 
           } else {
-            new RuntimeException( "file [" + (String) ArgList[0] + "] can not be found!" );
+            new RuntimeException( "file [" + ArgList[0] + "] can not be found!" );
           }
 
           return Extension;
@@ -2314,7 +2313,7 @@ public class ScriptAddedFunctions {
             foldername = KettleVFS.getFilename( file.getParent() );
 
           } else {
-            new RuntimeException( "file [" + (String) ArgList[0] + "] can not be found!" );
+            new RuntimeException( "file [" + ArgList[0] + "] can not be found!" );
           }
 
           return foldername;
@@ -2361,7 +2360,7 @@ public class ScriptAddedFunctions {
             lastmodifiedtime = dateFormat.format( lastmodifiedtimedate );
 
           } else {
-            new RuntimeException( "file [" + (String) ArgList[0] + "] can not be found!" );
+            new RuntimeException( "file [" + ArgList[0] + "] can not be found!" );
           }
 
           return lastmodifiedtime;
@@ -2494,13 +2493,13 @@ public class ScriptAddedFunctions {
               }
               boolean destinationExists = fileDestination.exists();
               // Let's move the file...
-              if ( ( destinationExists && overwrite ) || !destinationExists ) {
+              if (!destinationExists || overwrite) {
                 fileSource.moveTo( fileDestination );
               }
 
             }
           } else {
-            new RuntimeException( "file to move [" + (String) ArgList[0] + "] can not be found!" );
+            new RuntimeException( "file to move [" + ArgList[0] + "] can not be found!" );
           }
         } catch ( IOException e ) {
           throw new RuntimeException( "The function call moveFile throw an error : " + e.toString() );

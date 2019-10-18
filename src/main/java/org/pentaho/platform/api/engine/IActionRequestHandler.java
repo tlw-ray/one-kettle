@@ -41,14 +41,14 @@ public interface IActionRequestHandler {
    * @return RuntimeContext from the execution
    * @see BaseRequestHandler
    */
-  public IRuntimeContext handleActionRequest( int timeout, int timeoutType );
+  IRuntimeContext handleActionRequest(int timeout, int timeoutType);
 
   /**
    * Executes an action sequence asynchronously. Note - this is currently not implemented in the BaseRequestHandler
    * 
    * @return RuntimeContext created for the asynchronous execution.
    */
-  public IRuntimeContext handleActionAsyncRequest();
+  IRuntimeContext handleActionAsyncRequest();
 
   /**
    * Gets the runtime. Currently not called anywhere in the platform
@@ -56,7 +56,7 @@ public interface IActionRequestHandler {
    * @param requestHandle
    * @return the RuntimeContext for the execution
    */
-  public IRuntimeContext getRuntime( String requestHandle );
+  IRuntimeContext getRuntime(String requestHandle);
 
   /**
    * As the execution happens, the action handler is responsible for storing a list of all the messages that occur
@@ -66,14 +66,14 @@ public interface IActionRequestHandler {
    * @return list of messages
    */
   @SuppressWarnings( "rawtypes" )
-  public List getMessages();
+  List getMessages();
 
-  public void setCreateFeedbackParameterCallback( ICreateFeedbackParameterCallback createFeedbackParameterCallback );
+  void setCreateFeedbackParameterCallback(ICreateFeedbackParameterCallback createFeedbackParameterCallback);
 
   /**
    * Sets whether to force the generation of a prompt page
    * 
    * @param forcePrompt
    */
-  public void setForcePrompt( boolean forcePrompt );
+  void setForcePrompt(boolean forcePrompt);
 }

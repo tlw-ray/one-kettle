@@ -168,7 +168,7 @@ public abstract class BaseStepGenericXulDialog extends AbstractXulEventHandler i
   }
 
   protected List<XulEventHandler> getEventHandlers() {
-    return Collections.singletonList( (XulEventHandler) this );
+    return Collections.singletonList(this);
   }
 
   public String getName() {

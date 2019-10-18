@@ -24,7 +24,7 @@ public interface IDatabaseDialect {
   /**
    * Use this length in a String value to indicate that you want to use a CLOB in stead of a normal text field.
    */
-  public static final int CLOB_LENGTH = 9999999;
+  int CLOB_LENGTH = 9999999;
 
   /**
    * @return the default database port number

@@ -148,7 +148,7 @@ public interface VariableSpace {
    *          The array of strings that wants its variables to be replaced.
    * @return the array with the environment variables replaced.
    */
-  public String[] environmentSubstitute( String[] string );
+  String[] environmentSubstitute(String[] string);
 
   /**
    * Inject variables. The behaviour should be that the properties object will be stored and at the time the
@@ -176,5 +176,5 @@ public interface VariableSpace {
    * @throws KettleValueException
    *           In case there is a String conversion error
    */
-  public String fieldSubstitute( String aString, RowMetaInterface rowMeta, Object[] rowData ) throws KettleValueException;
+  String fieldSubstitute(String aString, RowMetaInterface rowMeta, Object[] rowData) throws KettleValueException;
 }

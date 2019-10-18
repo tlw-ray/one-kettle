@@ -93,8 +93,8 @@ public class OracleRDBDatabaseMetaTest {
     assertEquals( "SELECT * FROM USER_SEQUENCES WHERE SEQUENCE_NAME = 'FOO'", nativeMeta.getSQLSequenceExists( "foo" ) );
     assertEquals( "SELECT FOO.currval FROM DUAL", nativeMeta.getSQLCurrentSequenceValue( "FOO" ) );
     assertEquals( "SELECT FOO.nextval FROM dual", nativeMeta.getSQLNextSequenceValue( "FOO" ) );
-    String reusedFieldsQuery = "SELECT * FROM FOO WHERE 1=0";;
-    assertEquals( reusedFieldsQuery, nativeMeta.getSQLQueryFields( "FOO" ) );
+    String reusedFieldsQuery = "SELECT * FROM FOO WHERE 1=0";
+      assertEquals( reusedFieldsQuery, nativeMeta.getSQLQueryFields( "FOO" ) );
     assertEquals( reusedFieldsQuery, nativeMeta.getSQLTableExists( "FOO" ) );
     String reusedColumnsQuery = "SELECT FOO FROM BAR WHERE 1=0";
     assertEquals( reusedColumnsQuery, nativeMeta.getSQLQueryColumnFields( "FOO", "BAR" ) );

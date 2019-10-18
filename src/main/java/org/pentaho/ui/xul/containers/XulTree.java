@@ -123,20 +123,20 @@ public interface XulTree extends XulContainer {
 
   boolean isPreserveexpandedstate();
 
-  public void setSortable( boolean sort );
+  void setSortable(boolean sort);
 
-  public boolean isSortable();
+  boolean isSortable();
 
-  public void setTreeLines( boolean visible );
+  void setTreeLines(boolean visible);
 
-  public boolean isTreeLines();
+  boolean isTreeLines();
 
   void setPreserveselection( boolean preserve );
 
   boolean isPreserveselection();
 
-  public void setNewitembinding( String binding );
+  void setNewitembinding(String binding);
 
-  public String getNewitembinding();
+  String getNewitembinding();
 
 }

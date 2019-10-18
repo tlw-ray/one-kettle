@@ -428,10 +428,10 @@ public abstract class AbstractRelationalDbAction extends ActionDefinition {
   private Format getFormat( String formatPattern ) {
     Format format = null;
     try {
-      format = new DecimalFormat( formatPattern.toString() );
+      format = new DecimalFormat(formatPattern);
     } catch ( Exception ex ) {
       try {
-        format = new SimpleDateFormat( formatPattern.toString() );
+        format = new SimpleDateFormat(formatPattern);
       } catch ( Exception ex2 ) {
         format = null;
       }

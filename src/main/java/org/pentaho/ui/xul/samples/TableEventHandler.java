@@ -39,7 +39,7 @@ public class TableEventHandler extends AbstractXulEventHandler {
       for ( int z = 0; z < data[i].length; z++ ) {
         System.out.print( data[i][z] + "," );
       }
-      System.out.println( "" );
+      System.out.println();
     }
   }
 
@@ -52,7 +52,7 @@ public class TableEventHandler extends AbstractXulEventHandler {
       for ( int z = 0; z < data[coords[0]].length; z++ ) {
         System.out.print( data[coords[0]][z] + "," );
       }
-      System.out.println( "" );
+      System.out.println();
 
     } else if ( selectionType.equalsIgnoreCase( "multiple" ) ) {
       for ( int i = 0; i < coords.length; i++ ) {
@@ -60,9 +60,9 @@ public class TableEventHandler extends AbstractXulEventHandler {
         for ( int z = 0; z < data[idx].length; z++ ) {
           System.out.print( data[idx][z] + "," );
         }
-        System.out.println( "" );
+        System.out.println();
       }
-      System.out.println( "" );
+      System.out.println();
     } else {
       // cell
       int[] cellPos = tree.getActiveCellCoordinates();

@@ -70,7 +70,7 @@ public class SpoonRefreshClustersSubtreeTest {
   @Test
   public void noClusters() {
     TransMeta meta = mock( TransMeta.class );
-    when( meta.getClusterSchemas() ).thenReturn( Collections.<ClusterSchema>emptyList() );
+    when( meta.getClusterSchemas() ).thenReturn( Collections.emptyList() );
 
     callRefreshWith( meta );
     verifyNumberOfNodesCreated( 1 );
@@ -103,6 +103,6 @@ public class SpoonRefreshClustersSubtreeTest {
   }
 
   private static ClusterSchema createSchema( String name ) {
-    return new ClusterSchema( name, Collections.<SlaveServer>emptyList() );
+    return new ClusterSchema( name, Collections.emptyList() );
   }
 }

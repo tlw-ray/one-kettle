@@ -126,7 +126,7 @@ public class ClusterSchemaDialog extends Dialog {
   }
 
   public ClusterSchemaDialog( Shell par, ClusterSchema clusterSchema, List<SlaveServer> slaveServers ) {
-    this( par, clusterSchema, Collections.<ClusterSchema>emptyList(), slaveServers );
+    this( par, clusterSchema, Collections.emptyList(), slaveServers );
   }
 
   public boolean open() {

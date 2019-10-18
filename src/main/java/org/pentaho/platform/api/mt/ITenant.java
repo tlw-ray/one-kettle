@@ -36,7 +36,7 @@ public interface ITenant extends Serializable {
    * The method is used for retrieving ID of the tenant.
    * @return Returns String representation of the tenant's ID. 
    */
-  public String getId();
+  String getId();
 
   /**
    * The method gets the absolute path to the tenant root folder.
@@ -44,13 +44,13 @@ public interface ITenant extends Serializable {
    *  located under the tenant's root folder. 
    * @return Returns the absolute path to the tenant's root folder. 
    */
-  public String getRootFolderAbsolutePath();
+  String getRootFolderAbsolutePath();
 
   /**
    * This method gets the tenant's name.
    * @return Returns the tenant's name.
    */
-  public String getName();
+  String getName();
 
   /**
    * The method validates whether the tenant is enabled or not. 

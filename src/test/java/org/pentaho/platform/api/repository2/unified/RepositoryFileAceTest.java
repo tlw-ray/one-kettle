@@ -58,7 +58,7 @@ public class RepositoryFileAceTest {
     assertTrue( ace.equals( ace ) );
     assertTrue( ace.equals( aceDup ) );
     assertFalse( ace.equals( null ) );
-    assertFalse( ace.equals( new String() ) );
+    assertFalse( ace.equals("") );
 
     RepositoryFileSid notRepoFile = new RepositoryFileSid( "notRepoFile" );
     RepositoryFileAce aceNotDup = new RepositoryFileAce( notRepoFile, permissions );

@@ -24,21 +24,21 @@ public interface XulOverlay {
    * Priority value is used to determine the order in which to apply overlays in order to guarantee the order of
    * elements supplied by overlays.
    */
-  final int DEFAULT_PRIORITY = 9999;
+  int DEFAULT_PRIORITY = 9999;
 
   /**
    * Returns the id of this overlay. The id is determined by the provider of the overlay.
    * 
    * @return Overlay id
    */
-  public String getId();
+  String getId();
 
   /**
    * Returns a URI to the resource bundle for this overlay. The URI can be a file or a HTTP URI.
    * 
    * @return Resource bundle URI
    */
-  public String getResourceBundleUri();
+  String getResourceBundleUri();
 
   /**
    * Returns the XML source for the overlay. The overlay object should implement this method or the getOverlayUri
@@ -46,11 +46,11 @@ public interface XulOverlay {
    * 
    * @return Overlay XML
    */
-  public String getSource();
+  String getSource();
 
   @Deprecated
   // use getSource
-  public
+
   String getOverlayXml();
 
   /**
@@ -59,13 +59,13 @@ public interface XulOverlay {
    * 
    * @return Overlay URI
    */
-  public String getOverlayUri();
+  String getOverlayUri();
 
   /**
    * Returns the int indicating the priority order in which the overlay should be applied
    * 
    * @return priority integer value
    */
-  public int getPriority();
+  int getPriority();
 
 }

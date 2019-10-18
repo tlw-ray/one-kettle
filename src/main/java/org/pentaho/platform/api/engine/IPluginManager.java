@@ -45,7 +45,7 @@ public interface IPluginManager {
    *
    * @return list of all the content types provided by plugins
    */
-  public Set<String> getContentTypes();
+  Set<String> getContentTypes();
 
   /**
    * Gets metadata about a particular content type
@@ -53,13 +53,13 @@ public interface IPluginManager {
    * @param type a content type provided by a plugin
    * @return info object for a content type
    */
-  public IContentInfo getContentTypeInfo( String type );
+  IContentInfo getContentTypeInfo(String type);
 
   /**
    * @deprecated Use {@link #getContentGenerator(String, String) instead
    */
   @Deprecated
-  public IContentGenerator getContentGeneratorForType( String type, IPentahoSession session )
+  IContentGenerator getContentGeneratorForType(String type, IPentahoSession session)
     throws ObjectFactoryException;
 
   /**
@@ -68,20 +68,20 @@ public interface IPluginManager {
    *
    * @return true if no errors were encountered
    */
-  public boolean reload();
+  boolean reload();
 
   /**
    * @deprecated Use {@link #reload()} instead
    */
   @Deprecated
-  public boolean reload( IPentahoSession session );
+  boolean reload(IPentahoSession session);
 
   /**
    * Returns a list of the XUL overlays that are defined by all the plug-ins. The overlays are XML fragments.
    *
    * @return List of XML XUL overlays
    */
-  public List<XulOverlay> getOverlays();
+  List<XulOverlay> getOverlays();
 
   /**
    * If any plugins have registered a bean by id beanId, this method will return a new instance of the object. The
@@ -91,7 +91,7 @@ public interface IPluginManager {
    * @return an instance of the bean registered under beanId may generate an unchecked PluginBeanException if there was
    * a problem retrieving the bean instance
    */
-  public Object getBean( String beanId ) throws PluginBeanException;
+  Object getBean(String beanId) throws PluginBeanException;
 
   /**
    * Returns a {@link IContentGenerator} that can render the named perspective (e.g. 'viewer') of a resource of type
@@ -105,7 +105,7 @@ public interface IPluginManager {
    * there is no bean definition with the specified name may generate an unchecked BeansException - if the bean could
    * not be obtained
    */
-  public IContentGenerator getContentGenerator( String type, String perspectiveName );
+  IContentGenerator getContentGenerator(String type, String perspectiveName);
 
   /**
    * Returns a loaded class for the bean registered as beanId. The class will have been loaded by the proper
@@ -116,7 +116,7 @@ public interface IPluginManager {
    * @return a loaded class for the registered bean
    * @throws PluginBeanException if there was a problem loading the class
    */
-  public Class<?> loadClass( String beanId ) throws PluginBeanException;
+  Class<?> loadClass(String beanId) throws PluginBeanException;
 
   /**
    * Returns true if a bean with id beanId has been registered with the plugin manager, i.e. you can get a bean instance
@@ -125,12 +125,12 @@ public interface IPluginManager {
    * @param beanId Cannot be null
    * @return true if the bean is registered
    */
-  public boolean isBeanRegistered( String beanId );
+  boolean isBeanRegistered(String beanId);
 
   /**
    * Unloads all the plugins. Called when the context shuts down.
    */
-  public void unloadAllPlugins();
+  void unloadAllPlugins();
 
   /**
    * Returns the plugin (IPlatformPlugin) that handles requests for files of type <code>contentType</code>
@@ -139,7 +139,7 @@ public interface IPluginManager {
    * @return the id of the plugin that handles requests to files of type <code>contentType</code> or <code>null</code>
    * if none were found
    */
-  public String getPluginIdForType( String contentType );
+  String getPluginIdForType(String contentType);
 
   /**
    * Returns the Plugin perspectives for files of type <code>contentType</code>
@@ -148,7 +148,7 @@ public interface IPluginManager {
    * @return the list of REST perspectives for files of type <code>contentType</code> or <code>null</code> if none were
    * found
    */
-  public List<String> getPluginRESTPerspectivesForType( String contentType );
+  List<String> getPluginRESTPerspectivesForType(String contentType);
 
   /**
    * Returns the Plugin perspectives for a plugin of specific id
@@ -156,7 +156,7 @@ public interface IPluginManager {
    * @param the id of the plugin
    * @return the list of REST perspectives for a plugin of specific id or <code>null</code> if none were found
    */
-  public List<String> getPluginRESTPerspectivesForId( String id );
+  List<String> getPluginRESTPerspectivesForId(String id);
 
   /**
    * Each plugin is loaded on its own classloader, we can use this to find the plugin for which the classloader is
@@ -165,7 +165,7 @@ public interface IPluginManager {
    * @param classLoader The classloader for the plugin, also used to load all plugin resources
    * @return the plugin id which was loaded on the given classloader
    */
-  public String getPluginIdForClassLoader( ClassLoader classLoader );
+  String getPluginIdForClassLoader(ClassLoader classLoader);
 
   /**
    * Retrieves a plugin setting for a given plugin and key.
@@ -175,7 +175,7 @@ public interface IPluginManager {
    * @param defaultValue the default to use if the setting key is not found
    * @return the plugin setting
    */
-  public Object getPluginSetting( String pluginId, String key, String defaultValue );
+  Object getPluginSetting(String pluginId, String key, String defaultValue);
 
   /**
    * Returns the plugin that can handle a request for the resource at "path". A plugin is determined to be able to serve
@@ -191,7 +191,7 @@ public interface IPluginManager {
    * a particular plugin dir is accessable through the plugin resources REST service.
    */
   @Deprecated
-  public String getServicePlugin( String path );
+  String getServicePlugin(String path);
 
   /**
    * Returns the classloader instance that was assigned by the plugin manager to load all classes for the specified
@@ -202,7 +202,7 @@ public interface IPluginManager {
    * @return the classloader assigned to this plugin, or <code>null</code> if the plugin is not known by the plugin
    * manager, or for some reason a classloader was not assigned to the plugin (an error condition).
    */
-  public ClassLoader getClassLoader( String pluginId );
+  ClassLoader getClassLoader(String pluginId);
 
   /**
    * Returns a (Spring) bean factory for retrieving plugin-bound objects
@@ -210,7 +210,7 @@ public interface IPluginManager {
    * @param pluginId
    * @return a bean factory for retrieving instances of plugin-provided objects
    */
-  public ListableBeanFactory getBeanFactory( String pluginId );
+  ListableBeanFactory getBeanFactory(String pluginId);
 
   /**
    * returns true if the path is a reference to a potential static resource. Note that this does not guarantee that the
@@ -223,7 +223,7 @@ public interface IPluginManager {
    * a particular plugin dir is accessable through the plugin resources REST service.
    */
   @Deprecated
-  public boolean isStaticResource( String path );
+  boolean isStaticResource(String path);
 
   /**
    * Returns true if the resource specified by <code>path</code> is publicly available, meaning this resource can be
@@ -233,7 +233,7 @@ public interface IPluginManager {
    * @param path     a path relative to the plugin folder to check for public availability
    * @return <code>true</code> if publicly available or <code>false</code> if not available for any reason
    */
-  public boolean isPublic( String pluginId, String path );
+  boolean isPublic(String pluginId, String path);
 
   /**
    * Returns and InputStream to the specified resource path.
@@ -245,7 +245,7 @@ public interface IPluginManager {
    * a particular plugin dir is accessable through the plugin resources REST service.
    */
   @Deprecated
-  public InputStream getStaticResource( String path );
+  InputStream getStaticResource(String path);
 
   /**
    * Lists the ids of available plugins. From the id, you can get lots of information about a plugin, such as the bean
@@ -253,7 +253,7 @@ public interface IPluginManager {
    *
    * @return list of plugin ids
    */
-  public List<String> getRegisteredPlugins();
+  List<String> getRegisteredPlugins();
 
   /**
    * Return a List of scripts registered for a given context.

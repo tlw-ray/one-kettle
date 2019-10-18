@@ -29,5 +29,5 @@ import org.pentaho.di.core.row.ValueMetaInterface;
  * Settings | File Templates.
  */
 public interface TableItemInsertXulListener {
-  public boolean tableItemInsertedFor( ValueMetaInterface v );
+  boolean tableItemInsertedFor(ValueMetaInterface v);
 }

@@ -26,11 +26,11 @@ import org.pentaho.ui.xul.XulComponent;
  */
 
 public interface XulStatusbarpanel extends XulComponent {
-  public void setLabel( String label );
+  void setLabel(String label);
 
-  public String getLabel();
+  String getLabel();
 
-  public void setImage( String image );
+  void setImage(String image);
 
-  public String getImage();
+  String getImage();
 }

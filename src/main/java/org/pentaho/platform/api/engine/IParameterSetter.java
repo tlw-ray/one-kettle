@@ -39,7 +39,7 @@ public interface IParameterSetter extends IParameterProvider {
    * @param value
    *          The <tt>String</tt> value to set
    */
-  public void setParameter( String name, String value );
+  void setParameter(String name, String value);
 
   /**
    * Sets a named parameter to a <tt>long</tt> value
@@ -49,7 +49,7 @@ public interface IParameterSetter extends IParameterProvider {
    * @param value
    *          The <tt>long</tt> value to set
    */
-  public void setParameter( String name, long value );
+  void setParameter(String name, long value);
 
   /**
    * Sets a named parameter to a <tt>Date</tt> value
@@ -59,7 +59,7 @@ public interface IParameterSetter extends IParameterProvider {
    * @param value
    *          The <tt>Date</tt> value to set
    */
-  public void setParameter( String name, Date value );
+  void setParameter(String name, Date value);
 
   /**
    * Sets a named parameter to a <tt>Object</tt> value
@@ -69,6 +69,6 @@ public interface IParameterSetter extends IParameterProvider {
    * @param value
    *          The <tt>Object</tt> value to set
    */
-  public void setParameter( String name, Object value );
+  void setParameter(String name, Object value);
 
 }

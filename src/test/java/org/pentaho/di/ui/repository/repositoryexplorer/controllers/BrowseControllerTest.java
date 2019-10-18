@@ -92,7 +92,7 @@ public class BrowseControllerTest {
     when( selectedFolder.createFolder( FOLDER_NAME ) ).thenReturn( someDirectory );
 
     XulTree folderTree = mock( XulTree.class );
-    when( folderTree.getSelectedItems() ).thenReturn( Collections.<Object>singleton( selectedFolder ) );
+    when( folderTree.getSelectedItems() ).thenReturn( Collections.singleton( selectedFolder ) );
     controller.setFolderTree( folderTree );
 
     directoryBinding = mock( Binding.class );

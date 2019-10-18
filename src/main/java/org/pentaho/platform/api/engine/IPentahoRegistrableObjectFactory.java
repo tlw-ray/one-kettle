@@ -40,7 +40,7 @@ public interface IPentahoRegistrableObjectFactory extends IPentahoObjectFactory 
    *     <dd>A combination of the other options, all classes and interfaces.</dd>
    * </p>
    */
-  static enum Types {
+  enum Types {
     INTERFACES, CLASSES, ALL
   }
 

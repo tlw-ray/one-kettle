@@ -1132,13 +1132,9 @@ public class JobEntryFTPDeleteDialog extends JobEntryDialog implements JobEntryD
             SFTPv3Client client = new SFTPv3Client( conn );
             boolean folderexist = sshDirectoryExists( client, realfoldername );
             client.close();
-            if ( folderexist ) {
               // Folder exists
-              folderexists = true;
-            } else {
               // we can not find folder
-              folderexists = false;
-            }
+              folderexists = folderexist;
           }
 
         }

@@ -299,13 +299,9 @@ public class SpoonTreeDelegate extends SpoonDelegate {
         TransMeta transMeta = spoon.getActiveTransformation();
         // JobMeta jobMeta = spoon.getActiveJob();
 
-        if ( object instanceof StepMeta
-          || object instanceof PluginInterface || ( object instanceof DatabaseMeta && transMeta != null )
-          || object instanceof TransHopMeta || object instanceof JobEntryCopy ) {
-          event.doit = true;
-        } else {
-          event.doit = false;
-        }
+          event.doit = object instanceof StepMeta
+                  || object instanceof PluginInterface || (object instanceof DatabaseMeta && transMeta != null)
+                  || object instanceof TransHopMeta || object instanceof JobEntryCopy;
       }
 
       public void dragSetData( DragSourceEvent event ) {

@@ -538,7 +538,7 @@ public class GetSubFoldersDialog extends BaseStepDialog implements StepDialogInt
     // Add the file to the list of files...
     SelectionAdapter selA = new SelectionAdapter() {
       public void widgetSelected( SelectionEvent arg0 ) {
-        wFoldernameList.add( new String[] { wFoldername.getText() } );
+        wFoldernameList.add(wFoldername.getText());
         wFoldername.setText( "" );
         wFoldernameList.removeEmptyRows();
         wFoldernameList.setRowNums();
@@ -653,8 +653,7 @@ public class GetSubFoldersDialog extends BaseStepDialog implements StepDialogInt
     if ( in.getFolderName() != null ) {
       wFoldernameList.removeAll();
       for ( int i = 0; i < in.getFolderName().length; i++ ) {
-        wFoldernameList.add( new String[] {
-          in.getFolderName()[i], in.getRequiredFilesDesc( in.getFolderRequired()[i] ) } );
+        wFoldernameList.add(in.getFolderName()[i], in.getRequiredFilesDesc( in.getFolderRequired()[i] ));
 
       }
       wFoldernameList.removeEmptyRows();

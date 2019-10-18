@@ -168,12 +168,15 @@ public class StepMeta extends SharedObjectBase implements Cloneable, Comparable<
    *          The step metadata interface to use (TextFileInputMeta, etc)
    */
   public StepMeta( String stepname, StepMetaInterface stepMetaInterface ) {
+    this();
     if ( stepMetaInterface != null ) {
       this.stepid = PluginRegistry.getInstance().getPluginId( StepPluginType.class, stepMetaInterface );
     }
     this.name = stepname;
     setStepMetaInterface( stepMetaInterface );
+  }
 
+  public StepMeta() {
     selected = false;
     distributes = true;
     copiesString = "1";
@@ -189,10 +192,6 @@ public class StepMeta extends SharedObjectBase implements Cloneable, Comparable<
     remoteOutputSteps = new ArrayList<RemoteStep>();
 
     attributesMap = new HashMap<String, Map<String, String>>();
-  }
-
-  public StepMeta() {
-    this( (String) null, (String) null, (StepMetaInterface) null );
   }
 
   @Override
@@ -551,7 +550,7 @@ public class StepMeta extends SharedObjectBase implements Cloneable, Comparable<
 
   public boolean hasChanged() {
     StepMetaInterface bsi = this.getStepMetaInterface();
-    return bsi != null ? bsi.hasChanged() : false;
+    return bsi != null && bsi.hasChanged();
   }
 
   public void setChanged( boolean ch ) {
@@ -716,7 +715,7 @@ public class StepMeta extends SharedObjectBase implements Cloneable, Comparable<
   }
 
   public StepMeta( ObjectId id_step ) {
-    this( (String) null, (String) null, (StepMetaInterface) null );
+    this();
     setObjectId( id_step );
   }
 
@@ -1038,10 +1037,7 @@ public class StepMeta extends SharedObjectBase implements Cloneable, Comparable<
     if ( !isPartitioned() && isTargetPartitioned() ) {
       return true;
     }
-    if ( isPartitioned() && isTargetPartitioned() && !stepPartitioningMeta.equals( targetStepPartitioningMeta ) ) {
-      return true;
-    }
-    return false;
+      return isPartitioned() && isTargetPartitioned() && !stepPartitioningMeta.equals(targetStepPartitioningMeta);
   }
 
   @Override

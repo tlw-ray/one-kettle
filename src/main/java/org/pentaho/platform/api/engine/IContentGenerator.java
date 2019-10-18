@@ -36,7 +36,7 @@ public interface IContentGenerator extends ILogger {
    * 
    * @throws Exception
    */
-  public void createContent() throws Exception;
+  void createContent() throws Exception;
 
   /**
    * called before createContent(), the IOutputHandler is the API that defines how to write content back to the
@@ -44,7 +44,7 @@ public interface IContentGenerator extends ILogger {
    * 
    * @param outputHandler
    */
-  public void setOutputHandler( IOutputHandler outputHandler );
+  void setOutputHandler(IOutputHandler outputHandler);
 
   /**
    * called before createContent(), this method is not used by the content generator system at this time.
@@ -52,53 +52,53 @@ public interface IContentGenerator extends ILogger {
    * @param messages
    *          a list of messages
    */
-  public void setMessagesList( List<String> messages );
+  void setMessagesList(List<String> messages);
 
   /**
    * called before createContent(), the parameterProviders list contain the available parameters.
    * 
    * @param parameterProviders
    */
-  public void setParameterProviders( Map<String, IParameterProvider> parameterProviders );
+  void setParameterProviders(Map<String, IParameterProvider> parameterProviders);
 
   /**
    * called before createContent(), this is the users session object.
    * 
    * @param userSession
    */
-  public void setSession( IPentahoSession userSession );
+  void setSession(IPentahoSession userSession);
 
   /**
    * called before createContent(), this is used to build URLs
    * 
    * @param urlFactory
    */
-  public void setUrlFactory( IPentahoUrlFactory urlFactory );
+  void setUrlFactory(IPentahoUrlFactory urlFactory);
 
   /**
    * this method is not used at this time
    * 
    * @param callbacks
    */
-  public void setCallbacks( List<Object> callbacks );
+  void setCallbacks(List<Object> callbacks);
 
   /**
    * this method is not used at this time
    * 
    * @param instanceId
    */
-  public void setInstanceId( String instanceId );
+  void setInstanceId(String instanceId);
 
   /**
    * Get the name of the output content item for this content generator
    */
-  public String getItemName();
+  String getItemName();
 
   /**
    * Set the name of the output content item for the content generator
    * 
    * @param itemName
    */
-  public void setItemName( String itemName );
+  void setItemName(String itemName);
 
 }

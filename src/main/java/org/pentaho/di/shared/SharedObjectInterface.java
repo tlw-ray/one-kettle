@@ -27,13 +27,13 @@ import java.util.Date;
 import org.pentaho.di.core.exception.KettleException;
 
 public interface SharedObjectInterface {
-  public void setShared( boolean shared );
+  void setShared(boolean shared);
 
-  public boolean isShared();
+  boolean isShared();
 
-  public String getName();
+  String getName();
 
-  public String getXML() throws KettleException;
+  String getXML() throws KettleException;
 
-  public Date getChangedDate();
+  Date getChangedDate();
 }

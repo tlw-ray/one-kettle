@@ -23,5 +23,5 @@
 package org.pentaho.di.ui.core.database.dialog;
 
 public enum UiPostActionStatus {
-  OK, ERROR_DIALOG_SHOWN, ERROR, NONE;
+  OK, ERROR_DIALOG_SHOWN, ERROR, NONE
 }

@@ -33,5 +33,5 @@ import java.util.Map;
  *
  */
 public interface ExtensionDataInterface {
-  public Map<String, Object> getExtensionDataMap();
+  Map<String, Object> getExtensionDataMap();
 }

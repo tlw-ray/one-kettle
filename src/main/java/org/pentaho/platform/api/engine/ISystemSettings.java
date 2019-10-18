@@ -39,7 +39,7 @@ public interface ISystemSettings {
    * 
    * @return String containing a name that identifies the source of the system configuration
    */
-  public String getSystemCfgSourceName();
+  String getSystemCfgSourceName();
 
   /**
    * Gets a system setting from the system path
@@ -52,7 +52,7 @@ public interface ISystemSettings {
    *          the value to use if the setting isn't specified in the setting document
    * @return the setting requested, or the default value if not found
    */
-  public String getSystemSetting( String path, String settingName, String defaultValue );
+  String getSystemSetting(String path, String settingName, String defaultValue);
 
   /**
    * Gets a system setting from the system configuration file
@@ -63,7 +63,7 @@ public interface ISystemSettings {
    *          the value to use if the setting isn't specified in the setting document
    * @return the setting requested, or the default value if not found
    */
-  public String getSystemSetting( String settingName, String defaultValue );
+  String getSystemSetting(String settingName, String defaultValue);
 
   /**
    * Gets a section from the specified settings document
@@ -75,7 +75,7 @@ public interface ISystemSettings {
    * @return the list of settings in the specified section of the document
    */
   @SuppressWarnings( "rawtypes" )
-  public List getSystemSettings( String path, String settingSection );
+  List getSystemSettings(String path, String settingSection);
 
   /**
    * Gets a section from the system system configuration file
@@ -85,13 +85,13 @@ public interface ISystemSettings {
    * @return the list of elements in the section of the document.
    */
   @SuppressWarnings( "rawtypes" )
-  public List getSystemSettings( String settingSection );
+  List getSystemSettings(String settingSection);
 
   /**
    * The SystemSettings object caches each settings document once it's read in. If the system gets a refresh event,
    * this should be called to make sure that the system settings get refreshed.
    */
-  public void resetSettingsCache();
+  void resetSettingsCache();
 
   /**
    * Returns a Document object containing the settings document within the path specified by actionPath.
@@ -100,7 +100,7 @@ public interface ISystemSettings {
    *          The XML document relative to the solution that contains the settings desired
    * @return Document Parsed XML document.
    */
-  public Document getSystemSettingsDocument( String actionPath );
+  Document getSystemSettingsDocument(String actionPath);
 
   /**
    * Gets a properties file from the solution.
@@ -109,6 +109,6 @@ public interface ISystemSettings {
    *          Relative path to the properties file within the solution
    * @return <tt>Properties</tt> object containing the properties.
    */
-  public Properties getSystemSettingsProperties( String path );
+  Properties getSystemSettingsProperties(String path);
 
 }

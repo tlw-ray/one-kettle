@@ -25,7 +25,7 @@ package org.pentaho.platform.api.action;
  */
 public interface IWorkerNodeCredential {
 
-  public String getUsername();
+  String getUsername();
 
-  public String getPassword();
+  String getPassword();
 }

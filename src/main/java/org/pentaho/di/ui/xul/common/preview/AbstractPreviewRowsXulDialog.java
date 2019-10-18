@@ -242,7 +242,7 @@ public abstract class AbstractPreviewRowsXulDialog extends AbstractXulEventHandl
   }
 
   protected List<XulEventHandler> getEventHandlers() {
-    return Collections.singletonList( (XulEventHandler) this );
+    return Collections.singletonList(this);
   }
 
   public String getName() {

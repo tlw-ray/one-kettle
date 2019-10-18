@@ -21,5 +21,5 @@ import org.pentaho.ui.xul.XulContainer;
 import org.pentaho.ui.xul.components.XulTabpanel;
 
 public interface XulTabpanels extends XulContainer {
-  public XulTabpanel getTabpanelByIndex( int index );
+  XulTabpanel getTabpanelByIndex(int index);
 }

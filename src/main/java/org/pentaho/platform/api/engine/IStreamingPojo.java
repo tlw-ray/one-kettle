@@ -37,13 +37,13 @@ public interface IStreamingPojo {
    * 
    * @param outputStream
    */
-  public void setOutputStream( OutputStream outputStream );
+  void setOutputStream(OutputStream outputStream);
 
   /**
    * Gets the mimetype of the content that this object will write to the output stream
    * 
    * @return
    */
-  public String getMimeType();
+  String getMimeType();
 
 }

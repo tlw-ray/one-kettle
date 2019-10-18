@@ -30,6 +30,6 @@ import org.pentaho.platform.api.repository.IContentItem;
  */
 public interface IPostProcessingAction extends IAction {
 
-  public List<IContentItem> getActionOutputContents();
+  List<IContentItem> getActionOutputContents();
 
 }

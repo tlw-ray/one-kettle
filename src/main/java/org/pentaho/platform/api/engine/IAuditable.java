@@ -32,14 +32,14 @@ public interface IAuditable {
    * 
    * @return the name of the object (the Java class name)
    */
-  public String getObjectName();
+  String getObjectName();
 
   /**
    * Return the id for the execution of a given action sequence document.
    * 
    * @return the process id
    */
-  public String getProcessId();
+  String getProcessId();
 
   /**
    * Return the name of the action sequence. Today, that name is synonymous with the name of the action sequence
@@ -47,13 +47,13 @@ public interface IAuditable {
    * 
    * @return the name of the action sequence
    */
-  public String getActionName();
+  String getActionName();
 
   /**
    * Returns a unique id (across classes and instances) for this auditable object.
    * 
    * @return the auditable's id
    */
-  public String getId();
+  String getId();
 
 }

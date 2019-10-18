@@ -149,7 +149,7 @@ public class SimpleTimestampFormat extends SimpleDateFormat {
     initNanosecondsFormat();
 
     if ( startNanosecondPatternPosition != -1 ) {
-      sb.append( datePattern.substring( 0, startNanosecondPatternPosition ) );
+      sb.append(datePattern, 0, startNanosecondPatternPosition);
       sb.append( FORMATTER_ESCAPE_CHARACTER );
       sb.append( NANOSECOND_PLACEHOLDER );
       sb.append( FORMATTER_ESCAPE_CHARACTER );

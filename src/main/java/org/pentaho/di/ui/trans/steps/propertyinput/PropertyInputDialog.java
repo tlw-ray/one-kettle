@@ -1061,9 +1061,8 @@ public class PropertyInputDialog extends BaseStepDialog implements StepDialogInt
     SelectionAdapter selA = new SelectionAdapter() {
       @Override
       public void widgetSelected( SelectionEvent arg0 ) {
-        wFilenameList.add( new String[] {
-          wFilename.getText(), wFilemask.getText(), wExcludeFilemask.getText(),
-          PropertyInputMeta.RequiredFilesCode[0], PropertyInputMeta.RequiredFilesCode[0] } );
+        wFilenameList.add(wFilename.getText(), wFilemask.getText(), wExcludeFilemask.getText(),
+                PropertyInputMeta.RequiredFilesCode[0], PropertyInputMeta.RequiredFilesCode[0]);
         wFilename.setText( "" );
         wFilemask.setText( "" );
         wExcludeFilemask.setText( "" );
@@ -1328,8 +1327,7 @@ public class PropertyInputDialog extends BaseStepDialog implements StepDialogInt
 
         for ( int j = 0; j < fields.size(); j++ ) {
           ValueMetaInterface field = fields.getValueMeta( j );
-          wFields.add( new String[] {
-            field.getName(), field.getName(), field.getTypeDesc(), "", "-1", "", "", "", "", "none", "N" } );
+          wFields.add(field.getName(), field.getName(), field.getTypeDesc(), "", "-1", "", "", "", "", "none", "N");
         }
         wFields.removeEmptyRows();
         wFields.setRowNums();
@@ -1402,10 +1400,9 @@ public class PropertyInputDialog extends BaseStepDialog implements StepDialogInt
       wFilenameList.removeAll();
 
       for ( int i = 0; i < in.getFileName().length; i++ ) {
-        wFilenameList.add( new String[] {
-          in.getFileName()[i], in.getFileMask()[i], in.getExcludeFileMask()[i],
-          in.getRequiredFilesDesc( in.getFileRequired()[i] ),
-          in.getRequiredFilesDesc( in.getIncludeSubFolders()[i] ) } );
+        wFilenameList.add(in.getFileName()[i], in.getFileMask()[i], in.getExcludeFileMask()[i],
+                in.getRequiredFilesDesc( in.getFileRequired()[i] ),
+                in.getRequiredFilesDesc( in.getIncludeSubFolders()[i] ));
       }
       wFilenameList.removeEmptyRows();
       wFilenameList.setRowNums();
@@ -1681,7 +1678,7 @@ public class PropertyInputDialog extends BaseStepDialog implements StepDialogInt
           String[] sectionsList = new String[wini.keySet().size()];
           int i = 0;
           while ( itSection.hasNext() ) {
-            sectionsList[i] = itSection.next().toString();
+            sectionsList[i] = itSection.next();
             i++;
           }
           Const.sortStrings( sectionsList );

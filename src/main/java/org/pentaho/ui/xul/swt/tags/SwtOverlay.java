@@ -41,7 +41,7 @@ public class SwtOverlay extends AbstractSwtXulContainer implements XulScript {
 
   public SwtOverlay( Element self, XulComponent parent, XulDomContainer container, String tagName ) {
     super( tagName );
-    Composite c = new Composite( (Composite) ( (XulComponent) parent ).getManagedObject(), SWT.NONE );
+    Composite c = new Composite( (Composite) parent.getManagedObject(), SWT.NONE );
     setManagedObject( c );
 
   }

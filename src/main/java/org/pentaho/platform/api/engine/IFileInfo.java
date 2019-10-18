@@ -22,23 +22,23 @@ package org.pentaho.platform.api.engine;
 
 public interface IFileInfo {
 
-  public String getTitle();
+  String getTitle();
 
-  public void setTitle( String title );
+  void setTitle(String title);
 
-  public String getDescription();
+  String getDescription();
 
-  public void setDescription( String description );
+  void setDescription(String description);
 
-  public String getAuthor();
+  String getAuthor();
 
-  public void setAuthor( String author );
+  void setAuthor(String author);
 
-  public String getIcon();
+  String getIcon();
 
-  public void setIcon( String icon );
+  void setIcon(String icon);
 
-  public String getDisplayType();
+  String getDisplayType();
 
-  public void setDisplayType( String displayType );
+  void setDisplayType(String displayType);
 }

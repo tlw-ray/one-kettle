@@ -373,7 +373,7 @@ public class JobEntryCheckFilesLockedDialog extends JobEntryDialog implements Jo
     fdlFields.top = new FormAttachment( wFilemask, margin );
     wlFields.setLayoutData( fdlFields );
 
-    int rows = jobEntry.arguments == null ? 1 : ( jobEntry.arguments.length == 0 ? 0 : jobEntry.arguments.length );
+    int rows = jobEntry.arguments == null ? 1 : (jobEntry.arguments.length);
     final int FieldsRows = rows;
 
     ColumnInfo[] colinf =
@@ -407,7 +407,7 @@ public class JobEntryCheckFilesLockedDialog extends JobEntryDialog implements Jo
     // Add the file to the list of files...
     SelectionAdapter selA = new SelectionAdapter() {
       public void widgetSelected( SelectionEvent arg0 ) {
-        wFields.add( new String[] { wFilename.getText(), wFilemask.getText() } );
+        wFields.add(wFilename.getText(), wFilemask.getText());
         wFilename.setText( "" );
         wFilemask.setText( "" );
         wFields.removeEmptyRows();

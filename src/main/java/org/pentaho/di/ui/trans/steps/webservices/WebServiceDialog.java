@@ -258,7 +258,7 @@ public class WebServiceDialog extends BaseStepDialog implements StepDialogInterf
       if ( parameters != null
         && parameters.getOperation() != null && parameters.getOperation().getInput() != null
         && parameters.getOperation().getInput().getName() != null ) {
-        request = wsdlOperation.getParameters().getOperation().getInput().getName().toString();
+        request = wsdlOperation.getParameters().getOperation().getInput().getName();
       }
       wOperationRequest.setText( request );
 

@@ -170,8 +170,8 @@ public class XMLHandlerUnitTest {
     assertEquals( "<along>123</along>" + cr, XMLHandler.addTagValue( "along", input, true ) );
     assertEquals( "<along>123</along>", XMLHandler.addTagValue( "along", input, false ) );
 
-    assertEquals( "<along>" + String.valueOf( Long.MAX_VALUE ) + "</along>", XMLHandler.addTagValue( "along", Long.MAX_VALUE, false ) );
-    assertEquals( "<along>" + String.valueOf( Long.MIN_VALUE ) + "</along>", XMLHandler.addTagValue( "along", Long.MIN_VALUE, false ) );
+    assertEquals( "<along>" + Long.MAX_VALUE + "</along>", XMLHandler.addTagValue( "along", Long.MAX_VALUE, false ) );
+    assertEquals( "<along>" + Long.MIN_VALUE + "</along>", XMLHandler.addTagValue( "along", Long.MIN_VALUE, false ) );
   }
 
   @Test
@@ -181,8 +181,8 @@ public class XMLHandlerUnitTest {
     assertEquals( "<anint>456</anint>" + cr, XMLHandler.addTagValue( "anint", input, true ) );
     assertEquals( "<anint>456</anint>", XMLHandler.addTagValue( "anint", input, false ) );
 
-    assertEquals( "<anint>" + String.valueOf( Integer.MAX_VALUE ) + "</anint>", XMLHandler.addTagValue( "anint", Integer.MAX_VALUE, false ) );
-    assertEquals( "<anint>" + String.valueOf( Integer.MIN_VALUE ) + "</anint>", XMLHandler.addTagValue( "anint", Integer.MIN_VALUE, false ) );
+    assertEquals( "<anint>" + Integer.MAX_VALUE + "</anint>", XMLHandler.addTagValue( "anint", Integer.MAX_VALUE, false ) );
+    assertEquals( "<anint>" + Integer.MIN_VALUE + "</anint>", XMLHandler.addTagValue( "anint", Integer.MIN_VALUE, false ) );
   }
 
   @Test
@@ -192,9 +192,9 @@ public class XMLHandlerUnitTest {
     assertEquals( "<adouble>123.45</adouble>" + cr, XMLHandler.addTagValue( "adouble", input, true ) );
     assertEquals( "<adouble>123.45</adouble>", XMLHandler.addTagValue( "adouble", input, false ) );
 
-    assertEquals( "<adouble>" + String.valueOf( Double.MAX_VALUE ) + "</adouble>", XMLHandler.addTagValue( "adouble", Double.MAX_VALUE, false ) );
-    assertEquals( "<adouble>" + String.valueOf( Double.MIN_VALUE ) + "</adouble>", XMLHandler.addTagValue( "adouble", Double.MIN_VALUE, false ) );
-    assertEquals( "<adouble>" + String.valueOf( Double.MIN_NORMAL ) + "</adouble>", XMLHandler.addTagValue( "adouble", Double.MIN_NORMAL, false ) );
+    assertEquals( "<adouble>" + Double.MAX_VALUE + "</adouble>", XMLHandler.addTagValue( "adouble", Double.MAX_VALUE, false ) );
+    assertEquals( "<adouble>" + Double.MIN_VALUE + "</adouble>", XMLHandler.addTagValue( "adouble", Double.MIN_VALUE, false ) );
+    assertEquals( "<adouble>" + Double.MIN_NORMAL + "</adouble>", XMLHandler.addTagValue( "adouble", Double.MIN_NORMAL, false ) );
   }
 
   @Test

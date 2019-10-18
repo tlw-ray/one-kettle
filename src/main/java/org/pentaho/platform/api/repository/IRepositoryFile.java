@@ -28,120 +28,120 @@ import java.util.Set;
 
 public interface IRepositoryFile extends ISearchable {
 
-  public static final char SEPARATOR = '/';
+  char SEPARATOR = '/';
 
   /**
    * This method's purpose is to allow Hibernate to initialize the ACLs from the data-store. Application clients
    * should likely use resetAccessControls.
    */
   @SuppressWarnings( "rawtypes" )
-  public void setAccessControls( List acls );
+  void setAccessControls(List acls);
 
   @SuppressWarnings( "rawtypes" )
-  public void resetAccessControls( List acls );
+  void resetAccessControls(List acls);
 
-  public int getRevision();
+  int getRevision();
 
-  public String getFileId();
+  String getFileId();
 
-  public String getSolution();
+  String getSolution();
 
-  public String getSolutionPath();
+  String getSolutionPath();
 
-  public String getFileName();
+  String getFileName();
 
-  public String getFullPath();
+  String getFullPath();
 
-  public void setParent( IRepositoryFile parent );
+  void setParent(IRepositoryFile parent);
 
-  public IRepositoryFile getParent();
+  IRepositoryFile getParent();
 
-  public ISolutionFile retrieveParent();
+  ISolutionFile retrieveParent();
 
   /*
    * (non-Javadoc)
    * 
    * @see org.pentaho.repository.ISearchable#getSearchableColumns()
    */
-  public String[] getSearchableColumns();
+  String[] getSearchableColumns();
 
   /*
    * (non-Javadoc)
    * 
    * @see org.pentaho.repository.ISearchable#getSearchableTable()
    */
-  public String getSearchableTable();
+  String getSearchableTable();
 
   /*
    * (non-Javadoc)
    * 
    * @see org.pentaho.repository.ISearchable#getPhraseSearchQueryName()
    */
-  public String getPhraseSearchQueryName();
+  String getPhraseSearchQueryName();
 
-  public boolean isDirectory();
+  boolean isDirectory();
 
   /**
    * @return Returns the childrenResources.
    */
   @SuppressWarnings( "rawtypes" )
-  public Set getChildrenFiles();
+  Set getChildrenFiles();
 
   /**
    * @param childrenResources
    *          The childrenResources to set.
    */
   @SuppressWarnings( "rawtypes" )
-  public void setChildrenFiles( Set childrenFiles );
+  void setChildrenFiles(Set childrenFiles);
 
-  public void addChildFile( IRepositoryFile file );
+  void addChildFile(IRepositoryFile file);
 
-  public void removeChildFile( IRepositoryFile file );
+  void removeChildFile(IRepositoryFile file);
 
   /**
    * @return Returns the data.
    */
-  public byte[] getData();
+  byte[] getData();
 
   /**
    * @param data
    *          The data to set.
    */
-  public void setData( byte[] data );
+  void setData(byte[] data);
 
-  public ISolutionFile[] listFiles( IFileFilter filter );
+  ISolutionFile[] listFiles(IFileFilter filter);
 
-  public ISolutionFile[] listFiles();
+  ISolutionFile[] listFiles();
 
-  public IRepositoryFile[] listRepositoryFiles();
+  IRepositoryFile[] listRepositoryFiles();
 
-  public int compareTo( Object o );
+  int compareTo(Object o);
 
   /**
    * @return Returns the modDate.
    */
-  public long getLastModified();
+  long getLastModified();
 
   /**
    * @param modDate
    *          The modDate to set.
    */
-  public void setLastModified( long modDate );
+  void setLastModified(long modDate);
 
-  public boolean containsActions();
+  boolean containsActions();
 
-  public boolean isRoot();
+  boolean isRoot();
 
   /**
    * @return a boolean indicating if this file has an extension
    */
-  public boolean hasExtension();
+  boolean hasExtension();
 
   /**
    * @return the extension (including the . seperator) of this file
    */
-  public String getExtension();
+  String getExtension();
 
-  public boolean exists();
+  boolean exists();
 
 }

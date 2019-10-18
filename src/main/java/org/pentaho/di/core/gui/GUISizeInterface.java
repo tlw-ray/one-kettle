@@ -23,11 +23,11 @@
 package org.pentaho.di.core.gui;
 
 public interface GUISizeInterface {
-  public int getWidth();
+  int getWidth();
 
-  public int getHeight();
+  int getHeight();
 
-  public void setWidth( int width );
+  void setWidth(int width);
 
-  public void setHeight( int height );
+  void setHeight(int height);
 }

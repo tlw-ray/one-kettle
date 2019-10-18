@@ -24,7 +24,7 @@ import org.dom4j.Document;
 
 public interface IXMLComponent {
 
-  public Document getXmlContent();
+  Document getXmlContent();
 
-  public String getContent( String mimeType );
+  String getContent(String mimeType);
 }

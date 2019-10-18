@@ -348,7 +348,7 @@ public abstract class CommonStepDialog<StepMetaType extends CommonStepMeta> exte
     }
 
     // Create the XML meta step
-    final StepMetaType populatedMeta = (StepMetaType) getPopulatedMeta();
+    final StepMetaType populatedMeta = getPopulatedMeta();
 
     final TransMeta previewMeta = TransPreviewFactory.generatePreviewTransformation(
       transMeta, populatedMeta, wStepname.getText() );

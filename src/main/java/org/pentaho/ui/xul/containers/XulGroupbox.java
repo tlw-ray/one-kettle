@@ -36,5 +36,5 @@ public interface XulGroupbox extends XulContainer, XulCaptionedPanel {
    * @param caption
    *          The groupbox's title text.
    */
-  public void setCaption( String caption );
+  void setCaption(String caption);
 }

@@ -111,11 +111,11 @@ public class MessageEncoderDecoderTest {
 
 
     assertTrue(
-      ( (RemoteSource) step ).getModelType() == ( (RemoteSource) ( (MetricsEvent) decodeMessage ).getSource() )
+      step.getModelType() == ( (RemoteSource) ( (MetricsEvent) decodeMessage ).getSource() )
         .getModelType() );
     assertTrue(
-      ( (RemoteSource) step ).getId()
-        .equals( ( (RemoteSource) ( (MetricsEvent) decodeMessage ).getSource() ).getId() ) );
+      step.getId()
+        .equals( ( (MetricsEvent) decodeMessage ).getSource().getId() ) );
   }
 
   @Test
@@ -128,9 +128,9 @@ public class MessageEncoderDecoderTest {
 
 
     assertTrue(
-      ( (RemoteSource) step ).getModelType() == ( (RemoteSource) ( (StatusEvent) decodeMessage ).getSource() )
+      step.getModelType() == ( (RemoteSource) ( (StatusEvent) decodeMessage ).getSource() )
         .getModelType() );
-    assertNull( ( (RemoteSource) ( (StatusEvent) decodeMessage ).getSource() ).getId() );
+    assertNull( ( (StatusEvent) decodeMessage ).getSource().getId() );
   }
 
   @Test

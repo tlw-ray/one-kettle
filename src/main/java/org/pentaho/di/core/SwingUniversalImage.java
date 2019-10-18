@@ -72,7 +72,7 @@ public abstract class SwingUniversalImage {
     angleDegree %= 360;
     angleRadians = Math.toRadians( angleDegree );
 
-    String key = width + "x" + height + "/" + Integer.toString( angleDegree );
+    String key = width + "x" + height + "/" + angleDegree;
     BufferedImage result = cache.get( key );
     if ( result == null ) {
       result = createDoubleBitmap( width, height );

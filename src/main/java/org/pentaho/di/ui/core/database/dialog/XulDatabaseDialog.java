@@ -142,7 +142,7 @@ public class XulDatabaseDialog {
     XulDomContainer container = null;
     try {
       databaseDialogInstance = new DatabaseConnectionDialog();
-      if ( ( (Shell) this.parentShell ).getText().contains( "Metadata Editor" ) ) {
+      if ( this.parentShell.getText().contains( "Metadata Editor" ) ) {
         databaseDialogInstance.registerClass( EXTENDED_WIDGET_ID, PMD_WIDGET_CLASSNAME );
       } else {
         databaseDialogInstance.registerClass( EXTENDED_WIDGET_ID, EXTENDED_WIDGET_CLASSNAME );

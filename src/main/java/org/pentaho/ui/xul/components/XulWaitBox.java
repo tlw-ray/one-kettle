@@ -19,25 +19,25 @@ package org.pentaho.ui.xul.components;
 
 public interface XulWaitBox extends XulProgressmeter {
 
-  public void setRunnable( WaitBoxRunnable runnable );
+  void setRunnable(WaitBoxRunnable runnable);
 
-  public void start();
+  void start();
 
-  public void stop();
+  void stop();
 
-  public void setModalParent( Object parent );
+  void setModalParent(Object parent);
 
-  public void setCanCancel( boolean canCancel );
+  void setCanCancel(boolean canCancel);
 
-  public void setTitle( String title );
+  void setTitle(String title);
 
-  public String getTitle();
+  String getTitle();
 
-  public void setMessage( String message );
+  void setMessage(String message);
 
-  public String getMessage();
+  String getMessage();
 
-  public void setDialogParent( Object parent );
+  void setDialogParent(Object parent);
 
-  public void setCancelLabel( String cancel );
+  void setCancelLabel(String cancel);
 }

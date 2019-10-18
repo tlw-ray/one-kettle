@@ -26,6 +26,6 @@ import org.pentaho.di.core.exception.KettleDatabaseException;
 
 public interface DatabaseFactoryInterface {
 
-  public String getConnectionTestReport( DatabaseMeta databaseMeta ) throws KettleDatabaseException;
+  String getConnectionTestReport(DatabaseMeta databaseMeta) throws KettleDatabaseException;
 
 }

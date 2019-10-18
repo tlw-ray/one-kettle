@@ -21,16 +21,16 @@ import org.pentaho.ui.xul.XulComponent;
 
 public interface XulTab extends XulComponent {
 
-  public void setLabel( String label );
+  void setLabel(String label);
 
-  public String getLabel();
+  String getLabel();
 
-  public void setOnclick( String onClick );
+  void setOnclick(String onClick);
 
-  public String getOnclick();
+  String getOnclick();
 
-  public void setDisabled( boolean disabled );
+  void setDisabled(boolean disabled);
 
-  public boolean isDisabled();
+  boolean isDisabled();
 
 }

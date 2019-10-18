@@ -26,13 +26,13 @@ public interface XulEventHandler {
    * 
    * @return The name of this event handler instance.
    */
-  public String getName();
+  String getName();
 
-  public void setName( String name );
+  void setName(String name);
 
-  public void setXulDomContainer( XulDomContainer xulDomContainer );
+  void setXulDomContainer(XulDomContainer xulDomContainer);
 
-  public XulDomContainer getXulDomContainer();
+  XulDomContainer getXulDomContainer();
 
   /**
    * A generic way of returning data from event handlers... can we do better than this? Handle return values from
@@ -40,7 +40,7 @@ public interface XulEventHandler {
    * 
    * @return any data associated with events that have been executed.
    */
-  public Object getData();
+  Object getData();
 
   /**
    * A generic way of passing data to the event handler. It seems we should maybe accept parameters instead of
@@ -49,6 +49,6 @@ public interface XulEventHandler {
    * @param any
    *          data events may want to operate on.
    */
-  public void setData( Object data );
+  void setData(Object data);
 
 }

@@ -12,11 +12,11 @@ public interface IMetaStoreObjectFactory {
    * @return the instantiated class 
    * 
    * */
-  public Object instantiateClass( String className, Map<String, String> context ) throws MetaStoreException;
+  Object instantiateClass(String className, Map<String, String> context) throws MetaStoreException;
 
   /** Extract plugin contextual information from the specified plugin object 
    * @param pluginObject the object to analyze
    * */
-  public Map<String, String> getContext( Object pluginObject ) throws MetaStoreException;
+  Map<String, String> getContext(Object pluginObject) throws MetaStoreException;
 
 }

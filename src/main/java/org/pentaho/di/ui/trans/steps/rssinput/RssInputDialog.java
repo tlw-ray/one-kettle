@@ -715,27 +715,20 @@ public class RssInputDialog extends BaseStepDialog implements StepDialogInterfac
       // Clear Fields Grid
       wFields.removeAll();
 
-      wFields.add( new String[] {
-        RssInputField.getColumnDesc( 0 ), RssInputField.getColumnDesc( 0 ), "String", "", "", "", "", "", "",
-        "N" } );
-      wFields.add( new String[] {
-        RssInputField.getColumnDesc( 1 ), RssInputField.getColumnDesc( 1 ), "String", "", "", "", "", "", "",
-        "N" } );
-      wFields.add( new String[] {
-        RssInputField.getColumnDesc( 2 ), RssInputField.getColumnDesc( 2 ), "String", "", "", "", "", "", "",
-        "N" } );
-      wFields.add( new String[] {
-        RssInputField.getColumnDesc( 3 ), RssInputField.getColumnDesc( 3 ), "String", "", "", "", "", "", "",
-        "N" } );
-      wFields.add( new String[] {
-        RssInputField.getColumnDesc( 4 ), RssInputField.getColumnDesc( 4 ), "String", "", "", "", "", "", "",
-        "N" } );
-      wFields.add( new String[] {
-        RssInputField.getColumnDesc( 5 ), RssInputField.getColumnDesc( 5 ), "String", "", "", "", "", "", "",
-        "N" } );
-      wFields.add( new String[] {
-        RssInputField.getColumnDesc( 6 ), RssInputField.getColumnDesc( 6 ), "String", "", "", "", "", "", "",
-        "N" } );
+      wFields.add(RssInputField.getColumnDesc( 0 ), RssInputField.getColumnDesc( 0 ), "String", "", "", "", "", "", "",
+              "N");
+      wFields.add(RssInputField.getColumnDesc( 1 ), RssInputField.getColumnDesc( 1 ), "String", "", "", "", "", "", "",
+              "N");
+      wFields.add(RssInputField.getColumnDesc( 2 ), RssInputField.getColumnDesc( 2 ), "String", "", "", "", "", "", "",
+              "N");
+      wFields.add(RssInputField.getColumnDesc( 3 ), RssInputField.getColumnDesc( 3 ), "String", "", "", "", "", "", "",
+              "N");
+      wFields.add(RssInputField.getColumnDesc( 4 ), RssInputField.getColumnDesc( 4 ), "String", "", "", "", "", "", "",
+              "N");
+      wFields.add(RssInputField.getColumnDesc( 5 ), RssInputField.getColumnDesc( 5 ), "String", "", "", "", "", "", "",
+              "N");
+      wFields.add(RssInputField.getColumnDesc( 6 ), RssInputField.getColumnDesc( 6 ), "String", "", "", "", "", "", "",
+              "N");
 
       wFields.removeEmptyRows();
       wFields.setRowNums();
@@ -771,7 +764,7 @@ public class RssInputDialog extends BaseStepDialog implements StepDialogInterfac
     if ( in.getUrl() != null ) {
       wUrlList.removeAll();
       for ( int i = 0; i < in.getUrl().length; i++ ) {
-        wUrlList.add( new String[] { in.getUrl()[i] } );
+        wUrlList.add(in.getUrl()[i]);
       }
       wUrlList.removeEmptyRows();
       wUrlList.setRowNums();

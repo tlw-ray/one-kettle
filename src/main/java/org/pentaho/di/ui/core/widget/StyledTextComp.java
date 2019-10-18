@@ -153,7 +153,7 @@ public class StyledTextComp extends Composite {
 
     // Create the drop target on the StyledText
     DropTarget dt = new DropTarget( styledText, DND.DROP_MOVE );
-    dt.setTransfer( new Transfer[] { TextTransfer.getInstance() } );
+    dt.setTransfer(TextTransfer.getInstance());
     dt.addDropListener( new DropTargetAdapter() {
       public void dragOver( DropTargetEvent e ) {
         styledText.setFocus();
@@ -360,11 +360,7 @@ public class StyledTextComp extends Composite {
       Clipboard clipboard = new Clipboard( xParent.getDisplay() );
       TextTransfer transfer = TextTransfer.getInstance();
       String text = (String) clipboard.getContents( transfer );
-      if ( text != null && text.length() > 0 ) {
-        return true;
-      } else {
-        return false;
-      }
+        return text != null && text.length() > 0;
     } catch ( Exception e ) {
       return false;
     }

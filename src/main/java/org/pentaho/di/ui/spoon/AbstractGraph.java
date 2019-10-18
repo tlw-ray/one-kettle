@@ -109,7 +109,7 @@ public abstract class AbstractGraph extends Composite {
   }
 
   protected void setZoomLabel() {
-    zoomLabel.setText( Integer.toString( Math.round( magnification * 100 ) ) + "%" );
+    zoomLabel.setText(Math.round(magnification * 100) + "%" );
   }
 
   protected <T extends GUIPositionInterface> void doRightClickSelection( T clicked, List<T> selection ) {

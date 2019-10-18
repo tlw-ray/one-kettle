@@ -21,5 +21,5 @@
 package org.pentaho.platform.api.repository2.unified;
 
 public interface ISourcesStreamEvents {
-  public void addListener( IStreamListener listener );
+  void addListener(IStreamListener listener);
 }

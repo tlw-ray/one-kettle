@@ -24,15 +24,15 @@ import java.util.List;
 
 public interface IPentahoSystemListeners {
 
-  public void notifySystemListenersOfStartup() throws PentahoSystemException;
+  void notifySystemListenersOfStartup() throws PentahoSystemException;
 
-  public void shutdown();
+  void shutdown();
 
-  public void addLogoutListener( final ILogoutListener listener );
+  void addLogoutListener(final ILogoutListener listener);
 
-  public ILogoutListener remove( final ILogoutListener listener );
+  ILogoutListener remove(final ILogoutListener listener);
 
-  public void invokeLogoutListeners( final IPentahoSession session );
+  void invokeLogoutListeners(final IPentahoSession session);
 
   /**
    * Registers custom handlers that are notified of both system startup and system shutdown events.
@@ -40,6 +40,6 @@ public interface IPentahoSystemListeners {
    * @param systemListeners
    *          the system event handlers
    */
-  public void setSystemListeners( List<IPentahoSystemListener> systemListeners );
+  void setSystemListeners(List<IPentahoSystemListener> systemListeners);
 
 }

@@ -24,15 +24,15 @@ import java.io.Serializable;
 
 public interface IUserSetting extends Serializable {
 
-  public void setSettingName( String settingName );
+  void setSettingName(String settingName);
 
-  public String getSettingName();
+  String getSettingName();
 
-  public void setSettingValue( String settingValue );
+  void setSettingValue(String settingValue);
 
-  public String getSettingValue();
+  String getSettingValue();
 
-  public String getUsername();
+  String getUsername();
 
-  public void setUsername( String username );
+  void setUsername(String username);
 }

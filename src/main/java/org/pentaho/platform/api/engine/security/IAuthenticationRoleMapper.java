@@ -32,7 +32,7 @@ public interface IAuthenticationRoleMapper {
    * @param ldapRole Third party role.
    * @return Returns the Pentaho security role.
    */
-  public String toPentahoRole( String thirdPartyRole );
+  String toPentahoRole(String thirdPartyRole);
 
   /**
    * Takes a Hitachi Vantara security role and returns the mapped third party role.
@@ -40,6 +40,6 @@ public interface IAuthenticationRoleMapper {
    * @param pentahoRole Pentaho security role.
    * @return Returns the third party role.
    */
-  public String fromPentahoRole( String pentahoRole );
+  String fromPentahoRole(String pentahoRole);
 
 }

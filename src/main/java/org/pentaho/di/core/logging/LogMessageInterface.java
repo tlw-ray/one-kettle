@@ -23,16 +23,16 @@
 package org.pentaho.di.core.logging;
 
 public interface LogMessageInterface {
-  public String getLogChannelId();
+  String getLogChannelId();
 
-  public String getMessage();
+  String getMessage();
 
-  public LogLevel getLevel();
+  LogLevel getLevel();
 
-  public String getSubject();
+  String getSubject();
 
-  public String getCopy();
+  String getCopy();
 
-  public Object[] getArguments();
+  Object[] getArguments();
 
 }

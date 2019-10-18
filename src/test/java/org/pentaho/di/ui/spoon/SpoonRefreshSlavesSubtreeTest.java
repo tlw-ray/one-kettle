@@ -76,7 +76,7 @@ public class SpoonRefreshSlavesSubtreeTest {
   @Test
   public void noConnectionsExist() {
     AbstractMeta meta = mock( AbstractMeta.class );
-    when( meta.getSlaveServers() ).thenReturn( Collections.<SlaveServer>emptyList() );
+    when( meta.getSlaveServers() ).thenReturn( Collections.emptyList() );
 
     callRefreshWith( meta );
     verifyNumberOfNodesCreated( 1 );

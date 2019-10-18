@@ -1273,9 +1273,7 @@ public class PropsUI extends Props {
   }
 
   private void resetRecentSearches() {
-    if ( properties.containsKey( STRING_RECENT_SEARCHES ) ) {
       properties.remove( STRING_RECENT_SEARCHES );
-    }
   }
 
   public void setRecentSearches( String recentSearches ) {

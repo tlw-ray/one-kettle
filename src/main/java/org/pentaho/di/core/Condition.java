@@ -499,13 +499,13 @@ public class Condition implements Cloneable, XMLInterface {
             break;
           case FUNC_CONTAINS:
             retval =
-              fieldMeta.getCompatibleString( field ) != null ? fieldMeta.getCompatibleString( field ).indexOf(
-                fieldMeta2.getCompatibleString( field2 ) ) >= 0 : false;
+                    fieldMeta.getCompatibleString(field) != null && fieldMeta.getCompatibleString(field).indexOf(
+                            fieldMeta2.getCompatibleString(field2)) >= 0;
             break;
           case FUNC_STARTS_WITH:
             retval =
-              fieldMeta.getCompatibleString( field ) != null ? fieldMeta
-                .getCompatibleString( field ).startsWith( fieldMeta2.getCompatibleString( field2 ) ) : false;
+                    fieldMeta.getCompatibleString(field) != null && fieldMeta
+                            .getCompatibleString(field).startsWith(fieldMeta2.getCompatibleString(field2));
             break;
           case FUNC_ENDS_WITH:
             String string = fieldMeta.getCompatibleString( field );

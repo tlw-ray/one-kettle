@@ -30,36 +30,36 @@ import javax.sql.DataSource;
  * 
  */
 public interface IDBDatasourceService {
-  public static final String JDBC_POOL = "JDBC_POOL"; //$NON-NLS-1$
-  public static final String JDBC_DATASOURCE = "DataSource"; //$NON-NLS-1$
-  public static final String IDBDATASOURCE_SERVICE = "IDBDatasourceService"; //$NON-NLS-1$
-  public static final String MAX_ACTIVE_KEY = "maxActive";
-  public static final String MAX_IDLE_KEY = "maxIdle";
-  public static final String MIN_IDLE_KEY = "minIdle";
-  public static final String MAX_WAIT_KEY = "maxWait";
-  public static final String QUERY_KEY = "validationQuery";
-  public static final String TEST_ON_BORROW = "testOnBorrow";
-  public static final String TEST_WHILE_IDLE = "testWhileIdle";
-  public static final String TEST_ON_RETURN = "testOnReturn";
-  public static final String DEFAULT_READ_ONLY = "defaultReadOnly";
-  public static final String DEFAULT_AUTO_COMMIT = "defaultAutoCommit";
-  public static final String DEFAULT_TRANSACTION_ISOLATION = "defaultTransactionIsolation";
-  public static final String TRANSACTION_ISOLATION_NONE_VALUE = "NONE";
-  public static final String DEFAULT_CATALOG = "defaultCatalog";
-  public static final String POOL_PREPARED_STATEMENTS = "poolPreparedStatements";
-  public static final String MAX_OPEN_PREPARED_STATEMENTS = "maxOpenPreparedStatements";
-  public static final String ACCESS_TO_UNDERLYING_CONNECTION_ALLOWED = "accessToUnderlyingConnectionAllowed";
-  public static final String TIME_BETWEEN_EVICTION_RUNS_MILLIS = "timeBetweenEvictionRunsMillis";
-  public static final String REMOVE_ABANDONED = "removeAbandoned";
-  public static final String REMOVE_ABANDONED_TIMEOUT = "removeAbandonedTimeout";
-  public static final String LOG_ABANDONED = "logAbandoned";
-  public static final String INITIAL_SIZE = "initialSize";
+  String JDBC_POOL = "JDBC_POOL"; //$NON-NLS-1$
+  String JDBC_DATASOURCE = "DataSource"; //$NON-NLS-1$
+  String IDBDATASOURCE_SERVICE = "IDBDatasourceService"; //$NON-NLS-1$
+  String MAX_ACTIVE_KEY = "maxActive";
+  String MAX_IDLE_KEY = "maxIdle";
+  String MIN_IDLE_KEY = "minIdle";
+  String MAX_WAIT_KEY = "maxWait";
+  String QUERY_KEY = "validationQuery";
+  String TEST_ON_BORROW = "testOnBorrow";
+  String TEST_WHILE_IDLE = "testWhileIdle";
+  String TEST_ON_RETURN = "testOnReturn";
+  String DEFAULT_READ_ONLY = "defaultReadOnly";
+  String DEFAULT_AUTO_COMMIT = "defaultAutoCommit";
+  String DEFAULT_TRANSACTION_ISOLATION = "defaultTransactionIsolation";
+  String TRANSACTION_ISOLATION_NONE_VALUE = "NONE";
+  String DEFAULT_CATALOG = "defaultCatalog";
+  String POOL_PREPARED_STATEMENTS = "poolPreparedStatements";
+  String MAX_OPEN_PREPARED_STATEMENTS = "maxOpenPreparedStatements";
+  String ACCESS_TO_UNDERLYING_CONNECTION_ALLOWED = "accessToUnderlyingConnectionAllowed";
+  String TIME_BETWEEN_EVICTION_RUNS_MILLIS = "timeBetweenEvictionRunsMillis";
+  String REMOVE_ABANDONED = "removeAbandoned";
+  String REMOVE_ABANDONED_TIMEOUT = "removeAbandonedTimeout";
+  String LOG_ABANDONED = "logAbandoned";
+  String INITIAL_SIZE = "initialSize";
 
   /**
    * This method clears the whole JNDI data source cache. The need exists because after a JNDI connection is edited the old data source must be
    * removed from the cache.
    */
-  public void clearCache();
+  void clearCache();
 
   /**
    * This method clears the specified JNDI data source from cache. 
@@ -68,7 +68,7 @@ public interface IDBDatasourceService {
    * 
    * @param dsName  The name of the data source to be removed from the cache.
    */
-  public void clearDataSource( String dsName );
+  void clearDataSource(String dsName);
 
   /**
    * Since JNDI is supported in different ways by different application servers, it's nearly impossible to have a standard
@@ -80,7 +80,7 @@ public interface IDBDatasourceService {
    * @return Returns DataSource if there is one bound in JNDI.
    * @throws DBDatasourceServiceException
    */
-  public DataSource getDataSource( String dsName ) throws DBDatasourceServiceException;
+  DataSource getDataSource(String dsName) throws DBDatasourceServiceException;
 
   /**
    * Since JNDI is supported in different ways by different application servers, it's nearly impossible to have a standard
@@ -92,7 +92,7 @@ public interface IDBDatasourceService {
    * @return Returns the bound data source name if it is bound in JNDI (e.g. "jdbc/SampleData").
    * @throws DBDatasourceServiceException
    */
-  public String getDSBoundName( String dsName ) throws DBDatasourceServiceException;
+  String getDSBoundName(String dsName) throws DBDatasourceServiceException;
 
   /**
    * Since JNDI is supported in different ways by different application servers, it's nearly impossible to have a standard
@@ -103,5 +103,5 @@ public interface IDBDatasourceService {
    *          The data source name (e.g. "jdbc/SampleData").
    * @return Returns the unbound data source name (e.g. "SampleData").
    */
-  public String getDSUnboundName( String dsName );
+  String getDSUnboundName(String dsName);
 }

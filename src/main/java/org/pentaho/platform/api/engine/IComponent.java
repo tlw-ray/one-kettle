@@ -39,7 +39,7 @@ public interface IComponent extends IAuditable, ILogger {
    * 
    * @return returns true if the Component initialized successfully, otherwise returns false
    */
-  public boolean init();
+  boolean init();
 
   /**
    * Validate that the Component has all the necessary inputs, outputs and resources it needs to execute
@@ -48,7 +48,7 @@ public interface IComponent extends IAuditable, ILogger {
    * @return one of IRuntimeContext validation conditions
    * @see org.pentaho.platform.api.engine.IRuntimeContext
    */
-  public int validate();
+  int validate();
 
   /**
    * Perform the Component execution; logic for what this Component does goes here.
@@ -56,47 +56,47 @@ public interface IComponent extends IAuditable, ILogger {
    * @return one of IRuntimeContext execution conditions
    * @see org.pentaho.platform.api.engine.IRuntimeContext
    */
-  public int execute();
+  int execute();
 
   /**
    * Allows the component to perform any cleanup after the execution of the action.
    * 
    */
-  public void done();
+  void done();
 
-  public void setInstanceId( String instanceId );
+  void setInstanceId(String instanceId);
 
-  public String getInstanceId();
+  String getInstanceId();
 
-  public void setActionName( String actionName );
+  void setActionName(String actionName);
 
-  public String getActionName();
+  String getActionName();
 
-  public void setProcessId( String processId );
+  void setProcessId(String processId);
 
-  public String getProcessId();
+  String getProcessId();
 
-  public void setComponentDefinition( Node componentDefinition );
+  void setComponentDefinition(Node componentDefinition);
 
-  public void setComponentDefinitionMap( Map<String, String> componentDefinitionMap );
+  void setComponentDefinitionMap(Map<String, String> componentDefinitionMap);
 
-  public Node getComponentDefinition();
+  Node getComponentDefinition();
 
-  public void setRuntimeContext( IRuntimeContext runtimeContext );
+  void setRuntimeContext(IRuntimeContext runtimeContext);
 
-  public IRuntimeContext getRuntimeContext();
+  IRuntimeContext getRuntimeContext();
 
-  public void setSession( IPentahoSession session );
+  void setSession(IPentahoSession session);
 
-  public IPentahoSession getSession();
-
-  @SuppressWarnings( "rawtypes" )
-  public void setMessages( List messaes );
+  IPentahoSession getSession();
 
   @SuppressWarnings( "rawtypes" )
-  public List getMessages();
+  void setMessages(List messaes);
 
-  public void setActionDefinition( IActionDefinition actionDefinition );
+  @SuppressWarnings( "rawtypes" )
+  List getMessages();
 
-  public IActionDefinition getActionDefinition();
+  void setActionDefinition(IActionDefinition actionDefinition);
+
+  IActionDefinition getActionDefinition();
 }

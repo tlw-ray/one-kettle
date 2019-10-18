@@ -378,7 +378,7 @@ public class JobEntryDeleteFoldersDialog extends JobEntryDialog implements JobEn
     fdlFields.top = new FormAttachment( wFilename, margin );
     wlFields.setLayoutData( fdlFields );
 
-    int rows = jobEntry.arguments == null ? 1 : ( jobEntry.arguments.length == 0 ? 0 : jobEntry.arguments.length );
+    int rows = jobEntry.arguments == null ? 1 : (jobEntry.arguments.length);
     final int FieldsRows = rows;
 
     ColumnInfo[] colinf =
@@ -406,7 +406,7 @@ public class JobEntryDeleteFoldersDialog extends JobEntryDialog implements JobEn
     // Add the file to the list of files...
     SelectionAdapter selA = new SelectionAdapter() {
       public void widgetSelected( SelectionEvent arg0 ) {
-        wFields.add( new String[] { wFilename.getText() } );
+        wFields.add(wFilename.getText());
         wFilename.setText( "" );
         wFields.removeEmptyRows();
         wFields.setRowNums();

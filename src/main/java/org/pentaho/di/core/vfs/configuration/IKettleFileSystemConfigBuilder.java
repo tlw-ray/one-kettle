@@ -37,11 +37,11 @@ public interface IKettleFileSystemConfigBuilder {
    * @param parameter
    * @return
    */
-  public String parseParameterName( String parameter, String scheme );
+  String parseParameterName(String parameter, String scheme);
 
   /**
    * Publicly expose a generic way to set parameters
    */
-  public void setParameter( FileSystemOptions opts, String name, String value, String fullParameterName,
-    String vfsUrl ) throws IOException;
+  void setParameter(FileSystemOptions opts, String name, String value, String fullParameterName,
+                    String vfsUrl) throws IOException;
 }

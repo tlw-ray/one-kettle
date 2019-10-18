@@ -108,7 +108,7 @@ public class GraphTest {
   public void testDelJobNoSelections() {
     JobMeta jobMeta = mock( JobMeta.class );
     Spoon spoon = mock( Spoon.class );
-    when( jobMeta.getSelectedEntries() ).thenReturn( Collections.<JobEntryCopy>emptyList() );
+    when( jobMeta.getSelectedEntries() ).thenReturn( Collections.emptyList() );
     JobEntryCopy je = mock( JobEntryCopy.class );
 
     JobGraph jobGraph = mock( JobGraph.class );

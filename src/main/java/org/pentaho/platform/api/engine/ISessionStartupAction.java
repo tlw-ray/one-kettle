@@ -22,15 +22,15 @@ package org.pentaho.platform.api.engine;
 
 public interface ISessionStartupAction {
 
-  public String getSessionType();
+  String getSessionType();
 
-  public void setSessionType( String sessionType );
+  void setSessionType(String sessionType);
 
-  public String getActionOutputScope();
+  String getActionOutputScope();
 
-  public void setActionOutputScope( String actionOutputScope );
+  void setActionOutputScope(String actionOutputScope);
 
-  public String getActionPath();
+  String getActionPath();
 
-  public void setActionPath( String actionPath );
+  void setActionPath(String actionPath);
 }

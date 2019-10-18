@@ -112,11 +112,7 @@ public class SpoonTabsDelegate extends SpoonDelegate {
               if ( reply == SWT.YES ) {
                 close = itemInterface.applyChanges();
               } else {
-                if ( reply == SWT.CANCEL ) {
-                  close = false;
-                } else {
-                  close = true;
-                }
+                  close = reply != SWT.CANCEL;
               }
             }
           }

@@ -85,9 +85,9 @@ public class SwtDialog extends AbstractSwtXulContainer implements XulDialog {
 
   protected enum BUTTON_ALIGN {
     START, CENTER, END, LEFT, RIGHT, MIDDLE
-  };
+  }
 
-  protected Map<String, SwtButton> activeDialogButtons = new HashMap<String, SwtButton>();
+    protected Map<String, SwtButton> activeDialogButtons = new HashMap<String, SwtButton>();
 
   protected String buttonlabelaccept;
 

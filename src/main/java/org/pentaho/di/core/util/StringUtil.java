@@ -151,12 +151,12 @@ public class StringUtil {
             // for safety: avoid recursive
             if ( recursion > 50 ) {
               // endless loops with stack overflow
-              throw new RuntimeException( "Endless loop detected for substitution of variable: " + (String) value );
+              throw new RuntimeException( "Endless loop detected for substitution of variable: " + value);
             }
             value = substitute( (String) value, variablesValues, open, close, ++recursion );
           }
         }
-        buffer.append( rest.substring( 0, i ) );
+        buffer.append(rest, 0, i);
         buffer.append( value );
         rest = rest.substring( j + close.length() );
       } else {
@@ -195,7 +195,7 @@ public class StringUtil {
       int j = rest.indexOf( HEX_CLOSE, i + HEX_OPEN.length() );
       // search for closing string
       if ( j > -1 ) {
-        buffer.append( rest.substring( 0, i ) );
+        buffer.append(rest, 0, i);
         String hexString = rest.substring( i + HEX_OPEN.length(), j );
         String[] hexStringArray = hexString.split( "," );
         int hexInt;
@@ -571,7 +571,7 @@ public class StringUtil {
   public static final String getVariableName( String variable ) {
     variable = variable.trim();
     if ( variable.startsWith( UNIX_OPEN ) || variable.startsWith( WINDOWS_OPEN ) || variable.startsWith( HEX_OPEN ) ) {
-      variable = variable.substring( 2, variable.length() );
+      variable = variable.substring( 2);
     }
     if ( variable.endsWith( UNIX_CLOSE ) || variable.endsWith( HEX_CLOSE ) ) {
       variable = variable.substring( 0, variable.length() - 1 );

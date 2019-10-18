@@ -32,41 +32,41 @@ import java.util.Collection;
  */
 public interface XulMenuList<T> extends XulContainer {
 
-  public void replaceAllItems( Collection<T> tees ) throws XulDomException;
+  void replaceAllItems(Collection<T> tees) throws XulDomException;
 
-  public String getSelectedItem();
+  String getSelectedItem();
 
-  public void setSelectedItem( T t );
+  void setSelectedItem(T t);
 
-  public void setSelectedIndex( int idx );
+  void setSelectedIndex(int idx);
 
-  public int getSelectedIndex();
+  int getSelectedIndex();
 
-  public void setOncommand( String command );
+  void setOncommand(String command);
 
-  public void setElements( Collection<T> elements );
+  void setElements(Collection<T> elements);
 
-  public Collection<T> getElements();
+  Collection<T> getElements();
 
-  public void setBinding( String binding );
+  void setBinding(String binding);
 
-  public String getBinding();
+  String getBinding();
 
-  public void setEditable( boolean editable );
+  void setEditable(boolean editable);
 
-  public boolean getEditable();
+  boolean getEditable();
 
   /**
    * Returns the user entered value in the case of an editable menulist
    * 
    * @return String user entered value
    */
-  public String getValue();
+  String getValue();
 
   /**
    * Sets teh value of the menulist if it's editable.
    * 
    * @param value
    */
-  public void setValue( String value );
+  void setValue(String value);
 }

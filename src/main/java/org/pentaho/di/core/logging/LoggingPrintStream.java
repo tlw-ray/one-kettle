@@ -46,7 +46,7 @@ public class LoggingPrintStream extends PrintStream {
 
   @Override
   public void println( boolean b ) {
-    log.logDebug( Boolean.toString( b ) + Const.CR );
+    log.logDebug(b + Const.CR );
   }
 
   @Override
@@ -56,7 +56,7 @@ public class LoggingPrintStream extends PrintStream {
 
   @Override
   public void println( char c ) {
-    log.logDebug( Character.toString( c ) + Const.CR );
+    log.logDebug(c + Const.CR );
   }
 
   @Override
@@ -76,7 +76,7 @@ public class LoggingPrintStream extends PrintStream {
 
   @Override
   public void println( double d ) {
-    log.logDebug( Double.toString( d ) + Const.CR );
+    log.logDebug(d + Const.CR );
   }
 
   @Override
@@ -86,7 +86,7 @@ public class LoggingPrintStream extends PrintStream {
 
   @Override
   public void println( float f ) {
-    log.logDebug( Float.toString( f ) + Const.CR );
+    log.logDebug(f + Const.CR );
   }
 
   @Override
@@ -96,7 +96,7 @@ public class LoggingPrintStream extends PrintStream {
 
   @Override
   public void println( int i ) {
-    log.logDebug( Integer.toString( i ) + Const.CR );
+    log.logDebug(i + Const.CR );
   }
 
   @Override
@@ -106,7 +106,7 @@ public class LoggingPrintStream extends PrintStream {
 
   @Override
   public void println( long l ) {
-    log.logDebug( Long.toString( l ) + Const.CR );
+    log.logDebug(l + Const.CR );
   }
 
   @Override

@@ -35,37 +35,37 @@ public interface ISequenceDefinition {
   /**
    * return code indicating a valid SequenceDefinition
    */
-  public static final int ACTION_SEQUENCE_DEFINITION_OK = 0;
+  int ACTION_SEQUENCE_DEFINITION_OK = 0;
 
   /**
    * return code indicating a problem with the action sequences's XML
    */
-  public static final int ACTION_SEQUENCE_DEFINITION_INVALID_XML = 1;
+  int ACTION_SEQUENCE_DEFINITION_INVALID_XML = 1;
 
   /**
    * return code indicating an action document that does validate against the action document schema
    */
-  public static final int ACTION_SEQUENCE_DEFINITION_INVALID_ACTION_DOC = 2;
+  int ACTION_SEQUENCE_DEFINITION_INVALID_ACTION_DOC = 2;
 
   /**
    * result-type value indicating the action should be not be displayed to users during navigation
    */
-  public static final String RESULT_TYPE_NONE = "none"; //$NON-NLS-1$
+  String RESULT_TYPE_NONE = "none"; //$NON-NLS-1$
 
   /**
    * result-type value indicating the action should be be displayed as a report to users during navigation
    */
-  public static final String RESULT_TYPE_REPORT = "report"; //$NON-NLS-1$
+  String RESULT_TYPE_REPORT = "report"; //$NON-NLS-1$
 
   /**
    * result-type value indicating the action should be be displayed as a business rule to users during navigation
    */
-  public static final String RESULT_TYPE_RULE = "rule"; //$NON-NLS-1$
+  String RESULT_TYPE_RULE = "rule"; //$NON-NLS-1$
 
   /**
    * result-type value indicating the action should be be displayed as a process to users during navigation
    */
-  public static final String RESULT_TYPE_PROCESS = "process"; //$NON-NLS-1$
+  String RESULT_TYPE_PROCESS = "process"; //$NON-NLS-1$
 
   /**
    * Returns a Map of the input parameters that are defined to this SequenceDefinition. These inputs are part of
@@ -74,7 +74,7 @@ public interface ISequenceDefinition {
    * @return Map of input parameters. Parameters take the name-value form.
    */
   @SuppressWarnings( "rawtypes" )
-  public Map getInputDefinitions();
+  Map getInputDefinitions();
 
   /**
    * Returns a Map of the input parameters that are defined to this SequenceDefinition for a specific parameter
@@ -88,7 +88,7 @@ public interface ISequenceDefinition {
    * @return Map of input parameters. Parameters take the name-value form.
    */
   @SuppressWarnings( "rawtypes" )
-  public Map getInputDefinitionsForParameterProvider( String parameterProviderName );
+  Map getInputDefinitionsForParameterProvider(String parameterProviderName);
 
   /**
    * Returns a Map of the output parameters that are defined to this SequenceDefinition. These outputs are part of
@@ -97,7 +97,7 @@ public interface ISequenceDefinition {
    * @return Map of output parameters. Parameters take the name-value form.
    */
   @SuppressWarnings( "rawtypes" )
-  public Map getOutputDefinitions();
+  Map getOutputDefinitions();
 
   /**
    * Returns the sequence's resource definitions as a Map. Resources are elements that exist outside of the action
@@ -106,14 +106,14 @@ public interface ISequenceDefinition {
    * @return Map of resource parameters. Parameters take the name-value form.
    */
   @SuppressWarnings( "rawtypes" )
-  public Map getResourceDefinitions();
+  Map getResourceDefinitions();
 
   /**
    * Returns the document name of the action sequence document that this SequenceDefinition came from.
    * 
    * @return the action sequence document name
    */
-  public String getSequenceName();
+  String getSequenceName();
 
   /**
    * Returns the type of the overall result of executing the action sequence document that this SequenceDefinition
@@ -124,49 +124,49 @@ public interface ISequenceDefinition {
    * 
    * @return the action sequence result type
    */
-  public String getResultType();
+  String getResultType();
 
   /**
    * Returns the author of the SequenceDefinition, if defined, or null otherwise.
    * 
    * @return this definition's author, or null if not defined.
    */
-  public String getAuthor();
+  String getAuthor();
 
   /**
    * Returns the description of this SequenceDefinition, if defined, or null otherwise.
    * 
    * @return this definition's description, or null if not defined.
    */
-  public String getDescription();
+  String getDescription();
 
   /**
    * Returns the URL to the Help page for this definition.
    * 
    * @return the definition's Help URL
    */
-  public String getHelp();
+  String getHelp();
 
   /**
    * Returns the title of this SequenceDefinition, if defined, or null otherwise.
    * 
    * @return this definition's title, or null if not defined.
    */
-  public String getTitle();
+  String getTitle();
 
   /**
    * Returns the solution name, which is the name at the root level of the solution path.
    * 
    * @return the name of the root level of this definition's solution
    */
-  public String getSolutionName();
+  String getSolutionName();
 
   /**
    * Returns the path relative to the solution name that will lead to this definition
    * 
    * @return the solution path to this definition
    */
-  public String getSolutionPath();
+  String getSolutionPath();
 
   /**
    * Get the logging level for this SequenceDefinition. The logging level may be set independently or may be
@@ -176,7 +176,7 @@ public interface ISequenceDefinition {
    * 
    * @see org.pentaho.platform.api.engine.ILogger
    */
-  public int getLoggingLevel();
+  int getLoggingLevel();
 
   /**
    * Returns the path to the icon for this SequenceDefinition. The path can be relative or absolute In the
@@ -185,6 +185,6 @@ public interface ISequenceDefinition {
    * 
    * @return the url to the icon
    */
-  public String getIcon();
+  String getIcon();
 
 }

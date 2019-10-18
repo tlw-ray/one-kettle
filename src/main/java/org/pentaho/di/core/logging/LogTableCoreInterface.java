@@ -38,7 +38,7 @@ public interface LogTableCoreInterface {
    * @param attributeInterface
    *          The attribute interface used to store the attributes
    */
-  public void saveToRepository( RepositoryAttributeInterface attributeInterface ) throws KettleException;
+  void saveToRepository(RepositoryAttributeInterface attributeInterface) throws KettleException;
 
   /**
    * Loads details of the log table from a repository.
@@ -46,37 +46,37 @@ public interface LogTableCoreInterface {
    * @param attributeInterface
    *          The attribute interface used to load the attributes
    */
-  public void loadFromRepository( RepositoryAttributeInterface attributeInterface ) throws KettleException;
+  void loadFromRepository(RepositoryAttributeInterface attributeInterface) throws KettleException;
 
-  public String getConnectionName();
+  String getConnectionName();
 
-  public void setConnectionName( String connectionName );
+  void setConnectionName(String connectionName);
 
-  public DatabaseMeta getDatabaseMeta();
+  DatabaseMeta getDatabaseMeta();
 
-  public List<LogTableField> getFields();
+  List<LogTableField> getFields();
 
   /**
    * @return The locally defined log schema name
    */
-  public String getSchemaName();
+  String getSchemaName();
 
   /**
    * @return The locally defined log table name
    */
-  public String getTableName();
+  String getTableName();
 
   /**
    * @return The actual schema name taking into account optionally defined KETTLE variables for global logging
    *         configuration
    */
-  public String getActualSchemaName();
+  String getActualSchemaName();
 
   /**
    * @return The actual table name taking into account optionally defined KETTLE variabled for global logging
    *         configuration
    */
-  public String getActualTableName();
+  String getActualTableName();
 
   /**
    * Assemble the log record from the logging subject.
@@ -91,69 +91,69 @@ public interface LogTableCoreInterface {
    * @throws in
    *           case there is a problem with the log record creation (incorrect settings, ...)
    */
-  public RowMetaAndData getLogRecord( LogStatus status, Object subject, Object parent ) throws KettleException;
+  RowMetaAndData getLogRecord(LogStatus status, Object subject, Object parent) throws KettleException;
 
-  public String getLogTableType();
+  String getLogTableType();
 
-  public String getConnectionNameVariable();
+  String getConnectionNameVariable();
 
-  public String getSchemaNameVariable();
+  String getSchemaNameVariable();
 
-  public String getTableNameVariable();
+  String getTableNameVariable();
 
-  public boolean isDefined();
+  boolean isDefined();
 
   /**
    * @return The string that describes the timeout in days (variable supported) as a floating point number
    */
-  public String getTimeoutInDays();
+  String getTimeoutInDays();
 
   /**
    * @return the field that represents the log date field or null if none was defined.
    */
-  public LogTableField getLogDateField();
+  LogTableField getLogDateField();
 
   /**
    * @return the field that represents the key to this logging table (batch id etc)
    */
-  public LogTableField getKeyField();
+  LogTableField getKeyField();
 
   /**
    * @return the appropriately quoted (by the database metadata) schema/table combination
    */
-  public String getQuotedSchemaTableCombination();
+  String getQuotedSchemaTableCombination();
 
   /**
    * @return the field that represents the logging text (or null if none is found)
    */
-  public LogTableField getLogField();
+  LogTableField getLogField();
 
   /**
    * @return the field that represents the status (or null if none is found)
    */
-  public LogTableField getStatusField();
+  LogTableField getStatusField();
 
   /**
    * @return the field that represents the number of errors (or null if none is found)
    */
-  public LogTableField getErrorsField();
+  LogTableField getErrorsField();
 
   /**
    * @return the field that represents the name of the object that is being used (or null if none is found)
    */
-  public LogTableField getNameField();
+  LogTableField getNameField();
 
   /**
    * @return A list of rows that contain the recommended indexed fields for this logging table.
    */
-  public List<RowMetaInterface> getRecommendedIndexes();
+  List<RowMetaInterface> getRecommendedIndexes();
 
   /**
    * Clone the log table
    *
    * @return The cloned log table
    */
-  public Object clone();
+  Object clone();
 
   /**
    * Replace the metadata of the logtable with the one of the specified
@@ -161,5 +161,5 @@ public interface LogTableCoreInterface {
    * @param logTableInterface
    *          the new log table details
    */
-  public void replaceMeta( LogTableCoreInterface logTableInterface );
+  void replaceMeta(LogTableCoreInterface logTableInterface);
 }

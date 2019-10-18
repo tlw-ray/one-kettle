@@ -21,31 +21,31 @@ import org.pentaho.ui.xul.XulComponent;
 
 public interface XulScale extends XulComponent {
 
-  public void setOrient( String orient );
+  void setOrient(String orient);
 
-  public String getOrient();
+  String getOrient();
 
-  public void setMin( int min );
+  void setMin(int min);
 
-  public int getMin();
+  int getMin();
 
-  public void setMax( int max );
+  void setMax(int max);
 
-  public int getMax();
+  int getMax();
 
-  public void setPageincrement( int increment );
+  void setPageincrement(int increment);
 
-  public int getPageincrement();
+  int getPageincrement();
 
-  public void setInc( int increment );
+  void setInc(int increment);
 
-  public int getInc();
+  int getInc();
 
-  public void setValue( int value );
+  void setValue(int value);
 
-  public int getValue();
+  int getValue();
 
-  public void setDir( String direction );
+  void setDir(String direction);
 
-  public String getDir();
+  String getDir();
 }

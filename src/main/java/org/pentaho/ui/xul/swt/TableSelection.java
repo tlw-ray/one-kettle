@@ -35,7 +35,7 @@ public enum TableSelection {
 
   private final int equivalent;
 
-  private TableSelection( int swtEquivalent ) {
+  TableSelection(int swtEquivalent) {
     this.equivalent = swtEquivalent;
   }
 

@@ -21,37 +21,37 @@ import org.pentaho.ui.xul.XulContainer;
 
 public interface XulTreeItem extends XulContainer {
 
-  public void setContainer( boolean isContainer );
+  void setContainer(boolean isContainer);
 
-  public boolean isContainer();
+  boolean isContainer();
 
-  public void setEmpty( boolean empty );
+  void setEmpty(boolean empty);
 
-  public boolean isEmpty();
+  boolean isEmpty();
 
-  public boolean isHierarchical();
+  boolean isHierarchical();
 
-  public XulTree getTree();
+  XulTree getTree();
 
-  public XulTreeRow getRow();
+  XulTreeRow getRow();
 
-  public void setRow( XulTreeRow row );
+  void setRow(XulTreeRow row);
 
-  public void remove();
+  void remove();
 
-  public void setImage( String src );
+  void setImage(String src);
 
-  public String getImage();
+  String getImage();
 
-  public void setExpanded( boolean expanded );
+  void setExpanded(boolean expanded);
 
-  public boolean isExpanded();
+  boolean isExpanded();
 
-  public void setBoundObject( Object obj );
+  void setBoundObject(Object obj);
 
-  public Object getBoundObject();
+  Object getBoundObject();
 
-  public void setClassname( String classname );
+  void setClassname(String classname);
 
-  public String getClassname();
+  String getClassname();
 }

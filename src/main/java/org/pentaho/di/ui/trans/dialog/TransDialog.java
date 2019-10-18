@@ -106,7 +106,7 @@ public class TransDialog extends Dialog {
 
   private static Class<?> PKG = TransDialog.class; // for i18n purposes, needed by Translator2!!
 
-  public static enum Tabs {
+  public enum Tabs {
     TRANS_TAB, PARAM_TAB, LOG_TAB, DATE_TAB, DEP_TAB, MISC_TAB, MONITOR_TAB, EXTRA_TAB,
   }
 

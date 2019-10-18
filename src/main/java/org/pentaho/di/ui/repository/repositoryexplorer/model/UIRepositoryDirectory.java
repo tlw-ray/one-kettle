@@ -234,9 +234,7 @@ public class UIRepositoryDirectory extends UIRepositoryObject {
       rep.deleteRepositoryDirectory( getDirectory() );
     }
     uiParent.getChildren().remove( this );
-    if ( uiParent.getRepositoryObjects().contains( this ) ) {
       uiParent.getRepositoryObjects().remove( this );
-    }
     uiParent.refresh();
   }
 
@@ -375,7 +373,7 @@ public class UIRepositoryDirectory extends UIRepositoryObject {
   }
 
   public String getPath() {
-    return ( (RepositoryDirectory) rd ).getPath();
+    return rd.getPath();
   }
 
   public boolean isVisible() {
@@ -455,12 +453,7 @@ public class UIRepositoryDirectory extends UIRepositoryObject {
     ObjectId id = getObjectId();
     ObjectId otherId = other.getObjectId();
     if ( id == null ) {
-      if ( otherId != null ) {
-        return false;
-      }
-    } else if ( !id.equals( otherId ) ) {
-      return false;
-    }
-    return true;
+        return otherId == null;
+    } else return id.equals(otherId);
   }
 }

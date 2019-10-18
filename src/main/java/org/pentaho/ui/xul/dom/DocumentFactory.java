@@ -47,7 +47,7 @@ public class DocumentFactory {
 
   public static Document createDocument() throws XulException {
     try {
-      Constructor constructor = concreteClass.getConstructor( new Class[] {} );
+      Constructor constructor = concreteClass.getConstructor();
       Object concreteDOM = constructor.newInstance( (Object[]) null );
       return (Document) concreteDOM;
 
@@ -60,7 +60,7 @@ public class DocumentFactory {
   public static Document createDocument( Object dom ) throws XulException {
     try {
       Class cls = dom.getClass();
-      Constructor constructor = concreteClass.getConstructor( new Class[] { cls } );
+      Constructor constructor = concreteClass.getConstructor(cls);
       Object concreteDOM = constructor.newInstance( dom );
       return (Document) concreteDOM;
 
@@ -74,7 +74,7 @@ public class DocumentFactory {
     try {
       Object element =
           elementClass.getConstructor( new Class[] { String.class, XulComponent.class } ).newInstance(
-              new Object[] { name, xulElement } );
+                  name, xulElement);
       return (Element) element;
 
     } catch ( Exception e ) {
@@ -85,7 +85,7 @@ public class DocumentFactory {
 
   public static Element createElement( String name ) throws XulException {
     try {
-      Object element = elementClass.getConstructor( new Class[] { String.class } ).newInstance( new Object[] { name } );
+      Object element = elementClass.getConstructor( new Class[] { String.class } ).newInstance(name);
       return (Element) element;
 
     } catch ( Exception e ) {

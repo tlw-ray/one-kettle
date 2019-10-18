@@ -20,7 +20,7 @@ import org.pentaho.metastore.util.MetaStoreUtil;
 public class MetaStoreFactory<T> {
 
   private enum AttributeType {
-    STRING, INTEGER, LONG, DATE, BOOLEAN, LIST, NAME_REFERENCE, FILENAME_REFERENCE, FACTORY_NAME_REFERENCE, ENUM, POJO;
+    STRING, INTEGER, LONG, DATE, BOOLEAN, LIST, NAME_REFERENCE, FILENAME_REFERENCE, FACTORY_NAME_REFERENCE, ENUM, POJO
   }
 
   private static final String OBJECT_FACTORY_CONTEXT = "_ObjectFactoryContext_";

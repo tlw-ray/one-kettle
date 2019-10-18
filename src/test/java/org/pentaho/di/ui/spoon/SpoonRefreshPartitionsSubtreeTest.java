@@ -69,7 +69,7 @@ public class SpoonRefreshPartitionsSubtreeTest {
   @Test
   public void noPartitionsExist() {
     TransMeta meta = mock( TransMeta.class );
-    when( meta.getPartitionSchemas() ).thenReturn( Collections.<PartitionSchema>emptyList() );
+    when( meta.getPartitionSchemas() ).thenReturn( Collections.emptyList() );
 
     callRefreshWith( meta );
     verifyNumberOfNodesCreated( 1 );
@@ -103,7 +103,7 @@ public class SpoonRefreshPartitionsSubtreeTest {
   }
 
   private static PartitionSchema mockSchema( String name ) {
-    PartitionSchema schema = new PartitionSchema( name, Collections.<String>emptyList() );
+    PartitionSchema schema = new PartitionSchema( name, Collections.emptyList() );
     return schema;
   }
 }

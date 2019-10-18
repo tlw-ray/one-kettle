@@ -35,5 +35,5 @@ public interface IPentahoRequestContext {
    * possible that a servlet container may match a context by more than one context path. In such cases this method
    * will return the actual context path used by the request
    */
-  public String getContextPath();
+  String getContextPath();
 }

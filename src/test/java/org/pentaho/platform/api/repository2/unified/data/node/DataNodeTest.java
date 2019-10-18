@@ -98,7 +98,7 @@ public class DataNodeTest {
     assertTrue( origNode.equals( dupNode ) );
     assertFalse( node.equals( dupNode ) );
     assertFalse( node.equals( null ) );
-    assertFalse( node.equals( new String() ) );
+    assertFalse( node.equals("") );
     DataNode diffNameNode = new DataNode( "diffName" );
     diffNameNode.setId( NODE_ID );
     assertFalse( node.equals( diffNameNode ) );

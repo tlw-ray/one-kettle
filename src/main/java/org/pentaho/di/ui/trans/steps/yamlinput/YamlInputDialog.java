@@ -847,7 +847,7 @@ public class YamlInputDialog extends BaseStepDialog implements StepDialogInterfa
     // Add the file to the list of files...
     SelectionAdapter selA = new SelectionAdapter() {
       public void widgetSelected( SelectionEvent arg0 ) {
-        wFilenameList.add( new String[] { wFilename.getText(), wFilemask.getText() } );
+        wFilenameList.add(wFilename.getText(), wFilemask.getText());
         wFilename.setText( "" );
         wFilemask.setText( "" );
         wFilenameList.removeEmptyRows();
@@ -1123,9 +1123,8 @@ public class YamlInputDialog extends BaseStepDialog implements StepDialogInterfa
       wFilenameList.removeAll();
 
       for ( int i = 0; i < in.getFileName().length; i++ ) {
-        wFilenameList.add( new String[] {
-          in.getFileName()[i], in.getFileMask()[i], in.getRequiredFilesDesc( in.getFileRequired()[i] ),
-          in.getRequiredFilesDesc( in.getIncludeSubFolders()[i] ) } );
+        wFilenameList.add(in.getFileName()[i], in.getFileMask()[i], in.getRequiredFilesDesc( in.getFileRequired()[i] ),
+                in.getRequiredFilesDesc( in.getIncludeSubFolders()[i] ));
       }
       wFilenameList.removeEmptyRows();
       wFilenameList.setRowNums();

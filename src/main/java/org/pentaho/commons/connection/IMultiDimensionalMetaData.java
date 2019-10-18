@@ -25,21 +25,21 @@ public interface IMultiDimensionalMetaData {
    *         number of dimensions and N is the number of rows. With the 0 index for M representing the innermost
    *         dimension. This method has been moved here from IPentahoMetaData
    */
-  public Object[][] getRowHeaders();
+  Object[][] getRowHeaders();
 
   /**
    * Gets the column names. These names include the names of the row dimensions and flattened column headers
    * 
    * @return
    */
-  public String[] getFlattenedColumnNames();
+  String[] getFlattenedColumnNames();
 
   /**
    * Gets the names of the row dimensions
    * 
    * @return
    */
-  public String[] getRowHeaderNames();
+  String[] getRowHeaderNames();
 
   /**
    * Sets the column name format string. The values in the column headers will be inserted into the format template
@@ -51,6 +51,6 @@ public interface IMultiDimensionalMetaData {
    * 
    * @param formatStr
    */
-  public void setColumnNameFormat( String formatStr );
+  void setColumnNameFormat(String formatStr);
 
 }

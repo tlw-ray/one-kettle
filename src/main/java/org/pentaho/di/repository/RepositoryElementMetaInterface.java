@@ -30,18 +30,18 @@ import java.util.Date;
  */
 public interface RepositoryElementMetaInterface extends RepositoryObjectInterface {
 
-  public Date getModifiedDate();
+  Date getModifiedDate();
 
-  public String getModifiedUser();
+  String getModifiedUser();
 
-  public RepositoryObjectType getObjectType();
+  RepositoryObjectType getObjectType();
 
-  public String getDescription();
+  String getDescription();
 
-  public boolean isDeleted();
+  boolean isDeleted();
 
-  public void setName( String name );
+  void setName(String name);
 
-  public RepositoryDirectoryInterface getRepositoryDirectory();
+  RepositoryDirectoryInterface getRepositoryDirectory();
 
 }

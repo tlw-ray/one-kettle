@@ -32,9 +32,9 @@ import org.pentaho.ui.xul.XulContainer;
 public interface XulEditpanel extends XulContainer, XulCaptionedPanel {
   enum TYPE {
     COLLAPSIBLE, CLOSABLE
-  };
+  }
 
-  void setType( String type );
+    void setType( String type );
 
   String getType();
 

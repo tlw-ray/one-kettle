@@ -104,7 +104,7 @@ public class SwtWaitBox extends SwtProgressmeter implements XulWaitBox {
 
     gd = new GridData( SWT.CENTER, SWT.CENTER, true, true, 1, 1 );
     gd.grabExcessHorizontalSpace = true;
-    gd.horizontalAlignment = gd.FILL;
+    gd.horizontalAlignment = GridData.FILL;
 
     progressmeter.setLayoutData( gd );
     // progressmeter.setSize(150, progressmeter.getSize().y);

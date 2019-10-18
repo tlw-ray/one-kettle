@@ -41,9 +41,9 @@ public interface IApplicationContext {
    *          a path to a location that exists relative to the solution tree
    * @return fully qualified path to the requested location in the solution tree
    */
-  public String getSolutionPath( String path );
+  String getSolutionPath(String path);
 
-  public String getSolutionRootPath();
+  String getSolutionRootPath();
 
   /**
    * Used for content output (temporary and otherwise), returns a fully qualified path suitable for creating a
@@ -53,7 +53,7 @@ public interface IApplicationContext {
    *          Relative path within the solution to the file location. Solution path will be pre-pended
    * @return Fully qualified path
    */
-  public String getFileOutputPath( String path );
+  String getFileOutputPath(String path);
 
   /**
    * Retrieves the descriptive name of the platform application.
@@ -64,7 +64,7 @@ public interface IApplicationContext {
    * @return the descriptive server name as specified in the system settings, or
    *         "Pentaho Business Intelligence Platform" by default.
    */
-  public String getPentahoServerName();
+  String getPentahoServerName();
 
   /**
    * @deprecated Returns a URL to the server application, up to and including the context.
@@ -75,7 +75,7 @@ public interface IApplicationContext {
    * @return the URL to the server application context root. Use getFullyQualifiedServerURL instead
    */
   @Deprecated
-  public String getBaseUrl();
+  String getBaseUrl();
 
   /**
    * Returns a fully qualified URL to the server application, up to and including the context.
@@ -85,7 +85,7 @@ public interface IApplicationContext {
    * 
    * @return the URL to the server application context root.
    */
-  public String getFullyQualifiedServerURL();
+  String getFullyQualifiedServerURL();
 
   /**
    * Returns the path to the web application or standalone application. This is only used in a few places, like
@@ -95,7 +95,7 @@ public interface IApplicationContext {
    *          a path to a location that exists relative to the application root directory
    * @return the path to the server application root
    */
-  public String getApplicationPath( String path );
+  String getApplicationPath(String path);
 
   /**
    * If there were any other properties set (for example, initParams in the servlet context), this will let you
@@ -105,7 +105,7 @@ public interface IApplicationContext {
    *          property Name
    * @return string property value
    */
-  public String getProperty( String key );
+  String getProperty(String key);
 
   /**
    * If there were any other properties set (for example, initParams in the servlet context), this will let you
@@ -117,47 +117,47 @@ public interface IApplicationContext {
    *          default value if the property is not specified.
    * @return string property value
    */
-  public String getProperty( String key, String defaultValue );
+  String getProperty(String key, String defaultValue);
 
   /**
    * Adds an entry point handler. The entry point handler is called when actions start on a particular thread.
    * 
    * @param entryPoint
    */
-  public void addEntryPointHandler( IPentahoSystemEntryPoint entryPoint );
+  void addEntryPointHandler(IPentahoSystemEntryPoint entryPoint);
 
   /**
    * Removes an entry point handler.
    * 
    * @param entryPoint
    */
-  public void removeEntryPointHandler( IPentahoSystemEntryPoint entryPoint );
+  void removeEntryPointHandler(IPentahoSystemEntryPoint entryPoint);
 
   /**
    * Adds an exit point handler. The exit point handler is called when actions stop on a particular thread
    * 
    * @param entryPoint
    */
-  public void addExitPointHandler( IPentahoSystemExitPoint exitPoint );
+  void addExitPointHandler(IPentahoSystemExitPoint exitPoint);
 
   /**
    * Removes an exit point handler.
    * 
    * @param exitPoint
    */
-  public void removeExitPointHandler( IPentahoSystemExitPoint exitPoint );
+  void removeExitPointHandler(IPentahoSystemExitPoint exitPoint);
 
   /**
    * Invokes all entry point handlers.
    */
-  public void invokeEntryPoints();
+  void invokeEntryPoints();
 
   /**
    * Invokes all exit point handlers.
    */
-  public void invokeExitPoints();
+  void invokeExitPoints();
 
-  public void setFullyQualifiedServerURL( String url );
+  void setFullyQualifiedServerURL(String url);
 
   /**
    * @deprecated
@@ -165,13 +165,13 @@ public interface IApplicationContext {
    *          Use setFullyQualifiedServerURL instead
    */
   @Deprecated
-  public void setBaseUrl( String url );
+  void setBaseUrl(String url);
 
-  public void setSolutionRootPath( String path );
+  void setSolutionRootPath(String path);
 
-  public Object getContext();
+  Object getContext();
 
-  public void setContext( Object context );
+  void setContext(Object context);
 
   /**
    * Creates a temporary file in the specified parent folder and optionally tracks it for deletion on session
@@ -190,8 +190,8 @@ public interface IApplicationContext {
    * @return
    * @throws IOException
    */
-  public File createTempFile( final IPentahoSession session, final String prefix, final String extension,
-      final File parentDir, boolean trackFile ) throws IOException;
+  File createTempFile(final IPentahoSession session, final String prefix, final String extension,
+                      final File parentDir, boolean trackFile) throws IOException;
 
   /**
    * Creates a temporary file in the system/tmp solutions folder
@@ -207,7 +207,7 @@ public interface IApplicationContext {
    * @return
    * @throws IOException
    */
-  public File createTempFile( final IPentahoSession session, final String prefix, final String extension,
-      boolean trackFile ) throws IOException;
+  File createTempFile(final IPentahoSession session, final String prefix, final String extension,
+                      boolean trackFile) throws IOException;
 
 }

@@ -129,13 +129,8 @@ public class RepositoryFileAcl implements Serializable {
       return false;
     }
     if ( owner == null ) {
-      if ( other.owner != null ) {
-        return false;
-      }
-    } else if ( !owner.equals( other.owner ) ) {
-      return false;
-    }
-    return true;
+        return other.owner == null;
+    } else return owner.equals(other.owner);
   }
 
   @Override
@@ -166,7 +161,7 @@ public class RepositoryFileAcl implements Serializable {
     }
 
     public Builder( final RepositoryFileSid owner ) {
-      this( (Serializable) null, owner );
+      this(null, owner );
     }
 
     public Builder( final Serializable id, final RepositoryFileSid owner ) {

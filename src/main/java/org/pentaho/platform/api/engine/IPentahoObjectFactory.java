@@ -49,7 +49,7 @@ import java.util.Map;
 public interface IPentahoObjectFactory {
 
   // Available Factory impls are ordered by priority. If one is not provided this default value is used.
-  public static final int DEFAULT_PRIORTIY = 0;
+  int DEFAULT_PRIORTIY = 0;
 
   /**
    * Retrieves an instance of a Pentaho BI Server API interface using the simple interface name (interfaceClass
@@ -65,7 +65,7 @@ public interface IPentahoObjectFactory {
    * @throws ObjectFactoryException
    *           if the object cannot be retrieved
    */
-  public <T> T get( Class<T> interfaceClass, final IPentahoSession session ) throws ObjectFactoryException;
+  <T> T get(Class<T> interfaceClass, final IPentahoSession session) throws ObjectFactoryException;
 
   /**
    * Retrieves an instance of a Pentaho BI Server API interface by the given object key. If an appropriate
@@ -84,7 +84,7 @@ public interface IPentahoObjectFactory {
    * 
    * @Deprecated use {@link IPentahoObjectFactory#get(Class, IPentahoSession)} instead}
    */
-  public <T> T get( Class<T> interfaceClass, String key, final IPentahoSession session ) throws ObjectFactoryException;
+  <T> T get(Class<T> interfaceClass, String key, final IPentahoSession session) throws ObjectFactoryException;
 
   /**
    * Retrieves an instance of a Pentaho BI Server API interface using the simple interface name (interfaceClass
@@ -103,7 +103,7 @@ public interface IPentahoObjectFactory {
    * @throws ObjectFactoryException
    *           if the object cannot be retrieved
    */
-  public <T> T get( Class<T> interfaceClass, final IPentahoSession session, Map<String, String> properties )
+  <T> T get(Class<T> interfaceClass, final IPentahoSession session, Map<String, String> properties)
     throws ObjectFactoryException;
 
   /**
@@ -113,7 +113,7 @@ public interface IPentahoObjectFactory {
    *          the object identifier, typically the interface name
    * @return true if the object is defined
    */
-  public boolean objectDefined( String key );
+  boolean objectDefined(String key);
 
   /**
    * Checks if the implementation for the given interface is defined.
@@ -122,7 +122,7 @@ public interface IPentahoObjectFactory {
    *          Interface or class literal to search for
    * @return true if the object is defined
    */
-  public boolean objectDefined( Class<?> clazz );
+  boolean objectDefined(Class<?> clazz);
 
   /**
    * Provides the concrete Class defined for the given object key.
@@ -133,7 +133,7 @@ public interface IPentahoObjectFactory {
    * @throws RuntimeException
    *           of some type indicating a problem loading or finding the implementing class
    */
-  public Class<?> getImplementingClass( String key );
+  Class<?> getImplementingClass(String key);
 
   /**
    * Initialize the factory with optional configuration file and runtime context. Calling this method should also
@@ -146,7 +146,7 @@ public interface IPentahoObjectFactory {
    *          varies depending on the framework used by the factory and the environment in which the application is
    *          running.
    */
-  public void init( String configFile, Object context );
+  void init(String configFile, Object context);
 
   /**
    * 

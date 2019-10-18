@@ -21,5 +21,5 @@
 package org.pentaho.platform.api.repository2.unified;
 
 public interface IStreamListener {
-  public void fileCreated( String filePath );
+  void fileCreated(String filePath);
 }

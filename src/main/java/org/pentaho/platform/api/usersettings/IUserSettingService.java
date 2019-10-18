@@ -26,19 +26,19 @@ import org.pentaho.platform.api.usersettings.pojo.IUserSetting;
 import java.util.List;
 
 public interface IUserSettingService extends IPentahoInitializer {
-  public void deleteUserSettings();
+  void deleteUserSettings();
 
   // if a global setting exists, the user setting has priority
-  public List<IUserSetting> getUserSettings();
+  List<IUserSetting> getUserSettings();
 
-  public IUserSetting getUserSetting( String settingName, String defaultValue );
+  IUserSetting getUserSetting(String settingName, String defaultValue);
 
-  public void setUserSetting( String settingName, String settingValue );
+  void setUserSetting(String settingName, String settingValue);
 
   // the implementation should allow only an administrator to set global user settings
-  public List<IUserSetting> getGlobalUserSettings();
+  List<IUserSetting> getGlobalUserSettings();
 
-  public IUserSetting getGlobalUserSetting( String settingName, String defaultValue );
+  IUserSetting getGlobalUserSetting(String settingName, String defaultValue);
 
-  public void setGlobalUserSetting( String settingName, String settingValue );
+  void setGlobalUserSetting(String settingName, String settingValue);
 }

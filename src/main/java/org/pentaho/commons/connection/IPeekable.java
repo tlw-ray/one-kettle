@@ -24,6 +24,6 @@ public interface IPeekable {
    * 
    * @return
    */
-  public Object[] peek();
+  Object[] peek();
 
 }

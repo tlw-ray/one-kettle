@@ -38,7 +38,7 @@ import org.pentaho.vfs.ui.CustomVfsUiPanel;
 import org.pentaho.vfs.ui.VfsFileChooserDialog;
 
 public class FileChooserTest {
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     FileSystemManager fsManager = null;
     FileObject maybeRootFile = null;
     try {
@@ -79,9 +79,9 @@ public class FileChooserTest {
     MenuItem fileOpenItem = new MenuItem(fileSubMenu, SWT.CASCADE);
     fileOpenItem.setText(Messages.getString("FileChooserTest.open")); //$NON-NLS-1$
     fileOpenItem.setAccelerator(SWT.CTRL + 'O');
-    final String filters[] = new String[] { "*.*", "*.xml;*.XML;", "*.class", "*.map" }; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
-    final String filterNames[] = new String[] {
-        Messages.getString("FileChooserTest.allFiles"), Messages.getString("FileChooserTest.xmlFiles"), Messages.getString("FileChooserTest.javaFiles"), Messages.getString("FileChooserTest.mapFiles") }; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
+      final String[] filters = new String[]{"*.*", "*.xml;*.XML;", "*.class", "*.map"}; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
+      final String[] filterNames = new String[]{
+              Messages.getString("FileChooserTest.allFiles"), Messages.getString("FileChooserTest.xmlFiles"), Messages.getString("FileChooserTest.javaFiles"), Messages.getString("FileChooserTest.mapFiles")}; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
     fileOpenItem.addSelectionListener(new SelectionListener() {
       public void widgetDefaultSelected(SelectionEvent arg0) {
       }

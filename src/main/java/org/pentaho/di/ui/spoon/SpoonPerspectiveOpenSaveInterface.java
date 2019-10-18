@@ -33,7 +33,7 @@ public interface SpoonPerspectiveOpenSaveInterface {
   /**
    * Open a file/object
    */
-  public void open();
+  void open();
 
   /**
    * Import from a file (extension driven by the perspective)
@@ -41,7 +41,7 @@ public interface SpoonPerspectiveOpenSaveInterface {
    * @param filename
    *          the file to read from
    */
-  public void importFile( String filename );
+  void importFile(String filename);
 
   /**
    * Save the specified file/object
@@ -50,7 +50,7 @@ public interface SpoonPerspectiveOpenSaveInterface {
    *          The object to be saved.
    * @return true if the object was saved
    */
-  public boolean save( EngineMetaInterface meta );
+  boolean save(EngineMetaInterface meta);
 
   /**
    * Export to a file

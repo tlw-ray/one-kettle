@@ -74,7 +74,7 @@ public class ThemeTest {
     Theme diffTheme = new Theme( newId, newName, ROOT_DIR );
     assertTrue( theme.equals( theme ) );
     assertFalse( theme.equals( null ) );
-    assertFalse( theme.equals( new String() ) );
+    assertFalse( theme.equals("") );
     assertFalse( theme.equals( new Theme( ID, null, ROOT_DIR ) ) );
     assertFalse( theme.equals( new Theme( ID, "newName", ROOT_DIR ) ) );
     assertTrue( theme.equals( new Theme( ID, NAME, ROOT_DIR ) ) );

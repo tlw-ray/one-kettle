@@ -21,10 +21,10 @@
 package org.pentaho.platform.api.util;
 
 public interface IPasswordService {
-  public static final String IPASSWORD_SERVICE = "IPasswordService"; //$NON-NLS-1$
+  String IPASSWORD_SERVICE = "IPasswordService"; //$NON-NLS-1$
 
-  public String decrypt( String encryptedPassword ) throws PasswordServiceException;
+  String decrypt(String encryptedPassword) throws PasswordServiceException;
 
-  public String encrypt( String password ) throws PasswordServiceException;
+  String encrypt(String password) throws PasswordServiceException;
 
 }

@@ -34,23 +34,23 @@ public interface IServiceConfig {
    * 
    * @return a unique id for this web service
    */
-  public String getId();
+  String getId();
 
   /**
    * Returns the enabled state of this service
    * 
    * @return Current enable/disable state
    */
-  public boolean isEnabled();
+  boolean isEnabled();
 
-  public Collection<Class<?>> getExtraClasses();
+  Collection<Class<?>> getExtraClasses();
 
   /**
    * Returns the web service bean class
    * 
    * @return bean class or id by which the class can be looked up
    */
-  public Class<?> getServiceClass();
+  Class<?> getServiceClass();
 
   /**
    * Returns the localized title for this web service. This is shown on the services list page. Defaults to service
@@ -58,15 +58,15 @@ public interface IServiceConfig {
    * 
    * @return natural language name for the service
    */
-  public String getTitle();
+  String getTitle();
 
   /**
    * Returns the localized title for this web service. This is shown on the services list page.
    * 
    * @return Description
    */
-  public String getDescription();
+  String getDescription();
 
-  public String getServiceType();
+  String getServiceType();
 
 }

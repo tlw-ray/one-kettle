@@ -27,15 +27,15 @@ import java.util.List;
  */
 @Deprecated
 public interface IAclHolder {
-  public static final int ACCESS_TYPE_READ = 0;
+  int ACCESS_TYPE_READ = 0;
 
-  public static final int ACCESS_TYPE_WRITE = 1;
+  int ACCESS_TYPE_WRITE = 1;
 
-  public static final int ACCESS_TYPE_UPDATE = 2;
+  int ACCESS_TYPE_UPDATE = 2;
 
-  public static final int ACCESS_TYPE_DELETE = 3;
+  int ACCESS_TYPE_DELETE = 3;
 
-  public static final int ACCESS_TYPE_ADMIN = 4;
+  int ACCESS_TYPE_ADMIN = 4;
 
   /**
    * Returns the ACLs on the existing object. Never returns null. If you need to get the effective access controls,
@@ -44,7 +44,7 @@ public interface IAclHolder {
    * 
    * @return List of ACLs for this object only.
    */
-  public List<IPentahoAclEntry> getAccessControls();
+  List<IPentahoAclEntry> getAccessControls();
 
   /**
    * Sets the access controls on this specific object. Currently doesn't check whether the acls are the same as
@@ -52,7 +52,7 @@ public interface IAclHolder {
    * 
    * @param acls
    */
-  public void setAccessControls( List<IPentahoAclEntry> acls );
+  void setAccessControls(List<IPentahoAclEntry> acls);
 
   /**
    * Replaces existing access controls with a new list of access controls. This method should be used in favor of
@@ -60,7 +60,7 @@ public interface IAclHolder {
    * 
    * @param acls
    */
-  public void resetAccessControls( List<IPentahoAclEntry> acls );
+  void resetAccessControls(List<IPentahoAclEntry> acls);
 
   /**
    * Examines whether the existing object has ACLs. If not, it will return the parent's ACLs. All the way up to the
@@ -68,5 +68,5 @@ public interface IAclHolder {
    * 
    * @return List containing all the AclEntry objects
    */
-  public List<IPentahoAclEntry> getEffectiveAccessControls();
+  List<IPentahoAclEntry> getEffectiveAccessControls();
 }

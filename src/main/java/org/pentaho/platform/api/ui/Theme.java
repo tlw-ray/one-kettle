@@ -84,11 +84,7 @@ public class Theme implements Serializable {
 
     Theme theme = (Theme) o;
 
-    if ( name != null ? !name.equals( theme.name ) : theme.name != null ) {
-      return false;
-    }
-
-    return true;
+      return name != null ? name.equals(theme.name) : theme.name == null;
   }
 
   @Override

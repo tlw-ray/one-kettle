@@ -37,7 +37,7 @@ public interface MetaStoreElementListener {
    * @param element
    *          The element that was created
    */
-  public void elementCreated( String namespace, String elementTypeId, IMetaStoreElement element );
+  void elementCreated(String namespace, String elementTypeId, IMetaStoreElement element);
 
   /**
    * This method is called when an element is changed
@@ -51,8 +51,8 @@ public interface MetaStoreElementListener {
    * @param newElement
    *          The element after the change
    */
-  public void elementUpdated( String namespace, String elementTypeId, IMetaStoreElement oldElement,
-      IMetaStoreElement newElement );
+  void elementUpdated(String namespace, String elementTypeId, IMetaStoreElement oldElement,
+                      IMetaStoreElement newElement);
 
   /**
    * This method is called after an element was deleted from the store
@@ -64,5 +64,5 @@ public interface MetaStoreElementListener {
    * @param element
    *          The element that was deleted
    */
-  public void elementDeleted( String namespace, String elementTypeId, IMetaStoreElement element );
+  void elementDeleted(String namespace, String elementTypeId, IMetaStoreElement element);
 }

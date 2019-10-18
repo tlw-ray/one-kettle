@@ -148,7 +148,7 @@ public class SpoonTest {
         return null;
       }
     } ).when( spoon ).toClipboard( anyString() );
-    spoon.copySelected( transMeta, transMeta.getSelectedSteps(), Collections.<NotePadMeta>emptyList() );
+    spoon.copySelected( transMeta, transMeta.getSelectedSteps(), Collections.emptyList() );
   }
 
   /**
@@ -190,7 +190,7 @@ public class SpoonTest {
       }
     } ).when( spoon ).toClipboard( anyString() );
 
-    spoon.copySelected( transMeta, transMeta.getSelectedSteps(), Collections.<NotePadMeta>emptyList() );
+    spoon.copySelected( transMeta, transMeta.getSelectedSteps(), Collections.emptyList() );
   }
 
   /**

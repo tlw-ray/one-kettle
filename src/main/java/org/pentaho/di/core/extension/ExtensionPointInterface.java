@@ -37,5 +37,5 @@ public interface ExtensionPointInterface {
    * @throws KettleException
    *           In case the plugin decides that an error has occurred and the parent process should stop.
    */
-  public void callExtensionPoint( LogChannelInterface log, Object object ) throws KettleException;
+  void callExtensionPoint(LogChannelInterface log, Object object) throws KettleException;
 }

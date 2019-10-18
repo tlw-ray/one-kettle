@@ -69,7 +69,7 @@ public class SimpleFileRegistry extends SimpleRegistry {
    * @see org.pentaho.metadata.registry.SimpleRegistry#load()
    */
   @Override
-  protected void load() throws InvalidPropertiesFormatException, IOException {
+  protected void load() throws IOException {
 
     // empty the registry
     clear();

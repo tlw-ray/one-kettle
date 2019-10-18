@@ -64,13 +64,9 @@ public class XMLTransfer extends ByteArrayTransfer {
   }
 
   boolean checkMyType( Object object ) {
-    if ( object == null || !( object instanceof DragAndDropContainer ) ) {
-      return false;
-    }
+      return object != null && object instanceof DragAndDropContainer;
 
     // System.out.println("Object class: "+object.getClass().toString());
-
-    return true;
   }
 
   public Object nativeToJava( TransferData transferData ) {

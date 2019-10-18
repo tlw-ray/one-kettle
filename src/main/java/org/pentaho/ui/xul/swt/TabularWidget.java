@@ -22,14 +22,14 @@ import org.eclipse.swt.widgets.Composite;
 
 public interface TabularWidget {
 
-  public int getItemHeight();
+  int getItemHeight();
 
-  public void addSelectionListener( SelectionListener listener );
+  void addSelectionListener(SelectionListener listener);
 
-  public Composite getComposite();
+  Composite getComposite();
 
-  public Object[][] getValues();
+  Object[][] getValues();
 
-  public int getSelectionIndex();
+  int getSelectionIndex();
 
 }

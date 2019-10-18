@@ -735,7 +735,7 @@ public class MappingDialog extends BaseStepDialog implements StepDialogInterface
   }
 
   public RowMetaInterface getFieldsFromStep( String stepname, boolean getTransformationStep, boolean mappingInput ) throws KettleException {
-    if ( !( mappingInput ^ getTransformationStep ) ) {
+    if (mappingInput == getTransformationStep) {
       if ( Utils.isEmpty( stepname ) ) {
         // If we don't have a specified stepname we return the input row
         // metadata

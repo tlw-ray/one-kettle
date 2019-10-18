@@ -2774,8 +2774,8 @@ public class ValueMetaBase implements ValueMetaInterface {
   }
 
   @Override
-  public Object readData( DataInputStream inputStream ) throws KettleFileException, KettleEOFException,
-    SocketTimeoutException {
+  public Object readData( DataInputStream inputStream ) throws KettleFileException,
+          SocketTimeoutException {
     try {
       // Is the value NULL?
       if ( inputStream.readBoolean() ) {
@@ -3337,7 +3337,7 @@ public class ValueMetaBase implements ValueMetaInterface {
                 string = XMLHandler.date2string( (Date) object );
                 break;
               case TYPE_BIGNUMBER:
-                string = ( (BigDecimal) object ).toString();
+                string = object.toString();
                 break;
               case TYPE_BOOLEAN:
                 string = Boolean.toString( (Boolean) object );
@@ -3349,7 +3349,7 @@ public class ValueMetaBase implements ValueMetaInterface {
                 string = XMLHandler.timestamp2string( (Timestamp)  object );
                 break;
               case TYPE_INET:
-                string = ( (InetAddress) object ).toString();
+                string = object.toString();
                 break;
               default:
                 throw new IOException( toString() + " : Unable to serialize data type to XML " + getType() );
@@ -3596,9 +3596,7 @@ public class ValueMetaBase implements ValueMetaInterface {
       // If it's a string and the string is empty, it's a null value as well
       //
       if ( isString() ) {
-        if ( value.toString().length() == 0 ) {
-          return true;
-        }
+          return value.toString().length() == 0;
       }
 
       // We tried everything else so we assume this value is not null.
@@ -4168,10 +4166,10 @@ public class ValueMetaBase implements ValueMetaInterface {
           hash ^= Arrays.hashCode( (byte[]) object );
           break;
         case TYPE_TIMESTAMP:
-          hash ^= ((Timestamp) object ).hashCode();
+          hash ^= object.hashCode();
           break;
         case TYPE_INET:
-          hash ^= ((InetAddress) object ).hashCode();
+          hash ^= object.hashCode();
           break;
         case TYPE_NONE:
           break;
@@ -4319,12 +4317,8 @@ public class ValueMetaBase implements ValueMetaInterface {
           // Otherwise, we can just ignore it...
           //
           if ( isDate() ) {
-            if ( ( getConversionMask() != null && getConversionMask().equals( storageMetadata.getConversionMask() ) )
-                || ( getConversionMask() == null && storageMetadata.getConversionMask() == null ) ) {
-              identicalFormat = true;
-            } else {
-              identicalFormat = false;
-            }
+              identicalFormat = (getConversionMask() != null && getConversionMask().equals(storageMetadata.getConversionMask()))
+                      || (getConversionMask() == null && storageMetadata.getConversionMask() == null);
           } else if ( isNumeric() ) {
             // Check the lengths first
             //
@@ -4342,13 +4336,9 @@ public class ValueMetaBase implements ValueMetaInterface {
               //
               if ( ( getGroupingSymbol() != null && getGroupingSymbol().equals( storageMetadata.getGroupingSymbol() ) )
                   || ( getConversionMask() == null && storageMetadata.getConversionMask() == null ) ) {
-                if ( ( getDecimalFormat( false ) != null && getDecimalFormat( false ).equals(
-                    storageMetadata.getDecimalFormat( false ) ) )
-                    || ( getDecimalFormat( false ) == null && storageMetadata.getDecimalFormat( false ) == null ) ) {
-                  identicalFormat = true;
-                } else {
-                  identicalFormat = false;
-                }
+                  identicalFormat = (getDecimalFormat(false) != null && getDecimalFormat(false).equals(
+                          storageMetadata.getDecimalFormat(false)))
+                          || (getDecimalFormat(false) == null && storageMetadata.getDecimalFormat(false) == null);
               } else {
                 identicalFormat = false;
               }

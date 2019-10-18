@@ -45,7 +45,7 @@ public class VfsHelper {
     throw new FileSystemException(Messages.getString("VfsHelper.operationFailed")); //$NON-NLS-1$
   }
   
-  public FileObject saveFileAs(String uri, InputStream is) throws FileSystemException, IOException {
+  public FileObject saveFileAs(String uri, InputStream is) throws IOException {
     if (fsManager != null) {
       FileObject savedFile = fsManager.resolveFile(uri);
       if (!savedFile.exists()) {

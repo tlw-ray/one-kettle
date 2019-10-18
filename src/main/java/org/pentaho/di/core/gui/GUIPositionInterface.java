@@ -23,13 +23,13 @@
 package org.pentaho.di.core.gui;
 
 public interface GUIPositionInterface {
-  public Point getLocation();
+  Point getLocation();
 
-  public void setLocation( Point p );
+  void setLocation(Point p);
 
-  public void setLocation( int x, int y );
+  void setLocation(int x, int y);
 
-  public boolean isSelected();
+  boolean isSelected();
 
-  public void setSelected( boolean selected );
+  void setSelected(boolean selected);
 }

@@ -100,14 +100,14 @@ public class RepositoryExportProgressDialog {
     // this hack is only to support dog-nail build process for <...>
     // and keep base interfaces without changes - getExporter should 
     // directly return IRepositoryExporterFeedback.
-    final boolean isFeedback = ( exporter instanceof IRepositoryExporterFeedback ) ? true : false;
+    final boolean isFeedback = exporter instanceof IRepositoryExporterFeedback;
     IRunnableWithProgress op = new IRunnableWithProgress() {
       public void run( IProgressMonitor monitor ) throws InvocationTargetException, InterruptedException {
         try {
           exporter.setImportRulesToValidate( importRules );
           ProgressMonitorAdapter pMonitor = new ProgressMonitorAdapter( monitor );
           if ( isFeedback ) {
-            IRepositoryExporterFeedback fExporter = IRepositoryExporterFeedback.class.cast( exporter );
+            IRepositoryExporterFeedback fExporter = (IRepositoryExporterFeedback) exporter;
             List<ExportFeedback> ret =
                 fExporter.exportAllObjectsWithFeedback( pMonitor, filename, dir, "all" );
             list.addAll( ret );
@@ -127,7 +127,7 @@ public class RepositoryExportProgressDialog {
 
       if ( !pmd.getProgressMonitor().isCanceled() && isFeedback ) {
         // show some results here.
-        IRepositoryExporterFeedback fExporter = IRepositoryExporterFeedback.class.cast( exporter );
+        IRepositoryExporterFeedback fExporter = (IRepositoryExporterFeedback) exporter;
         showExportResultStatus( list, fExporter.isRulesViolation() );
       }
     } catch ( InvocationTargetException e ) {

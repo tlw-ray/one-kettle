@@ -70,7 +70,7 @@ public abstract class BaseEvent<S extends LogicalModelElement, D extends Seriali
       result = 31 * result + ( ( (RemoteSource) source ).getModelType() != null
         ? ( (RemoteSource) source ).getModelType().toString().hashCode() : 0 );
       result =
-        31 * result + ( ( (RemoteSource) source ).getId() != null ? ( (RemoteSource) source ).getId().hashCode() : 0 );
+        31 * result + ( source.getId() != null ? source.getId().hashCode() : 0 );
     } else {
       result = source.getId().hashCode();
       result = 31 * result + data.hashCode();

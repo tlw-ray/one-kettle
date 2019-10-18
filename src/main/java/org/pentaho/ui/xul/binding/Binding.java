@@ -26,11 +26,11 @@ import java.util.List;
 
 public interface Binding {
 
-  public enum Type {
+  enum Type {
     ONE_WAY, BI_DIRECTIONAL
-  };
+  }
 
-  void setBindingType( Type t );
+    void setBindingType( Type t );
 
   Type getBindingType();
 

@@ -30,73 +30,73 @@ import java.util.Properties;
  */
 public interface IPentahoConnection {
 
-  public static final int NONE_DATASOURCE = -1;
+  int NONE_DATASOURCE = -1;
 
-  public static final String SQL_DATASOURCE = "SQL"; //$NON-NLS-1$
+  String SQL_DATASOURCE = "SQL"; //$NON-NLS-1$
 
-  public static final String MDX_DATASOURCE = "MDX"; //$NON-NLS-1$
+  String MDX_DATASOURCE = "MDX"; //$NON-NLS-1$
 
-  public static final String MDX_OLAP4J_DATASOURCE = "MDXOlap4j"; //$NON-NLS-1$
+  String MDX_OLAP4J_DATASOURCE = "MDXOlap4j"; //$NON-NLS-1$
 
-  public static final String XML_DATASOURCE = "XML"; //$NON-NLS-1$
+  String XML_DATASOURCE = "XML"; //$NON-NLS-1$
 
-  public static final String HQL_DATASOURCE = "HQL"; //$NON-NLS-1$
+  String HQL_DATASOURCE = "HQL"; //$NON-NLS-1$
 
   /**
    * Setting for class name used to look up a connection in the pentaho.xml.
    */
-  public static final String CLASSNAME_KEY = "className"; //$NON-NLS-1$
+  String CLASSNAME_KEY = "className"; //$NON-NLS-1$
 
   /**
    * Defines the XML element in the component-definition that holds the JNDI (Java Naming and Directory Interface) name
    * for the database connection.
    */
-  public static final String JNDI_NAME_KEY = "jndiName"; //$NON-NLS-1$
+  String JNDI_NAME_KEY = "jndiName"; //$NON-NLS-1$
 
   /**
    * Defines the XML element in the component-definition that holds the JDBC driver.
    */
-  public static final String DRIVER_KEY = "driver"; //$NON-NLS-1$
+  String DRIVER_KEY = "driver"; //$NON-NLS-1$
 
   /**
    * Defines the XML element in the component-definition that holds the JDBC URL.
    */
-  public static final String LOCATION_KEY = "location"; //$NON-NLS-1$
+  String LOCATION_KEY = "location"; //$NON-NLS-1$
 
   /**
    * Defines the XML element in the component-definition that holds the user name used to connect to the JDBC driver.
    */
-  public static final String USERNAME_KEY = "userName"; //$NON-NLS-1$
+  String USERNAME_KEY = "userName"; //$NON-NLS-1$
 
   /**
    * Defines the XML element in the component-definition that holds the password used to connect to the JDBC driver.
    */
-  public static final String PASSWORD_KEY = "password"; //$NON-NLS-1$
+  String PASSWORD_KEY = "password"; //$NON-NLS-1$
 
   /**
    * Defines the XML element in the component-definition that holds the database query (e.g. MDX, SQL).
    */
-  public static final String QUERY_KEY = "query"; //$NON-NLS-1$
+  String QUERY_KEY = "query"; //$NON-NLS-1$
 
   /**
    * Standard key to use for a connection property.
    */
-  public static final String CONNECTION = "connection"; //$NON-NLS-1$
+  String CONNECTION = "connection"; //$NON-NLS-1$
 
   /**
    * Standard key to use for a connection's name property.
    */
-  public static final String CONNECTION_NAME = "connection_name"; //$NON-NLS-1$
+  String CONNECTION_NAME = "connection_name"; //$NON-NLS-1$
 
   /**
    * Standard key to use for a provider property.
    */
-  public static final String PROVIDER = "provider"; //$NON-NLS-1$
+  String PROVIDER = "provider"; //$NON-NLS-1$
 
   /**
    * Array of the XML element keys defined above.
    */
-  public static final String[] KEYS = new String[] { CLASSNAME_KEY, JNDI_NAME_KEY, DRIVER_KEY, LOCATION_KEY,
+  String[] KEYS = new String[] { CLASSNAME_KEY, JNDI_NAME_KEY, DRIVER_KEY, LOCATION_KEY,
     USERNAME_KEY, PASSWORD_KEY, QUERY_KEY };
 
   /**
@@ -189,13 +189,13 @@ public interface IPentahoConnection {
   /**Checks if the connection is initialized or not.
    * @return Return true if the connection has been properly initialized.
    */
-  public boolean initialized();
+  boolean initialized();
 
   /**
    * Returns the connection type.
    * 
    * @return Returns the type of the connection.
    */
-  public String getDatasourceType();
+  String getDatasourceType();
 
 }

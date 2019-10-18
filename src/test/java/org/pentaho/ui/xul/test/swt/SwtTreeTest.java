@@ -131,7 +131,7 @@ public class SwtTreeTest {
     perp.name = "Wil";
     perp.city = "Narcossee";
     perp.titles = new Vector<String>();
-    perp.titles.addAll( Arrays.asList( new String[] { "Blogger", "Actor", "Static coder" } ) );
+    perp.titles.addAll( Arrays.asList("Blogger", "Actor", "Static coder") );
     perp.disposition = "Feeling it";
     peeps.add( perp );
 
@@ -140,7 +140,7 @@ public class SwtTreeTest {
     perp.name = "Mike";
     perp.city = "St Cloud";
     perp.titles = new Vector<String>();
-    perp.titles.addAll( Arrays.asList( new String[] { "Add clicker", "Prettiest man in OSS", "GWT ninja" } ) );
+    perp.titles.addAll( Arrays.asList("Add clicker", "Prettiest man in OSS", "GWT ninja") );
     perp.disposition = "Weary";
     peeps.add( perp );
     tree3.setElements( peeps );

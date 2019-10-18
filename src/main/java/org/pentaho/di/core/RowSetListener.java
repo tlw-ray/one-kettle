@@ -23,5 +23,5 @@
 package org.pentaho.di.core;
 
 public interface RowSetListener {
-  public void isEmpty( RowSet rowSet );
+  void isEmpty(RowSet rowSet);
 }

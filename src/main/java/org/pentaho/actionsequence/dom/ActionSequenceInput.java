@@ -147,7 +147,7 @@ public class ActionSequenceInput extends AbstractIOElement implements IActionSeq
         for ( Iterator keyIter = paramMap.keySet().iterator(); keyIter.hasNext(); ) {
           defaultTableModel.addColumn( keyIter.next().toString() );
         }
-        defaultTableModel.addRow( (String[]) paramMap.values().toArray( new String[0] ) );
+        defaultTableModel.addRow(paramMap.values().toArray( new String[0] ));
         initPropertyMap( defValElement, defaultTableModel );
       }
       ActionSequenceDocument.fireIoChanged( this );

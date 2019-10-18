@@ -38,7 +38,7 @@ import java.util.Map;
  */
 public interface IPlatformPlugin extends IPluginLifecycleListener {
 
-  public enum ClassLoaderType {
+  enum ClassLoaderType {
     DEFAULT, OVERRIDING
   }
 
@@ -47,57 +47,57 @@ public interface IPlatformPlugin extends IPluginLifecycleListener {
    * 
    * @return the plugin id
    */
-  public String getId();
+  String getId();
 
   /**
    * A short description of where this plugin came from, e.g. "biserver/solutions/pluginA"
    * 
    * @return
    */
-  public String getSourceDescription();
+  String getSourceDescription();
 
   /**
    * Returns the list of content generators for this plug-in
    * 
    * @return
    */
-  public List<IContentGeneratorInfo> getContentGenerators();
+  List<IContentGeneratorInfo> getContentGenerators();
 
   /**
    * Returns a list of overlays for this plug-in
    * 
    * @return
    */
-  public List<XulOverlay> getOverlays();
+  List<XulOverlay> getOverlays();
 
   /**
    * Returns a list of content info objects for this plug-in
    * 
    * @return
    */
-  public List<IContentInfo> getContentInfos();
+  List<IContentInfo> getContentInfos();
 
   /**
    * Returns a list of perspective objects for this plug-in
    * 
    * @return plugin perspectives
    */
-  public List<IPluginPerspective> getPluginPerspectives();
+  List<IPluginPerspective> getPluginPerspectives();
 
   /**
    * Returns a list of bean configurations for this plugin-in
    */
-  public Collection<PluginBeanDefinition> getBeans();
+  Collection<PluginBeanDefinition> getBeans();
 
   /**
    * Returns the Spring application context for this plugin
    */
-  public ListableBeanFactory getBeanFactory();
+  ListableBeanFactory getBeanFactory();
 
   /**
    * Returns a list of static resource paths for this plugin-in
    */
-  public Map<String, String> getStaticResourceMap();
+  Map<String, String> getStaticResourceMap();
 
   /**
    * Returns the fully qualified name of the lifecycle listener class defined by this plugin. The class must be a
@@ -105,7 +105,7 @@ public interface IPlatformPlugin extends IPluginLifecycleListener {
    * 
    * @return lifecycle listener class name
    */
-  public String getLifecycleListenerClassname();
+  String getLifecycleListenerClassname();
 
   /**
    * Registers a lifecycle listener with this plugin. This listener will be notified when lifecycle events occur on
@@ -114,28 +114,28 @@ public interface IPlatformPlugin extends IPluginLifecycleListener {
    * @param listener
    *          a lifecycle listener
    */
-  public void addLifecycleListener( IPluginLifecycleListener listener );
+  void addLifecycleListener(IPluginLifecycleListener listener);
 
   /*
    * (non-Javadoc)
    * 
    * @see org.pentaho.platform.api.engine.IPluginLifecycleListener#init()
    */
-  public void init() throws PluginLifecycleException;
+  void init() throws PluginLifecycleException;
 
   /*
    * (non-Javadoc)
    * 
    * @see org.pentaho.platform.api.engine.IPluginLifecycleListener#loaded()
    */
-  public void loaded() throws PluginLifecycleException;
+  void loaded() throws PluginLifecycleException;
 
   /*
    * (non-Javadoc)
    * 
    * @see org.pentaho.platform.api.engine.IPluginLifecycleListener#unLoaded()
    */
-  public void unLoaded() throws PluginLifecycleException;
+  void unLoaded() throws PluginLifecycleException;
 
   /**
    * The storage mechanism for a plugin to know what ISolutionFileMetaProvider class should be used for a
@@ -144,14 +144,14 @@ public interface IPlatformPlugin extends IPluginLifecycleListener {
    * @return a map of content types (extensions) keys and ISolutionFileMetaProvider (or deprecated
    *         IFileInfoGenerator) classnames for values
    */
-  public Map<String, String> getMetaProviderMap();
+  Map<String, String> getMetaProviderMap();
 
   /**
    * Returns the list of the webservices defined by this plugin.
    * 
    * @return the definitions of the webservices for this plugin
    */
-  public Collection<PluginServiceDefinition> getServices();
+  Collection<PluginServiceDefinition> getServices();
 
   /**
    * Indicates what kind of classloader should be used to load classes and resources from this plugin. The default
@@ -160,7 +160,7 @@ public interface IPlatformPlugin extends IPluginLifecycleListener {
    * @see IPlatformPlugin.ClassLoaderType
    * @return the type of classloader to use for this plugin
    */
-  public ClassLoaderType getLoaderType();
+  ClassLoaderType getLoaderType();
 
   /**
    * Return a List of scripts registered for a given context.

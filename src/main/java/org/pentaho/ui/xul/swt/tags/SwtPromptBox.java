@@ -20,6 +20,7 @@ package org.pentaho.ui.xul.swt.tags;
 import org.eclipse.jface.dialogs.IDialogConstants;
 import org.eclipse.jface.dialogs.IInputValidator;
 import org.eclipse.jface.dialogs.InputDialog;
+import org.eclipse.jface.window.Window;
 import org.eclipse.swt.graphics.Image;
 import org.pentaho.ui.xul.XulComponent;
 import org.pentaho.ui.xul.XulDomContainer;
@@ -65,7 +66,7 @@ public final class SwtPromptBox extends MessageDialogBase implements XulPromptBo
       parentImg = getParentObject().getImage();
     }
     if ( parentImg != null ) {
-      dlg.setDefaultImage( parentImg );
+      Window.setDefaultImage( parentImg );
     }
     int retVal = dlg.open();
     notifyListeners( retVal );

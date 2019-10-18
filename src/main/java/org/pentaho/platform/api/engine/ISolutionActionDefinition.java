@@ -41,7 +41,7 @@ public interface ISolutionActionDefinition {
    * @return Map of input parameters. Parameters take the name-value form.
    */
   @SuppressWarnings( "rawtypes" )
-  public Map getActionInputDefinitions();
+  Map getActionInputDefinitions();
 
   /**
    * 
@@ -51,7 +51,7 @@ public interface ISolutionActionDefinition {
    *          String name of the parameter to get a mapping for
    * @return String name of the parameter that 'name' is mapped to
    */
-  public String getMappedInputName( String name );
+  String getMappedInputName(String name);
 
   /**
    * Returns a <tt>Map</tt> of the output parameters that are defined for this ActionDefinition.
@@ -59,7 +59,7 @@ public interface ISolutionActionDefinition {
    * @return <tt>Map</tt> of output parameters. Parameters take the name-value form.
    */
   @SuppressWarnings( "rawtypes" )
-  public Map getActionOutputDefinitions();
+  Map getActionOutputDefinitions();
 
   /**
    * 
@@ -69,7 +69,7 @@ public interface ISolutionActionDefinition {
    *          String name of the parameter to get a mapping for
    * @return String name of the parameter that 'name' is mapped to
    */
-  public String getMappedOutputName( String name );
+  String getMappedOutputName(String name);
 
   /**
    * Returns a <tt>List</tt> of the resource parameter names that are defined for this ActionDefinition.
@@ -77,9 +77,9 @@ public interface ISolutionActionDefinition {
    * @return <tt>List</tt> of resource parameter names.
    */
   @SuppressWarnings( "rawtypes" )
-  public List getActionResourceDefinitionNames();
+  List getActionResourceDefinitionNames();
 
-  public boolean hasActionResources();
+  boolean hasActionResources();
 
   /**
    * 
@@ -89,7 +89,7 @@ public interface ISolutionActionDefinition {
    *          String name of the parameter to get a mapping for
    * @return String name of the parameter that 'name' is mapped to
    */
-  public String getMappedResourceName( String name );
+  String getMappedResourceName(String name);
 
   /**
    * Get the logging level for this ActionDefinition. The logging level may be set independently or may be
@@ -98,7 +98,7 @@ public interface ISolutionActionDefinition {
    * @return this ActionDefinition's logging level
    * @see org.pentaho.platform.api.engine.ILogger
    */
-  public int getLoggingLevel();
+  int getLoggingLevel();
 
   /**
    * Returns the list of input and output parameters that will be audited before component execution. This list is
@@ -107,7 +107,7 @@ public interface ISolutionActionDefinition {
    * @return <tt>List</tt> of parameters defined for pre-execution auditing
    */
   @SuppressWarnings( "rawtypes" )
-  public List getPreExecuteAuditList();
+  List getPreExecuteAuditList();
 
   /**
    * Returns the list of input and output parameters that will be audited after component execution. This list is
@@ -116,21 +116,21 @@ public interface ISolutionActionDefinition {
    * @return <tt>List</tt> of parameters defined for post-execution auditing
    */
   @SuppressWarnings( "rawtypes" )
-  public List getPostExecuteAuditList();
+  List getPostExecuteAuditList();
 
   /**
    * Returns boolean value regarding whether this action is set to execute synchronous or asynchronously.
    * 
    * @return true, if set to asynchronous, false if set to synchronous
    */
-  public boolean getSyncPreference();
+  boolean getSyncPreference();
 
   /**
    * Returns the Java class name of the Component that this ActionDefinition is created for.
    * 
    * @return the Java class name of Component for this ActionDefinition
    */
-  public String getComponentName();
+  String getComponentName();
 
   /**
    * Returns the Component definition portion of this ActionDefinition. The Component section typically describes
@@ -138,44 +138,44 @@ public interface ISolutionActionDefinition {
    * 
    * @return the Component definition section of the ActionDefinition
    */
-  public Node getComponentSection();
+  Node getComponentSection();
 
-  public Node getNode();
+  Node getNode();
 
   /**
    * Returns the Component object that this ActionDefinition belongs to.
    * 
    * @return the definition's Component object
    */
-  public IComponent getComponent();
+  IComponent getComponent();
 
   /**
    * Returns the author of the ActionDefinition, if defined, or null otherwise.
    * 
    * @return this definition's author, or null if not defined.
    */
-  public String getAuthor();
+  String getAuthor();
 
   /**
    * Returns the description of the ActionDefinition, if defined, or null otherwise.
    * 
    * @return this definition's description, or null if not defined.
    */
-  public String getDescription();
+  String getDescription();
 
   /**
    * Returns the URL to the Help page for this definition.
    * 
    * @return the definition's Help URL
    */
-  public String getHelp();
+  String getHelp();
 
   /**
    * Returns the URL to the icon for this definition.
    * 
    * @return the definition's icon URL
    */
-  public String getIconUrl();
+  String getIconUrl();
 
   /**
    * Sets the Component object that this definition will belong to. The component must be valid for this
@@ -184,6 +184,6 @@ public interface ISolutionActionDefinition {
    * @param component
    *          the Component that is valid for this definiton.
    */
-  public void setComponent( IComponent component );
+  void setComponent(IComponent component);
 
 }

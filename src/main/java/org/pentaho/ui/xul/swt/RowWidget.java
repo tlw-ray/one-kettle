@@ -21,14 +21,14 @@ import org.eclipse.swt.widgets.Item;
 
 public interface RowWidget {
 
-  public static final int EVENT_SELECT = 123;
+  int EVENT_SELECT = 123;
 
-  public Item getItem();
+  Item getItem();
 
-  public void setText( int index, String text );
+  void setText(int index, String text);
 
-  public void makeCellEditable( int index );
+  void makeCellEditable(int index);
 
-  public void remove();
+  void remove();
 
 }

@@ -32,21 +32,21 @@ public interface IOutputDef {
    * 
    * @return the output parameter type
    */
-  public String getType();
+  String getType();
 
   /**
    * Retrieves the name of the output parameter.
    * 
    * @return the name of the ouotput parameter
    */
-  public String getName();
+  String getName();
 
   /**
    * Determine whether the value associated with this parameter is a list or not.
    * 
    * @return rue if the parameter value is a list, otherwise false
    */
-  public boolean isList();
+  boolean isList();
 
   /**
    * Sets the value of the output parameter.
@@ -54,14 +54,14 @@ public interface IOutputDef {
    * @param value
    *          the value to set
    */
-  public void setValue( Object value );
+  void setValue(Object value);
 
   /**
    * Retrieve the OutputStream associated with this output parameter.
    * 
    * @return the OutputStream for this parameter
    */
-  public OutputStream getOutputStream();
+  OutputStream getOutputStream();
 
   /**
    * Adds the given value to the value list for this output parameter.
@@ -69,5 +69,5 @@ public interface IOutputDef {
    * @param value
    *          value to add to the parameter value list.
    */
-  public void addToList( Object value );
+  void addToList(Object value);
 }

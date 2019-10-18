@@ -24,6 +24,6 @@ import java.util.List;
 
 public interface IPentahoSystemAclHelper {
 
-  public List<String> getACLFileExtensionList();
+  List<String> getACLFileExtensionList();
 
 }

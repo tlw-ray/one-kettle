@@ -170,7 +170,7 @@ public class SwtGrid extends AbstractSwtXulContainer implements XulGrid {
         // opposite direction of the orientation.
 
         if ( swtChild.getFlex() <= 0 && swtChild.getAlign() != null ) {
-          SwtAlign swtAlign = SwtAlign.valueOf( swtChild.getAlign().toString() );
+          SwtAlign swtAlign = SwtAlign.valueOf(swtChild.getAlign());
           switch ( swtAlign ) {
             case START:
               data.horizontalAlignment = GridData.BEGINNING;

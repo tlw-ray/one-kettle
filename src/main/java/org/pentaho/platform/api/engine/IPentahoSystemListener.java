@@ -32,11 +32,11 @@ public interface IPentahoSystemListener {
    * Notification of system startup. This event fires at the end of system initialization, after all system
    * components have started successfully.
    */
-  public boolean startup( IPentahoSession session );
+  boolean startup(IPentahoSession session);
 
   /**
    * Notification of system shutdown. This event fires right before the server context is shutdown.
    */
-  public void shutdown();
+  void shutdown();
 
 }

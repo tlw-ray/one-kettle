@@ -104,7 +104,7 @@ public class TeradataDatabaseDialectTest {
   @Test
   public void testGetLimitClause() {
     int rows = 5;
-    Assert.assertEquals( dialect.getLimitClause( rows ), " sample " + Integer.toString( rows ) );
+    Assert.assertEquals( dialect.getLimitClause( rows ), " sample " + rows);
   }
 
   @Test

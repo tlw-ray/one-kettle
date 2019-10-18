@@ -64,8 +64,8 @@ public interface IStreamingAction extends IAction {
    *          the action definition output name representing the streamed output, e.g. "reportContent"
    * @return the mimeType for the stream indicated by streamPropertyName
    */
-  public String getMimeType( String streamPropertyName );
+  String getMimeType(String streamPropertyName);
 
-  public void setOutputStream( OutputStream outputStream );
+  void setOutputStream(OutputStream outputStream);
 
 }

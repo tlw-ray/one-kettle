@@ -112,7 +112,7 @@ public class DatabaseDialog extends XulDatabaseDialog {
       EnterTextDialog dialog =
         new EnterTextDialog(
           shell, BaseMessages.getString( PKG, "DatabaseDialog.ConnectionReport.title" ), BaseMessages
-            .getString( PKG, "DatabaseDialog.ConnectionReport.description" ), reportMessage.toString() );
+            .getString( PKG, "DatabaseDialog.ConnectionReport.description" ), reportMessage);
       dialog.setReadOnly();
       dialog.setFixed( true );
       dialog.setModal();

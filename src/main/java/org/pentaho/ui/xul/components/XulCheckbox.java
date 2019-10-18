@@ -36,20 +36,20 @@ public interface XulCheckbox extends XulComponent {
    * @param checked
    *          if true, checks the box, clears it otherwise.
    */
-  public void setChecked( boolean checked );
+  void setChecked(boolean checked);
 
   /**
    * 
    * @return is the box checked?
    */
-  public boolean isChecked();
+  boolean isChecked();
 
   /**
    * The label that appears next to the checkbox.
    * 
    * @return the checkbox label.
    */
-  public String getLabel();
+  String getLabel();
 
   /**
    * Sets the label that appears next to the checkbox.
@@ -57,7 +57,7 @@ public interface XulCheckbox extends XulComponent {
    * @param label
    *          the checkbox label that should display.
    */
-  public void setLabel( String label );
+  void setLabel(String label);
 
   /**
    * XUL's attribute is "disabled", thus this acts exactly the opposite of SWT/Swing/AWT. If the property is not
@@ -65,14 +65,14 @@ public interface XulCheckbox extends XulComponent {
    * 
    * @return boolean true if the control is disabled.
    */
-  public boolean isDisabled();
+  boolean isDisabled();
 
   /**
    * 
    * @param dis
    *          If true, disable this button. Otherwise, attribute should be removed.
    */
-  public void setDisabled( boolean dis );
+  void setDisabled(boolean dis);
 
   /**
    * According to XUL spec, this is the appropriate event to listen to for checkbox state changes from a user
@@ -83,11 +83,11 @@ public interface XulCheckbox extends XulComponent {
    * @param method
    *          The method to execute when the checkbox is checked or unchecked.
    */
-  public void setCommand( final String method );
+  void setCommand(final String method);
 
   /**
    * @return method The method to execute when the checkbox is checked or unchecked
    */
-  public String getCommand();
+  String getCommand();
 
 }

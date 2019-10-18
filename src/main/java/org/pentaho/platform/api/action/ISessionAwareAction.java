@@ -31,6 +31,6 @@ import org.pentaho.platform.api.engine.IPentahoSession;
  */
 public interface ISessionAwareAction extends IAction {
 
-  public void setSession( IPentahoSession session );
+  void setSession(IPentahoSession session);
 
 }

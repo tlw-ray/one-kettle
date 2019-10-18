@@ -121,7 +121,7 @@ public class ValueMetaConverter implements Serializable, IValueMetaConverter {
             return null;
           }
         case ValueMetaInterface.TYPE_STRING:
-          return new String( stringValue );
+          return stringValue;
         case ValueMetaInterface.TYPE_INTEGER:
           return Long.parseLong( stripDecimal( stringValue ) );
         case ValueMetaInterface.TYPE_NUMBER:
@@ -320,7 +320,7 @@ public class ValueMetaConverter implements Serializable, IValueMetaConverter {
           }
           return doubleValue;
         case ValueMetaInterface.TYPE_BIGNUMBER:
-          return new BigDecimal( ( (BigDecimal) value ).toString() );
+          return new BigDecimal( value.toString() );
         default:
           throwBadConversionCombination( ValueMetaInterface.TYPE_BIGNUMBER, targetValueMetaType, value );
       }

@@ -19,63 +19,63 @@ package org.pentaho.ui.xul.containers;
 
 public interface XulDialog extends XulRoot {
 
-  public void setButtons( String buttons );
+  void setButtons(String buttons);
 
-  public String getButtons();
+  String getButtons();
 
-  public void setButtonlabelcancel( String label );
+  void setButtonlabelcancel(String label);
 
-  public String getButtonlabelcancel();
+  String getButtonlabelcancel();
 
-  public void setButtonlabelaccept( String label );
+  void setButtonlabelaccept(String label);
 
-  public String getButtonlabelaccept();
+  String getButtonlabelaccept();
 
-  public void setButtonlabelextra1( String label );
+  void setButtonlabelextra1(String label);
 
-  public String getButtonlabelextra1();
+  String getButtonlabelextra1();
 
-  public void setButtonlabelextra2( String label );
+  void setButtonlabelextra2(String label);
 
-  public String getButtonlabelextra2();
+  String getButtonlabelextra2();
 
-  public void setOndialogaccept( String command );
+  void setOndialogaccept(String command);
 
-  public String getOndialogaccept();
+  String getOndialogaccept();
 
-  public void setOndialogcancel( String command );
+  void setOndialogcancel(String command);
 
-  public String getOndialogcancel();
+  String getOndialogcancel();
 
-  public void setOndialogextra1( String command );
+  void setOndialogextra1(String command);
 
-  public String getOndialogextra1();
+  String getOndialogextra1();
 
-  public void setOndialogextra2( String command );
+  void setOndialogextra2(String command);
 
-  public String getOndialogextra2();
+  String getOndialogextra2();
 
-  public void setButtonalign( String align );
+  void setButtonalign(String align);
 
-  public String getButtonalign();
+  String getButtonalign();
 
-  public void show();
+  void show();
 
-  public void hide();
+  void hide();
 
-  public boolean isHidden();
+  boolean isHidden();
 
-  public void setVisible( boolean visible );
+  void setVisible(boolean visible);
 
-  public Boolean getResizable();
+  Boolean getResizable();
 
-  public void setResizable( Boolean resizable );
+  void setResizable(Boolean resizable);
 
-  public void setModal( Boolean modal );
+  void setModal(Boolean modal);
 
-  public void setPack( boolean pack );
+  void setPack(boolean pack);
 
-  public boolean isPack();
+  boolean isPack();
 
-  public void center();
+  void center();
 }

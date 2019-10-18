@@ -82,10 +82,10 @@ public class SwtXulRunner implements XulRunner {
   }
 
   public void stop() throws XulException {
-    if ( ( (Shell) rootFrame ).isDisposed() ) {
+    if ( rootFrame.isDisposed() ) {
       return;
     }
-    ( (Shell) rootFrame ).dispose();
+    rootFrame.dispose();
   }
 
   public void addContainer( XulDomContainer xulDomContainer ) {

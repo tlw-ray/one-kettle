@@ -51,7 +51,7 @@ public interface IAuditEntry {
    * @throws AuditException
    * @see org.pentaho.platform.engine.core.audit.MessageTypes
    */
-  public void auditAll( String jobId, String instId, String objId, String objType, String actor, String messageType,
-      String messageName, String messageTxtValue, BigDecimal messageNumValue, double duration ) throws AuditException;
+  void auditAll(String jobId, String instId, String objId, String objType, String actor, String messageType,
+                String messageName, String messageTxtValue, BigDecimal messageNumValue, double duration) throws AuditException;
 
 }

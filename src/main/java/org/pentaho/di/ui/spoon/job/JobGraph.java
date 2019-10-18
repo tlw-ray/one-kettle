@@ -530,7 +530,7 @@ public class JobGraph extends AbstractGraph implements XulEventHandler, Redrawab
                   if ( newjge != null ) {
                     // newjge.setEntry(jge.getEntry());
                     if ( log.isDebug() ) {
-                      log.logDebug( "entry aft = " + ( (Object) jge.getEntry() ).toString() );
+                      log.logDebug( "entry aft = " + jge.getEntry().toString() );
                     }
 
                     newjge.setNr( jobMeta.findUnusedNr( newjge.getName() ) );
@@ -3032,11 +3032,7 @@ public class JobGraph extends AbstractGraph implements XulEventHandler, Redrawab
     double angle_point = Math.atan2( y - y1, x - x1 ) + Math.PI;
 
     // Same angle, or close enough?
-    if ( angle_point >= angle_line - 0.01 && angle_point <= angle_line + 0.01 ) {
-      return true;
-    }
-
-    return false;
+      return angle_point >= angle_line - 0.01 && angle_point <= angle_line + 0.01;
   }
 
   protected SnapAllignDistribute createSnapAllignDistribute() {

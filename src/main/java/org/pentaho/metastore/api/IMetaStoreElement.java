@@ -35,7 +35,7 @@ public interface IMetaStoreElement extends IMetaStoreAttribute {
    * 
    * @return the name of the element
    */
-  public String getName();
+  String getName();
 
   /**
    * Sets the name for this element.
@@ -43,14 +43,14 @@ public interface IMetaStoreElement extends IMetaStoreAttribute {
    * @param name
    *          the new name
    */
-  public void setName( String name );
+  void setName(String name);
 
   /**
    * Gets the element type.
    * 
    * @return the element type
    */
-  public IMetaStoreElementType getElementType();
+  IMetaStoreElementType getElementType();
 
   /**
    * Sets the element type.
@@ -58,14 +58,14 @@ public interface IMetaStoreElement extends IMetaStoreAttribute {
    * @param elementType
    *          the new element type
    */
-  public void setElementType( IMetaStoreElementType elementType );
+  void setElementType(IMetaStoreElementType elementType);
 
   /**
    * Gets the owner of this element.
    * 
    * @return the owner
    */
-  public IMetaStoreElementOwner getOwner();
+  IMetaStoreElementOwner getOwner();
 
   /**
    * Sets the owner for this element.
@@ -73,14 +73,14 @@ public interface IMetaStoreElement extends IMetaStoreAttribute {
    * @param owner
    *          the new owner
    */
-  public void setOwner( IMetaStoreElementOwner owner );
+  void setOwner(IMetaStoreElementOwner owner);
 
   /**
    * Gets the owner permissions list for this element.
    * 
    * @return the owner permissions list
    */
-  public List<MetaStoreOwnerPermissions> getOwnerPermissionsList();
+  List<MetaStoreOwnerPermissions> getOwnerPermissionsList();
 
   /**
    * Sets the owner permissions list for this element.
@@ -88,6 +88,6 @@ public interface IMetaStoreElement extends IMetaStoreAttribute {
    * @param ownerPermissions
    *          the new owner permissions list
    */
-  public void setOwnerPermissionsList( List<MetaStoreOwnerPermissions> ownerPermissions );
+  void setOwnerPermissionsList(List<MetaStoreOwnerPermissions> ownerPermissions);
 
 }

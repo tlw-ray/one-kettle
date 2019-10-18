@@ -448,7 +448,7 @@ public abstract class JobEntryBaseDialog extends JobEntryDialog {
     } );
 
     final int FieldsCols = 1;
-    int rows = getArguments() == null ? 1 : ( getArguments().length == 0 ? 0 : getArguments().length );
+    int rows = getArguments() == null ? 1 : (getArguments().length);
     final int FieldsRows = rows;
 
     ColumnInfo[] colinf = new ColumnInfo[ FieldsCols ];

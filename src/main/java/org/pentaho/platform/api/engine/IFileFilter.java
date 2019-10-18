@@ -22,6 +22,6 @@ package org.pentaho.platform.api.engine;
 
 public interface IFileFilter {
 
-  public boolean accept( ISolutionFile file );
+  boolean accept(ISolutionFile file);
 
 }

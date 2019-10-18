@@ -24,14 +24,14 @@ import java.util.Date;
 
 public interface IScheduledJob {
 
-  public static final int STATE_NORMAL = 0;
+  int STATE_NORMAL = 0;
 
-  public static final int STATE_PAUSED = 1;
+  int STATE_PAUSED = 1;
 
   /**
    * The trigger has no remaining fire-times in its schedule. </p>
    */
-  public static final int STATE_COMPLETE = 2;
+  int STATE_COMPLETE = 2;
 
   /**
    * A <code>ScheduledJob</code> arrives at the error state when the scheduler attempts to fire it, but cannot due
@@ -42,7 +42,7 @@ public interface IScheduledJob {
    * When the ScheduledJob is in the error state, the scheduler will make no attempts to fire it.
    * </p>
    */
-  public static final int STATE_ERROR = 3;
+  int STATE_ERROR = 3;
 
   /**
    * A <code>ScheduledJob</code> arrives at the blocked state when the job that it is associated with is a
@@ -50,25 +50,25 @@ public interface IScheduledJob {
    * 
    * @see StatefulJob
    */
-  public static final int STATE_BLOCKED = 4;
+  int STATE_BLOCKED = 4;
 
   /**
    * <p>
    * Indicates that the <code>ScheduledJob</code> does not exist.
    * </p>
    */
-  public static final int STATE_NONE = -1;
+  int STATE_NONE = -1;
 
-  public Date getNextTriggerTime();
+  Date getNextTriggerTime();
 
-  public Date getLastTriggerTime();
+  Date getLastTriggerTime();
 
-  public int getExecutionState();
+  int getExecutionState();
 
-  public String getDescription();
+  String getDescription();
 
-  public String getUniqueId();
+  String getUniqueId();
 
-  public String getErrorMessage();
+  String getErrorMessage();
 
 }

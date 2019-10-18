@@ -2419,9 +2419,9 @@ public class Database implements VariableSpace, LoggingObjectInterface {
     //
     String name;
     if ( databaseMeta.isMySQLVariant() && getDatabaseMetaData().getDriverMajorVersion() > 3 ) {
-      name = new String( rm.getColumnLabel( i ) );
+      name = rm.getColumnLabel(i);
     } else {
-      name = new String( rm.getColumnName( i ) );
+      name = rm.getColumnName(i);
     }
 
     // Check the name, sometimes it's empty.
@@ -4082,7 +4082,7 @@ public class Database implements VariableSpace, LoggingObjectInterface {
           String procSchema = rowMeta.getString( row, "PROCEDURE_SCHEM", null );
           String procName = rowMeta.getString( row, "PROCEDURE_NAME", "" );
 
-          StringBuilder name = new StringBuilder( "" );
+          StringBuilder name = new StringBuilder();
           if ( procCatalog != null ) {
             name.append( procCatalog ).append( "." );
           }

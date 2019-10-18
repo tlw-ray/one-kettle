@@ -78,7 +78,7 @@ public class LAFMessageHandler extends GlobalMessages {
         offset = replace.length();
       }
     }
-    return new String( replaceWith + packageName.substring( offset ) );
+    return replaceWith + packageName.substring(offset);
   }
 
   private String internalCalc( String packageName, String global, String key, Object[] parameters,

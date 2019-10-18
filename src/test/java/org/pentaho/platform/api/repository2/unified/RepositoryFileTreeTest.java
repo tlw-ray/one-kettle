@@ -82,7 +82,7 @@ public class RepositoryFileTreeTest {
     // Testing variations of equals
     assertTrue( fileTree.equals( fileTree ) );
     assertFalse( fileTree.equals( null ) );
-    assertFalse( fileTree.equals( new String() ) );
+    assertFalse( fileTree.equals("") );
   }
 
   @Test

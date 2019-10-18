@@ -39,7 +39,7 @@ public interface XulSpacer extends XulComponent {
    * @param size
    *          The hieght.
    */
-  public void setHeight( int size );
+  void setHeight(int size);
 
   /**
    * Set the width that this space should occupy.
@@ -47,6 +47,6 @@ public interface XulSpacer extends XulComponent {
    * @param size
    *          The width.
    */
-  public void setWidth( int size );
+  void setWidth(int size);
 
 }

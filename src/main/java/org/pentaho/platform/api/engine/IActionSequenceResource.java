@@ -35,39 +35,39 @@ public interface IActionSequenceResource {
   /**
    * The Resource is a solution file
    */
-  public static final int SOLUTION_FILE_RESOURCE = 1;
+  int SOLUTION_FILE_RESOURCE = 1;
 
   /**
    * The resource is a URL
    */
-  public static final int URL_RESOURCE = 2;
+  int URL_RESOURCE = 2;
 
   /**
    * The resource is an arbitrary file
    */
-  public static final int FILE_RESOURCE = 3;
+  int FILE_RESOURCE = 3;
 
   /**
    * The resource type is unknown
    */
-  public static final int UNKNOWN_RESOURCE = 4;
+  int UNKNOWN_RESOURCE = 4;
 
   /**
    * The resource type is an embedded string
    */
-  public static final int STRING = 5;
+  int STRING = 5;
 
   /**
    * The resource type is embedded xml
    */
-  public static final int XML = 6;
+  int XML = 6;
 
   /**
    * Return the xml node name of the resource
    * 
    * @return name of the resource
    */
-  public String getName();
+  String getName();
 
   /**
    * Returns the mime type of the resource. Since resources are external, they can take on many different formats
@@ -75,7 +75,7 @@ public interface IActionSequenceResource {
    * 
    * @return the mime type of the resource
    */
-  public String getMimeType();
+  String getMimeType();
 
   /**
    * Get the type of external resource that this ActionResource is derived from.
@@ -84,7 +84,7 @@ public interface IActionSequenceResource {
    * 
    * @return the resource source type
    */
-  public int getSourceType();
+  int getSourceType();
 
   /**
    * Depending on the resource source type, returns the address to the resource as a path or a URL.
@@ -92,9 +92,9 @@ public interface IActionSequenceResource {
    * @return address of resource
    */
   // public String getLocation();
-  public String getAddress();
+  String getAddress();
 
-  public InputStream getInputStream( RepositoryFilePermission actionOperation, Locale locale );
+  InputStream getInputStream(RepositoryFilePermission actionOperation, Locale locale);
 
-  public InputStream getInputStream( RepositoryFilePermission actionOperation );
+  InputStream getInputStream(RepositoryFilePermission actionOperation);
 }

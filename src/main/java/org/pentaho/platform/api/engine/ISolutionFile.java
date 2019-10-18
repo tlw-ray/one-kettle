@@ -30,40 +30,40 @@ public interface ISolutionFile {
   /**
    * @return true if the ISolutionFile points to a directory.
    */
-  public boolean isDirectory();
+  boolean isDirectory();
 
   /**
    * @return The name of the file/directory
    */
-  public String getFileName();
+  String getFileName();
 
   /**
    * @return path within the solution to the file/directory.
    */
-  public String getSolutionPath();
+  String getSolutionPath();
 
   /**
    * @return Name of the solution this file/directory is contained within
    */
-  public String getSolution();
+  String getSolution();
 
   /**
    * @return fully qualified path to this file/directory
    */
-  public String getFullPath();
+  String getFullPath();
 
   // public String getFileType();
   /**
    * If this is a directory, will list all children files/directories for hierarchical navigation.
    */
-  public ISolutionFile[] listFiles();
+  ISolutionFile[] listFiles();
 
-  public ISolutionFile[] listFiles( IFileFilter filter );
+  ISolutionFile[] listFiles(IFileFilter filter);
 
   /**
    * @return true if this is the root solution folder NOTE: This will always return false for a filebased solution
    */
-  public boolean isRoot();
+  boolean isRoot();
 
   /**
    * NOTE: This method is named 'retrieveParent' instead of 'getParent' because the generic ISolutionFile type is
@@ -71,17 +71,17 @@ public interface ISolutionFile {
    * 
    * @return The parent file for this ISolutionFile
    */
-  public ISolutionFile retrieveParent();
+  ISolutionFile retrieveParent();
 
-  public byte[] getData();
+  byte[] getData();
 
-  public boolean exists();
+  boolean exists();
 
   /**
    * @return Returns the modDate.
    */
-  public long getLastModified();
+  long getLastModified();
 
-  public String getExtension();
+  String getExtension();
 
 }

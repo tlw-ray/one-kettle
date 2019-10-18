@@ -31,7 +31,7 @@ public enum ObjectLocationSpecificationMethod {
   private String code;
   private String description;
 
-  private ObjectLocationSpecificationMethod( String code, String description ) {
+  ObjectLocationSpecificationMethod(String code, String description) {
     this.code = code;
     this.description = description;
   }

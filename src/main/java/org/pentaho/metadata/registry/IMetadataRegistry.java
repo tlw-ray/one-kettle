@@ -33,26 +33,26 @@ public interface IMetadataRegistry {
    * 
    * @throws Exception
    */
-  public void init() throws Exception;
+  void init() throws Exception;
 
   /**
    * Returns true if the metadata registry has initialized successfully
    * 
    * @return
    */
-  public boolean isInitialized();
+  boolean isInitialized();
 
   /**
    * Resets the registry to an empty state
    */
-  public void clear();
+  void clear();
 
   /**
    * Adds an entity to the registry
    * 
    * @param entity
    */
-  public void addEntity( Entity entity );
+  void addEntity(Entity entity);
 
   /**
    * Returns an specific entity of a specific type from the registry. Returns null if the entity cannot be found.
@@ -61,7 +61,7 @@ public interface IMetadataRegistry {
    * @param typeId
    * @return
    */
-  public Entity getEntity( String id, String typeId );
+  Entity getEntity(String id, String typeId);
 
   /**
    * Returns all entities with the specified id
@@ -69,7 +69,7 @@ public interface IMetadataRegistry {
    * @param name
    * @return
    */
-  public List<Entity> getEntities( String id );
+  List<Entity> getEntities(String id);
 
   /**
    * Deletes an entity from the registry
@@ -77,84 +77,84 @@ public interface IMetadataRegistry {
    * @param id
    * @return true if the operation succeeded
    */
-  public boolean removeEntity( Entity entity );
+  boolean removeEntity(Entity entity);
 
   /**
    * Adds a namespace to the registry
    * 
    * @param namespace
    */
-  public void addNamespace( Namespace namespace );
+  void addNamespace(Namespace namespace);
 
   /**
    * Returns a list of all known namespaces
    * 
    * @return
    */
-  public List<Namespace> getNamespaces();
+  List<Namespace> getNamespaces();
 
   /**
    * Returns a list of all known entity types
    * 
    * @return
    */
-  public List<Type> getTypes();
+  List<Type> getTypes();
 
   /**
    * Sets the known entity types
    * 
    * @param types
    */
-  public void setTypes( List<Type> types );
+  void setTypes(List<Type> types);
 
   /**
    * Sets the known namespaces
    * 
    * @param namespaces
    */
-  public void setNamespaces( List<Namespace> namespaces );
+  void setNamespaces(List<Namespace> namespaces);
 
   /**
    * Adds a entity type to the registry
    * 
    * @param type
    */
-  public void addType( Type type );
+  void addType(Type type);
 
   /**
    * Adds a new verb to the registry
    * 
    * @param verb
    */
-  public void addVerb( Verb verb );
+  void addVerb(Verb verb);
 
   /**
    * Returns a list of known verbs
    * 
    * @return
    */
-  public List<Verb> getVerbs();
+  List<Verb> getVerbs();
 
   /**
    * Sets the collection of known verbs
    * 
    * @param verbs
    */
-  public void setVerbs( List<Verb> verbs );
+  void setVerbs(List<Verb> verbs);
 
   /**
    * Adds a new link to the registry
    * 
    * @param link
    */
-  public void addLink( Link link );
+  void addLink(Link link);
 
   /**
    * Returns a list of all known links in the registry
    * 
    * @return
    */
-  public List<Link> getLinks();
+  List<Link> getLinks();
 
   /**
    * Deletes a link from the registry
@@ -162,21 +162,21 @@ public interface IMetadataRegistry {
    * @param id
    * @return
    */
-  public boolean removeLink( Link link );
+  boolean removeLink(Link link);
 
   /**
    * Adds a new link type
    * 
    * @param link
    */
-  public void addTypeLink( TypeLink link );
+  void addTypeLink(TypeLink link);
 
   /**
    * Returns a list of link types
    * 
    * @return
    */
-  public List<TypeLink> getTypeLinks();
+  List<TypeLink> getTypeLinks();
 
   /**
    * Returns a list of all the entities with the specified type
@@ -188,7 +188,7 @@ public interface IMetadataRegistry {
    *          Optional. If true the match on the id must be exact
    * @return
    */
-  public List<Entity> getEntitiesOfType( String typeId, String match, boolean exactMatch );
+  List<Entity> getEntitiesOfType(String typeId, String match, boolean exactMatch);
 
   /**
    * Returns a list of links to an entity that match the verb and type specified. For example given a specified physical
@@ -202,7 +202,7 @@ public interface IMetadataRegistry {
    *          The type of linked objects to return
    * @return
    */
-  public List<Link> findObjectLinks( String subjectId, String verbId, String typeId );
+  List<Link> findObjectLinks(String subjectId, String verbId, String typeId);
 
   /**
    * Returns a list of links to an entity that match the verbs and types specified.
@@ -212,7 +212,7 @@ public interface IMetadataRegistry {
    * @param typeIds
    * @return
    */
-  public List<Link> findObjectLinks( String subjectId, Set<String> verbIds, Set<String> typeIds );
+  List<Link> findObjectLinks(String subjectId, Set<String> verbIds, Set<String> typeIds);
 
   /**
    * Returns a list of links to an entity that match the verb and type specified. For example given a specified model
@@ -226,7 +226,7 @@ public interface IMetadataRegistry {
    *          The type of linked objects to return
    * @return
    */
-  public List<Link> findSubjectLinks( String objectId, String verbId, String typeId );
+  List<Link> findSubjectLinks(String objectId, String verbId, String typeId);
 
   /**
    * Returns a list of links to an entity that match the verbs and types specified. For example given a specified model
@@ -240,7 +240,7 @@ public interface IMetadataRegistry {
    *          The types of linked objects to return
    * @return
    */
-  public List<Link> findSubjectLinks( String objectId, Set<String> verbIds, Set<String> typeIds );
+  List<Link> findSubjectLinks(String objectId, Set<String> verbIds, Set<String> typeIds);
 
   /**
    * Returns a list of links between the specified entity and entities of a specific type.
@@ -249,7 +249,7 @@ public interface IMetadataRegistry {
    * @param typeId
    * @return
    */
-  public List<Link> findDirectLinks( String entityId, String typeId );
+  List<Link> findDirectLinks(String entityId, String typeId);
 
   /**
    * Returns a list of links between the specified entity and entities of a specific types.
@@ -258,7 +258,7 @@ public interface IMetadataRegistry {
    * @param typeIds
    * @return
    */
-  public List<Link> findDirectLinks( String entityId, Set<String> typeIds );
+  List<Link> findDirectLinks(String entityId, Set<String> typeIds);
 
   /**
    * Returns a list of all entities of the specified type that are linked in any way to the specified entity
@@ -267,7 +267,7 @@ public interface IMetadataRegistry {
    * @param typeId
    * @return
    */
-  public List<Entity> findAllLinkedEntities( String entityId, String typeId );
+  List<Entity> findAllLinkedEntities(String entityId, String typeId);
 
   /**
    * Returns a list of all entities of the specified types that are linked in any way to the specified entity
@@ -276,13 +276,13 @@ public interface IMetadataRegistry {
    * @param typeIds
    * @return
    */
-  public List<Entity> findAllLinkedEntities( String entityId, Set<String> typeIds );
+  List<Entity> findAllLinkedEntities(String entityId, Set<String> typeIds);
 
   /**
    * Flushes the state of the registry to its storage
    * 
    * @throws Exception
    */
-  public void commit() throws Exception;
+  void commit() throws Exception;
 
 }

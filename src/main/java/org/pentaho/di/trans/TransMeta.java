@@ -333,7 +333,7 @@ public class TransMeta extends AbstractMeta
      * @param description
      *          the description
      */
-    private TransformationType( String code, String description ) {
+    TransformationType(String code, String description) {
       this.code = code;
       this.description = description;
     }
@@ -6331,7 +6331,7 @@ public class TransMeta extends AbstractMeta
   }
 
   public void removeMissingTrans( MissingTrans trans ) {
-    if ( missingTrans != null && trans != null && missingTrans.contains( trans ) ) {
+    if ( missingTrans != null && trans != null) {
       missingTrans.remove( trans );
     }
   }

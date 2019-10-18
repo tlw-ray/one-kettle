@@ -2320,7 +2320,7 @@ public class Const {
     // Wait, if the string didn't end with a separator, we still have information at the end of the string...
     // In our example that would be "d"...
     if ( from + sepLen <= string.length() ) {
-      list.add( NVL( string.substring( from, string.length() ), "" ) );
+      list.add( NVL( string.substring( from), "" ) );
     }
 
     return list.toArray( new String[list.size()] );
@@ -2388,7 +2388,7 @@ public class Const {
     // Wait, if the string didn't end with a separator, we still have information at the end of the string...
     // In our example that would be "d"...
     if ( from + 1 <= string.length() ) {
-      list.add( NVL( string.substring( from, string.length() ), "" ) );
+      list.add( NVL( string.substring( from), "" ) );
     }
 
     return list.toArray( new String[list.size()] );
@@ -2816,12 +2816,8 @@ public class Const {
         change.setCharAt( i, lower );
       }
 
-      new_word = false;
-
-      // Cast to (int) is required for extended characters (SB)
-      if ( !Character.isLetterOrDigit( (int) ch ) && ch != '_' ) {
-        new_word = true;
-      }
+        // Cast to (int) is required for extended characters (SB)
+        new_word = !Character.isLetterOrDigit((int) ch) && ch != '_';
     }
 
     return change.toString();
@@ -2925,7 +2921,7 @@ public class Const {
       int dateFormatsCount = toInt( BaseMessages.getString( PKG, "Const.DateFormat.Count" ), 0 );
       dateFormats = new String[dateFormatsCount];
       for ( int i = 1; i <= dateFormatsCount; i++ ) {
-        dateFormats[i - 1] = BaseMessages.getString( PKG, "Const.DateFormat" + Integer.toString( i ) );
+        dateFormats[i - 1] = BaseMessages.getString( PKG, "Const.DateFormat" + i);
       }
     }
     return dateFormats;
@@ -2942,7 +2938,7 @@ public class Const {
       numberFormats = new String[numberFormatsCount + 1];
       numberFormats[0] = DEFAULT_NUMBER_FORMAT;
       for ( int i = 1; i <= numberFormatsCount; i++ ) {
-        numberFormats[i] = BaseMessages.getString( PKG, "Const.NumberFormat" + Integer.toString( i ) );
+        numberFormats[i] = BaseMessages.getString( PKG, "Const.NumberFormat" + i);
       }
     }
     return numberFormats;

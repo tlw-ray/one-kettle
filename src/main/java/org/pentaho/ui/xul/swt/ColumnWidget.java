@@ -23,26 +23,26 @@ import org.eclipse.swt.widgets.Item;
 
 public interface ColumnWidget {
 
-  public boolean getMoveable();
+  boolean getMoveable();
 
-  public void setMovable( boolean movable );
+  void setMovable(boolean movable);
 
-  public boolean getResizable();
+  boolean getResizable();
 
-  public void setResizable( boolean resizable );
+  void setResizable(boolean resizable);
 
-  public int getWidth();
+  int getWidth();
 
-  public void setWidth( int width );
+  void setWidth(int width);
 
-  public String getText();
+  String getText();
 
-  public void setText( String string );
+  void setText(String string);
 
-  public void setImage( Image image );
+  void setImage(Image image);
 
-  public Item getItem();
+  Item getItem();
 
-  public void autoSize();
+  void autoSize();
 
 }

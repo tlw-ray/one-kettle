@@ -43,12 +43,12 @@ public interface IContentItem extends IMimeTypeListener {
   /**
    * @return The ContentItem path
    */
-  public String getPath();
+  String getPath();
 
   /**
    * @return The MimeType of the content item.
    */
-  public String getMimeType();
+  String getMimeType();
 
   /**
    * Gets an input stream from the Content item. If the content item doesn't exist on disk, throws an exception
@@ -56,9 +56,9 @@ public interface IContentItem extends IMimeTypeListener {
    * @return An input stream from the file system that is represented by this content item
    * @throws ContentException
    */
-  public InputStream getInputStream() throws ContentException;
+  InputStream getInputStream() throws ContentException;
 
-  public IPentahoStreamSource getDataSource();
+  IPentahoStreamSource getDataSource();
 
   /**
    * The behavior of this method depends upon it's write mode (defined only at construction).
@@ -77,9 +77,9 @@ public interface IContentItem extends IMimeTypeListener {
    * @throws IOException
    * @return the OutputStream to write to
    */
-  public OutputStream getOutputStream( String actionName ) throws IOException;
+  OutputStream getOutputStream(String actionName) throws IOException;
 
-  public void closeOutputStream();
+  void closeOutputStream();
 
   /**
    * Sets the mime type
@@ -87,6 +87,6 @@ public interface IContentItem extends IMimeTypeListener {
    * @param mimeType
    *          The mime type to set.
    */
-  public void setMimeType( String mimeType );
+  void setMimeType(String mimeType);
 
 }

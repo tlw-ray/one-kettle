@@ -104,10 +104,7 @@ public class ServiceLoaderDatabaseDialectProvider implements IDatabaseDialectPro
     return dialect -> {
       if ( dialect instanceof IDriverLocator ) {
         return ( (IDriverLocator) dialect ).isUsable();
-      } else if ( ClassUtil.canLoadClass( dialect.getNativeDriver() ) ) {
-        return true;
-      }
-      return false;
+      } else return ClassUtil.canLoadClass(dialect.getNativeDriver());
     };
   }
 }

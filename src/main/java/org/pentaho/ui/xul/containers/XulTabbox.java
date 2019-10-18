@@ -21,29 +21,29 @@ import org.pentaho.ui.xul.XulContainer;
 import org.pentaho.ui.xul.components.XulTabpanel;
 
 public interface XulTabbox extends XulContainer {
-  public int getSelectedIndex();
+  int getSelectedIndex();
 
-  public void setSelectedIndex( int index );
+  void setSelectedIndex(int index);
 
-  public XulTabpanel getSelectedPanel();
+  XulTabpanel getSelectedPanel();
 
-  public XulTabs getTabs();
+  XulTabs getTabs();
 
-  public XulTabpanels getTabpanels();
+  XulTabpanels getTabpanels();
 
-  public void setTabDisabledAt( boolean flag, int pos );
+  void setTabDisabledAt(boolean flag, int pos);
 
-  public void removeTab( int idx );
+  void removeTab(int idx);
 
-  public void removeTabpanel( int idx );
+  void removeTabpanel(int idx);
 
-  public void addTab( int idx );
+  void addTab(int idx);
 
-  public void addTabpanel( int idx );
+  void addTabpanel(int idx);
 
-  public void setClosable( boolean flag );
+  void setClosable(boolean flag);
 
-  public boolean isClosable();
+  boolean isClosable();
 
-  public void setOnclose( String command );
+  void setOnclose(String command);
 }

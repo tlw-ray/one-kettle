@@ -103,8 +103,7 @@ public class SpoonClustersDelegate extends SpoonSharedObjectDelegate {
   public void delClusterSchema( TransMeta transMeta, ClusterSchema clusterSchema ) {
     try {
 
-      int idx = transMeta.getClusterSchemas().indexOf( clusterSchema );
-      transMeta.getClusterSchemas().remove( idx );
+        transMeta.getClusterSchemas().remove(clusterSchema);
 
       if ( spoon.rep != null && clusterSchema.getObjectId() != null ) {
         // remove the partition schema from the repository too...

@@ -37,11 +37,11 @@ public interface IPentahoUrl {
    * @param value
    *          Value to set the parameter to
    */
-  public void setParameter( String name, String value );
+  void setParameter(String name, String value);
 
   /**
    * @return the full URL with the parameters incorporated
    */
-  public String getUrl();
+  String getUrl();
 
 }

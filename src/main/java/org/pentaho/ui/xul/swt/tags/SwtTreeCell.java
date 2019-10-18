@@ -107,7 +107,7 @@ public class SwtTreeCell extends SwtElement implements XulTreeCell {
       this.value = vec;
 
     } else if ( value instanceof Boolean ) {
-      this.value = (Boolean) value;
+      this.value = value;
     } else {
       this.value = value;
     }

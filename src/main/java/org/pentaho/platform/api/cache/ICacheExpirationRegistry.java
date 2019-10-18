@@ -35,19 +35,19 @@ public interface ICacheExpirationRegistry {
    * 
    * @param cacheItem
    */
-  public void register( ILastModifiedCacheItem cacheItem );
+  void register(ILastModifiedCacheItem cacheItem);
 
   /**
    * . Removes an item from the registry
    * 
    * @param cacheItem
    */
-  public void unRegister( ILastModifiedCacheItem cacheItem );
+  void unRegister(ILastModifiedCacheItem cacheItem);
 
   /**
    * Gets a <code>List</code> of all items registered
    * 
    * @return
    */
-  public List<ILastModifiedCacheItem> getCachedItems();
+  List<ILastModifiedCacheItem> getCachedItems();
 }

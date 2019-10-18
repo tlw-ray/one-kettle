@@ -42,7 +42,7 @@ public class DataPropertyTest {
     DataProperty prop = new DataProperty( PROP_NAME, PROP_VALUE, PROP_TYPE );
 
     assertEquals( PROP_NAME, prop.getName() );
-    assertEquals( new String( PROP_VALUE ), prop.getString() );
+    assertEquals(PROP_VALUE, prop.getString() );
     assertEquals( PROP_TYPE, prop.getType() );
 
     assertFalse( prop.getBoolean() );
@@ -70,7 +70,7 @@ public class DataPropertyTest {
 
     assertFalse( prop.equals( null ) );
     assertTrue( prop.equals( prop ) );
-    assertFalse( prop.equals( new String() ) );
+    assertFalse( prop.equals("") );
     assertTrue( prop.equals( new DataProperty( PROP_NAME, PROP_VALUE, PROP_TYPE ) ) );
 
     DataProperty nullProp = new DataProperty( null, PROP_VALUE, PROP_TYPE );

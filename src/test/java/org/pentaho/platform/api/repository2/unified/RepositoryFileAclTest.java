@@ -85,7 +85,7 @@ public class RepositoryFileAclTest {
 
     // Testing equals
     assertFalse( acl.equals( null ) );
-    assertFalse( acl.equals( new String() ) );
+    assertFalse( acl.equals("") );
 
     assertTrue( acl.equals( acl ) );
     builder = new RepositoryFileAcl.Builder( acl );
@@ -100,7 +100,7 @@ public class RepositoryFileAclTest {
     RepositoryFileAcl diffAcl = builder.build();
     assertFalse( acl.equals( diffAcl ) );
 
-    builder.id( new String( "DiffId" ) );
+    builder.id("DiffId");
     diffAcl = builder.build();
     assertFalse( acl.equals( diffAcl ) );
     builder.id( null );

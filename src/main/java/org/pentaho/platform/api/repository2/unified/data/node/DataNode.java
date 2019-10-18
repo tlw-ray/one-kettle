@@ -176,13 +176,8 @@ public class DataNode {
       return false;
     }
     if ( propNameToPropMap == null ) {
-      if ( other.propNameToPropMap != null ) {
-        return false;
-      }
-    } else if ( !propNameToPropMap.equals( other.propNameToPropMap ) ) {
-      return false;
-    }
-    return true;
+        return other.propNameToPropMap == null;
+    } else return propNameToPropMap.equals(other.propNameToPropMap);
   }
 
   @Override

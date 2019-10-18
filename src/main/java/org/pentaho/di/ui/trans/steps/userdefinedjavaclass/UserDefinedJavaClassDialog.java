@@ -544,7 +544,7 @@ public class UserDefinedJavaClassDialog extends BaseStepDialog implements StepDi
 
     // Create the drag source on the tree
     DragSource ds = new DragSource( wTree, DND.DROP_MOVE );
-    ds.setTransfer( new Transfer[] { TextTransfer.getInstance() } );
+    ds.setTransfer(TextTransfer.getInstance());
     ds.addDragListener( new DragSourceAdapter() {
 
       public void dragStart( DragSourceEvent event ) {
@@ -1769,7 +1769,7 @@ public class UserDefinedJavaClassDialog extends BaseStepDialog implements StepDi
               case SWT.Verify:
                 String newText = text.getText();
                 String leftText = newText.substring( 0, e.start );
-                String rightText = newText.substring( e.end, newText.length() );
+                String rightText = newText.substring( e.end);
                 GC gc = new GC( text );
                 Point size = gc.textExtent( leftText + e.text + rightText );
                 gc.dispose();

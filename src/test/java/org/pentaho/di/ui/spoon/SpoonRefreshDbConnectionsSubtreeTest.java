@@ -70,7 +70,7 @@ public class SpoonRefreshDbConnectionsSubtreeTest {
   @Test
   public void noConnectionsExist() {
     AbstractMeta meta = mock( AbstractMeta.class );
-    when( meta.getDatabases() ).thenReturn( Collections.<DatabaseMeta>emptyList() );
+    when( meta.getDatabases() ).thenReturn( Collections.emptyList() );
 
     callRefreshWith( meta );
     // one call - to create a parent tree node

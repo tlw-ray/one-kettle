@@ -50,6 +50,6 @@ public interface IRepositoryDefaultAclHandler {
    * @param repositoryFile
    * @return
    */
-  public RepositoryFileAcl createDefaultAcl( RepositoryFile repositoryFile );
+  RepositoryFileAcl createDefaultAcl(RepositoryFile repositoryFile);
 
 }

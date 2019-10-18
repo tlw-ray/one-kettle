@@ -57,9 +57,7 @@ public class UITransformation extends UIRepositoryContent {
 
   public void delete() throws Exception {
     rep.deleteTransformation( this.getObjectId() );
-    if ( uiParent.getRepositoryObjects().contains( this ) ) {
       uiParent.getRepositoryObjects().remove( this );
-    }
   }
 
   public void move( UIRepositoryDirectory newParentDir ) throws KettleException {

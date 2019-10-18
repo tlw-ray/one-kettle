@@ -30,5 +30,5 @@ public interface IServerStatusChangeListener {
   /**
    * Called whenever the IServerStatusProvider changes status, or status messages.
    */
-  public void onStatusChange( );
+  void onStatusChange();
 }

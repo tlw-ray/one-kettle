@@ -153,9 +153,9 @@ public class SwtTreeCol extends SwtElement implements XulTreeCol {
   public void setSrc( String srcUrl ) {
     // TODO Auto-generated method stub
 
-  };
+  }
 
-  public void setType( String type ) {
+    public void setType( String type ) {
     try {
       this.type = ColumnType.valueOf( type.toUpperCase() );
     } catch ( Exception e ) {

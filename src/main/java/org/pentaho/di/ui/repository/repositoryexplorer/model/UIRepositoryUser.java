@@ -65,7 +65,7 @@ public class UIRepositoryUser extends XulEventSourceAdapter implements IUIUser {
   }
 
   public boolean equals( Object o ) {
-    return ( ( o instanceof UIRepositoryUser ) ? getName().equals( ( (UIRepositoryUser) o ).getName() ) : false );
+    return ((o instanceof UIRepositoryUser) && getName().equals(((UIRepositoryUser) o).getName()));
   }
 
   @Override

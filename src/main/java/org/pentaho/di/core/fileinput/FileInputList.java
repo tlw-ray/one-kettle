@@ -56,7 +56,7 @@ public class FileInputList {
     private String name;
     private final Collection<FileType> allowedFileTypes;
 
-    private FileTypeFilter( String name, FileType... allowedFileTypes ) {
+    FileTypeFilter(String name, FileType... allowedFileTypes) {
       this.name = name;
       this.allowedFileTypes = Collections.unmodifiableCollection( Arrays.asList( allowedFileTypes ) );
     }
@@ -337,10 +337,7 @@ public class FileInputList {
 
               FileObject fileObject = info.getFile();
               try {
-                if ( fileObject != null && filter.isFileTypeAllowed( fileObject.getType() ) ) {
-                  return true;
-                }
-                return false;
+                  return fileObject != null && filter.isFileTypeAllowed(fileObject.getType());
               } catch ( IOException ex ) {
                 // Upon error don't process the file.
                 return false;

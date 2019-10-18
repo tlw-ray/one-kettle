@@ -26,7 +26,7 @@ import java.util.List;
 
 public interface IPluginPerspectiveManager {
 
-  public List<IPluginPerspective> getPluginPerspectives();
+  List<IPluginPerspective> getPluginPerspectives();
 
   /**
    * @param pluginPerspective
@@ -37,7 +37,7 @@ public interface IPluginPerspectiveManager {
    * </pre>
    */
   @Deprecated
-  public void addPluginPerspective( IPluginPerspective pluginPerspective );
+  void addPluginPerspective(IPluginPerspective pluginPerspective);
 
   /**
    * @param pluginPerspective
@@ -50,7 +50,7 @@ public interface IPluginPerspectiveManager {
    * </pre>
    */
   @Deprecated
-  public void removePluginPerspective( IPluginPerspective pluginPerspective );
+  void removePluginPerspective(IPluginPerspective pluginPerspective);
 
   /**
    * @deprecated No longer needed as IPluginPerspective objects are registered with PentahoSystem. Existing calls will
@@ -62,6 +62,6 @@ public interface IPluginPerspectiveManager {
    * </pre>
    */
   @Deprecated
-  public void clearPluginPerspectives();
+  void clearPluginPerspectives();
 
 }

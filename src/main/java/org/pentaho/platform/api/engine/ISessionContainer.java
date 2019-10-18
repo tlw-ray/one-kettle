@@ -39,5 +39,5 @@ public interface ISessionContainer {
    * @param sess
    *          The IPentahoSession to set
    */
-  public void setSession( IPentahoSession sess );
+  void setSession(IPentahoSession sess);
 }

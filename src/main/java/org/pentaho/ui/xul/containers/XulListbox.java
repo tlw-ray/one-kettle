@@ -30,36 +30,36 @@ import java.util.Collection;
  */
 public interface XulListbox extends XulContainer {
 
-  public enum SEL_TYPE {
+  enum SEL_TYPE {
     SINGLE, MULTIPLE
-  };
+  }
 
-  /**
+    /**
    * Adds a list item object to the list. Note that specific implementations may limit the object class types
    * allowed to be passed in.
    * 
    * @param item
    */
-  public void addItem( Object item );
+  void addItem(Object item);
 
   /**
    * Clears all list items from the listbox.
    */
-  public void removeItems();
+  void removeItems();
 
   /**
    * 
    * @param dis
    *          If true, disable this button. Otherwise, attribute should be removed.
    */
-  public void setDisabled( boolean dis );
+  void setDisabled(boolean dis);
 
   /**
    * 
    * @param dis
    *          If true, disable this button. Otherwise, attribute should be removed.
    */
-  public void setDisabled( String dis );
+  void setDisabled(String dis);
 
   /**
    * XUL's attribute is "disabled", thus this acts exactly the opposite of SWT/Swing/AWT. If the property is not
@@ -67,7 +67,7 @@ public interface XulListbox extends XulContainer {
    * 
    * @return boolean True if the control is disabled.
    */
-  public boolean isDisabled();
+  boolean isDisabled();
 
   /**
    * 
@@ -75,7 +75,7 @@ public interface XulListbox extends XulContainer {
    *         listbox, which you can retrieve with getRowCount().
    * 
    */
-  public int getRows();
+  int getRows();
 
   /**
    * The number of rows to display in the list box. If the listbox contains more than this many rows, a scrollbar
@@ -86,7 +86,7 @@ public interface XulListbox extends XulContainer {
    *          The number of rows to display in the listbox.
    * 
    */
-  public void setRows( int rows );
+  void setRows(int rows);
 
   /**
    * The total number of listitems in the listbox.
@@ -94,14 +94,14 @@ public interface XulListbox extends XulContainer {
    * @return The listbox's total number of rows.
    * 
    */
-  public int getRowCount();
+  int getRowCount();
 
   /**
    * 
    * @return The selection mode for this listbox; either single or multiple.
    * 
    */
-  public String getSeltype();
+  String getSeltype();
 
   /**
    * Used to indicate whether multiple selection is allowed.
@@ -111,27 +111,27 @@ public interface XulListbox extends XulContainer {
    * @param selType
    *          Valid values are single or multiple.
    */
-  public void setSeltype( String selType );
+  void setSeltype(String selType);
 
   /**
    * 
    * @return The single (or first) item selected in the listbox.
    */
-  public Object getSelectedItem();
+  Object getSelectedItem();
 
   /**
    * 
    * @param item
    *          Set the given item as selected in the listbox.
    */
-  public void setSelectedItem( Object item );
+  void setSelectedItem(Object item);
 
   /**
    * 
    * @param index
    *          Set the given index as selected in the listbox.
    */
-  public void setSelectedIndex( int index );
+  void setSelectedIndex(int index);
 
   /**
    * 
@@ -139,7 +139,7 @@ public interface XulListbox extends XulContainer {
    *         this will be a list of one, and you should use the getSelectedItem() method instead.
    * 
    */
-  public Object[] getSelectedItems();
+  Object[] getSelectedItems();
 
   /**
    * For a multiple selection listbox, this method sets the items in the list as selected in the listbox.
@@ -147,7 +147,7 @@ public interface XulListbox extends XulContainer {
    * @param items
    *          The items to select.
    */
-  public void setSelectedItems( Object[] items );
+  void setSelectedItems(Object[] items);
 
   /**
    * Sets the method that will be invoked when an item in this list is selected. Also hooks up any listeners for
@@ -156,45 +156,45 @@ public interface XulListbox extends XulContainer {
    * @param method
    *          the method to execute when the item is selected.
    */
-  public void setOnselect( String method );
+  void setOnselect(String method);
 
   /**
    * 
    * @return the method string used for this list's selection event.
    */
-  public String getOnselect();
+  String getOnselect();
 
   /**
    * Sets the name of the method to be invoked when a user double-clicks an item in the list.
    * 
    * @param command
    */
-  public void setCommand( String command );
+  void setCommand(String command);
 
-  public String getCommand();
+  String getCommand();
 
   /**
    * Helper method returning the zero based index of selected item.
    * 
    * @return The selected item's index.
    */
-  public int getSelectedIndex();
+  int getSelectedIndex();
 
   /**
    * Helper method returning the zero based indices of selected items.
    * 
    * @return The selected items' indices as an array of native int values.
    */
-  public int[] getSelectedIndices();
+  int[] getSelectedIndices();
 
-  public void setSelectedIndices( int[] indices );
+  void setSelectedIndices(int[] indices);
 
   <T> void setElements( Collection<T> elements );
 
   <T> Collection<T> getElements();
 
-  public void setBinding( String binding );
+  void setBinding(String binding);
 
-  public String getBinding();
+  String getBinding();
 
 }

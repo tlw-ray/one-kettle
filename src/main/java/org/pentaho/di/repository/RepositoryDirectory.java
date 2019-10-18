@@ -77,7 +77,7 @@ public class RepositoryDirectory implements RepositoryDirectoryInterface {
    *
    */
   public RepositoryDirectory() {
-    this( null, (String) null );
+    this( null, null);
   }
 
   @Override

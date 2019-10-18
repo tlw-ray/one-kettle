@@ -28,6 +28,6 @@ import java.util.Map;
 @Deprecated
 public interface IAcceptsRuntimeInputs {
 
-  public void setInputs( Map<String, Object> inputs );
+  void setInputs(Map<String, Object> inputs);
 
 }

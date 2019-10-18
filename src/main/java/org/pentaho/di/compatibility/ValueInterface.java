@@ -34,51 +34,51 @@ import java.util.Date;
  * @since 15-10-2004
  */
 public interface ValueInterface {
-  public int getType();
+  int getType();
 
-  public String getTypeDesc();
+  String getTypeDesc();
 
-  public String getString();
+  String getString();
 
-  public double getNumber();
+  double getNumber();
 
-  public Date getDate();
+  Date getDate();
 
-  public boolean getBoolean();
+  boolean getBoolean();
 
-  public long getInteger();
+  long getInteger();
 
-  public BigDecimal getBigNumber();
+  BigDecimal getBigNumber();
 
-  public Serializable getSerializable();
+  Serializable getSerializable();
 
-  public byte[] getBytes();
+  byte[] getBytes();
 
-  public void setString( String string );
+  void setString(String string);
 
-  public void setNumber( double number );
+  void setNumber(double number);
 
-  public void setDate( Date date );
+  void setDate(Date date);
 
-  public void setBoolean( boolean bool );
+  void setBoolean(boolean bool);
 
-  public void setInteger( long number );
+  void setInteger(long number);
 
-  public void setBigNumber( BigDecimal number );
+  void setBigNumber(BigDecimal number);
 
-  public void setSerializable( Serializable ser );
+  void setSerializable(Serializable ser);
 
-  public void setBytes( byte[] b );
+  void setBytes(byte[] b);
 
-  public int getLength();
+  int getLength();
 
-  public int getPrecision();
+  int getPrecision();
 
-  public void setLength( int length );
+  void setLength(int length);
 
-  public void setPrecision( int precision );
+  void setPrecision(int precision);
 
-  public void setLength( int length, int precision );
+  void setLength(int length, int precision);
 
-  public Object clone();
+  Object clone();
 }

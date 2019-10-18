@@ -24,19 +24,19 @@ import java.io.File;
 
 public interface ITempFileDeleter {
 
-  public static final String DELETER_SESSION_VARIABLE = "PENTAHO_TMP_DELETER"; //$NON-NLS-1$
+  String DELETER_SESSION_VARIABLE = "PENTAHO_TMP_DELETER"; //$NON-NLS-1$
 
   /**
    * Adds the provided file to the list of files being tracked
    * 
    * @param aFile
    */
-  public void trackTempFile( File aFile );
+  void trackTempFile(File aFile);
 
   /**
    * Performs the temp file cleanup.
    */
-  public void doTempFileCleanup();
+  void doTempFileCleanup();
 
   /**
    * Returns true if the specified file is being tracked by the deleter
@@ -44,6 +44,6 @@ public interface ITempFileDeleter {
    * @param aFileName
    * @return true if the deleter has the filename in it's list
    */
-  public boolean hasTempFile( String aFileName );
+  boolean hasTempFile(String aFileName);
 
 }

@@ -118,7 +118,7 @@ public class RowTest extends TestCase {
   }
 
   private void makeTestExtractDataWithTimestampConversion( RowMetaInterface rowMeta, String str, Date date,
-      Timestamp constTimestamp ) throws KettleEOFException, KettleFileException, IOException {
+      Timestamp constTimestamp ) throws KettleFileException, IOException {
     Object[] rowData = new Object[] { str, date };
     byte[] result = RowMeta.extractData( rowMeta, rowData );
     DataInputStream stream = new DataInputStream( new ByteArrayInputStream( result ) );

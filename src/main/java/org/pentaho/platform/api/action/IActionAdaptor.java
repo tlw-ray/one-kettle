@@ -37,7 +37,7 @@ public interface IActionAdaptor {
    * @return the {@link IActionInvokeStatus} object containing result of the action
    *
   */
-  public IActionInvokeStatus execute( IAction action, final String user, final Map<String, Serializable> params ) throws Exception;
+  IActionInvokeStatus execute(IAction action, final String user, final Map<String, Serializable> params) throws Exception;
 
   /**
    * Schedule the request for execution in the orchestration environment in future
@@ -47,7 +47,7 @@ public interface IActionAdaptor {
    * @return the {@link IActionInvokeStatus} object containing result of the action
    *
    */
-  public IActionInvokeStatus schedule( IAction action, final String user, final Map<String, Serializable> params ) throws Exception;
+  IActionInvokeStatus schedule(IAction action, final String user, final Map<String, Serializable> params) throws Exception;
 
   /**
    * Delete the request
@@ -56,7 +56,7 @@ public interface IActionAdaptor {
    * @param (@link Map) of parameters for execution
    * @return the {@link IActionInvokeStatus} object containing result of the action
    */
-  public IActionInvokeStatus delete( IAction action, final String user, final Map<String, Serializable> params ) throws Exception;
+  IActionInvokeStatus delete(IAction action, final String user, final Map<String, Serializable> params) throws Exception;
 
 
 }

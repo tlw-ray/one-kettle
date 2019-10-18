@@ -37,7 +37,7 @@ public interface XulContainer extends XulComponent {
    * @param component
    *          the child component to add to this container.
    */
-  public void addComponent( XulComponent component );
+  void addComponent(XulComponent component);
 
   /**
    * @Depreciated use addChildAt instead
@@ -48,7 +48,7 @@ public interface XulContainer extends XulComponent {
    * @param index
    *          to add the component at (zero-based)
    */
-  public void addComponentAt( XulComponent component, int idx );
+  void addComponentAt(XulComponent component, int idx);
 
   /**
    * @Depreciated use removeChild instead
@@ -57,19 +57,19 @@ public interface XulContainer extends XulComponent {
    * @param component
    *          the child component to remove from this container.
    */
-  public void removeComponent( XulComponent component );
+  void removeComponent(XulComponent component);
 
   /**
    * @see org.pentaho.ui.xul.util.Orient
    * @return the orientation for this container. Valid values are found in the Orient enum.
    */
-  public Orient getOrientation();
+  Orient getOrientation();
 
   /**
    * Defeats layout calls. Useful for bulk updates.
    * 
    * @param suppress
    */
-  public void suppressLayout( boolean suppress );
+  void suppressLayout(boolean suppress);
 
 }

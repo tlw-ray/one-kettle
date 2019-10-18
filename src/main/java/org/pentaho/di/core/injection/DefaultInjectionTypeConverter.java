@@ -114,10 +114,7 @@ public class DefaultInjectionTypeConverter extends InjectionTypeConverter {
 
   @Override
   public Boolean boolean2boolean( Boolean v ) throws KettleValueException {
-    if ( v == null ) {
-      return null;
-    }
-    return v;
+      return v;
   }
 
   @Override

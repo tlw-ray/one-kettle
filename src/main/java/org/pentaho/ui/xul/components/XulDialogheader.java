@@ -20,12 +20,12 @@ package org.pentaho.ui.xul.components;
 import org.pentaho.ui.xul.XulComponent;
 
 public interface XulDialogheader extends XulComponent {
-  public void setDescription( String desc );
+  void setDescription(String desc);
 
-  public String getDescription();
+  String getDescription();
 
-  public void setTitle( String title );
+  void setTitle(String title);
 
-  public String getTitle();
+  String getTitle();
 
 }

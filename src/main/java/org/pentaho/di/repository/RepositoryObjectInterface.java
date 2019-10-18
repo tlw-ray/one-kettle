@@ -36,13 +36,13 @@ public interface RepositoryObjectInterface {
    *
    * @return the name of the object
    */
-  public String getName();
+  String getName();
 
   /**
    * The id of the object
    *
    * @return the id of the object
    */
-  public ObjectId getObjectId();
+  ObjectId getObjectId();
 
 }

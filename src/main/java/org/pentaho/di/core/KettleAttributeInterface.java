@@ -27,35 +27,35 @@ public interface KettleAttributeInterface {
   /**
    * @return the key for this attribute, usually the repository code.
    */
-  public String getKey();
+  String getKey();
 
   /**
    * @return the xmlCode
    */
-  public String getXmlCode();
+  String getXmlCode();
 
   /**
    * @return the repCode
    */
-  public String getRepCode();
+  String getRepCode();
 
   /**
    * @return the description
    */
-  public String getDescription();
+  String getDescription();
 
   /**
    * @return the tooltip
    */
-  public String getTooltip();
+  String getTooltip();
 
   /**
    * @return the type
    */
-  public int getType();
+  int getType();
 
   /**
    * @return The parent interface.
    */
-  public KettleAttributeInterface getParent();
+  KettleAttributeInterface getParent();
 }

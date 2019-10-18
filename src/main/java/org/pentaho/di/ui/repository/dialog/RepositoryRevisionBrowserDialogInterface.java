@@ -28,5 +28,5 @@ public interface RepositoryRevisionBrowserDialogInterface {
    *
    * @return the version selected
    */
-  public String open();
+  String open();
 }

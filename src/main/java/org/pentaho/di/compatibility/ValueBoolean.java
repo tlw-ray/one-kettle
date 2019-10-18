@@ -86,7 +86,7 @@ public class ValueBoolean implements ValueInterface, Cloneable {
 
   @Override
   public void setNumber( double number ) {
-    this.bool = ( number == 0.0 ) ? false : true;
+    this.bool = number != 0.0;
   }
 
   @Override
@@ -106,7 +106,7 @@ public class ValueBoolean implements ValueInterface, Cloneable {
 
   @Override
   public void setInteger( long number ) {
-    this.bool = ( number == 0 ) ? false : true;
+    this.bool = number != 0;
   }
 
   @Override

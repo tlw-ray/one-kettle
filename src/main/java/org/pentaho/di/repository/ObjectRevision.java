@@ -35,21 +35,21 @@ public interface ObjectRevision {
   /**
    * @return The internal name or number of the revision
    */
-  public String getName();
+  String getName();
 
   /**
    * @return The creation date of the revision
    */
-  public Date getCreationDate();
+  Date getCreationDate();
 
   /**
    * @return The revision comment
    */
-  public String getComment();
+  String getComment();
 
   /**
    * @return The user that caused the revision
    */
-  public String getLogin();
+  String getLogin();
 
 }

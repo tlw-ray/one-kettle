@@ -22,6 +22,6 @@ package org.pentaho.platform.api.engine;
 
 public interface IContentListener extends IMimeTypeListener {
 
-  public void close();
+  void close();
 
 }

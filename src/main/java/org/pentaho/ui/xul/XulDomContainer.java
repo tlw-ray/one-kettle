@@ -34,25 +34,25 @@ import java.util.Map;
  */
 public interface XulDomContainer {
 
-  public void addDocument( Document document );
+  void addDocument(Document document);
 
-  public Document getDocumentRoot();
+  Document getDocumentRoot();
 
-  public Document getDocument( int idx );
+  Document getDocument(int idx);
 
-  public XulDomContainer loadFragment( String xulLocation ) throws XulException;
+  XulDomContainer loadFragment(String xulLocation) throws XulException;
 
   /**
    * @deprecated We are getting away from using xul-instantiated event handlers. It is prefered that the
    *             application set the event handler via {@link XulDomContainer#addEventHandler(XulEventHandler)}
    */
-  public void addEventHandler( String id, String eventClassName ) throws XulException;
+  void addEventHandler(String id, String eventClassName) throws XulException;
 
-  public XulDomContainer loadFragment( String xulLocation, Object bundle ) throws XulException;
+  XulDomContainer loadFragment(String xulLocation, Object bundle) throws XulException;
 
-  public void loadFragment( String id, String src ) throws XulException;
+  void loadFragment(String id, String src) throws XulException;
 
-  public XulEventHandler getEventHandler( String key ) throws XulException;
+  XulEventHandler getEventHandler(String key) throws XulException;
 
   /**
    * Registers an event handler with elements of this container. Attributes of command-type elements within a xul
@@ -62,28 +62,28 @@ public interface XulDomContainer {
    * @param handler
    *          - a XulEventHandler
    */
-  public void addEventHandler( XulEventHandler handler );
+  void addEventHandler(XulEventHandler handler);
 
   @Deprecated
-  public void addBinding( Binding binding );
+  void addBinding(Binding binding);
 
-  public void addInitializedBinding( Binding b );
+  void addInitializedBinding(Binding b);
 
-  public void removeBinding( Binding binding );
+  void removeBinding(Binding binding);
 
-  public void initialize();
+  void initialize();
 
-  public boolean isInitialized();
+  boolean isInitialized();
 
-  public void close();
+  void close();
 
-  public boolean isClosed();
+  boolean isClosed();
 
-  public XulLoader getXulLoader();
+  XulLoader getXulLoader();
 
-  public void mergeContainer( XulDomContainer container );
+  void mergeContainer(XulDomContainer container);
 
-  public Map<String, XulEventHandler> getEventHandlers();
+  Map<String, XulEventHandler> getEventHandlers();
 
   /**
    * Execute the method passed, with any args as parameters. This invokation is used for plumbing event handlers to
@@ -96,7 +96,7 @@ public interface XulDomContainer {
    * 
    * @return the invoked method's return object
    */
-  public Object invoke( String method, Object[] args ) throws XulException;
+  Object invoke(String method, Object[] args) throws XulException;
 
   /**
    * Accommodates those objects that require a parenting on construction. Set the root parent before parsing.
@@ -104,29 +104,29 @@ public interface XulDomContainer {
    * @param context
    *          root context
    */
-  public void setOuterContext( Object context );
+  void setOuterContext(Object context);
 
-  public Object getOuterContext();
-
-  @Deprecated
-  public Binding createBinding( XulEventSource source, String sourceAttr, String targetId, String targetAttr );
+  Object getOuterContext();
 
   @Deprecated
-  public Binding createBinding( String source, String sourceAttr, String targetId, String targetAttr );
+  Binding createBinding(XulEventSource source, String sourceAttr, String targetId, String targetAttr);
 
-  public void loadOverlay( String src ) throws XulException;
+  @Deprecated
+  Binding createBinding(String source, String sourceAttr, String targetId, String targetAttr);
 
-  public void loadOverlay( String src, Object resourceBundle ) throws XulException;
+  void loadOverlay(String src) throws XulException;
 
-  public void removeOverlay( String src ) throws XulException;
+  void loadOverlay(String src, Object resourceBundle) throws XulException;
 
-  public void invokeLater( Runnable runnable );
+  void removeOverlay(String src) throws XulException;
 
-  public boolean isRegistered( String widgetHandlerName );
+  void invokeLater(Runnable runnable);
 
-  public void setResourceBundles( List<Object> resourceBundles );
+  boolean isRegistered(String widgetHandlerName);
 
-  public List<Object> getResourceBundles();
+  void setResourceBundles(List<Object> resourceBundles);
+
+  List<Object> getResourceBundles();
 
   void loadPerspective( String id );
 

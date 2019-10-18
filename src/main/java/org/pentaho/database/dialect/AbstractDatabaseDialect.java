@@ -549,7 +549,7 @@ public abstract class AbstractDatabaseDialect implements IDatabaseDialect, IDriv
         Iterator<String> iterator = map.keySet().iterator();
         boolean first = true;
         while ( iterator.hasNext() ) {
-          String typedParameter = (String) iterator.next();
+          String typedParameter = iterator.next();
           int dotIndex = typedParameter.indexOf( '.' );
           if ( dotIndex >= 0 ) {
             String typeCode = typedParameter.substring( 0, dotIndex );

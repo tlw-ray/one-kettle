@@ -40,7 +40,7 @@ public interface RepositoryAttributeInterface {
    * @param value
    * @throws KettleException
    */
-  public void setAttribute( String code, String value ) throws KettleException;
+  void setAttribute(String code, String value) throws KettleException;
 
   /**
    * Get a string attribute. If the attribute is not found, return null
@@ -49,7 +49,7 @@ public interface RepositoryAttributeInterface {
    * @return
    * @throws KettleException
    */
-  public String getAttributeString( String code ) throws KettleException;
+  String getAttributeString(String code) throws KettleException;
 
   /**
    * Set a boolean attribute
@@ -58,7 +58,7 @@ public interface RepositoryAttributeInterface {
    * @param value
    * @throws KettleException
    */
-  public void setAttribute( String code, boolean value ) throws KettleException;
+  void setAttribute(String code, boolean value) throws KettleException;
 
   /**
    * Get a boolean attribute, if the attribute is not found, return false;
@@ -67,7 +67,7 @@ public interface RepositoryAttributeInterface {
    * @return
    * @throws KettleException
    */
-  public boolean getAttributeBoolean( String code ) throws KettleException;
+  boolean getAttributeBoolean(String code) throws KettleException;
 
   /**
    * Set an integer attribute
@@ -76,7 +76,7 @@ public interface RepositoryAttributeInterface {
    * @param value
    * @throws KettleException
    */
-  public void setAttribute( String code, long value ) throws KettleException;
+  void setAttribute(String code, long value) throws KettleException;
 
   /**
    * Get an integer attribute. If the attribute is not found, return 0;
@@ -85,5 +85,5 @@ public interface RepositoryAttributeInterface {
    * @return
    * @throws KettleException
    */
-  public long getAttributeInteger( String code ) throws KettleException;
+  long getAttributeInteger(String code) throws KettleException;
 }

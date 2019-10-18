@@ -39,6 +39,6 @@ public interface IVarArgsAction extends IAction {
    * @param args
    *          a map of unspecified inputs
    */
-  public void setVarArgs( Map<String, Object> args );
+  void setVarArgs(Map<String, Object> args);
 
 }

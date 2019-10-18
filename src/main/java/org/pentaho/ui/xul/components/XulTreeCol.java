@@ -25,93 +25,93 @@ import java.util.List;
 
 public interface XulTreeCol extends XulComponent {
 
-  public void setEditable( boolean edit );
+  void setEditable(boolean edit);
 
-  public boolean isEditable();
+  boolean isEditable();
 
-  public void setFixed( boolean fixed );
+  void setFixed(boolean fixed);
 
-  public boolean isFixed();
+  boolean isFixed();
 
-  public void setHidden( boolean hide );
+  void setHidden(boolean hide);
 
-  public boolean isHidden();
+  boolean isHidden();
 
-  public void setLabel( String label );
+  void setLabel(String label);
 
-  public String getLabel();
+  String getLabel();
 
-  public void setPrimary( boolean primo );
+  void setPrimary(boolean primo);
 
-  public boolean isPrimary();
+  boolean isPrimary();
 
-  public void setSortActive( boolean sort );
+  void setSortActive(boolean sort);
 
-  public boolean isSortActive();
+  boolean isSortActive();
 
-  public void setSortDirection( String dir );
+  void setSortDirection(String dir);
 
-  public String getSortDirection();
+  String getSortDirection();
 
-  public void setSrc( String srcUrl );
+  void setSrc(String srcUrl);
 
-  public String getSrc();
+  String getSrc();
 
-  public void setType( String type );
+  void setType(String type);
 
-  public String getType();
+  String getType();
 
-  public ColumnType getColumnType();
+  ColumnType getColumnType();
 
-  public void setWidth( int width );
+  void setWidth(int width);
 
-  public int getWidth();
+  int getWidth();
 
-  public void autoSize();
+  void autoSize();
 
-  public String getCustomeditor();
+  String getCustomeditor();
 
-  public void setCustomeditor( String customClass );
+  void setCustomeditor(String customClass);
 
-  public void setBinding( String binding );
+  void setBinding(String binding);
 
-  public String getBinding();
+  String getBinding();
 
-  public void setChildrenbinding( String childProperty );
+  void setChildrenbinding(String childProperty);
 
-  public String getChildrenbinding();
+  String getChildrenbinding();
 
-  public String getCombobinding();
+  String getCombobinding();
 
-  public void setCombobinding( String property );
+  void setCombobinding(String property);
 
-  public String getColumntypebinding();
+  String getColumntypebinding();
 
-  public void setColumntypebinding( String property );
+  void setColumntypebinding(String property);
 
-  public List<InlineBindingExpression> getBindingExpressions();
+  List<InlineBindingExpression> getBindingExpressions();
 
-  public String getDisabledbinding();
+  String getDisabledbinding();
 
-  public void setDisabledbinding( String property );
+  void setDisabledbinding(String property);
 
-  public String getImagebinding();
+  String getImagebinding();
 
-  public void setImagebinding( String img );
+  void setImagebinding(String img);
 
-  public String getComparatorbinding();
+  String getComparatorbinding();
 
-  public void setComparatorbinding( String comp );
+  void setComparatorbinding(String comp);
 
-  public String getExpandedbinding();
+  String getExpandedbinding();
 
-  public void setExpandedbinding( String bind );
+  void setExpandedbinding(String bind);
 
-  public String getTooltipbinding();
+  String getTooltipbinding();
 
-  public void setTooltipbinding( String bind );
+  void setTooltipbinding(String bind);
 
-  public String getClassnameBinding();
+  String getClassnameBinding();
 
-  public void setClassnameBinding( String classname );
+  void setClassnameBinding(String classname);
 }

@@ -31,9 +31,9 @@ import java.util.Iterator;
  */
 public interface IParameterProvider {
 
-  public static final String SCOPE_REQUEST = "request"; //$NON-NLS-1$
+  String SCOPE_REQUEST = "request"; //$NON-NLS-1$
 
-  public static final String SCOPE_SESSION = "session"; //$NON-NLS-1$
+  String SCOPE_SESSION = "session"; //$NON-NLS-1$
 
   /**
    * Retrieve the requested parameter as type java.lang.String
@@ -44,7 +44,7 @@ public interface IParameterProvider {
    *          value to return if the named parameter can not be found
    * @return value of requested parameter, or the defaultValue if not found
    */
-  public String getStringParameter( String name, String defaultValue );
+  String getStringParameter(String name, String defaultValue);
 
   /**
    * Retrieve the requested parameter as primitive Java type long.
@@ -55,7 +55,7 @@ public interface IParameterProvider {
    *          value to return if the named parameter can not be found
    * @return value of requested parameter, or the defaultValue if not found
    */
-  public long getLongParameter( String name, long defaultValue );
+  long getLongParameter(String name, long defaultValue);
 
   /**
    * Retrieve the requested parameter as type java.util.Date.
@@ -66,7 +66,7 @@ public interface IParameterProvider {
    *          value to return if the named parameter can not be found
    * @return value of requested parameter, or the defaultValue if not found
    */
-  public Date getDateParameter( String name, Date defaultValue );
+  Date getDateParameter(String name, Date defaultValue);
 
   /**
    * Retrieve the requested parameter as decimal, returning a java.lang.Object.
@@ -77,7 +77,7 @@ public interface IParameterProvider {
    *          value to return if the named parameter can not be found
    * @return value of requested parameter, or the defaultValue if not found
    */
-  public BigDecimal getDecimalParameter( String name, BigDecimal defaultValue );
+  BigDecimal getDecimalParameter(String name, BigDecimal defaultValue);
 
   /**
    * Retrieve the requested parameter as an Object array
@@ -89,7 +89,7 @@ public interface IParameterProvider {
    * @return value of requested parameter converted to an array if it wasn't already an array, or the defaultValue
    *         if not found
    */
-  public Object[] getArrayParameter( String name, Object[] defaultValue );
+  Object[] getArrayParameter(String name, Object[] defaultValue);
 
   /**
    * Retrieve the requested parameter as a String array
@@ -101,7 +101,7 @@ public interface IParameterProvider {
    * @return value of requested parameter converted to a String array if it wasn't already a String array, or the
    *         defaultValue if not found
    */
-  public String[] getStringArrayParameter( String name, String[] defaultValue );
+  String[] getStringArrayParameter(String name, String[] defaultValue);
 
   /**
    * Return list of all avialable parameter names in this provider
@@ -109,7 +109,7 @@ public interface IParameterProvider {
    * @return Set of parameter names
    */
   @SuppressWarnings( "rawtypes" )
-  public Iterator getParameterNames();
+  Iterator getParameterNames();
 
   /**
    * Gets the named parameter from the provider as it's native type
@@ -118,13 +118,13 @@ public interface IParameterProvider {
    *          The name of the parameter to retrieve
    * @return The native object
    */
-  public Object getParameter( String name );
+  Object getParameter(String name);
 
   /**
    * @param name
    *          Name of the parameter to look up
    * @return true if the parameter exists in the parameter provider
    */
-  public boolean hasParameter( String name );
+  boolean hasParameter(String name);
 
 }

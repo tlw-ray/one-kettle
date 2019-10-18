@@ -23,5 +23,5 @@
 package org.pentaho.di.core.gui;
 
 public interface HasOverwritePrompter {
-  public OverwritePrompter getOverwritePrompter();
+  OverwritePrompter getOverwritePrompter();
 }

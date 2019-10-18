@@ -204,11 +204,7 @@ public class SpoonSlave extends Composite implements TabItemInterface {
       if ( itemType != null ? !itemType.equals( treeEntry.itemType ) : treeEntry.itemType != null ) {
         return false;
       }
-      if ( name != null ? !name.equals( treeEntry.name ) : treeEntry.name != null ) {
-        return false;
-      }
-
-      return true;
+        return name != null ? name.equals(treeEntry.name) : treeEntry.name == null;
     }
 
     @Override

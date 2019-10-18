@@ -273,7 +273,7 @@ public class StaxPoiSheetTest {
     XSSFReader reader = mockXSSFReader( sheetId, SHEET_1,
         mockSharedStringsTable(
             "Col1Label", "Col2Date", "Col3Number", "Col4Boolean", "Col5NumFormula", "One", "Two", "Three" ),
-        mockStylesTable( Collections.singletonMap( 1, 14 ), Collections.<Integer, String>emptyMap() ) );
+        mockStylesTable( Collections.singletonMap( 1, 14 ), Collections.emptyMap() ) );
     return new StaxPoiSheet( reader, "Sheet 1", sheetId );
   }
 
@@ -307,7 +307,7 @@ public class StaxPoiSheetTest {
     } );
     when( styles.getNumberFormatAt( any( Short.class ) ) ).then( new Answer<String>() {
       public String answer( InvocationOnMock invocation ) throws Throwable {
-        return numFmts.get( (Short) invocation.getArguments()[0] );
+        return numFmts.get(invocation.getArguments()[0]);
       }
     } );
     return styles;

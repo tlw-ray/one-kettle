@@ -103,7 +103,7 @@ public class VersionSummaryTest {
   public void testEquals() {
     assertTrue( versionSummary.equals( versionSummary ) );
     assertFalse( versionSummary.equals( null ) );
-    assertFalse( versionSummary.equals( new String() ) );
+    assertFalse( versionSummary.equals("") );
     assertFalse( versionSummary.equals( new VersionSummary( "diffId", FILE_ID, ACL_CHANGE, DATE, AUTHOR, MESSAGE,
       LABELS ) ) );
     assertTrue( versionSummary.equals( new VersionSummary( ID, FILE_ID, ACL_CHANGE, DATE, AUTHOR, MESSAGE,

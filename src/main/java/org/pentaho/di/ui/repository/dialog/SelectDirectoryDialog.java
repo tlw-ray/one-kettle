@@ -89,7 +89,7 @@ public class SelectDirectoryDialog extends Dialog {
 
   private boolean readOnly;
 
-  private Set<String> restrictedPaths = Collections.<String>emptySet();
+  private Set<String> restrictedPaths = Collections.emptySet();
 
   public void setRestrictedPaths( Set<String> restrictedPaths ) {
     this.restrictedPaths = restrictedPaths;

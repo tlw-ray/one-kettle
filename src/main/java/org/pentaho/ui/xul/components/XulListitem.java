@@ -38,14 +38,14 @@ public interface XulListitem extends XulComponent {
    * @param label
    *          The listitem label to display.
    */
-  public void setLabel( String label );
+  void setLabel(String label);
 
   /**
    * The text that represents this listitem in the box.
    * 
    * @return The listitem label.
    */
-  public String getLabel();
+  String getLabel();
 
   /**
    * Determines whether this item is selected in the box.
@@ -53,13 +53,13 @@ public interface XulListitem extends XulComponent {
    * @param selected
    *          If true, this item is selected, otherwise, it is not.
    */
-  public void setSelected( boolean selected );
+  void setSelected(boolean selected);
 
   /**
    * 
    * @return Is this listitem selected in the box?
    */
-  public boolean isSelected();
+  boolean isSelected();
 
   /**
    * A value associated with the listitem. Use for your own purposes. If no label is set on this listitem, an
@@ -68,13 +68,13 @@ public interface XulListitem extends XulComponent {
    * @param value
    *          The object to associate with this listitem.
    */
-  public void setValue( Object value );
+  void setValue(Object value);
 
   /**
    * Likely will be and can be null.
    * 
    * @return The object associated with this listitem.
    */
-  public Object getValue();
+  Object getValue();
 
 }

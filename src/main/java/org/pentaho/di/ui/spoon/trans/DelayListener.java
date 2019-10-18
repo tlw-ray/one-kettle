@@ -29,5 +29,5 @@ package org.pentaho.di.ui.spoon.trans;
  *
  */
 public interface DelayListener {
-  public void expired();
+  void expired();
 }

@@ -31,21 +31,21 @@ import java.io.IOException;
  */
 public interface IOutputHandler {
   // TODO sbarkdull, convert these 3 OUTPUT_* to enumerated type
-  public static final int OUTPUT_TYPE_PARAMETERS = 1;
+  int OUTPUT_TYPE_PARAMETERS = 1;
 
-  public static final int OUTPUT_TYPE_CONTENT = 2;
+  int OUTPUT_TYPE_CONTENT = 2;
 
-  public static final int OUTPUT_TYPE_DEFAULT = 3;
+  int OUTPUT_TYPE_DEFAULT = 3;
 
-  public static final String RESPONSE = "response"; //$NON-NLS-1$
+  String RESPONSE = "response"; //$NON-NLS-1$
 
-  public static final String CONTENT = "content"; //$NON-NLS-1$
+  String CONTENT = "content"; //$NON-NLS-1$
 
-  public static final String FILE = "file"; //$NON-NLS-1$
+  String FILE = "file"; //$NON-NLS-1$
 
-  public void setSession( IPentahoSession session );
+  void setSession(IPentahoSession session);
 
-  public IPentahoSession getSession();
+  IPentahoSession getSession();
 
   /**
    * @deprecated This method could never tell you if the content was actually done. Use
@@ -53,7 +53,7 @@ public interface IOutputHandler {
    *             response.
    */
   @Deprecated
-  public boolean contentDone();
+  boolean contentDone();
 
   /**
    * Indicates whether or not the handler is expected to have data written to a response output stream managed by
@@ -64,7 +64,7 @@ public interface IOutputHandler {
    * 
    * @return true if the handler gave something the opportunity to write data to the its response output stream
    */
-  public boolean isResponseExpected();
+  boolean isResponseExpected();
 
   /**
    * Retrieve the ContentItem that describes the request interface for additional or missing information (missing
@@ -72,7 +72,7 @@ public interface IOutputHandler {
    * 
    * @return ContentItem describing user feedback
    */
-  public IContentItem getFeedbackContentItem();
+  IContentItem getFeedbackContentItem();
 
   /**
    * Retrieve the ContentItem that describes the output from this request's component execution.
@@ -89,7 +89,7 @@ public interface IOutputHandler {
    *          Name of the content
    * @return ContentItem describing end result output
    */
-  public IContentItem getOutputContentItem( String objectName, String contentName, String instanceId, String mimeType );
+  IContentItem getOutputContentItem(String objectName, String contentName, String instanceId, String mimeType);
 
   /**
    * Determines whether this output handler can send feedback ContentItems or not.
@@ -99,7 +99,7 @@ public interface IOutputHandler {
    * 
    * @return true if feedback is allowed, false otherwise
    */
-  public boolean allowFeedback();
+  boolean allowFeedback();
 
   /**
    * Sets the output type that is wanted by the handler. Valid values are OUTPUT_TYPE_PARAMETERS,
@@ -108,7 +108,7 @@ public interface IOutputHandler {
    * @param outputType
    *          Output type requested
    */
-  public void setOutputPreference( int outputType );
+  void setOutputPreference(int outputType);
 
   /**
    * Gets the output type prefered by the handler. Values are defined in
@@ -117,7 +117,7 @@ public interface IOutputHandler {
    * 
    * @return Output type
    */
-  public int getOutputPreference();
+  int getOutputPreference();
 
   /**
    * Sets an output of the handler. For example the HTTP handler will accept output names of 'header' allowing an
@@ -128,9 +128,9 @@ public interface IOutputHandler {
    * @param value
    *          Value of the output
    */
-  public void setOutput( String name, Object value ) throws IOException;
+  void setOutput(String name, Object value) throws IOException;
 
-  public IMimeTypeListener getMimeTypeListener();
+  IMimeTypeListener getMimeTypeListener();
 
-  public void setMimeTypeListener( IMimeTypeListener mimeTypeListener );
+  void setMimeTypeListener(IMimeTypeListener mimeTypeListener);
 }

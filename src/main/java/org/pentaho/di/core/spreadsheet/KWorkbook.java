@@ -30,22 +30,22 @@ public interface KWorkbook extends AutoCloseable {
    *          The name of the sheet.
    * @return The sheet or null if the sheet was not found.
    */
-  public KSheet getSheet( String sheetName );
+  KSheet getSheet(String sheetName);
 
   /**
    * @return The array of sheet names in the workbook
    */
-  public String[] getSheetNames();
+  String[] getSheetNames();
 
   /**
    * Close the workbook file
    */
-  public void close();
+  void close();
 
   /**
    * @return The number of sheets in the workbook
    */
-  public int getNumberOfSheets();
+  int getNumberOfSheets();
 
   /**
    * Get a sheet in the workbook by index
@@ -54,7 +54,7 @@ public interface KWorkbook extends AutoCloseable {
    *          The sheet number to get
    * @return The selected sheet
    */
-  public KSheet getSheet( int sheetNr );
+  KSheet getSheet(int sheetNr);
 
   /**
    * Get a sheet name in the workbook by index
@@ -63,5 +63,5 @@ public interface KWorkbook extends AutoCloseable {
    *          The sheet number to get
    * @return The selected sheet's name
    */
-  public String getSheetName( int sheetNr );
+  String getSheetName(int sheetNr);
 }

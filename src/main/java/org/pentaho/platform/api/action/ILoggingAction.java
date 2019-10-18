@@ -37,6 +37,6 @@ public interface ILoggingAction extends IAction {
    * @param log
    *          the commons logging log that the Action can write to
    */
-  public void setLogger( Log log );
+  void setLogger(Log log);
 
 }

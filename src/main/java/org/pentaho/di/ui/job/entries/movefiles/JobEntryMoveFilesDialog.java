@@ -636,8 +636,7 @@ public class JobEntryMoveFilesDialog extends JobEntryDialog implements JobEntryD
     wlFields.setLayoutData( fdlFields );
 
     int rows =
-      jobEntry.source_filefolder == null ? 1 : ( jobEntry.source_filefolder.length == 0
-        ? 0 : jobEntry.source_filefolder.length );
+      jobEntry.source_filefolder == null ? 1 : (jobEntry.source_filefolder.length);
     final int FieldsRows = rows;
 
     ColumnInfo[] colinf =
@@ -675,8 +674,7 @@ public class JobEntryMoveFilesDialog extends JobEntryDialog implements JobEntryD
     // Add the file to the list of files...
     SelectionAdapter selA = new SelectionAdapter() {
       public void widgetSelected( SelectionEvent arg0 ) {
-        wFields.add( new String[] {
-          wSourceFileFolder.getText(), wDestinationFileFolder.getText(), wWildcard.getText() } );
+        wFields.add(wSourceFileFolder.getText(), wDestinationFileFolder.getText(), wWildcard.getText());
         wSourceFileFolder.setText( "" );
         wDestinationFileFolder.setText( "" );
         wWildcard.setText( "" );

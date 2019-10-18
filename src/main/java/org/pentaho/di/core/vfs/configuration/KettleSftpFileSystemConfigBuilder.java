@@ -132,7 +132,7 @@ public class KettleSftpFileSystemConfigBuilder extends KettleGenericFileSystemCo
 
   private static boolean parameterContainsHost( String parameter ) {
     // Test the number of '.' in the file. If there are more then two, then there is a host associated
-    return parameter.matches( "^(.*\\..*){3,}" ) ? true : false;
+    return parameter.matches("^(.*\\..*){3,}");
   }
 
   private static class PentahoUserInfo implements UserInfo {

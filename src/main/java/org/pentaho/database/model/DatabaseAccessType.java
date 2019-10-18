@@ -31,7 +31,7 @@ public enum DatabaseAccessType {
 
   private static Map<String, DatabaseAccessType> typeByName = null;
 
-  private DatabaseAccessType( String name ) {
+  DatabaseAccessType(String name) {
     this.name = name;
   }
 

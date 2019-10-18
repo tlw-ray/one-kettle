@@ -31,24 +31,24 @@ public interface TabItemInterface {
    *
    * @return true if the tab was closed, false if it was prevented by the user. (are you sure dialog)
    */
-  public boolean canBeClosed();
+  boolean canBeClosed();
 
-  public boolean canHandleSave();
+  boolean canHandleSave();
 
-  public Object getManagedObject();
+  Object getManagedObject();
 
-  public boolean hasContentChanged();
+  boolean hasContentChanged();
 
-  public ChangedWarningInterface getChangedWarning();
+  ChangedWarningInterface getChangedWarning();
 
-  public int showChangedWarning() throws KettleException;
+  int showChangedWarning() throws KettleException;
 
-  public boolean applyChanges() throws KettleException;
+  boolean applyChanges() throws KettleException;
 
-  public EngineMetaInterface getMeta();
+  EngineMetaInterface getMeta();
 
-  public void setControlStates();
+  void setControlStates();
 
-  public boolean setFocus();
+  boolean setFocus();
 
 }

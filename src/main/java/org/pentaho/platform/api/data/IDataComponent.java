@@ -37,11 +37,11 @@ public interface IDataComponent extends IComponent {
   /**
    * @return Returns the resultSet that the component currently has.
    */
-  public IPentahoResultSet getResultSet();
+  IPentahoResultSet getResultSet();
 
   /**
    * Disposes of resources held by the data component
    */
-  public void dispose();
+  void dispose();
 
 }

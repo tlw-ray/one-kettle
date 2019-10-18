@@ -30,5 +30,5 @@ package org.pentaho.di.core.logging;
  */
 public interface BufferChangedListener {
   // Left as StringBuffer as this is used across threads.
-  public void contentWasAdded( StringBuffer content, String extra, int nrLines );
+  void contentWasAdded(StringBuffer content, String extra, int nrLines);
 }

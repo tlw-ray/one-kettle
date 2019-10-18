@@ -23,7 +23,7 @@
 package org.pentaho.di.core.spreadsheet;
 
 public interface KCell {
-  public KCellType getType();
+  KCellType getType();
 
   /**
    * @return java.util.Date for KCellType.DATE<br>
@@ -32,15 +32,15 @@ public interface KCell {
    *         String for KCellType.LABEL<br>
    *         null for KCellType.EMPTY<br>
    */
-  public Object getValue();
+  Object getValue();
 
   /**
    * @return The content description of the cell
    */
-  public String getContents();
+  String getContents();
 
   /**
    * @return The row number in the sheet.
    */
-  public int getRow();
+  int getRow();
 }

@@ -35,6 +35,6 @@ public interface ILoggablePojo {
    * 
    * @param logger
    */
-  public void setLogger( ILogger logger );
+  void setLogger(ILogger logger);
 
 }

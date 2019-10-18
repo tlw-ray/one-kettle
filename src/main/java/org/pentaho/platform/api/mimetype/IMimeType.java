@@ -26,34 +26,34 @@ import org.pentaho.platform.api.repository2.unified.Converter;
 
 public interface IMimeType {
 
-  public String getName();
+  String getName();
 
-  public void setName( String name );
+  void setName(String name);
 
-  public List<String> getExtensions();
+  List<String> getExtensions();
 
-  public boolean isHidden();
+  boolean isHidden();
 
-  public void setHidden( boolean hidden );
+  void setHidden(boolean hidden);
 
-  public boolean isLocale();
+  boolean isLocale();
 
-  public void setLocale( boolean locale );
+  void setLocale(boolean locale);
 
-  public boolean isVersionEnabled();
+  boolean isVersionEnabled();
 
-  public void setVersionEnabled( boolean versionEnabled );
+  void setVersionEnabled(boolean versionEnabled);
 
-  public boolean isVersionCommentEnabled();
+  boolean isVersionCommentEnabled();
 
-  public void setVersionCommentEnabled( boolean versionCommentEnabled );
+  void setVersionCommentEnabled(boolean versionCommentEnabled);
 
-  public Converter getConverter();
+  Converter getConverter();
 
-  public void setConverter( Converter converter );
+  void setConverter(Converter converter);
 
-  public void setExtensions( List<String> extensions );
+  void setExtensions(List<String> extensions);
 
-  public String toString();
+  String toString();
 
 }

@@ -98,8 +98,7 @@ public class SpoonPartitionsDelegate extends SpoonSharedObjectDelegate {
 
   public void delPartitionSchema( TransMeta transMeta, PartitionSchema partitionSchema ) {
     try {
-      int idx = transMeta.getPartitionSchemas().indexOf( partitionSchema );
-      transMeta.getPartitionSchemas().remove( idx );
+        transMeta.getPartitionSchemas().remove(partitionSchema);
 
       if ( spoon.rep != null && partitionSchema.getObjectId() != null ) {
         // remove the partition schema from the repository too...

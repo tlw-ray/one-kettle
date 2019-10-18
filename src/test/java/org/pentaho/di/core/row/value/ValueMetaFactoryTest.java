@@ -327,7 +327,7 @@ public class ValueMetaFactoryTest {
 
   @Test
   public void testGetValueMetaNames() {
-    List<String> dataTypes = Arrays.<String>asList( ValueMetaFactory.getValueMetaNames() );
+    List<String> dataTypes = Arrays.asList( ValueMetaFactory.getValueMetaNames() );
 
     assertTrue( dataTypes.contains( "Number" ) );
     assertTrue( dataTypes.contains( "String" ) );
@@ -343,7 +343,7 @@ public class ValueMetaFactoryTest {
 
   @Test
   public void testGetAllValueMetaNames() {
-    List<String> dataTypes = Arrays.<String>asList( ValueMetaFactory.getAllValueMetaNames() );
+    List<String> dataTypes = Arrays.asList( ValueMetaFactory.getAllValueMetaNames() );
 
     assertTrue( dataTypes.contains( "Number" ) );
     assertTrue( dataTypes.contains( "String" ) );
@@ -455,7 +455,7 @@ public class ValueMetaFactoryTest {
     assertTrue( ValueMetaFactory.guessValueMetaInterface( new BigDecimal( 1.0 ) ) instanceof ValueMetaBigNumber );
     assertTrue( ValueMetaFactory.guessValueMetaInterface( new Double( 1.0 ) ) instanceof ValueMetaNumber );
     assertTrue( ValueMetaFactory.guessValueMetaInterface( new Long( 1 ) ) instanceof ValueMetaInteger );
-    assertTrue( ValueMetaFactory.guessValueMetaInterface( new String() ) instanceof ValueMetaString );
+    assertTrue( ValueMetaFactory.guessValueMetaInterface("") instanceof ValueMetaString );
     assertTrue( ValueMetaFactory.guessValueMetaInterface( new Date() ) instanceof ValueMetaDate );
     assertTrue( ValueMetaFactory.guessValueMetaInterface( new Boolean( false ) ) instanceof ValueMetaBoolean );
     assertTrue( ValueMetaFactory.guessValueMetaInterface( new Boolean( true ) ) instanceof ValueMetaBoolean );

@@ -63,7 +63,7 @@ public class XulTreeColumnModifier implements ICellModifier {
         return cell.getSelectedIndex();
       case TEXT:
       case PASSWORD:
-        ( (TextCellEditor) ( (TreeViewer) tree.getManagedObject() ).getCellEditors()[colIdx] ).getControl().setEnabled(
+        ( (TreeViewer) tree.getManagedObject() ).getCellEditors()[colIdx].getControl().setEnabled(
             !cell.isDisabled() );
 
         return cell.getLabel() != null ? cell.getLabel() : "";
@@ -83,7 +83,7 @@ public class XulTreeColumnModifier implements ICellModifier {
 
     switch ( tree.getColumns().getColumn( colIdx ).getColumnType() ) {
       case CHECKBOX:
-        cell.setValue( (Boolean) value );
+        cell.setValue(value);
         break;
       case COMBOBOX:
       case EDITABLECOMBOBOX:

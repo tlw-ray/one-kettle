@@ -49,7 +49,7 @@ public class MetaStoreUtilTest {
   @Test
   public void testVerifyNamespaceCreated() throws Exception {
     when( mockMetaStore.namespaceExists( namespace ) ).thenReturn( false );
-    metaStoreUtil.verifyNamespaceCreated( mockMetaStore, namespace );
+    MetaStoreUtil.verifyNamespaceCreated( mockMetaStore, namespace );
     verify( mockMetaStore ).createNamespace( namespace );
   }
 

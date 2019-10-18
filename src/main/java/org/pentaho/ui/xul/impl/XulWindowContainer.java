@@ -163,7 +163,7 @@ public class XulWindowContainer extends AbstractXulDomContainer {
   }
 
   public XulDomContainer loadFragment( String xulLocation, Object bundle ) throws XulException {
-    XulDomContainer container = this.xulLoader.loadXulFragment( xulLocation, (ResourceBundle) bundle );
+    XulDomContainer container = this.xulLoader.loadXulFragment( xulLocation, bundle);
     return container;
   }
 

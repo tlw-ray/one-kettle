@@ -36,6 +36,6 @@ public interface IActionCompleteListener {
    * @param runtime
    *          the runtime context associated with this action
    */
-  public void actionComplete( IRuntimeContext runtime );
+  void actionComplete(IRuntimeContext runtime);
 
 }

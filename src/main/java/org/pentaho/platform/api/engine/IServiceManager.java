@@ -44,7 +44,7 @@ public interface IServiceManager {
    *          the web service definition
    * @throws ServiceException
    */
-  public void registerService( final IServiceConfig config ) throws ServiceException;
+  void registerService(final IServiceConfig config) throws ServiceException;
 
   /**
    * Activates the services that have been registered with the service manager.
@@ -53,7 +53,7 @@ public interface IServiceManager {
    *          the current session
    * @throws ServiceInitializationException
    */
-  public void initServices() throws ServiceInitializationException;
+  void initServices() throws ServiceInitializationException;
 
   /**
    * Returns an instance of a registered servicing object.
@@ -66,7 +66,7 @@ public interface IServiceManager {
    * @throws ServiceException
    *           if no service object can be found or there was a problem retrieving the service object
    */
-  public Object getServiceBean( String serviceType, String serviceId ) throws ServiceException;
+  Object getServiceBean(String serviceType, String serviceId) throws ServiceException;
 
   /**
    * Gets the configuration for the requested service.
@@ -77,6 +77,6 @@ public interface IServiceManager {
    *          the unique id of the service
    * @return configuration of the service
    */
-  public IServiceConfig getServiceConfig( String serviceType, String serviceId );
+  IServiceConfig getServiceConfig(String serviceType, String serviceId);
 
 }

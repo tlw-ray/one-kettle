@@ -223,10 +223,7 @@ public class GuptaDatabaseMeta extends BaseDatabaseMeta implements DatabaseInter
    */
   @Override
   public boolean isSystemTable( String tableName ) {
-    if ( tableName.startsWith( "SYS" ) ) {
-      return true;
-    }
-    return false;
+      return tableName.startsWith("SYS");
   }
 
   /**

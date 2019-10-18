@@ -703,7 +703,7 @@ public class VfsFileChooserDialog implements SelectionListener, MouseListener, V
       defaultFilter = fileFilters[ 0 ];
     }
     vfsBrowser =
-      new VfsBrowser( dialog, SWT.NONE, rootFile, defaultFilter, fileDialogMode == VFS_DIALOG_SAVEAS ? true : false,
+      new VfsBrowser( dialog, SWT.NONE, rootFile, defaultFilter, fileDialogMode == VFS_DIALOG_SAVEAS,
         false );
     // vfsBrowser.selectTreeItemByName(rootFile.getName().getURI(), true);
     vfsBrowser.addVfsBrowserListener( this );

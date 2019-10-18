@@ -41,7 +41,7 @@ public interface IDefinitionAwareAction extends IAction {
    * @param inputNames
    *          names of the action definition inputs
    */
-  public void setInputNames( List<String> inputNames );
+  void setInputNames(List<String> inputNames);
 
   /**
    * Informs the Action of the outputs that will be expected of it, as specified in the action definition. This
@@ -50,5 +50,5 @@ public interface IDefinitionAwareAction extends IAction {
    * @param inputNames
    *          names of the action definition inputs
    */
-  public void setOutputNames( List<String> outputNames );
+  void setOutputNames(List<String> outputNames);
 }

@@ -27,41 +27,41 @@ import java.util.Set;
 public interface IParameterManager {
 
   @SuppressWarnings( "rawtypes" )
-  public Map getAllParameters();
+  Map getAllParameters();
 
-  public IActionParameter getCurrentInput( String inputName );
+  IActionParameter getCurrentInput(String inputName);
 
-  public IActionParameter getCurrentOutput( String outputName );
+  IActionParameter getCurrentOutput(String outputName);
 
-  public IActionSequenceResource getCurrentResource( String resource );
-
-  @SuppressWarnings( "rawtypes" )
-  public Set getCurrentInputNames();
-
-  public IActionParameter getLoopParameter( String inputName );
-
-  public String getActualRequestParameterName( String fieldName );
+  IActionSequenceResource getCurrentResource(String resource);
 
   @SuppressWarnings( "rawtypes" )
-  public Set getCurrentOutputNames();
+  Set getCurrentInputNames();
+
+  IActionParameter getLoopParameter(String inputName);
+
+  String getActualRequestParameterName(String fieldName);
 
   @SuppressWarnings( "rawtypes" )
-  public Set getCurrentResourceNames();
-
-  public void dispose();
+  Set getCurrentOutputNames();
 
   @SuppressWarnings( "rawtypes" )
-  public void dispose( List exceptParameters );
+  Set getCurrentResourceNames();
 
-  public void resetParameters();
+  void dispose();
 
-  public void setCurrentParameters( ISolutionActionDefinition actionDefinition );
+  @SuppressWarnings( "rawtypes" )
+  void dispose(List exceptParameters);
 
-  public void addToAllInputs( String key, IActionParameter param );
+  void resetParameters();
 
-  public void addToCurrentInputs( String key, IActionParameter param );
+  void setCurrentParameters(ISolutionActionDefinition actionDefinition);
 
-  public boolean addOutputParameters( ISolutionActionDefinition actionDefinition );
+  void addToAllInputs(String key, IActionParameter param);
+
+  void addToCurrentInputs(String key, IActionParameter param);
+
+  boolean addOutputParameters(ISolutionActionDefinition actionDefinition);
 
   /**
    * Returns a mapping of output parameters and the value and destination.
@@ -72,8 +72,8 @@ public interface IParameterManager {
    * @return a map with the param name as the key and a ReturnParameter containing the data.
    */
   @SuppressWarnings( "rawtypes" )
-  public Map getReturnParameters();
+  Map getReturnParameters();
 
-  public IActionParameter getInput( String inputName );
+  IActionParameter getInput(String inputName);
 
 }

@@ -189,7 +189,7 @@ public class JobFileListener implements FileListener {
   }
 
   public void syncMetaName( EngineMetaInterface meta, String name ) {
-    ( (JobMeta) meta ).setName( name );
+    meta.setName( name );
   }
 
   public boolean accepts( String fileName ) {

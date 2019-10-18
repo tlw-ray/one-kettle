@@ -34,7 +34,7 @@ public interface IAclVoter {
    * @param mask
    * @return true if the user has the requested access.
    */
-  public boolean hasAccess( IPentahoSession session, IAclHolder holder, int mask );
+  boolean hasAccess(IPentahoSession session, IAclHolder holder, int mask);
 
   /**
    * Returns an array of the authorities from the IAclHolder that apply to the provided authentication object.
@@ -45,7 +45,7 @@ public interface IAclVoter {
    * @param holder
    * @return The array of authorities from the IAclHolder that apply to the person in question
    */
-  public IAclEntry[] getEffectiveAcls( IPentahoSession session, IAclHolder holder );
+  IAclEntry[] getEffectiveAcls(IPentahoSession session, IAclHolder holder);
 
   /**
    * Determines whether the user is a super-manager of Hitachi Vantara. Uses the Manager Role.
@@ -53,14 +53,14 @@ public interface IAclVoter {
    * @param session
    * @return <code>true</code> if the user is a super-manager
    */
-  public boolean isPentahoAdministrator( IPentahoSession session );
+  boolean isPentahoAdministrator(IPentahoSession session);
 
   /**
    * Gets the role used to determine whether someone is the system-manager.
    *
    * @return <code>GrantedAuthority</code> of the role someone must be in to be the system manager.
    */
-  public GrantedAuthority getAdminRole();
+  GrantedAuthority getAdminRole();
 
   /**
    * Sets the role used to determine whether someone is the system-manager.
@@ -68,7 +68,7 @@ public interface IAclVoter {
    * @param value
    *          The <code>GrantedAuthority</code> which someone must be a considered a system manager
    */
-  public void setAdminRole( GrantedAuthority value );
+  void setAdminRole(GrantedAuthority value);
 
   /**
    * Returns true if the user is a member of the specified role
@@ -77,7 +77,7 @@ public interface IAclVoter {
    * @param role
    * @return <code>true</code> if the user is a member of the specified role
    */
-  public boolean isGranted( IPentahoSession session, GrantedAuthority role );
+  boolean isGranted(IPentahoSession session, GrantedAuthority role);
 
   /**
    * This returns the effective ACL for the piece of content for the given user. Ideally, this will look at all the
@@ -92,6 +92,6 @@ public interface IAclVoter {
    * @param holder
    * @return PentahoAclEntry holding the access to the object.
    */
-  public IPentahoAclEntry getEffectiveAcl( IPentahoSession session, IAclHolder holder );
+  IPentahoAclEntry getEffectiveAcl(IPentahoSession session, IAclHolder holder);
 
 }

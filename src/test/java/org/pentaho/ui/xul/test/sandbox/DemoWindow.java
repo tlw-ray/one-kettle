@@ -52,7 +52,7 @@ public class DemoWindow {
     for ( int i = 0; i < 5; i++ ) {
       TableColumn column = new TableColumn( table, SWT.LEFT );
       if ( i != 0 ) {
-        column.setText( "help" + String.valueOf( i ) );
+        column.setText( "help" + i);
       }
       column.pack();
     }

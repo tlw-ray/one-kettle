@@ -38,7 +38,7 @@ public interface IRuntimeRepository extends ILogger, ISessionContainer {
    * @throws RepositoryException
    */
   @SuppressWarnings( "rawtypes" )
-  public IRuntimeElement loadElementById( String instanceId, Collection allowableReadAttributeNames )
+  IRuntimeElement loadElementById(String instanceId, Collection allowableReadAttributeNames)
     throws RepositoryException;
 
   /**
@@ -53,7 +53,7 @@ public interface IRuntimeRepository extends ILogger, ISessionContainer {
    *          this will be in memory only, and will not be persisted when it goes out of scope.
    * @return The new Runtime element
    */
-  public IRuntimeElement newRuntimeElement( String parentId, String parentType, boolean transientOnly );
+  IRuntimeElement newRuntimeElement(String parentId, String parentType, boolean transientOnly);
 
   /**
    * Constructs a new Runtime Element.
@@ -69,8 +69,8 @@ public interface IRuntimeRepository extends ILogger, ISessionContainer {
    *          this will be in memory only, and will not be persisted when it goes out of scope.
    * @return The new Runtime element
    */
-  public IRuntimeElement newRuntimeElement( String parId, String parType, String solutionId, boolean transientOnly );
+  IRuntimeElement newRuntimeElement(String parId, String parType, String solutionId, boolean transientOnly);
 
-  public boolean usesHibernate();
+  boolean usesHibernate();
 
 }

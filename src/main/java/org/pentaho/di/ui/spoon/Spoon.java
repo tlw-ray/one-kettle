@@ -30,6 +30,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
+import java.lang.management.ManagementFactory;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -604,6 +605,11 @@ public class Spoon extends ApplicationWindow implements AddUndoPositionInterface
    *     Arguments are available in the "Get System Info" step.
    */
   public static void main( String[] a ) throws KettleException {
+    //measure jvm startup spend time
+    long currentTime = System.currentTimeMillis();
+    long vmStartTime = ManagementFactory.getRuntimeMXBean().getStartTime();
+    System.out.println(currentTime - vmStartTime);
+
     boolean doConsoleRedirect = !Boolean.getBoolean( "Spoon.Console.Redirect.Disabled" );
     if ( doConsoleRedirect ) {
       try {
@@ -3667,7 +3673,7 @@ public class Spoon extends ApplicationWindow implements AddUndoPositionInterface
 
   public void delHop( TransMeta transMeta, TransHopMeta transHopMeta ) {
     int index = transMeta.indexOfTransHop( transHopMeta );
-    addUndoDelete( transMeta, new Object[] { (TransHopMeta) transHopMeta.clone() }, new int[] { index } );
+    addUndoDelete( transMeta, new Object[] {transHopMeta.clone()}, new int[] { index } );
     transMeta.removeTransHop( index );
 
     StepMeta fromStepMeta = transHopMeta.getFromStep();
@@ -5294,9 +5300,7 @@ public class Spoon extends ApplicationWindow implements AddUndoPositionInterface
       }
     }
     if ( meta.getFileType().equals( LastUsedFile.FILE_TYPE_JOB ) ) {
-      if ( RepositorySecurityUI.verifyOperations( shell, rep, RepositoryOperation.MODIFY_JOB ) ) {
-        return false;
-      }
+        return !RepositorySecurityUI.verifyOperations(shell, rep, RepositoryOperation.MODIFY_JOB);
     }
     return true;
   }

@@ -22,19 +22,19 @@ package org.pentaho.platform.api.engine;
 
 public interface IPentahoSystemHelper {
 
-  public IContentOutputHandler getOutputDestinationFromContentRef( final String contentTag,
-      final IPentahoSession session );
+  IContentOutputHandler getOutputDestinationFromContentRef(final String contentTag,
+                                                           final IPentahoSession session);
 
-  public String getSystemName();
-
-  // use get(...) to retrieve pentaho system objects
-  @Deprecated
-  public Object createObject( final String className, final ILogger logger );
+  String getSystemName();
 
   // use get(...) to retrieve pentaho system objects
   @Deprecated
-  public Object createObject( final String className );
+  Object createObject(final String className, final ILogger logger);
 
-  public void registerHostnameVerifier();
+  // use get(...) to retrieve pentaho system objects
+  @Deprecated
+  Object createObject(final String className);
+
+  void registerHostnameVerifier();
 
 }

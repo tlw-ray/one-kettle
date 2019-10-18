@@ -121,9 +121,9 @@ public class ActionDefinition implements IActionDefinition {
 
   protected void initNewActionDefinition() {
 
-  };
+  }
 
-  /**
+    /**
    * Compares the component name of the given action definition element with the given component name. It is the short
    * component names that are compared. The short name is the substring following the last "." in the name provided. If
    * there is no "." in the name the short name is the provided name.
@@ -446,7 +446,7 @@ public class ActionDefinition implements IActionDefinition {
   }
 
   public IActionInput[] getInputs() {
-    return getInputs( (IActionInputFilter) null );
+    return getInputs(null);
   }
 
   public IActionInput[] getInputs( IActionInputFilter actionInputFilter ) {

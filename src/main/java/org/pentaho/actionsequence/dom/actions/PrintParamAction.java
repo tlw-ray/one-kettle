@@ -136,7 +136,7 @@ public class PrintParamAction extends ActionDefinition {
         && ( ( (ActionInputConstant) inputSource ).getValue() != null ) ) {
       String printParamName = getUniqueNameParam();
       printParamNames.add( printParamName );
-      setActionInputValue( printParamName, (ActionInputConstant) inputSource );
+      setActionInputValue( printParamName, inputSource);
     }
 
     if ( printParamNames.size() > 0 ) {

@@ -34,6 +34,6 @@ public interface IPentahoSystemEntryPoint {
   /**
    * Perform operations necessary upon entry to the system.
    */
-  public void systemEntryPoint();
+  void systemEntryPoint();
 
 }

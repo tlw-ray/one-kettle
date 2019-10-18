@@ -36,5 +36,5 @@ public interface WarningInterface {
    *          the parent subject that is being edited.
    * @return the warning message
    */
-  public WarningMessageInterface getWarningSituation( String text, Control widget, Object subject );
+  WarningMessageInterface getWarningSituation(String text, Control widget, Object subject);
 }

@@ -34,7 +34,7 @@ public enum LogStatus {
 
   private String status;
 
-  private LogStatus( String status ) {
+  LogStatus(String status) {
     this.status = status;
   }
 

@@ -1929,8 +1929,8 @@ public class MailDialog extends BaseStepDialog implements StepDialogInterface {
     wlFields.setLayoutData( fdlFields );
 
     int rows =
-      input.getEmbeddedImages() == null ? 1 : ( input.getEmbeddedImages().length == 0 ? 0 : input
-        .getEmbeddedImages().length );
+      input.getEmbeddedImages() == null ? 1 : (input
+              .getEmbeddedImages().length);
     final int FieldsRows = rows;
 
     ColumnInfo[] colinf =
@@ -1961,7 +1961,7 @@ public class MailDialog extends BaseStepDialog implements StepDialogInterface {
     // Add the file to the list of files...
     SelectionAdapter selA = new SelectionAdapter() {
       public void widgetSelected( SelectionEvent arg0 ) {
-        wFields.add( new String[] { wImageFilename.getText(), wContentID.getText() } );
+        wFields.add(wImageFilename.getText(), wContentID.getText());
         wImageFilename.setText( "" );
         wContentID.setText( "" );
         wFields.removeEmptyRows();

@@ -36,7 +36,7 @@ public enum RepositoryObjectType {
   private String typeDescription;
   private String extension;
 
-  private RepositoryObjectType( String typeDescription, String extension ) {
+  RepositoryObjectType(String typeDescription, String extension) {
     this.typeDescription = typeDescription;
     this.extension = extension;
   }

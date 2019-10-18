@@ -36,7 +36,7 @@ public interface IPentahoDefinableObjectFactory extends IPentahoObjectFactory {
    *
    * @author jamesdixon
    */
-  public static enum Scope {
+  enum Scope {
     GLOBAL, SESSION, REQUEST, THREAD, LOCAL
   }
 
@@ -47,7 +47,7 @@ public interface IPentahoDefinableObjectFactory extends IPentahoObjectFactory {
    * @param className - the name of the class to instatiate
    * @param scope     - the scope of the object
    */
-  public void defineObject( String key, String className, Scope scope );
+  void defineObject(String key, String className, Scope scope);
 
   /**
    * Defines a new object that must be loaded with a specific classloader
@@ -57,7 +57,7 @@ public interface IPentahoDefinableObjectFactory extends IPentahoObjectFactory {
    * @param scope     - the scope of the object
    * @param loader    - the loader to be used to create the class
    */
-  public void defineObject( String key, String className, Scope scope, ClassLoader loader );
+  void defineObject(String key, String className, Scope scope, ClassLoader loader);
 
   /**
    * Defines a new object instance.
@@ -65,5 +65,5 @@ public interface IPentahoDefinableObjectFactory extends IPentahoObjectFactory {
    * @param key      - typically the interface name
    * @param instance - the object instance to return when asked for by key
    */
-  public void defineInstance( String key, Object instance );
+  void defineInstance(String key, Object instance);
 }

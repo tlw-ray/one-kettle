@@ -33,7 +33,7 @@ public class PersistentXmlMetaStoreCache extends BaseXmlMetaStoreCache implement
 
   @Override
   protected ElementType createElementType( String elementId ) {
-    return new ElementType( elementId, this.<String, String>createStorage() );
+    return new ElementType( elementId, this.createStorage() );
   }
   
   protected static class ElementType extends BaseXmlMetaStoreCache.ElementType {

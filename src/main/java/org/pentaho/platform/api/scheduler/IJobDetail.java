@@ -21,15 +21,15 @@
 package org.pentaho.platform.api.scheduler;
 
 public interface IJobDetail {
-  public String getSubmissionDate();
+  String getSubmissionDate();
 
-  public String getActionName();
+  String getActionName();
 
-  public String getFullName();
+  String getFullName();
 
-  public String getDescription();
+  String getDescription();
 
-  public String getName();
+  String getName();
 
-  public String getGroupName();
+  String getGroupName();
 }

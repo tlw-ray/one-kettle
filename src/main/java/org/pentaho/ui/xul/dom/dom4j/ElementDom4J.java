@@ -105,7 +105,7 @@ public class ElementDom4J implements Element {
     if ( ele == null ) {
       return null;
     }
-    return (XulComponent) ele.getXulElement();
+    return ele.getXulElement();
   }
 
   /*
@@ -314,8 +314,8 @@ public class ElementDom4J implements Element {
   public void replaceChild( XulComponent oldElement, XulComponent newElement ) {
 
     List contentOfParent = element.content();
-    int index = contentOfParent.indexOf( (org.dom4j.Element) oldElement.getElementObject() );
-    contentOfParent.set( index, (org.dom4j.Element) newElement.getElementObject() );
+    int index = contentOfParent.indexOf(oldElement.getElementObject());
+    contentOfParent.set( index, newElement.getElementObject());
 
   }
 

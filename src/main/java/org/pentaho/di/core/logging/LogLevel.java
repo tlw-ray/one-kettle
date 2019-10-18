@@ -44,7 +44,7 @@ public enum LogLevel {
   private int level;
   private String code;
 
-  private LogLevel( int level, String code ) {
+  LogLevel(int level, String code) {
     this.level = level;
     this.code = code;
   }

@@ -28,7 +28,7 @@ public interface IVariableSerializer {
 
   String serializeToString( Object o );
 
-  public class BasicSerializer implements IVariableSerializer {
+  class BasicSerializer implements IVariableSerializer {
     @Override public Integer serializeToInt( Object o ) {
       if ( o == null ) {
         return -1;

@@ -22,6 +22,6 @@ public interface IDisposable {
    * Disposes of this object's resources
    * 
    */
-  public void dispose();
+  void dispose();
 
 }

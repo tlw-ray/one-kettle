@@ -29,12 +29,12 @@ public enum DialogButton {
   private String defaultLabel = null;
   private String label = null;
 
-  private DialogButton( int id, String defaultLabel ) {
+  DialogButton(int id, String defaultLabel) {
     this.id = id;
     this.defaultLabel = defaultLabel;
   }
 
-  private DialogButton( DialogButton base, String defaultLabel ) {
+  DialogButton(DialogButton base, String defaultLabel) {
     this.id = base.id;
     this.defaultLabel = defaultLabel;
   }

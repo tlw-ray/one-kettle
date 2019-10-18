@@ -270,7 +270,7 @@ public class KettleTransformAction extends ActionDefinition {
     } else {
       errors.add( validationError );
     }
-    return (ActionSequenceValidationError[]) errors.toArray( new ActionSequenceValidationError[0] );
+    return errors.toArray( new ActionSequenceValidationError[0] );
   }
 
   public IActionResource setTransformationFile( URI uri, String mimeType ) {

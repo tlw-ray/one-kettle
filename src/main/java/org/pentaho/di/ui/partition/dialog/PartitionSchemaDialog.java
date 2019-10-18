@@ -124,7 +124,7 @@ public class PartitionSchemaDialog extends Dialog {
 
   public PartitionSchemaDialog( Shell par, PartitionSchema partitionSchema, List<DatabaseMeta> databases,
       VariableSpace variableSpace ) {
-    this( par, partitionSchema, Collections.<PartitionSchema>emptyList(), databases, variableSpace );
+    this( par, partitionSchema, Collections.emptyList(), databases, variableSpace );
   }
 
   public boolean open() {
@@ -397,7 +397,7 @@ public class PartitionSchemaDialog extends Dialog {
 
           for ( int i = 0; i < partitioningInformation.length; i++ ) {
             PartitionDatabaseMeta meta = partitioningInformation[i];
-            wPartitions.add( new String[] { meta.getPartitionId() } );
+            wPartitions.add(meta.getPartitionId());
           }
 
           wPartitions.removeEmptyRows();

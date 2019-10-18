@@ -31,12 +31,12 @@ public interface ILastModifiedCacheItem {
    * 
    * @return
    */
-  public long getLastModified();
+  long getLastModified();
 
   /**
    * Get the lookup key for this cache item
    * 
    * @return
    */
-  public String getCacheKey();
+  String getCacheKey();
 }

@@ -33,7 +33,7 @@ public interface AliasedFileObject {
    */
   String getOriginalURIString();
 
-  public static boolean isAliasedFile( FileObject file) {
+  static boolean isAliasedFile(FileObject file) {
     return AliasedFileObject.class.isAssignableFrom( file.getClass() );
   }
 

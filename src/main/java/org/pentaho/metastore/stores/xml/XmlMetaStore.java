@@ -113,8 +113,7 @@ public class XmlMetaStore extends BaseMetaStore implements IMetaStore {
   }
 
   @Override
-  public synchronized void createNamespace( String namespace ) throws MetaStoreException,
-    MetaStoreNamespaceExistsException {
+  public synchronized void createNamespace( String namespace ) throws MetaStoreException {
     lockStore();
     try {
       String spaceFolder = XmlUtil.getNamespaceFolder( rootFolder, namespace );
@@ -131,8 +130,7 @@ public class XmlMetaStore extends BaseMetaStore implements IMetaStore {
   }
 
   @Override
-  public synchronized void deleteNamespace( String namespace ) throws MetaStoreException,
-    MetaStoreElementTypeExistsException {
+  public synchronized void deleteNamespace( String namespace ) throws MetaStoreException {
     lockStore();
     try {
       String spaceFolder = XmlUtil.getNamespaceFolder( rootFolder, namespace );
@@ -247,7 +245,7 @@ public class XmlMetaStore extends BaseMetaStore implements IMetaStore {
 
   @Override
   public synchronized void createElementType( String namespace, IMetaStoreElementType elementType )
-    throws MetaStoreException, MetaStoreElementTypeExistsException {
+    throws MetaStoreException {
     lockStore();
     try {
       // In the case of a file, the ID is the name
@@ -317,7 +315,7 @@ public class XmlMetaStore extends BaseMetaStore implements IMetaStore {
 
   @Override
   public synchronized void deleteElementType( String namespace, IMetaStoreElementType elementType )
-    throws MetaStoreException, MetaStoreDependenciesExistsException {
+    throws MetaStoreException {
     lockStore();
     try {
       String elementTypeFilename = XmlUtil.getElementTypeFile( rootFolder, namespace, elementType.getName() );
@@ -469,7 +467,7 @@ public class XmlMetaStore extends BaseMetaStore implements IMetaStore {
 
   public synchronized void
     createElement( String namespace, IMetaStoreElementType elementType, IMetaStoreElement element )
-      throws MetaStoreException, MetaStoreElementExistException {
+      throws MetaStoreException {
     lockStore();
     try {
       // In the case of a file, the ID is the name

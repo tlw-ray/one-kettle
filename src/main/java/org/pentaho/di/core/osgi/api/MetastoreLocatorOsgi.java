@@ -27,9 +27,9 @@ import org.pentaho.metastore.api.IMetaStore;
  * Created by tkafalas on 7/10/2017.
  */
 public interface MetastoreLocatorOsgi {
-  final String LOCAL_PROVIDER_KEY = "LocalMetastoreProvider";
-  final String REPOSITORY_PROVIDER_KEY = "RepositoryMetastoreProvider";
-  final String EMBEDDED_METASTORE_KEY_PREFIX = "Embedded";
+  String LOCAL_PROVIDER_KEY = "LocalMetastoreProvider";
+  String REPOSITORY_PROVIDER_KEY = "RepositoryMetastoreProvider";
+  String EMBEDDED_METASTORE_KEY_PREFIX = "Embedded";
 
   /**
    * Attempts to pick the best the MetaStore based on environment; either
@@ -63,7 +63,7 @@ public interface MetastoreLocatorOsgi {
    *
    * @param providerKey The key to the metastore provider.
    */
-  public void disposeMetastoreProvider( String providerKey );
+  void disposeMetastoreProvider(String providerKey);
 
   /**
    * Unconditionally returns the metastore stored with the given provider key, or null if it does not exist.
@@ -71,6 +71,6 @@ public interface MetastoreLocatorOsgi {
    * @param providerKey
    * @return
    */
-  public IMetaStore getExplicitMetastore( String providerKey );
+  IMetaStore getExplicitMetastore(String providerKey);
 
 }

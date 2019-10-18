@@ -22,8 +22,8 @@ package org.pentaho.platform.api.engine;
 
 public interface IMimeTypeListener {
 
-  public void setMimeType( String mimeType );
+  void setMimeType(String mimeType);
 
-  public void setName( String name );
+  void setName(String name);
 
 }

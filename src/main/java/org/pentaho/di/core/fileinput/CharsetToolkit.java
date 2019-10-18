@@ -114,16 +114,16 @@ public class CharsetToolkit {
     }
   }
 
-  public static Charset guessEncoding( FileObject file, int bufferLength ) throws FileNotFoundException,
-    IOException {
+  public static Charset guessEncoding( FileObject file, int bufferLength ) throws
+          IOException {
     return guessEncoding( new File( file.getName().getPathDecoded() ), bufferLength );
   }
 
-  public static String guessEncodingName( FileObject file ) throws FileNotFoundException, IOException {
+  public static String guessEncodingName( FileObject file ) throws IOException {
     return guessEncodingName( new File( file.getName().getPathDecoded() ) );
   }
 
-  public static String guessEncodingName( File file ) throws FileNotFoundException, IOException {
+  public static String guessEncodingName( File file ) throws IOException {
     return guessEncoding( file, 4096 ).displayName();
   }
 
@@ -301,7 +301,7 @@ public class CharsetToolkit {
     return this.defaultCharset;
   }
 
-  public static Charset guessEncoding( File f, int bufferLength ) throws FileNotFoundException, IOException {
+  public static Charset guessEncoding( File f, int bufferLength ) throws IOException {
     FileInputStream fis = new FileInputStream( f );
     byte[] buffer = new byte[bufferLength];
     fis.read( buffer );
@@ -311,7 +311,7 @@ public class CharsetToolkit {
     return toolkit.guessEncoding();
   }
 
-  public static Charset guessEncoding( File f, int bufferLength, Charset defaultCharset ) throws FileNotFoundException, IOException {
+  public static Charset guessEncoding( File f, int bufferLength, Charset defaultCharset ) throws IOException {
     FileInputStream fis = new FileInputStream( f );
     byte[] buffer = new byte[bufferLength];
     fis.read( buffer );

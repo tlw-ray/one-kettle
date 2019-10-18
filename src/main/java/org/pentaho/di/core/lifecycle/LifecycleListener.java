@@ -39,7 +39,7 @@ public interface LifecycleListener {
    * @throws LifecycleException
    *           Whenever this listener is unable to start succesfully.
    */
-  public void onStart( LifeEventHandler handler ) throws LifecycleException;
+  void onStart(LifeEventHandler handler) throws LifecycleException;
 
   /**
    * Called when the application ends
@@ -47,6 +47,6 @@ public interface LifecycleListener {
    * @throws LifecycleException
    *           If a problem prevents this listener from shutting down.
    */
-  public void onExit( LifeEventHandler handler ) throws LifecycleException;
+  void onExit(LifeEventHandler handler) throws LifecycleException;
 
 }

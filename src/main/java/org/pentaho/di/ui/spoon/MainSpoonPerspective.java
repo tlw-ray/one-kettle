@@ -101,7 +101,7 @@ public class MainSpoonPerspective implements SpoonPerspectiveImageProvider {
 
   @Override
   public List<XulOverlay> getOverlays() {
-    return Collections.singletonList( (XulOverlay) new DefaultXulOverlay( "ui/main_perspective_overlay.xul" ) );
+    return Collections.singletonList(new DefaultXulOverlay( "ui/main_perspective_overlay.xul" ));
   }
 
   @Override

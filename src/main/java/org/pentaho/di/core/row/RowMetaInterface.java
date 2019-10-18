@@ -71,7 +71,7 @@ public interface RowMetaInterface extends Cloneable {
    *
    * @return the list of value Metadata
    */
-  public List<ValueMetaInterface> getValueMetaList();
+  List<ValueMetaInterface> getValueMetaList();
 
   /**
    * Sets the value meta list.
@@ -79,7 +79,7 @@ public interface RowMetaInterface extends Cloneable {
    * @param valueMetaList
    *          the list of valueMeta to set
    */
-  public void setValueMetaList( List<ValueMetaInterface> valueMetaList );
+  void setValueMetaList(List<ValueMetaInterface> valueMetaList);
 
   /**
    * Check if a value is already present in this row with the same name.
@@ -88,7 +88,7 @@ public interface RowMetaInterface extends Cloneable {
    *          the value to check for existence
    * @return true if a value with the same name already exists in the row
    */
-  public boolean exists( ValueMetaInterface meta );
+  boolean exists(ValueMetaInterface meta);
 
   /**
    * Add a metadata value, extends the array if needed. If a value with the same name already exists, it gets renamed.
@@ -96,7 +96,7 @@ public interface RowMetaInterface extends Cloneable {
    * @param meta
    *          The metadata value to add
    */
-  public void addValueMeta( ValueMetaInterface meta );
+  void addValueMeta(ValueMetaInterface meta);
 
   /**
    * Add a metadata value on a certain location in the row. If a value with the same name already exists, it gets
@@ -107,7 +107,7 @@ public interface RowMetaInterface extends Cloneable {
    * @param meta
    *          The metadata value to add to the row
    */
-  public void addValueMeta( int index, ValueMetaInterface meta );
+  void addValueMeta(int index, ValueMetaInterface meta);
 
   /**
    * Get the value metadata on the specified index.
@@ -116,7 +116,7 @@ public interface RowMetaInterface extends Cloneable {
    *          The index to get the value metadata from
    * @return The value metadata specified by the index.
    */
-  public ValueMetaInterface getValueMeta( int index );
+  ValueMetaInterface getValueMeta(int index);
 
   /**
    * Replaces a value meta entry in the row metadata with another one.
@@ -126,7 +126,7 @@ public interface RowMetaInterface extends Cloneable {
    * @param valueMeta
    *          the metadata to replace with
    */
-  public void setValueMeta( int index, ValueMetaInterface valueMeta );
+  void setValueMeta(int index, ValueMetaInterface valueMeta);
 
   /**
    * Get a String value from a row of data. Convert data if this needed.
@@ -139,7 +139,7 @@ public interface RowMetaInterface extends Cloneable {
    * @throws KettleValueException
    *           in case there was a problem converting the data.
    */
-  public String getString( Object[] dataRow, int index ) throws KettleValueException;
+  String getString(Object[] dataRow, int index) throws KettleValueException;
 
   /**
    * Get an Integer value from a row of data. Convert data if this needed.
@@ -152,7 +152,7 @@ public interface RowMetaInterface extends Cloneable {
    * @throws KettleValueException
    *           in case there was a problem converting the data.
    */
-  public Long getInteger( Object[] dataRow, int index ) throws KettleValueException;
+  Long getInteger(Object[] dataRow, int index) throws KettleValueException;
 
   /**
    * Get a Number value from a row of data. Convert data if this needed.
@@ -165,7 +165,7 @@ public interface RowMetaInterface extends Cloneable {
    * @throws KettleValueException
    *           in case there was a problem converting the data.
    */
-  public Double getNumber( Object[] dataRow, int index ) throws KettleValueException;
+  Double getNumber(Object[] dataRow, int index) throws KettleValueException;
 
   /**
    * Get a Date value from a row of data. Convert data if this needed.
@@ -178,7 +178,7 @@ public interface RowMetaInterface extends Cloneable {
    * @throws KettleValueException
    *           in case there was a problem converting the data.
    */
-  public Date getDate( Object[] dataRow, int index ) throws KettleValueException;
+  Date getDate(Object[] dataRow, int index) throws KettleValueException;
 
   /**
    * Get a BigNumber value from a row of data. Convert data if this needed.
@@ -191,7 +191,7 @@ public interface RowMetaInterface extends Cloneable {
    * @throws KettleValueException
    *           in case there was a problem converting the data.
    */
-  public BigDecimal getBigNumber( Object[] dataRow, int index ) throws KettleValueException;
+  BigDecimal getBigNumber(Object[] dataRow, int index) throws KettleValueException;
 
   /**
    * Get a Boolean value from a row of data. Convert data if this needed.
@@ -204,7 +204,7 @@ public interface RowMetaInterface extends Cloneable {
    * @throws KettleValueException
    *           in case there was a problem converting the data.
    */
-  public Boolean getBoolean( Object[] dataRow, int index ) throws KettleValueException;
+  Boolean getBoolean(Object[] dataRow, int index) throws KettleValueException;
 
   /**
    * Get a Binary value from a row of data. Convert data if this needed.
@@ -217,7 +217,7 @@ public interface RowMetaInterface extends Cloneable {
    * @throws KettleValueException
    *           in case there was a problem converting the data.
    */
-  public byte[] getBinary( Object[] dataRow, int index ) throws KettleValueException;
+  byte[] getBinary(Object[] dataRow, int index) throws KettleValueException;
 
   /**
    * Clone row.
@@ -230,7 +230,7 @@ public interface RowMetaInterface extends Cloneable {
    * @throws KettleValueException
    *           in case something is not quite right with the expected data
    */
-  public Object[] cloneRow( Object[] objects, Object[] cloneTo ) throws KettleValueException;
+  Object[] cloneRow(Object[] objects, Object[] cloneTo) throws KettleValueException;
 
   /**
    * Clone row.
@@ -241,21 +241,21 @@ public interface RowMetaInterface extends Cloneable {
    * @throws KettleValueException
    *           in case something is not quite right with the expected data
    */
-  public Object[] cloneRow( Object[] objects ) throws KettleValueException;
+  Object[] cloneRow(Object[] objects) throws KettleValueException;
 
   /**
    * Returns the size of the metadata row.
    *
    * @return the size of the metadata row
    */
-  public int size();
+  int size();
 
   /**
    * Returns true if there are no elements in the row metadata.
    *
    * @return true if there are no elements in the row metadata
    */
-  public boolean isEmpty();
+  boolean isEmpty();
 
   /**
    * Determines whether a value in a row is null. A value is null when the object is null. As such, you can just as good
@@ -269,14 +269,14 @@ public interface RowMetaInterface extends Cloneable {
    * @throws KettleValueException
    *           in case there is a conversion error (only thrown in case of lazy conversion)
    */
-  public boolean isNull( Object[] dataRow, int index ) throws KettleValueException;
+  boolean isNull(Object[] dataRow, int index) throws KettleValueException;
 
   /**
    * Clone this RowMetaInterface object.
    *
    * @return a copy of this RowMetaInterface object
    */
-  public RowMetaInterface clone();
+  RowMetaInterface clone();
 
   /**
    * This method copies the row metadata and sets all values to the specified type (usually String)
@@ -287,7 +287,7 @@ public interface RowMetaInterface extends Cloneable {
    * @throws if
    *           the target type could not be loaded from the plugin registry
    */
-  public RowMetaInterface cloneToType( int targetType ) throws KettleValueException;
+  RowMetaInterface cloneToType(int targetType) throws KettleValueException;
 
   /**
    * Gets the string.
@@ -302,7 +302,7 @@ public interface RowMetaInterface extends Cloneable {
    * @throws KettleValueException
    *           the kettle value exception
    */
-  public String getString( Object[] dataRow, String valueName, String defaultValue ) throws KettleValueException;
+  String getString(Object[] dataRow, String valueName, String defaultValue) throws KettleValueException;
 
   /**
    * Gets the integer.
@@ -317,7 +317,7 @@ public interface RowMetaInterface extends Cloneable {
    * @throws KettleValueException
    *           the kettle value exception
    */
-  public Long getInteger( Object[] dataRow, String valueName, Long defaultValue ) throws KettleValueException;
+  Long getInteger(Object[] dataRow, String valueName, Long defaultValue) throws KettleValueException;
 
   /**
    * Gets the date.
@@ -332,7 +332,7 @@ public interface RowMetaInterface extends Cloneable {
    * @throws KettleValueException
    *           the kettle value exception
    */
-  public Date getDate( Object[] dataRow, String valueName, Date defaultValue ) throws KettleValueException;
+  Date getDate(Object[] dataRow, String valueName, Date defaultValue) throws KettleValueException;
 
   /**
    * Searches for a value with a certain name in the value meta list.
@@ -341,7 +341,7 @@ public interface RowMetaInterface extends Cloneable {
    *          The value name to search for
    * @return The value metadata or null if nothing was found
    */
-  public ValueMetaInterface searchValueMeta( String valueName );
+  ValueMetaInterface searchValueMeta(String valueName);
 
   /**
    * Searches the index of a value meta with a given name.
@@ -350,7 +350,7 @@ public interface RowMetaInterface extends Cloneable {
    *          the name of the value metadata to look for
    * @return the index or -1 in case we didn't find the value
    */
-  public int indexOfValue( String valueName );
+  int indexOfValue(String valueName);
 
   /**
    * Add a number of fields from another row (append to the end).
@@ -358,7 +358,7 @@ public interface RowMetaInterface extends Cloneable {
    * @param rowMeta
    *          The row of metadata values to add
    */
-  public void addRowMeta( RowMetaInterface rowMeta );
+  void addRowMeta(RowMetaInterface rowMeta);
 
   /**
    * Merge the values of row r to this Row. The values that are not yet in the row are added unchanged. The values that
@@ -368,7 +368,7 @@ public interface RowMetaInterface extends Cloneable {
    *          The row to be merged with this row
    */
   @Deprecated
-  public void mergeRowMeta( RowMetaInterface r );
+  void mergeRowMeta(RowMetaInterface r);
 
   /**
    * Merge the values of row r to this Row. The values that are not yet in the row are added unchanged. The values that
@@ -377,14 +377,14 @@ public interface RowMetaInterface extends Cloneable {
    * @param r
    *          The row to be merged with this row
    */
-  public void mergeRowMeta( RowMetaInterface r, String originStepName );
+  void mergeRowMeta(RowMetaInterface r, String originStepName);
 
   /**
    * Get an array of the names of all the Values in the Row.
    *
    * @return an array of Strings: the names of all the Values in the Row.
    */
-  public String[] getFieldNames();
+  String[] getFieldNames();
 
   /**
    * Write a serialized version of this class (Row Metadata) to the specified outputStream.
@@ -394,7 +394,7 @@ public interface RowMetaInterface extends Cloneable {
    * @throws KettleFileException
    *           in case a I/O error occurs
    */
-  public void writeMeta( DataOutputStream outputStream ) throws KettleFileException;
+  void writeMeta(DataOutputStream outputStream) throws KettleFileException;
 
   /**
    * Write a serialized version of the supplied data to the outputStream (based on the metadata but not the metadata
@@ -407,7 +407,7 @@ public interface RowMetaInterface extends Cloneable {
    * @throws KettleFileException
    *           in case a I/O error occurs
    */
-  public void writeData( DataOutputStream outputStream, Object[] data ) throws KettleFileException;
+  void writeData(DataOutputStream outputStream, Object[] data) throws KettleFileException;
 
   /**
    * De-serialize a row of data (no metadata is read) from an input stream.
@@ -420,12 +420,12 @@ public interface RowMetaInterface extends Cloneable {
    * @throws SocketTimeoutException
    *           In case there is a timeout during reading.
    */
-  public Object[] readData( DataInputStream inputStream ) throws KettleFileException, SocketTimeoutException;
+  Object[] readData(DataInputStream inputStream) throws KettleFileException, SocketTimeoutException;
 
   /**
    * Clear the row metadata.
    */
-  public void clear();
+  void clear();
 
   /**
    * Remove a value with a certain name from the row metadata.
@@ -435,7 +435,7 @@ public interface RowMetaInterface extends Cloneable {
    * @throws KettleValueException
    *           in case the value couldn't be found in the row metadata
    */
-  public void removeValueMeta( String string ) throws KettleValueException;
+  void removeValueMeta(String string) throws KettleValueException;
 
   /**
    * Remove a value metadata object on a certain index in the row.
@@ -443,7 +443,7 @@ public interface RowMetaInterface extends Cloneable {
    * @param index
    *          the index to remove the value metadata from
    */
-  public void removeValueMeta( int index );
+  void removeValueMeta(int index);
 
   /**
    * Get the string representation of the data in a row of data.
@@ -454,7 +454,7 @@ public interface RowMetaInterface extends Cloneable {
    * @throws KettleValueException
    *           in case of a conversion error
    */
-  public String getString( Object[] row ) throws KettleValueException;
+  String getString(Object[] row) throws KettleValueException;
 
   /**
    * Get an array of strings showing the name of the values in the row padded to a maximum length, followed by the types
@@ -464,7 +464,7 @@ public interface RowMetaInterface extends Cloneable {
    *          The length to which the name will be padded.
    * @return an array of strings: the names and the types of the fieldnames in the row.
    */
-  public String[] getFieldNamesAndTypes( int maxlen );
+  String[] getFieldNamesAndTypes(int maxlen);
 
   /**
    * Compare 2 rows with each other using certain values in the rows and also considering the specified ascending
@@ -480,7 +480,7 @@ public interface RowMetaInterface extends Cloneable {
    * @throws KettleValueException
    *           the kettle value exception
    */
-  public int compare( Object[] rowData1, Object[] rowData2, int[] fieldnrs ) throws KettleValueException;
+  int compare(Object[] rowData1, Object[] rowData2, int[] fieldnrs) throws KettleValueException;
 
   /**
    * Compare 2 rows with each other for equality using certain values in the rows and also considering the case
@@ -496,7 +496,7 @@ public interface RowMetaInterface extends Cloneable {
    * @throws KettleValueException
    *           the kettle value exception
    */
-  public boolean equals( Object[] rowData1, Object[] rowData2, int[] fieldnrs ) throws KettleValueException;
+  boolean equals(Object[] rowData1, Object[] rowData2, int[] fieldnrs) throws KettleValueException;
 
   /**
    * Compare 2 rows with each other using certain values in the rows and also considering the specified ascending
@@ -514,7 +514,7 @@ public interface RowMetaInterface extends Cloneable {
    * @throws KettleValueException
    *           the kettle value exception
    */
-  public int compare( Object[] rowData1, Object[] rowData2, int[] fieldnrs1, int[] fieldnrs2 ) throws KettleValueException;
+  int compare(Object[] rowData1, Object[] rowData2, int[] fieldnrs1, int[] fieldnrs2) throws KettleValueException;
 
   /**
    * Compare 2 rows with each other using certain values in the rows and also considering the specified ascending
@@ -534,8 +534,8 @@ public interface RowMetaInterface extends Cloneable {
    * @throws KettleValueException
    *           the kettle value exception
    */
-  public int compare( Object[] rowData1, RowMetaInterface rowMeta2, Object[] rowData2, int[] fieldnrs1,
-    int[] fieldnrs2 ) throws KettleValueException;
+  int compare(Object[] rowData1, RowMetaInterface rowMeta2, Object[] rowData2, int[] fieldnrs1,
+              int[] fieldnrs2) throws KettleValueException;
 
   /**
    * Compare 2 rows with each other using all values in the rows and also considering the specified ascending clauses of
@@ -549,7 +549,7 @@ public interface RowMetaInterface extends Cloneable {
    * @throws KettleValueException
    *           the kettle value exception
    */
-  public int compare( Object[] rowData1, Object[] rowData2 ) throws KettleValueException;
+  int compare(Object[] rowData1, Object[] rowData2) throws KettleValueException;
 
   /**
    * Calculate a hashCode of the content (not the index) of the data specified NOTE: This method uses a simple XOR of
@@ -564,7 +564,7 @@ public interface RowMetaInterface extends Cloneable {
    * @deprecated
    */
   @Deprecated
-  public int oldXORHashCode( Object[] rowData ) throws KettleValueException;
+  int oldXORHashCode(Object[] rowData) throws KettleValueException;
 
   /**
    * Calculates a simple hashCode of all the native data objects in the supplied row. This method will return a better
@@ -580,7 +580,7 @@ public interface RowMetaInterface extends Cloneable {
    * @throws KettleValueException
    *           in case there is a data conversion error
    */
-  public int hashCode( Object[] rowData ) throws KettleValueException;
+  int hashCode(Object[] rowData) throws KettleValueException;
 
   /**
    * Calculates a hashcode of the converted value of all objects in the supplied row. This method returns distinct
@@ -594,14 +594,14 @@ public interface RowMetaInterface extends Cloneable {
    * @throws KettleValueException
    *           in case there is a data conversion error
    */
-  public int convertedValuesHashCode( Object[] rowData ) throws KettleValueException;
+  int convertedValuesHashCode(Object[] rowData) throws KettleValueException;
 
   /**
    * To string meta.
    *
    * @return a string with a description of all the metadata values of the complete row of metadata
    */
-  public String toStringMeta();
+  String toStringMeta();
 
   /**
    * Gets the meta xml.
@@ -610,7 +610,7 @@ public interface RowMetaInterface extends Cloneable {
    * @throws IOException
    *           Thrown in case there is an (Base64/GZip) encoding problem
    */
-  public String getMetaXML() throws IOException;
+  String getMetaXML() throws IOException;
 
   /**
    * Gets the data xml.
@@ -621,7 +621,7 @@ public interface RowMetaInterface extends Cloneable {
    * @throws IOException
    *           Thrown in case there is an (Base64/GZip) encoding problem
    */
-  public String getDataXML( Object[] rowData ) throws IOException;
+  String getDataXML(Object[] rowData) throws IOException;
 
   /**
    * Convert an XML node into binary data using the row metadata supplied.
@@ -632,6 +632,6 @@ public interface RowMetaInterface extends Cloneable {
    * @throws KettleException
    *           Thrown in case there is an (Base64/GZip) decoding problem
    */
-  public Object[] getRow( Node node ) throws KettleException;
+  Object[] getRow(Node node) throws KettleException;
 
 }

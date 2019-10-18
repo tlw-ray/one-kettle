@@ -31,26 +31,26 @@ import org.pentaho.ui.xul.binding.Binding;
  * 
  */
 public interface Document extends Element {
-  public XulComponent getRootElement();
+  XulComponent getRootElement();
 
-  public XulComponent createElement( String elementName ) throws XulException;
+  XulComponent createElement(String elementName) throws XulException;
 
-  public boolean isRegistered( String elementName );
+  boolean isRegistered(String elementName);
 
-  public void setXulDomContainer( XulDomContainer container );
+  void setXulDomContainer(XulDomContainer container);
 
-  public void addOverlay( String src ) throws XulException;
+  void addOverlay(String src) throws XulException;
 
-  public void removeOverlay( String src ) throws XulException;
+  void removeOverlay(String src) throws XulException;
 
-  public void loadFragment( String id, String src ) throws XulException;
+  void loadFragment(String id, String src) throws XulException;
 
   @Deprecated
-  public void addBinding( Binding bind );
+  void addBinding(Binding bind);
 
-  public void addInitializedBinding( Binding b );
+  void addInitializedBinding(Binding b);
 
-  public void invokeLater( Runnable runnable );
+  void invokeLater(Runnable runnable);
 
   void loadPerspective( String id );
 }

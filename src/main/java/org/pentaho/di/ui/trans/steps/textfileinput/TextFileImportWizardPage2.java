@@ -627,7 +627,7 @@ public class TextFileImportWizardPage2 extends WizardPage {
   private void refreshFields() {
     wFields.removeAll();
     for ( int i = 0; i < fields.size(); i++ ) {
-      wFields.add( ( (TextFileInputField) fields.get( i ) ).getName() );
+      wFields.add( fields.get( i ).getName() );
     }
   }
 

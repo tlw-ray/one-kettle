@@ -14,8 +14,8 @@
 package org.pentaho.actionsequence.dom;
 
 public interface IActionSequenceValidationError {
-  int INPUT_OK = 0;;
-  int INPUT_MISSING = 1;
+  int INPUT_OK = 0;
+    int INPUT_MISSING = 1;
   int INPUT_REFERENCES_UNKNOWN_VAR = 2;
   int INPUT_UNINITIALIZED = 3;
   int OUTPUT_MISSING = 4;

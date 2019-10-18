@@ -44,14 +44,14 @@ public interface SpoonPerspective {
    *
    * @return unique ID
    */
-  public String getId();
+  String getId();
 
   /**
    * Returns the main UI for the perspective.
    *
    * @return UI Composite
    */
-  public Composite getUI();
+  Composite getUI();
 
   /**
    * Returns a localized name for the perspective
@@ -60,7 +60,7 @@ public interface SpoonPerspective {
    *          current Locale
    * @return localized name
    */
-  public String getDisplayName( Locale l );
+  String getDisplayName(Locale l);
 
   /**
    * Perspectives will be represented in spoon by an icon on the main toolbar. This method returns the InputStream for
@@ -68,21 +68,21 @@ public interface SpoonPerspective {
    *
    * @return icon InputStream
    */
-  public InputStream getPerspectiveIcon();
+  InputStream getPerspectiveIcon();
 
   /**
    * Called by Spoon whenever the active state of a perspective changes.
    *
    * @param active
    */
-  public void setActive( boolean active );
+  void setActive(boolean active);
 
   /**
    * A list of Xul Overlays to be applied and removed when the perspective is loaded or unloaded
    *
    * @return List of XulOverlays.
    */
-  public List<XulOverlay> getOverlays();
+  List<XulOverlay> getOverlays();
 
   /**
    * Returns a list of Xul Event Handlers (controllers) to be added to Xul Containers in Spoon. Perspectives may
@@ -90,19 +90,19 @@ public interface SpoonPerspective {
    *
    * @return list of XulEventHandlers
    */
-  public List<XulEventHandler> getEventHandlers();
+  List<XulEventHandler> getEventHandlers();
 
   /**
    * Allows outside code to register to for activation events for this perspective.
    *
    * @param listener
    */
-  public void addPerspectiveListener( SpoonPerspectiveListener listener );
+  void addPerspectiveListener(SpoonPerspectiveListener listener);
 
   /**
    * Return the active EngineMeta in the case of perspectives with save-able content.
    *
    * @return active EngineMetaInterface
    */
-  public EngineMetaInterface getActiveMeta();
+  EngineMetaInterface getActiveMeta();
 }

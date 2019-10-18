@@ -27,7 +27,7 @@ import org.pentaho.di.core.logging.LogTableInterface;
 
 public interface LogTableUserInterface {
 
-  public void retrieveLogTableOptions( LogTableInterface logTable );
+  void retrieveLogTableOptions(LogTableInterface logTable);
 
-  public void showLogTableOptions( Composite composite, LogTableInterface logTable );
+  void showLogTableOptions(Composite composite, LogTableInterface logTable);
 }

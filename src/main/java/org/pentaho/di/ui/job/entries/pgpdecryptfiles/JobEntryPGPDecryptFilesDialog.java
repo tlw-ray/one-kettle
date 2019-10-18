@@ -636,8 +636,7 @@ public class JobEntryPGPDecryptFilesDialog extends JobEntryDialog implements Job
     wlFields.setLayoutData( fdlFields );
 
     int rows =
-      jobEntry.source_filefolder == null ? 1 : ( jobEntry.source_filefolder.length == 0
-        ? 0 : jobEntry.source_filefolder.length );
+      jobEntry.source_filefolder == null ? 1 : (jobEntry.source_filefolder.length);
     final int FieldsRows = rows;
 
     ColumnInfo[] colinf =
@@ -683,8 +682,7 @@ public class JobEntryPGPDecryptFilesDialog extends JobEntryDialog implements Job
     // Add the file to the list of files...
     SelectionAdapter selA = new SelectionAdapter() {
       public void widgetSelected( SelectionEvent arg0 ) {
-        wFields.add( new String[] {
-          wSourceFileFolder.getText(), wWildcard.getText(), null, wDestinationFileFolder.getText() } );
+        wFields.add(wSourceFileFolder.getText(), wWildcard.getText(), null, wDestinationFileFolder.getText());
         wSourceFileFolder.setText( "" );
         wDestinationFileFolder.setText( "" );
         wWildcard.setText( "" );

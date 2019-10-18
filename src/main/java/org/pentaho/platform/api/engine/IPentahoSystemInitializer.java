@@ -26,14 +26,14 @@ import java.util.Map;
 public interface IPentahoSystemInitializer {
 
   @SuppressWarnings( "rawtypes" )
-  public boolean init( final IApplicationContext pApplicationContext, final Map listenerMap );
+  boolean init(final IApplicationContext pApplicationContext, final Map listenerMap);
 
-  public boolean getInitializedOK();
+  boolean getInitializedOK();
 
-  public int getInitializedStatus();
+  int getInitializedStatus();
 
-  public List<String> getInitializationFailureMessages();
+  List<String> getInitializationFailureMessages();
 
-  public void addInitializationFailureMessage( final int failureBit, final String message );
+  void addInitializationFailureMessage(final int failureBit, final String message);
 
 }

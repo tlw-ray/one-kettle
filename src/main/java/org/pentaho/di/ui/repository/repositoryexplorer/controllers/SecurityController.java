@@ -209,10 +209,7 @@ public class SecurityController extends LazilyInitializedController implements I
 
         @Override
         public Boolean sourceToTarget( Mode arg0 ) {
-          if ( arg0.equals( Mode.ADD ) ) {
-            return false;
-          }
-          return true;
+            return !arg0.equals(Mode.ADD);
         }
 
         @Override

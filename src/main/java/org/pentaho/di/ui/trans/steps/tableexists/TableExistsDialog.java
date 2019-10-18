@@ -371,7 +371,7 @@ public class TableExistsDialog extends BaseStepDialog implements StepDialogInter
               BaseMessages.getString( PKG, "System.Dialog.AvailableSchemas.Message" ) );
           String d = dialog.open();
           if ( d != null ) {
-            wSchemaname.setText( Const.NVL( d.toString(), "" ) );
+            wSchemaname.setText( Const.NVL(d, "" ) );
           }
 
         } else {

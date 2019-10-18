@@ -28,7 +28,7 @@ public enum UIPermission {
 
   private String description;
 
-  private UIPermission( String description ) {
+  UIPermission(String description) {
     this.description = description;
   }
 

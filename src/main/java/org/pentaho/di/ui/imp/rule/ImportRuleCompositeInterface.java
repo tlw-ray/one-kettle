@@ -36,7 +36,7 @@ public interface ImportRuleCompositeInterface {
    *          The import rule to edit
    * @return the new composite
    */
-  public Composite getComposite( Composite parent, ImportRuleInterface importRule );
+  Composite getComposite(Composite parent, ImportRuleInterface importRule);
 
   /**
    * Set the import rule data onto the composite
@@ -44,7 +44,7 @@ public interface ImportRuleCompositeInterface {
    * @param importRule
    *          the import rule to use
    */
-  public void setCompositeData( ImportRuleInterface importRule );
+  void setCompositeData(ImportRuleInterface importRule);
 
   /**
    * Get the data from the composite controls and set them in the import rule provided.
@@ -52,5 +52,5 @@ public interface ImportRuleCompositeInterface {
    * @param importRule
    *          The import rule to update.
    */
-  public void getCompositeData( ImportRuleInterface importRule );
+  void getCompositeData(ImportRuleInterface importRule);
 }

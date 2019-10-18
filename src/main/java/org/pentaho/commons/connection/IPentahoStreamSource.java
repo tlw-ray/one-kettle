@@ -22,11 +22,11 @@ import java.io.OutputStream;
 
 public interface IPentahoStreamSource {
 
-  public abstract String getContentType();
+  String getContentType();
 
-  public abstract InputStream getInputStream() throws IOException;
+  InputStream getInputStream() throws IOException;
 
-  public abstract String getName();
+  String getName();
 
-  public abstract OutputStream getOutputStream() throws IOException;
+  OutputStream getOutputStream() throws IOException;
 }

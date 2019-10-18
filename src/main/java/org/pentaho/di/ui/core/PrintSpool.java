@@ -88,7 +88,7 @@ public class PrintSpool {
   public PaletteData getPaletteData() {
     switch ( getDepth() ) {
       case 1:
-        palette = new PaletteData( new RGB[] { new RGB( 0, 0, 0 ), new RGB( 255, 255, 255 ) } );
+        palette = new PaletteData(new RGB( 0, 0, 0 ), new RGB( 255, 255, 255 ));
         break;
       default:
         palette = new PaletteData( 0, 0, 0 );

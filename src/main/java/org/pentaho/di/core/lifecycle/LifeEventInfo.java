@@ -27,11 +27,11 @@ import java.util.Set;
 
 public class LifeEventInfo {
   public enum Hint {
-    DISPLAY_MSG_BOX, DISPLAY_BROWSER;
+    DISPLAY_MSG_BOX, DISPLAY_BROWSER
   }
 
   public enum State {
-    SUCCESS, FAIL, HALTED;
+    SUCCESS, FAIL, HALTED
   }
 
   private String message;

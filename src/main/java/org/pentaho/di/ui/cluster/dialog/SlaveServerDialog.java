@@ -122,7 +122,7 @@ public class SlaveServerDialog extends Dialog {
   }
 
   public SlaveServerDialog( Shell par, SlaveServer slaveServer ) {
-    this( par, slaveServer, Collections.<SlaveServer>emptyList() );
+    this( par, slaveServer, Collections.emptyList() );
   }
 
   public boolean open() {

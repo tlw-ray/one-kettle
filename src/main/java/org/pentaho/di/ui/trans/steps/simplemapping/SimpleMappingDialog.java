@@ -116,7 +116,7 @@ public class SimpleMappingDialog extends BaseStepDialog implements StepDialogInt
   private ObjectLocationSpecificationMethod specificationMethod;
 
   private interface ApplyChanges {
-    public void applyChanges();
+    void applyChanges();
   }
 
   private class MappingParametersTab implements ApplyChanges {

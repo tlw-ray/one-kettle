@@ -49,7 +49,7 @@ public interface IPluginResourceLoader {
    *          the (relative) path to a resource
    * @return a resource as an array of bytes or null if the resource is not found
    */
-  public byte[] getResourceAsBytes( Class<? extends Object> pluginClass, String resourcePath );
+  byte[] getResourceAsBytes(Class<? extends Object> pluginClass, String resourcePath);
 
   /**
    * Gets a plugin-related resource in the form of a String. The relevant plugin is inferred from pluginClass. An
@@ -66,7 +66,7 @@ public interface IPluginResourceLoader {
    * @exception UnsupportedEncodingException
    *              if there is a problem encoding the string
    */
-  public String getResourceAsString( Class<? extends Object> pluginClass, String resourcePath )
+  String getResourceAsString(Class<? extends Object> pluginClass, String resourcePath)
     throws UnsupportedEncodingException;
 
   /**
@@ -84,7 +84,7 @@ public interface IPluginResourceLoader {
    * @exception UnsupportedEncodingException
    *              if there is a problem encoding the string
    */
-  public String getResourceAsString( Class<? extends Object> pluginClass, String resourcePath, String charsetName )
+  String getResourceAsString(Class<? extends Object> pluginClass, String resourcePath, String charsetName)
     throws UnsupportedEncodingException;
 
   /**
@@ -98,7 +98,7 @@ public interface IPluginResourceLoader {
    *          the (relative) path to a resource
    * @return a resource as an {@link InputStream} or null if the resource is not found
    */
-  public InputStream getResourceAsStream( Class<?> pluginClass, String resourcePath );
+  InputStream getResourceAsStream(Class<?> pluginClass, String resourcePath);
 
   /**
    * Gets a plugin-related resource in the form of an InputStream. An example of resource path is
@@ -111,7 +111,7 @@ public interface IPluginResourceLoader {
    *          the (relative) path to a resource
    * @return a resource as an {@link InputStream} or null if the resource is not found
    */
-  public InputStream getResourceAsStream( ClassLoader classLoader, String resourcePath );
+  InputStream getResourceAsStream(ClassLoader classLoader, String resourcePath);
 
   /**
    * A searching method, yielding a list of plugin-related resources as URLs. This method allows advanced searching
@@ -123,12 +123,12 @@ public interface IPluginResourceLoader {
    *          a resource name pattern supporting wildcards
    * @return a list of URLs to the matching resources or empty list if none are found
    */
-  public List<URL> findResources( Class<?> pluginClass, String namePattern );
+  List<URL> findResources(Class<?> pluginClass, String namePattern);
 
   /**
    * @see #findResources(Class, String)
    */
-  public List<URL> findResources( ClassLoader classLoader, String namePattern );
+  List<URL> findResources(ClassLoader classLoader, String namePattern);
 
   /**
    * Retrieves a localized resource bundle for the plugin represented by pluginClass. baseName is a fully qualified
@@ -151,7 +151,7 @@ public interface IPluginResourceLoader {
    *           if resource bundle not found
    * @see ResourceBundle
    */
-  public ResourceBundle getResourceBundle( Class<?> pluginClass, String baseName );
+  ResourceBundle getResourceBundle(Class<?> pluginClass, String baseName);
 
   /**
    * Searches for the plugin setting with the specified key. The method returns <code>null</code> if the setting is
@@ -163,7 +163,7 @@ public interface IPluginResourceLoader {
    *          the setting key
    * @return the plugin setting value or null if setting not found
    */
-  public String getPluginSetting( Class<?> pluginClass, String key );
+  String getPluginSetting(Class<?> pluginClass, String key);
 
   /**
    * Searches for the plugin setting with the specified key.
@@ -176,7 +176,7 @@ public interface IPluginResourceLoader {
    *          the value to return if no value is found for the setting key
    * @return the plugin setting value or defaultValue if setting not found
    */
-  public String getPluginSetting( Class<?> pluginClass, String key, String defaultValue );
+  String getPluginSetting(Class<?> pluginClass, String key, String defaultValue);
 
   /**
    * Searches for the plugin setting with the specified key.
@@ -189,6 +189,6 @@ public interface IPluginResourceLoader {
    *          the value to return if no value is found for the setting key
    * @return the plugin setting value or defaultValue if setting not found
    */
-  public String getPluginSetting( ClassLoader pluginClassLoader, String key, String defaultValue );
+  String getPluginSetting(ClassLoader pluginClassLoader, String key, String defaultValue);
 
 }

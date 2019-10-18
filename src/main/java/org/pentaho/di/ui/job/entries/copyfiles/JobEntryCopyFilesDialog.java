@@ -309,8 +309,7 @@ public class JobEntryCopyFilesDialog extends JobEntryDialog implements JobEntryD
     wlFields.setLayoutData( fdlFields );
 
     int rows =
-      jobEntry.source_filefolder == null ? 1 : ( jobEntry.source_filefolder.length == 0
-        ? 0 : jobEntry.source_filefolder.length );
+      jobEntry.source_filefolder == null ? 1 : (jobEntry.source_filefolder.length);
     final int FieldsRows = rows;
 
     ColumnInfo[] colinf =

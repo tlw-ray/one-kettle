@@ -30,10 +30,10 @@ import java.util.HashMap;
 public interface IUIComponent {
 
   @SuppressWarnings( "rawtypes" )
-  public void handleRequest( OutputStream outputStream, IActionRequestHandler actionRequestHandler, String contentType,
-      HashMap requestParameterProviders ) throws IOException;
+  void handleRequest(OutputStream outputStream, IActionRequestHandler actionRequestHandler, String contentType,
+                     HashMap requestParameterProviders) throws IOException;
 
-  public boolean validate();
+  boolean validate();
 
   /**
    * Set the userSession member, generate a Log Id, set the requestHandler, and validate the component's
@@ -44,6 +44,6 @@ public interface IUIComponent {
    * @param actionRequestHandler
    * @return boolean true if component configuration is valid, else false
    */
-  public boolean validate( IPentahoSession session, IActionRequestHandler actionRequestHandler );
+  boolean validate(IPentahoSession session, IActionRequestHandler actionRequestHandler);
 
 }

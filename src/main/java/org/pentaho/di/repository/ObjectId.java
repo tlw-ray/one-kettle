@@ -31,5 +31,5 @@ package org.pentaho.di.repository;
  *
  */
 public interface ObjectId {
-  public String getId();
+  String getId();
 }

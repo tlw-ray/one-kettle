@@ -56,7 +56,7 @@ public class RepositoryFileSidTest {
     // Test variations of equals
     assertTrue( sid.equals( sid ) );
     assertFalse( sid.equals( null ) );
-    assertFalse( sid.equals( new String() ) );
+    assertFalse( sid.equals("") );
 
     RepositoryFileSid dupSid = new RepositoryFileSid( NAME );
     assertTrue( sid.equals( dupSid ) );

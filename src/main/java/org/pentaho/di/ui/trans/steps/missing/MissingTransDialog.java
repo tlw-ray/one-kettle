@@ -93,7 +93,7 @@ public class MissingTransDialog extends BaseStepDialog implements StepDialogInte
           BaseMessages.getString( PKG, "MissingTransDialog.MissingTransStepId", stepname + " - "
               + ( (MissingTrans) baseStepMeta ).getMissingPluginId() );
     }
-    return message.toString();
+    return message;
   }
 
   public String open() {

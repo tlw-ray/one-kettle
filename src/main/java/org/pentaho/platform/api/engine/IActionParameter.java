@@ -34,62 +34,62 @@ public interface IActionParameter {
   /**
    * Parameter type of <tt>String</tt>
    */
-  public static final String TYPE_STRING = "string"; //$NON-NLS-1$
+  String TYPE_STRING = "string"; //$NON-NLS-1$
 
   /**
    * Parameter type of <code>int</code>
    */
-  public static final String TYPE_INTEGER = "integer"; //$NON-NLS-1$
+  String TYPE_INTEGER = "integer"; //$NON-NLS-1$
 
   /**
    * Parameter type of <tt>List</tt>.
    */
-  public static final String TYPE_LIST = "list"; //$NON-NLS-1$
+  String TYPE_LIST = "list"; //$NON-NLS-1$
 
   /**
    * Parameter type indicating streamable content. @see
    * <tt>RuntimeContext#getOutputStream(java.lang.String,java.lang.String,java.lang.String)</tt>
    */
-  public static final String TYPE_CONTENT = "content"; //$NON-NLS-1$
+  String TYPE_CONTENT = "content"; //$NON-NLS-1$
 
   /**
    * Parameter type of <tt>Date</tt>
    */
-  public static final String TYPE_DATE = "date"; //$NON-NLS-1$
+  String TYPE_DATE = "date"; //$NON-NLS-1$
 
   /**
    * Parameter type of <tt>IPentahoResultSet</tt>
    */
-  public static final String TYPE_RESULT_SET = "resultset"; //$NON-NLS-1$
+  String TYPE_RESULT_SET = "resultset"; //$NON-NLS-1$
 
   /**
    * Parameter type of <tt>BigDecimal</tt>
    */
-  public static final String TYPE_DECIMAL = "bigdecimal"; //$NON-NLS-1$
+  String TYPE_DECIMAL = "bigdecimal"; //$NON-NLS-1$
 
   /**
    * Parameter type indicating any type of <tt>Object</tt>
    */
-  public static final String TYPE_OBJECT = "object"; //$NON-NLS-1$
+  String TYPE_OBJECT = "object"; //$NON-NLS-1$
 
   /** This parameter allows prompting */
-  public static final int PROMPT_ALLOWED = 0;
+  int PROMPT_ALLOWED = 0;
 
   /** This parameter needs to be prompted for a value */
-  public static final int PROMPT_NEEDED = 1;
+  int PROMPT_NEEDED = 1;
 
   /** This parameter does not allow prompting */
-  public static final int PROMPT_NEVER = 2;
+  int PROMPT_NEVER = 2;
 
   /** A component has already specified a prompt for this parameter */
-  public static final int PROMPT_PENDING = 3;
+  int PROMPT_PENDING = 3;
 
   /**
    * Get the name, or the key for this ActionParameter.
    * 
    * @return the ActionParameter name
    */
-  public String getName();
+  String getName();
 
   /**
    * Get the value for this ActionParameter as type String.
@@ -97,14 +97,14 @@ public interface IActionParameter {
    * @return the ActionParameter value as a String. getType() should be referenced first to be sure the value type
    *         is TYPE_STRING.
    */
-  public String getStringValue();
+  String getStringValue();
 
   /**
    * Get the value for this ActionParameter as a generic Java Object.
    * 
    * @return the ActionParameter value as an Object
    */
-  public Object getValue();
+  Object getValue();
 
   /**
    * Get the value for this ActionParameter as a java.util.List.
@@ -113,7 +113,7 @@ public interface IActionParameter {
    *         TYPE_LIST.
    */
   @SuppressWarnings( "rawtypes" )
-  public List getValueAsList();
+  List getValueAsList();
 
   /**
    * Get the value for this ActionParameter as a IPentahoResultSet
@@ -121,14 +121,14 @@ public interface IActionParameter {
    * @return the IPentahoResultSet getType() should be referenced first to be sure the value type is
    *         TYPE_RESULT_SET.
    */
-  public IPentahoResultSet getValueAsResultSet();
+  IPentahoResultSet getValueAsResultSet();
 
   /**
    * Return the value type as one of the constants available in this class.
    * 
    * @return valid return values are TYPE_STRING, TYPE_INTEGER, TYPE_LIST, TYPE_CONTENT or TYPE_DATE
    */
-  public String getType();
+  String getType();
 
   /**
    * Sets the value object for this ActionParameter.
@@ -136,27 +136,27 @@ public interface IActionParameter {
    * @param value
    *          the value Object to be set.
    */
-  public void setValue( Object value );
+  void setValue(Object value);
 
   /**
    * @return List of where the parameter may come from (request, session, etc)
    */
   @SuppressWarnings( "rawtypes" )
-  public List getVariables();
+  List getVariables();
 
   /**
    * Check if this ActionParameter has a default value set.
    * 
    * @return true if there is a default value, otherwise false
    */
-  public boolean hasDefaultValue();
+  boolean hasDefaultValue();
 
   /**
    * Check to se if a value has been set for this parameter. Default value does not count;
    * 
    * @return true if this parameter has a non default value
    */
-  public boolean hasValue();
+  boolean hasValue();
 
   /**
    * Check to see if the value returned from thisActionParameter is indeed the default value instead of a value
@@ -164,20 +164,20 @@ public interface IActionParameter {
    * 
    * @return true if the parameter is using the default value, false otherwise
    */
-  public boolean isDefaultValue();
+  boolean isDefaultValue();
 
   /**
    * Check to see if the value (includes the default value) is null.
    * 
    * @return true if the value is null, otherwise false
    */
-  public boolean isNull();
+  boolean isNull();
 
   /**
    * See if we need to do any cleanup here
    * 
    */
-  public void dispose();
+  void dispose();
 
   /**
    * Returns the prompt status for this parameter.
@@ -188,7 +188,7 @@ public interface IActionParameter {
    * @see IActionParameter#PROMPT_NEEDED
    * @see IActionParameter#PROMPT_PENDING
    */
-  public int getPromptStatus();
+  int getPromptStatus();
 
   /**
    * Sets the prompt status for this parameter.
@@ -201,20 +201,20 @@ public interface IActionParameter {
    * @see IActionParameter#PROMPT_NEEDED
    * @see IActionParameter#PROMPT_PENDING
    */
-  public boolean setPromptStatus( int status );
+  boolean setPromptStatus(int status);
 
   // // Selection Support
   /*
    * Check to see if selections are set for this Parameter
    */
-  public boolean hasSelections();
+  boolean hasSelections();
 
   /**
    * The display name to use when building a prompt.
    * 
    * @return The display name for the prompt.
    */
-  public String getSelectionDisplayName();
+  String getSelectionDisplayName();
 
   /**
    * When building a parameter prompt page, what is the name of the prompt
@@ -222,33 +222,33 @@ public interface IActionParameter {
    * @param value
    * @return name for the value
    */
-  public String getSelectionNameForValue( String value );
+  String getSelectionNameForValue(String value);
 
   /**
    * 
    * @return Whether parameter should be displayed in output.
    */
-  public boolean isOutputParameter();
+  boolean isOutputParameter();
 
   /**
    * @deprecated Unused in the platform
    */
   @Deprecated
   @SuppressWarnings( "rawtypes" )
-  public Map getSelectionNameMap();
+  Map getSelectionNameMap();
 
   /**
    * @deprecated Unused in the platform
    */
   @Deprecated
   @SuppressWarnings( "rawtypes" )
-  public List getSelectionValues();
+  List getSelectionValues();
 
   /**
    * @deprecated Unused in the platform
    */
   @Deprecated
   @SuppressWarnings( "rawtypes" )
-  public void setParamSelections( List selValues, Map selNames, String displayname );
+  void setParamSelections(List selValues, Map selNames, String displayname);
 
 }

@@ -226,7 +226,7 @@ public class JobEntryTruncateTablesDialog extends JobEntryDialog implements JobE
     fdlFields.top = new FormAttachment( wbTable, 2 * margin );
     wlFields.setLayoutData( fdlFields );
 
-    int rows = jobEntry.arguments == null ? 1 : ( jobEntry.arguments.length == 0 ? 0 : jobEntry.arguments.length );
+    int rows = jobEntry.arguments == null ? 1 : (jobEntry.arguments.length);
     final int FieldsRows = rows;
 
     ColumnInfo[] colinf =

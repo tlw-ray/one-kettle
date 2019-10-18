@@ -57,7 +57,7 @@ public class ValueMetaTimestampTest {
         Object ts = invocationOnMock.getArguments()[1];
         return ts.toString();
       }
-    } ).when( ps ).setTimestamp( anyInt(), (Timestamp) anyObject() );
+    } ).when( ps ).setTimestamp( anyInt(), anyObject());
 
     try {
       vm.setPreparedStatementValue( mock( DatabaseMeta.class ), ps, 0, null );

@@ -27,7 +27,7 @@ public interface IPdiContentProvider {
    * (underscore) as prefix; so, if a user creates input parameter "_name", then the other users looking at it will know
    * that they should not change it.
    */
-  public static final String PROTECTED_PARAMETER_PREFIX = "_";
+  String PROTECTED_PARAMETER_PREFIX = "_";
 
   /**
    * given a ktr/kjb filePath, looks in its metadata for the existence of user input parameters, required to properly

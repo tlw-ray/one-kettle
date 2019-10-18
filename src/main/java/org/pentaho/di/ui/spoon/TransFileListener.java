@@ -203,7 +203,7 @@ public class TransFileListener implements FileListener {
   }
 
   public void syncMetaName( EngineMetaInterface meta, String name ) {
-    ( (TransMeta) meta ).setName( name );
+    meta.setName( name );
   }
 
   public boolean accepts( String fileName ) {
@@ -215,10 +215,7 @@ public class TransFileListener implements FileListener {
   }
 
   public boolean acceptsXml( String nodeName ) {
-    if ( "transformation".equals( nodeName ) ) {
-      return true;
-    }
-    return false;
+      return "transformation".equals(nodeName);
   }
 
   public String[] getFileTypeDisplayNames( Locale locale ) {

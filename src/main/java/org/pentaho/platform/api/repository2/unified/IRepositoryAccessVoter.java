@@ -47,7 +47,7 @@ public interface IRepositoryAccessVoter {
    * @return Returns true if the user has the requested access.
    */
 
-  public boolean hasAccess( final RepositoryFile file, final RepositoryFilePermission operation,
-      final RepositoryFileAcl acl, final IPentahoSession session );
+  boolean hasAccess(final RepositoryFile file, final RepositoryFilePermission operation,
+                    final RepositoryFileAcl acl, final IPentahoSession session);
 
 }

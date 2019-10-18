@@ -92,13 +92,8 @@ public class RepositoryFileAce implements Serializable {
       return false;
     }
     if ( recipient == null ) {
-      if ( other.recipient != null ) {
-        return false;
-      }
-    } else if ( !recipient.equals( other.recipient ) ) {
-      return false;
-    }
-    return true;
+        return other.recipient == null;
+    } else return recipient.equals(other.recipient);
   }
 
   @Override

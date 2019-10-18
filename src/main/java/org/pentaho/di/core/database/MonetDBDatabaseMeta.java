@@ -59,9 +59,9 @@ public class MonetDBDatabaseMeta extends BaseDatabaseMeta implements DatabaseInt
     } else {
       return -1;
     }
-  };
+  }
 
-  /**
+    /**
    * @see DatabaseInterface#getNotFoundTK(boolean)
    */
   @Override

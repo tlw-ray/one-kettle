@@ -45,26 +45,26 @@ public interface IRepositoryExplorerUISupport {
    *          dom container
    * @throws XulException
    */
-  public void apply( XulDomContainer container ) throws XulException;
+  void apply(XulDomContainer container) throws XulException;
 
   /**
    * Get the list of event handlers added to the list of event handlers
    *
    * @return list of event handlers
    */
-  public List<XulEventHandler> getEventHandlers();
+  List<XulEventHandler> getEventHandlers();
 
   /**
    * Get the list of overlays for the UI Support
    *
    * @return
    */
-  public List<XulOverlay> getOverlays();
+  List<XulOverlay> getOverlays();
 
   /**
    * Initialize the controller
    *
    * @throws ControllerInitializationException
    */
-  public void initControllers( Repository rep ) throws ControllerInitializationException;
+  void initControllers(Repository rep) throws ControllerInitializationException;
 }

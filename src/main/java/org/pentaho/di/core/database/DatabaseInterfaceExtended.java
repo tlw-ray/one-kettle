@@ -46,5 +46,5 @@ public interface DatabaseInterfaceExtended extends DatabaseInterface {
    * @param e exception to check
    * @return decision result
    */
-  public boolean fullExceptionLog( Exception e );
+  boolean fullExceptionLog(Exception e);
 }

@@ -107,7 +107,7 @@ public class MySQLBulkLoaderTest {
     MySQLBulkLoaderMeta lm = new MySQLBulkLoaderMeta();
     Document document = XMLHandler.loadXMLFile( this.getClass().getResourceAsStream( "step.xml" ) );
     IMetaStore metastore = null;
-    Node stepNode = (Node) document.getDocumentElement();
+    Node stepNode = document.getDocumentElement();
     lm.loadXML( stepNode, Collections.EMPTY_LIST, metastore );
     int[] codes = lm.getFieldFormatType();
     Assert.assertEquals( 3, codes[0] );

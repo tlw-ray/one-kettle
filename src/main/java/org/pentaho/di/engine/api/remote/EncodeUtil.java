@@ -60,7 +60,7 @@ public class EncodeUtil {
 
     try (
       GZIPInputStream unzip = new GZIPInputStream( zip, ZIP_BUFFER_SIZE );
-      BufferedInputStream in = new BufferedInputStream( unzip, ZIP_BUFFER_SIZE );
+      BufferedInputStream in = new BufferedInputStream( unzip, ZIP_BUFFER_SIZE )
     ) {
       byte[] buff = new byte[ ZIP_BUFFER_SIZE ];
       for ( int length = 0; ( length = in.read( buff ) ) > 0; ) {

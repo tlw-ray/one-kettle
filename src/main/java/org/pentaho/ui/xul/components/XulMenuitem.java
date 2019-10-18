@@ -29,32 +29,32 @@ import org.pentaho.ui.xul.XulComponent;
  */
 public interface XulMenuitem extends XulComponent {
 
-  public String getAcceltext();
+  String getAcceltext();
 
-  public void setAcceltext( String accel );
+  void setAcceltext(String accel);
 
-  public String getLabel();
+  String getLabel();
 
-  public void setLabel( String label );
+  void setLabel(String label);
 
-  public String getAccesskey();
+  String getAccesskey();
 
-  public void setAccesskey( String accessKey );
+  void setAccesskey(String accessKey);
 
-  public boolean isDisabled();
+  boolean isDisabled();
 
-  public void setDisabled( boolean disabled );
+  void setDisabled(boolean disabled);
 
-  public String getImage();
+  String getImage();
 
-  public void setImage( String image );
+  void setImage(String image);
 
-  public boolean isSelected();
+  boolean isSelected();
 
-  public void setSelected( boolean selected );
+  void setSelected(boolean selected);
 
-  public void setCommand( String command );
+  void setCommand(String command);
 
-  public String getCommand();
+  String getCommand();
 
 }

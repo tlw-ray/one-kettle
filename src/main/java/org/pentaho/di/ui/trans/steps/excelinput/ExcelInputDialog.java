@@ -1064,9 +1064,8 @@ public class ExcelInputDialog extends BaseStepDialog implements StepDialogInterf
     SelectionAdapter selA = new SelectionAdapter() {
       @Override
       public void widgetSelected( SelectionEvent arg0 ) {
-        wFilenameList.add( new String[] {
-          wFilename.getText(), wFilemask.getText(), wExcludeFilemask.getText(),
-          ExcelInputMeta.RequiredFilesCode[0], ExcelInputMeta.RequiredFilesCode[0] } );
+        wFilenameList.add(wFilename.getText(), wFilemask.getText(), wExcludeFilemask.getText(),
+                ExcelInputMeta.RequiredFilesCode[0], ExcelInputMeta.RequiredFilesCode[0]);
         wFilename.setText( "" );
         wFilemask.setText( "" );
         wExcludeFilemask.setText( "" );
@@ -1280,10 +1279,9 @@ public class ExcelInputDialog extends BaseStepDialog implements StepDialogInterf
       wFilenameList.removeAll();
 
       for ( int i = 0; i < meta.getFileName().length; i++ ) {
-        wFilenameList.add( new String[] {
-          meta.getFileName()[i], meta.getFileMask()[i], meta.getExludeFileMask()[i],
-          meta.getRequiredFilesDesc( meta.getFileRequired()[i] ),
-          meta.getRequiredFilesDesc( meta.getIncludeSubFolders()[i] ) } );
+        wFilenameList.add(meta.getFileName()[i], meta.getFileMask()[i], meta.getExludeFileMask()[i],
+                meta.getRequiredFilesDesc( meta.getFileRequired()[i] ),
+                meta.getRequiredFilesDesc( meta.getIncludeSubFolders()[i] ));
       }
       wFilenameList.removeEmptyRows();
       wFilenameList.setRowNums();
@@ -1948,7 +1946,7 @@ public class ExcelInputDialog extends BaseStepDialog implements StepDialogInterf
     String[] selection = esd.open();
     if ( selection != null ) {
       for ( int j = 0; j < selection.length; j++ ) {
-        wSheetnameList.add( new String[] { selection[j], "" } );
+        wSheetnameList.add(selection[j], "");
       }
       wSheetnameList.removeEmptyRows();
       wSheetnameList.setRowNums();
@@ -1998,7 +1996,7 @@ public class ExcelInputDialog extends BaseStepDialog implements StepDialogInterf
       }
       for ( int j = 0; j < fields.size(); j++ ) {
         ValueMetaInterface field = fields.getValueMeta( j );
-        wFields.add( new String[] { field.getName(), field.getTypeDesc(), "", "", "none", "N" } );
+        wFields.add(field.getName(), field.getTypeDesc(), "", "", "none", "N");
       }
       wFields.removeEmptyRows();
       wFields.setRowNums();

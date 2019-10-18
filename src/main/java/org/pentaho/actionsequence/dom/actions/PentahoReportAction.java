@@ -153,7 +153,7 @@ public class PentahoReportAction extends ActionDefinition {
     ArrayList<IActionInput> reportParameters = new ArrayList<IActionInput>();
     for ( IActionInput input : getInputs() ) {
       if ( ( input instanceof ActionInputConstant )
-          && !knownInputs.contains( ( (ActionInputConstant) input ).getName() ) ) {
+          && !knownInputs.contains( input.getName() ) ) {
         reportParameters.add( input );
       } else if ( ( input instanceof IActionInputVariable )
           && !knownInputs.contains( ( (IActionInputVariable) input ).getVariableName() ) ) {
@@ -167,7 +167,7 @@ public class PentahoReportAction extends ActionDefinition {
     List<IActionInput> existingReportParameters = getReportParameters();
     for ( IActionInput existingReportParameter : existingReportParameters ) {
       if ( existingReportParameter instanceof ActionInputConstant ) {
-        setActionInputValue( ( (ActionInputConstant) existingReportParameter ).getName(), (IActionInputSource) null );
+        setActionInputValue( existingReportParameter.getName(), (IActionInputSource) null );
       } else if ( existingReportParameter instanceof IActionInputVariable ) {
         setActionInputValue( ( (IActionInputVariable) existingReportParameter ).getVariableName(),
             (IActionInputSource) null );
@@ -175,10 +175,10 @@ public class PentahoReportAction extends ActionDefinition {
     }
     for ( IActionInputSource reportParam : reportParameters ) {
       if ( reportParam instanceof ActionInputConstant ) {
-        setActionInputValue( ( (ActionInputConstant) reportParam ).getName(), (IActionInputSource) reportParam );
+        setActionInputValue( ( (ActionInputConstant) reportParam ).getName(), reportParam);
       } else if ( reportParam instanceof IActionInputVariable ) {
         setActionInputValue( ( (IActionInputVariable) reportParam ).getVariableName(),
-            (IActionInputSource) reportParam );
+                reportParam);
       }
     }
   }

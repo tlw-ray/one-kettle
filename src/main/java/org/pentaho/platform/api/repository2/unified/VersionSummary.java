@@ -157,13 +157,8 @@ public class VersionSummary implements Serializable {
     }
     VersionSummary other = (VersionSummary) obj;
     if ( id == null ) {
-      if ( other.id != null ) {
-        return false;
-      }
-    } else if ( !id.equals( other.id ) ) {
-      return false;
-    }
-    return true;
+        return other.id == null;
+    } else return id.equals(other.id);
   }
 
   public boolean isAclOnlyChange() {

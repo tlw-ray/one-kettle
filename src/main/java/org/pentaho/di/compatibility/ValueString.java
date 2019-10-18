@@ -25,6 +25,7 @@ package org.pentaho.di.compatibility;
 import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
+import java.nio.charset.StandardCharsets;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -211,11 +212,6 @@ public class ValueString implements ValueInterface, Cloneable {
 
   @Override
   public void setBytes( byte[] b ) {
-    try {
-      string = new String( b, "US-ASCII" );
-    } catch ( UnsupportedEncodingException e ) {
-      // we should not get here, ASCII is a mandatory encoding
-      string = null;
-    }
+      string = new String( b, StandardCharsets.US_ASCII);
   }
 }

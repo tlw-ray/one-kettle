@@ -49,7 +49,7 @@ public class SpoonSlaveTest {
 
     String message = spoonSlave.setExceptionMessage( e );
 
-    assertEquals( message, e.getMessage().toString() );
+    assertEquals( message, e.getMessage());
 
   }
   @Test
@@ -64,7 +64,7 @@ public class SpoonSlaveTest {
 
     Throwable cause = e.getCause();
 
-    assertEquals( message, cause.getMessage().toString() );
+    assertEquals( message, cause.getMessage());
 
   }
   @Test
@@ -78,7 +78,7 @@ public class SpoonSlaveTest {
 
     String message = spoonSlave.setExceptionMessage( e );
 
-    assertEquals( message, e.getMessage().toString()  );
+    assertEquals( message, e.getMessage());
 
   }
 

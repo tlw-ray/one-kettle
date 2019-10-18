@@ -53,16 +53,16 @@ public class SwtMenuListTest {
   @Test
   public void testGetSelectedItem() throws Exception {
     XulMenuitem item = (XulMenuitem) doc.getElementById( "regions" );
-    assertEquals( list.getSelectedItem().toString(), item.getLabel() );
+    assertEquals(list.getSelectedItem(), item.getLabel() );
   }
 
   @Test
   public void testSetSelectedItem() throws Exception {
     XulMenuitem item = (XulMenuitem) doc.getElementById( "sales" );
     list.setSelectedItem( item );
-    assertEquals( item.getLabel(), list.getSelectedItem().toString() );
+    assertEquals( item.getLabel(), list.getSelectedItem());
     list.setSelectedItem( "Customers" );
-    assertEquals( "Customers", list.getSelectedItem().toString() );
+    assertEquals( "Customers", list.getSelectedItem());
   }
 
   @Test
@@ -70,9 +70,9 @@ public class SwtMenuListTest {
     XulMenuitem item = (XulMenuitem) doc.getElementById( "sales-nobinding" );
     XulMenuList listNoBinding = (XulMenuList) doc.getElementById( "list-nobinding" );
     listNoBinding.setSelectedItem( item );
-    assertEquals( item.getLabel(), listNoBinding.getSelectedItem().toString() );
+    assertEquals( item.getLabel(), listNoBinding.getSelectedItem());
     listNoBinding.setSelectedItem( "Customers" );
-    assertEquals( "Customers", listNoBinding.getSelectedItem().toString() );
+    assertEquals( "Customers", listNoBinding.getSelectedItem());
   }
 
   @Test
@@ -108,7 +108,7 @@ public class SwtMenuListTest {
   public void testSetSelecetdIndex() throws Exception {
     XulMenuitem item = (XulMenuitem) doc.getElementById( "sales" );
     list.setSelectedIndex( 0 );
-    assertEquals( list.getSelectedItem().toString(), item.getLabel() );
+    assertEquals(list.getSelectedItem(), item.getLabel() );
   }
 
   private class TestClass {

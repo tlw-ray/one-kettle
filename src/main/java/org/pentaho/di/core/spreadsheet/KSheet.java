@@ -37,17 +37,17 @@ public interface KSheet {
    * @throws ArrayIndexOutOfBoundsException
    *           in case you try to read beyond the last row. (never returns null as such)
    */
-  public KCell[] getRow( int rownr );
+  KCell[] getRow(int rownr);
 
   /**
    * @return The name of the cell
    */
-  public String getName();
+  String getName();
 
   /**
    * @return The number of rows in the sheet
    */
-  public int getRows();
+  int getRows();
 
   /**
    * Get a cell in the sheet by specification of its coordinates.
@@ -58,5 +58,5 @@ public interface KSheet {
    *          The row number
    * @return The cell at the specified coordinates.
    */
-  public KCell getCell( int colnr, int rownr );
+  KCell getCell(int colnr, int rownr);
 }

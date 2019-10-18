@@ -200,7 +200,7 @@ public class FormatMsgAction extends ActionDefinition {
         && ( ( (ActionInputConstant) inputSource ).getValue() != null ) ) {
       String msgInputParamName = getUniqueNameParam();
       msgInputParamNames.add( msgInputParamName );
-      setActionInputValue( msgInputParamName, (ActionInputConstant) inputSource );
+      setActionInputValue( msgInputParamName, inputSource);
     }
 
     if ( msgInputParamNames.size() > 0 ) {

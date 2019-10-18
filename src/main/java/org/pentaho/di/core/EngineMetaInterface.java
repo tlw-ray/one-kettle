@@ -36,24 +36,24 @@ public interface EngineMetaInterface extends RepositoryElementInterface {
    *
    * @param filename
    */
-  public void setFilename( String filename );
+  void setFilename(String filename);
 
   /**
    * Gets the name.
    *
    * @return name
    */
-  public String getName();
+  String getName();
 
   /**
    * Builds a name for this. If no name is yet set, create the name from the filename.
    */
-  public void nameFromFilename();
+  void nameFromFilename();
 
   /**
    * Clears the changed flag of this.
    */
-  public void clearChanged();
+  void clearChanged();
 
   /**
    * Gets the XML representation.
@@ -64,33 +64,33 @@ public interface EngineMetaInterface extends RepositoryElementInterface {
    * @see org.pentaho.di.core.xml.XMLInterface#getXML()
    */
 
-  public String getXML() throws KettleException;
+  String getXML() throws KettleException;
 
   /**
    * Gets the file type.
    *
    * @return the file type
    */
-  public String getFileType();
+  String getFileType();
 
   /**
    * Gets the filter names.
    */
-  public String[] getFilterNames();
+  String[] getFilterNames();
 
   /**
    * Gets the filter extensions.
    *
    * @return the filter extensions
    */
-  public String[] getFilterExtensions();
+  String[] getFilterExtensions();
 
   /**
    * Gets the default extension.
    *
    * @return default extension
    */
-  public String getDefaultExtension();
+  String getDefaultExtension();
 
   /**
    * Set the database ID for this in the repository.
@@ -98,14 +98,14 @@ public interface EngineMetaInterface extends RepositoryElementInterface {
    * @param id
    *          the database ID for this in the repository
    */
-  public void setObjectId( ObjectId id );
+  void setObjectId(ObjectId id);
 
   /**
    * Gets the date the transformation was created.
    *
    * @return the date the transformation was created
    */
-  public Date getCreatedDate();
+  Date getCreatedDate();
 
   /**
    * Sets the date the transformation was created.
@@ -113,21 +113,21 @@ public interface EngineMetaInterface extends RepositoryElementInterface {
    * @param createdDate
    *          The creation date to set
    */
-  public void setCreatedDate( Date date );
+  void setCreatedDate(Date date);
 
   /**
    * Returns whether or not the this can be saved.
    *
    * @return
    */
-  public boolean canSave();
+  boolean canSave();
 
   /**
    * Gets the user by whom this was created.
    *
    * @return the user by whom this was created
    */
-  public String getCreatedUser();
+  String getCreatedUser();
 
   /**
    * Sets the user by whom this was created.
@@ -135,14 +135,14 @@ public interface EngineMetaInterface extends RepositoryElementInterface {
    * @param createdUser
    *          The user to set
    */
-  public void setCreatedUser( String createduser );
+  void setCreatedUser(String createduser);
 
   /**
    * Gets the date this was modified.
    *
    * @return the date this was modified
    */
-  public Date getModifiedDate();
+  Date getModifiedDate();
 
   /**
    * Sets the date this was modified.
@@ -150,7 +150,7 @@ public interface EngineMetaInterface extends RepositoryElementInterface {
    * @param modifiedDate
    *          The modified date to set
    */
-  public void setModifiedDate( Date date );
+  void setModifiedDate(Date date);
 
   /**
    * Sets the user who last modified this.
@@ -158,40 +158,40 @@ public interface EngineMetaInterface extends RepositoryElementInterface {
    * @param modifiedUser
    *          The user name to set
    */
-  public void setModifiedUser( String user );
+  void setModifiedUser(String user);
 
   /**
    * Gets the user who last modified this.
    *
    * @return the user who last modified this
    */
-  public String getModifiedUser();
+  String getModifiedUser();
 
   /**
    * Gets the repository element type.
    *
    * @return the repository element type
    */
-  public RepositoryDirectoryInterface getRepositoryDirectory();
+  RepositoryDirectoryInterface getRepositoryDirectory();
 
   /**
    * Get the filename (if any).
    *
    * @return the filename
    */
-  public String getFilename();
+  String getFilename();
 
   /**
    * Saves shared objects, including databases, steps, partition schemas, slave servers, and cluster schemas, to a file.
    *
    * @throws KettleException
    */
-  public void saveSharedObjects() throws KettleException;
+  void saveSharedObjects() throws KettleException;
 
   /**
    * Sets the internal kettle variables.
    */
-  public void setInternalKettleVariables();
+  void setInternalKettleVariables();
 
   /**
    * Set versioning enabled
@@ -199,7 +199,7 @@ public interface EngineMetaInterface extends RepositoryElementInterface {
    * @param versioningEnabled
    *          is versioning enabled
    */
-  public default void setVersioningEnabled( Boolean versioningEnabled ) {
+  default void setVersioningEnabled(Boolean versioningEnabled) {
     // Default implementation does nothing
   }
 
@@ -208,7 +208,7 @@ public interface EngineMetaInterface extends RepositoryElementInterface {
    *
    * @return is versioning enabled
    */
-  public default Boolean getVersioningEnabled() {
+  default Boolean getVersioningEnabled() {
     return null;
   }
 

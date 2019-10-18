@@ -35,7 +35,7 @@ public interface MetaStoreElementTypeListener {
    * @param dataType
    *          the data type that was created.
    */
-  public void dataTypeCreated( String namespace, IMetaStoreElementType dataType );
+  void dataTypeCreated(String namespace, IMetaStoreElementType dataType);
 
   /**
    * This method will is called when a data type is updated.
@@ -47,7 +47,7 @@ public interface MetaStoreElementTypeListener {
    * @param newDataType
    *          The new data type.
    */
-  public void dataTypeUpdated( String namespace, IMetaStoreElementType oldDataType, IMetaStoreElementType newDataType );
+  void dataTypeUpdated(String namespace, IMetaStoreElementType oldDataType, IMetaStoreElementType newDataType);
 
   /**
    * This method will is called when a data type is deleted.
@@ -57,5 +57,5 @@ public interface MetaStoreElementTypeListener {
    * @param dataType
    *          The deleted data type.
    */
-  public void dataTypeDeleted( String namespace, IMetaStoreElementType dataType );
+  void dataTypeDeleted(String namespace, IMetaStoreElementType dataType);
 }

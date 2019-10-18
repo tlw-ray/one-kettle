@@ -44,5 +44,5 @@ public interface IPluginProvider {
    * @throws PlatformPluginRegistrationException
    *           if there is a problem looking for plugins
    */
-  public List<IPlatformPlugin> getPlugins( IPentahoSession session ) throws PlatformPluginRegistrationException;
+  List<IPlatformPlugin> getPlugins(IPentahoSession session) throws PlatformPluginRegistrationException;
 }

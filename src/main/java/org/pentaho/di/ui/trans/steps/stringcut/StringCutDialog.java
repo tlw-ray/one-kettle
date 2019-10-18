@@ -351,12 +351,8 @@ public class StringCutDialog extends BaseStepDialog implements StepDialogInterfa
       if ( r != null ) {
         TableItemInsertListener listener = new TableItemInsertListener() {
           public boolean tableItemInserted( TableItem tableItem, ValueMetaInterface v ) {
-            if ( v.getType() == ValueMetaInterface.TYPE_STRING ) {
               // Only process strings
-              return true;
-            } else {
-              return false;
-            }
+              return v.getType() == ValueMetaInterface.TYPE_STRING;
           }
         };
 

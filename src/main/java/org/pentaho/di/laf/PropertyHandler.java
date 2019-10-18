@@ -29,7 +29,7 @@ public interface PropertyHandler extends Handler {
    * @param filename
    * @return true if load was successful
    */
-  public boolean loadProps( String filename );
+  boolean loadProps(String filename);
 
   /**
    * check to see whether a property file exists within the classpath or filesystem
@@ -37,7 +37,7 @@ public interface PropertyHandler extends Handler {
    * @param filename
    * @return true if resource exists
    */
-  public boolean exists( String filename );
+  boolean exists(String filename);
 
   /**
    * return the value of a given key from the properties list
@@ -45,7 +45,7 @@ public interface PropertyHandler extends Handler {
    * @param key
    * @return null if the key is not found
    */
-  public String getProperty( String key );
+  String getProperty(String key);
 
   /**
    * return the value of a given key from the properties list, returning the defValue string should the key not be found
@@ -55,5 +55,5 @@ public interface PropertyHandler extends Handler {
    * @return a string representing either the value associated with the passed key or defValue should that key not be
    *         found
    */
-  public String getProperty( String key, String defValue );
+  String getProperty(String key, String defValue);
 }

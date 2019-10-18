@@ -659,13 +659,8 @@ public class RepositoryFile implements Comparable<RepositoryFile>, Serializable 
       return false;
     }
     if ( versionId == null ) {
-      if ( other.versionId != null ) {
-        return false;
-      }
-    } else if ( !versionId.equals( other.versionId ) ) {
-      return false;
-    }
-    return true;
+        return other.versionId == null;
+    } else return versionId.equals(other.versionId);
   }
 
   @Override

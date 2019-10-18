@@ -29,7 +29,7 @@ package org.pentaho.di.core;
  * @since 21-aug-2006
  */
 public interface DescriptionInterface {
-  public void setDescription( String description );
+  void setDescription(String description);
 
-  public String getDescription();
+  String getDescription();
 }

@@ -37,13 +37,13 @@ public interface XulMessageBox extends XulComponent {
    * @param title
    *          The dialog title to display.
    */
-  public void setTitle( String title );
+  void setTitle(String title);
 
   /**
    * 
    * @return The messagebox dialog title.
    */
-  public String getTitle();
+  String getTitle();
 
   /**
    * Sets the message for display in this messagebox.
@@ -51,13 +51,13 @@ public interface XulMessageBox extends XulComponent {
    * @param message
    *          The message for display.
    */
-  public void setMessage( String message );
+  void setMessage(String message);
 
   /**
    * 
    * @return The messagebox's message.
    */
-  public String getMessage();
+  String getMessage();
 
   /**
    * Sets the buttons to show on the messagebox dialog. Values for this array will be implementation specific. If
@@ -66,13 +66,13 @@ public interface XulMessageBox extends XulComponent {
    * @param buttons
    *          An array of objects representing buttons - implementation specific values.
    */
-  public void setButtons( Object[] buttons );
+  void setButtons(Object[] buttons);
 
   /**
    * 
    * @return The array of values representing the buttons to show on this messagebox.
    */
-  public Object[] getButtons();
+  Object[] getButtons();
 
   /**
    * Sets a custom icon on the messagebox dialog. Values for this parameter are implementation specific. If icon is
@@ -82,20 +82,20 @@ public interface XulMessageBox extends XulComponent {
    * @param icon
    *          The icon to display on the messagebox.
    */
-  public void setIcon( Object icon );
+  void setIcon(Object icon);
 
   /**
    * 
    * @return the messagebox's icon.
    */
-  public Object getIcon();
+  Object getIcon();
 
   /**
    * Creates and opens the messagebox for viewing. Return values are implementation specific.
    * 
    * @return the return value for the dialog.
    */
-  public int open();
+  int open();
 
   /**
    * Sets whether or not to display the message as a simple label or in a scrollable container.
@@ -103,18 +103,18 @@ public interface XulMessageBox extends XulComponent {
    * @param scroll
    *          boolean flag
    */
-  public void setScrollable( boolean scroll );
+  void setScrollable(boolean scroll);
 
-  public int getHeight();
+  int getHeight();
 
-  public void setHeight( int height );
+  void setHeight(int height);
 
-  public int getWidth();
+  int getWidth();
 
-  public void setWidth( int width );
+  void setWidth(int width);
 
-  public void setModalParent( Object parent );
+  void setModalParent(Object parent);
 
-  public void setAcceptLabel( String label );
+  void setAcceptLabel(String label);
 
 }

@@ -36,9 +36,9 @@ public class SqlScriptParserTest {
 
   @Test
   public void testSplit() {
-    assertEquals( Arrays.asList( new String[0] ), sqlScriptParser.split( null ) );
-    assertEquals( Arrays.asList( new String[0] ), sqlScriptParser.split( "" ) );
-    assertEquals( Arrays.asList( new String[0] ), sqlScriptParser.split( " " ) );
+    assertEquals( Arrays.asList(), sqlScriptParser.split( null ) );
+    assertEquals( Arrays.asList(), sqlScriptParser.split( "" ) );
+    assertEquals( Arrays.asList(), sqlScriptParser.split( " " ) );
     assertEquals( Arrays.asList( "SELECT 1", "SELECT 2" ), sqlScriptParser.split( "SELECT 1;SELECT 2" ) );
     assertEquals( Collections.singletonList( "SELECT '1;2'" ), sqlScriptParser.split( "SELECT '1;2'" ) );
     assertEquals( Collections.singletonList( "SELECT \"1;2\"" ), sqlScriptParser.split( "SELECT \"1;2\"" ) );

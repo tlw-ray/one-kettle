@@ -98,7 +98,7 @@ public class SpoonDBDelegate extends SpoonDelegate {
 
       databaseMeta = getDatabaseDialog().getDatabaseMeta();
       if ( !newname.equals( originalName )
-          && databaseMeta.findDatabase( hasDatabasesInterface.getDatabases(), newname ) != null ) {
+          && DatabaseMeta.findDatabase( hasDatabasesInterface.getDatabases(), newname ) != null ) {
         databaseMeta.setName( newname.trim() );
         DatabaseDialog.showDatabaseExistsDialog( spoon.getShell(), databaseMeta );
         databaseMeta.setName( originalName );
@@ -498,7 +498,7 @@ public class SpoonDBDelegate extends SpoonDelegate {
       databaseMeta.setDisplayName( con_name );
       databaseMeta = getDatabaseDialog().getDatabaseMeta();
 
-      if ( databaseMeta.findDatabase( hasDatabasesInterface.getDatabases(), con_name ) == null ) {
+      if ( DatabaseMeta.findDatabase( hasDatabasesInterface.getDatabases(), con_name ) == null ) {
         hasDatabasesInterface.addDatabase( databaseMeta );
         spoon.addUndoNew( (UndoInterface) hasDatabasesInterface, new DatabaseMeta[]{(DatabaseMeta) databaseMeta
                 .clone()}, new int[]{hasDatabasesInterface.indexOfDatabase( databaseMeta )} );

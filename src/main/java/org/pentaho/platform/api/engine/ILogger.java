@@ -31,50 +31,50 @@ public interface ILogger {
   /**
    * The TRACE has the lowest possible rank and is intended to turn on all logging.
    */
-  public static final int TRACE = 1;
+  int TRACE = 1;
 
   /**
    * The DEBUG Level designates fine-grained informational events that are most useful to debug an application.
    */
-  public static final int DEBUG = 2;
+  int DEBUG = 2;
 
   /**
    * The INFO level designates informational messages that highlight the progress of the application at
    * coarse-grained level.
    */
-  public static final int INFO = 3;
+  int INFO = 3;
 
   /**
    * The WARN level designates potentially harmful situations.
    */
-  public static final int WARN = 4;
+  int WARN = 4;
 
   /**
    * The ERROR level designates error events that might still allow the application to continue running.
    */
-  public static final int ERROR = 5;
+  int ERROR = 5;
 
   /**
    * The FATAL level designates very severe error events that will presumably lead the application to abort.
    */
-  public static final int FATAL = 6;
+  int FATAL = 6;
 
-  public static final int UNKNOWN = 100;
+  int UNKNOWN = 100;
 
-  public static final String SOLUTION_LOG = "solution"; //$NON-NLS-1$
+  String SOLUTION_LOG = "solution"; //$NON-NLS-1$
 
-  public static final String ACTIVITY_LOG = "activity"; //$NON-NLS-1$
+  String ACTIVITY_LOG = "activity"; //$NON-NLS-1$
 
-  public static final String INSTANCE_LOG = "instance"; //$NON-NLS-1$
+  String INSTANCE_LOG = "instance"; //$NON-NLS-1$
 
-  public static final String SESSION_LOG = "session"; //$NON-NLS-1$
+  String SESSION_LOG = "session"; //$NON-NLS-1$
 
   /**
    * Return the logging level for this Logger.
    * 
    * @return logging level
    */
-  public int getLoggingLevel();
+  int getLoggingLevel();
 
   /**
    * Set the logging level for this Logger.
@@ -84,7 +84,7 @@ public interface ILogger {
    * 
    * @param loggingLevel
    */
-  public void setLoggingLevel( int loggingLevel );
+  void setLoggingLevel(int loggingLevel);
 
   /**
    * Log a message object with the {@link #TRACE TRACE} Level.
@@ -92,7 +92,7 @@ public interface ILogger {
    * @param message
    *          the message object to log.
    */
-  public void trace( String message );
+  void trace(String message);
 
   /**
    * Log a message object with the {@link #DEBUG DEBUG} Level.
@@ -100,7 +100,7 @@ public interface ILogger {
    * @param message
    *          the message object to log.
    */
-  public void debug( String message );
+  void debug(String message);
 
   /**
    * Log a message object with the {@link #INFO INFO} Level.
@@ -108,7 +108,7 @@ public interface ILogger {
    * @param message
    *          the message object to log.
    */
-  public void info( String message );
+  void info(String message);
 
   /**
    * Log a message object with the {@link #WARN WARN} Level.
@@ -116,7 +116,7 @@ public interface ILogger {
    * @param message
    *          the message object to log.
    */
-  public void warn( String message );
+  void warn(String message);
 
   /**
    * Log a message object with the {@link #ERROR ERROR} Level.
@@ -124,7 +124,7 @@ public interface ILogger {
    * @param message
    *          the message object to log.
    */
-  public void error( String message );
+  void error(String message);
 
   /**
    * Log a message object with the {@link #FATAL FATAL} Level.
@@ -132,7 +132,7 @@ public interface ILogger {
    * @param message
    *          the message object to log.
    */
-  public void fatal( String message );
+  void fatal(String message);
 
   /**
    * Log a message with the {@link #TRACE TRACE} level including the stack trace of the Throwable error passed as
@@ -143,7 +143,7 @@ public interface ILogger {
    * @param error
    *          the exception to log, including its stack trace.
    */
-  public void trace( String message, Throwable error );
+  void trace(String message, Throwable error);
 
   /**
    * Log a message with the {@link #DEBUG DEBUG} level including the stack trace of the Throwable error passed as
@@ -154,7 +154,7 @@ public interface ILogger {
    * @param error
    *          the exception to log, including its stack trace.
    */
-  public void debug( String message, Throwable error );
+  void debug(String message, Throwable error);
 
   /**
    * Log a message with the {@link #INFO INFO} level including the stack trace of the Throwable error passed as
@@ -165,7 +165,7 @@ public interface ILogger {
    * @param error
    *          the exception to log, including its stack trace.
    */
-  public void info( String message, Throwable error );
+  void info(String message, Throwable error);
 
   /**
    * Log a message with the {@link #WARN WARN} level including the stack trace of the Throwable error passed as
@@ -176,7 +176,7 @@ public interface ILogger {
    * @param error
    *          the exception to log, including its stack trace.
    */
-  public void warn( String message, Throwable error );
+  void warn(String message, Throwable error);
 
   /**
    * Log a message with the {@link #ERROR ERROR} level including the stack trace of the Throwable error passed as
@@ -187,7 +187,7 @@ public interface ILogger {
    * @param error
    *          the exception to log, including its stack trace.
    */
-  public void error( String message, Throwable error );
+  void error(String message, Throwable error);
 
   /**
    * Log a message with the {@link #FATAL FATAL} level including the stack trace of the Throwable error passed as
@@ -198,6 +198,6 @@ public interface ILogger {
    * @param error
    *          the exception to log, including its stack trace.
    */
-  public void fatal( String message, Throwable error );
+  void fatal(String message, Throwable error);
 
 }

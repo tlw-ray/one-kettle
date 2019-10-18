@@ -35,36 +35,36 @@ package org.pentaho.di.repository;
  */
 public interface RepositoryElementInterface extends RepositoryObjectInterface {
 
-  public RepositoryDirectoryInterface getRepositoryDirectory();
+  RepositoryDirectoryInterface getRepositoryDirectory();
 
-  public void setRepositoryDirectory( RepositoryDirectoryInterface repositoryDirectory );
+  void setRepositoryDirectory(RepositoryDirectoryInterface repositoryDirectory);
 
   /**
    * Gets the name of the repository object.
    */
   @Override
-  public String getName();
+  String getName();
 
   /**
    * Sets the name of the repository object.
    *
    * @param name
    */
-  public void setName( String name );
+  void setName(String name);
 
   /**
    * Gets the description of the repository object.
    *
    * @return
    */
-  public String getDescription();
+  String getDescription();
 
   /**
    * Sets the description of the repository object.
    *
    * @param description
    */
-  public void setDescription( String description );
+  void setDescription(String description);
 
   /**
    * Gets the database ID in the repository for this object.
@@ -72,34 +72,34 @@ public interface RepositoryElementInterface extends RepositoryObjectInterface {
    * @return the database ID in the repository for this object
    */
   @Override
-  public ObjectId getObjectId();
+  ObjectId getObjectId();
 
   /**
    * Sets the database ID in the repository for this object.
    *
    * @return the database ID in the repository for this object
    */
-  public void setObjectId( ObjectId id );
+  void setObjectId(ObjectId id);
 
   /**
    * Gets the repository element type for this object.
    *
    * @return the repository element type for this object
    */
-  public RepositoryObjectType getRepositoryElementType();
+  RepositoryObjectType getRepositoryElementType();
 
   /**
    * Gets the object revision.
    *
    * @return the object revision
    */
-  public ObjectRevision getObjectRevision();
+  ObjectRevision getObjectRevision();
 
   /**
    * Sets the object revision.
    *
    * @param objectRevision
    */
-  public void setObjectRevision( ObjectRevision objectRevision );
+  void setObjectRevision(ObjectRevision objectRevision);
 
 }

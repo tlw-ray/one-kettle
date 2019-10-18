@@ -1036,7 +1036,7 @@ public class XMLHandler {
    * @return The XML String for the tag.
    */
   public static String addTagValue( String tag, BigDecimal val, boolean cr ) {
-    return addTagValue( tag, val != null ? val.toString() : (String) null, cr );
+    return addTagValue( tag, val != null ? val.toString() : null, cr );
   }
 
   /**
@@ -1275,8 +1275,8 @@ public class XMLHandler {
 class DTDIgnoringEntityResolver implements EntityResolver {
   @Override
   public InputSource resolveEntity( java.lang.String publicID, java.lang.String systemID ) throws IOException {
-    System.out.println( "Public-ID: " + publicID.toString() );
-    System.out.println( "System-ID: " + systemID.toString() );
+    System.out.println( "Public-ID: " + publicID);
+    System.out.println( "System-ID: " + systemID);
     return new InputSource( new ByteArrayInputStream( "<?xml version='1.0' encoding='UTF-8'?>".getBytes() ) );
   }
 

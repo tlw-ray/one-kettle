@@ -107,10 +107,10 @@ public class ActionFactory {
     // TODO a map would improve performance here
     for ( Class actionClass : pluginActions.values() ) {
       try {
-        Method acceptElementMethod = actionClass.getMethod( "accepts", new Class[] { Element.class } );
-        if ( Boolean.TRUE.equals( acceptElementMethod.invoke( null, new Object[] { actionDefDomElement } ) ) ) {
+        Method acceptElementMethod = actionClass.getMethod( "accepts", Element.class);
+        if ( Boolean.TRUE.equals( acceptElementMethod.invoke( null, actionDefDomElement) ) ) {
           Constructor constructor =
-              actionClass.getConstructor( new Class[] { Element.class, IActionParameterMgr.class } );
+              actionClass.getConstructor(Element.class, IActionParameterMgr.class);
           actionDefinition =
               (ActionDefinition) constructor.newInstance( new Object[] { actionDefDomElement, actionInputProvider } );
           break;

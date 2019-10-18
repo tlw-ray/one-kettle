@@ -33,7 +33,7 @@ import java.util.List;
 
 public interface IDatasourceMgmtService extends IPentahoInitializer {
 
-  public static final String IDATASOURCEMGMTSERVICE = "IDatasourceMgmtService"; //$NON-NLS-1$
+  String IDATASOURCEMGMTSERVICE = "IDatasourceMgmtService"; //$NON-NLS-1$
 
   /**
    * Creates a JDBC datasource in a given repository and return an id
@@ -43,7 +43,7 @@ public interface IDatasourceMgmtService extends IPentahoInitializer {
    * @throws DuplicateDatasourceException
    * @throws DatasourceMgmtServiceException
    */
-  public String createDatasource( IDatabaseConnection databaseConnection ) throws DuplicateDatasourceException,
+  String createDatasource(IDatabaseConnection databaseConnection) throws DuplicateDatasourceException,
     DatasourceMgmtServiceException;
 
   /**
@@ -53,7 +53,7 @@ public interface IDatasourceMgmtService extends IPentahoInitializer {
    * @throws NonExistingDatasourceException
    * @throws DatasourceMgmtServiceException
    */
-  public void deleteDatasourceByName( String name ) throws NonExistingDatasourceException,
+  void deleteDatasourceByName(String name) throws NonExistingDatasourceException,
     DatasourceMgmtServiceException;
 
   /**
@@ -63,7 +63,7 @@ public interface IDatasourceMgmtService extends IPentahoInitializer {
    * @throws NonExistingDatasourceException
    * @throws DatasourceMgmtServiceException
    */
-  public void deleteDatasourceById( String id ) throws NonExistingDatasourceException, DatasourceMgmtServiceException;
+  void deleteDatasourceById(String id) throws NonExistingDatasourceException, DatasourceMgmtServiceException;
 
   /**
    * Retrieves a JDBC datasource form the repository by name
@@ -72,7 +72,7 @@ public interface IDatasourceMgmtService extends IPentahoInitializer {
    * @return IDatabaseConnection
    * @throws DatasourceMgmtServiceException
    */
-  public IDatabaseConnection getDatasourceByName( String name ) throws DatasourceMgmtServiceException;
+  IDatabaseConnection getDatasourceByName(String name) throws DatasourceMgmtServiceException;
 
   /**
    * Retrieves a JDBC datasource form the repository by id
@@ -81,7 +81,7 @@ public interface IDatasourceMgmtService extends IPentahoInitializer {
    * @return IDatabaseConnection
    * @throws DatasourceMgmtServiceException
    */
-  public IDatabaseConnection getDatasourceById( String id ) throws DatasourceMgmtServiceException;
+  IDatabaseConnection getDatasourceById(String id) throws DatasourceMgmtServiceException;
 
   /**
    * Retrieves all JDBC datasources from the repository
@@ -89,7 +89,7 @@ public interface IDatasourceMgmtService extends IPentahoInitializer {
    * @return databaseConnection List
    * @throws DatasourceMgmtServiceException
    */
-  public List<IDatabaseConnection> getDatasources() throws DatasourceMgmtServiceException;
+  List<IDatabaseConnection> getDatasources() throws DatasourceMgmtServiceException;
 
   /**
    * Retrieves all JDBC datasource ids from the repository
@@ -97,7 +97,7 @@ public interface IDatasourceMgmtService extends IPentahoInitializer {
    * @return list of ids
    * @throws DatasourceMgmtServiceException
    */
-  public List<String> getDatasourceIds() throws DatasourceMgmtServiceException;
+  List<String> getDatasourceIds() throws DatasourceMgmtServiceException;
 
   /**
    * Updates a given JDBC datasource by name
@@ -108,7 +108,7 @@ public interface IDatasourceMgmtService extends IPentahoInitializer {
    * @throws NonExistingDatasourceException
    * @throws DatasourceMgmtServiceException
    */
-  public String updateDatasourceByName( String name, IDatabaseConnection databaseConnection )
+  String updateDatasourceByName(String name, IDatabaseConnection databaseConnection)
     throws NonExistingDatasourceException, DatasourceMgmtServiceException;
 
   /**
@@ -120,6 +120,6 @@ public interface IDatasourceMgmtService extends IPentahoInitializer {
    * @throws NonExistingDatasourceException
    * @throws DatasourceMgmtServiceException
    */
-  public String updateDatasourceById( String id, IDatabaseConnection databaseConnection )
+  String updateDatasourceById(String id, IDatabaseConnection databaseConnection)
     throws NonExistingDatasourceException, DatasourceMgmtServiceException;
 }

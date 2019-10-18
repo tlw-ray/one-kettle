@@ -21,26 +21,26 @@ import org.pentaho.ui.xul.XulContainer;
 
 public interface XulTreeChildren extends XulContainer {
 
-  public void setAlternatingbackground( boolean alt );
+  void setAlternatingbackground(boolean alt);
 
-  public boolean isAlternatingbackground();
+  boolean isAlternatingbackground();
 
-  public void addItem( XulTreeItem item );
+  void addItem(XulTreeItem item);
 
-  public void removeItem( XulTreeItem item );
+  void removeItem(XulTreeItem item);
 
-  public XulTreeRow addNewRow();
+  XulTreeRow addNewRow();
 
-  public void removeAll();
+  void removeAll();
 
-  public XulTreeItem getItem( int rowIndex );
+  XulTreeItem getItem(int rowIndex);
 
-  public void removeItem( int rowIndex );
+  void removeItem(int rowIndex);
 
-  public int getItemCount();
+  int getItemCount();
 
-  public boolean isHierarchical();
+  boolean isHierarchical();
 
-  public XulTree getTree();
+  XulTree getTree();
 
 }

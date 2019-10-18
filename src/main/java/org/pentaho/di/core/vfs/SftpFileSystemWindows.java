@@ -243,7 +243,7 @@ class SftpFileSystemWindows extends SftpFileSystem {
     this.ensureSession();
     ChannelExec channel = (ChannelExec) this.session.openChannel( "exec" );
     channel.setCommand( command );
-    channel.setInputStream( (InputStream) null );
+    channel.setInputStream(null);
     InputStreamReader stream = new InputStreamReader( channel.getInputStream() );
     channel.setErrStream( System.err, true );
     channel.connect();

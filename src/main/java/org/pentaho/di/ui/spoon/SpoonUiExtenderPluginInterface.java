@@ -27,7 +27,7 @@ import java.util.Map;
 
 public interface SpoonUiExtenderPluginInterface {
 
-  public Map<Class<?>, Set<String>> respondsTo();
+  Map<Class<?>, Set<String>> respondsTo();
 
-  public void uiEvent( Object subject, String event );
+  void uiEvent(Object subject, String event);
 }

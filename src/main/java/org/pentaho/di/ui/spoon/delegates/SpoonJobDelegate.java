@@ -900,7 +900,7 @@ public class SpoonJobDelegate extends SpoonDelegate {
         PropsUI props = PropsUI.getInstance();
 
         if ( tabName.length() >= getMaxTabLength() ) {
-          tabName = new StringBuilder().append( tabName.substring( 0, getMaxTabLength() ) ).append( "\u2026" ).toString();
+          tabName = new StringBuilder().append(tabName, 0, getMaxTabLength()).append( "\u2026" ).toString();
         }
         TabItem tabItem = new TabItem( spoon.tabfolder, tabName, tabName, props.getSashWeights() );
         String toolTipText =

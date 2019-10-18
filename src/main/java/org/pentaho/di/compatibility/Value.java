@@ -811,10 +811,7 @@ public class Value implements Cloneable, XMLInterface, Serializable {
    * @return true if the value is empty.
    */
   public boolean isEmpty() {
-    if ( value == null ) {
-      return true;
-    }
-    return false;
+      return value == null;
   }
 
   /**
@@ -1164,7 +1161,7 @@ public class Value implements Cloneable, XMLInterface, Serializable {
     if ( isNull() || value.getDate() == null ) {
       retval = Const.NULL_DATE;
     } else {
-      retval = df.format( value.getDate() ).toString();
+      retval = df.format( value.getDate() );
     }
 
     /*
@@ -1877,11 +1874,7 @@ public class Value implements Cloneable, XMLInterface, Serializable {
 
   @Override
   public boolean equals( Object v ) {
-    if ( compare( (Value) v ) == 0 ) {
-      return true;
-    } else {
-      return false;
-    }
+      return compare((Value) v) == 0;
   }
 
   /**
@@ -2087,7 +2080,7 @@ public class Value implements Cloneable, XMLInterface, Serializable {
     boolean b1 = getBoolean();
     boolean b2 = v.getBoolean();
 
-    boolean res = b1 && b2 ? false : !b1 && !b2 ? false : true;
+    boolean res = (!b1 || !b2) && (b1 || b2);
 
     setValue( res );
 
@@ -3877,9 +3870,7 @@ public class Value implements Cloneable, XMLInterface, Serializable {
       if ( getLength() != v.getLength() ) {
         return false;
       }
-      if ( getPrecision() != v.getPrecision() ) {
-        return false;
-      }
+        return getPrecision() == v.getPrecision();
     }
 
     return true;

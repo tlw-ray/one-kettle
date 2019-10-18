@@ -74,14 +74,14 @@ public class UtilsTest {
   @Test
   public void testIsEmptyStringBuffer() {
     assertTrue( Utils.isEmpty( (StringBuffer) null ) );
-    assertTrue( Utils.isEmpty( new StringBuffer( "" ) ) );
+    assertTrue( Utils.isEmpty( new StringBuffer() ) );
     assertFalse( Utils.isEmpty( new StringBuffer( "test" ) ) );
   }
 
   @Test
   public void testIsEmptyStringBuilder() {
     assertTrue( Utils.isEmpty( (StringBuilder) null ) );
-    assertTrue( Utils.isEmpty( new StringBuilder( "" ) ) );
+    assertTrue( Utils.isEmpty( new StringBuilder() ) );
     assertFalse( Utils.isEmpty( new StringBuilder( "test" ) ) );
   }
 

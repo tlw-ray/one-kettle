@@ -35,13 +35,13 @@ public interface IPentahoUrlFactory {
    * 
    * @return the action URL
    */
-  public IPentahoUrl getActionUrlBuilder();
+  IPentahoUrl getActionUrlBuilder();
 
   /**
    * Returns a URL builder for contructing URLs that are generated for user feedback (e.g. parameter input forms).
    * 
    * @return The URL builder
    */
-  public IPentahoUrl getDisplayUrlBuilder();
+  IPentahoUrl getDisplayUrlBuilder();
 
 }

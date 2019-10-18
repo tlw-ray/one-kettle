@@ -46,7 +46,7 @@ public interface IParameterResolver {
    *         TODO: Change this interface to make it easier to do things without exposing the internals of
    *         TemplateUtil.
    */
-  public int resolveParameter( String template, String parameterName, Matcher parameterMatcher, int copyStart,
-      StringBuffer result );
+  int resolveParameter(String template, String parameterName, Matcher parameterMatcher, int copyStart,
+                       StringBuffer result);
 
 }

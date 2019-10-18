@@ -39,6 +39,6 @@ public interface XMLInterface {
    * @throws KettleException
    *           in case there is an encoding problem.
    */
-  public String getXML() throws KettleException;
+  String getXML() throws KettleException;
 
 }

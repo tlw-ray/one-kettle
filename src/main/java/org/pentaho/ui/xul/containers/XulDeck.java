@@ -35,12 +35,12 @@ public interface XulDeck extends XulContainer {
    * @param index
    *          The index of the child to display.
    */
-  public void setSelectedIndex( int index );
+  void setSelectedIndex(int index);
 
   /**
    * 
    * @return the index of the selected or displayed child control.
    */
-  public int getSelectedIndex();
+  int getSelectedIndex();
 
 }

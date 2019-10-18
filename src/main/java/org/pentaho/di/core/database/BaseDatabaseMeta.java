@@ -1776,7 +1776,7 @@ public abstract class BaseDatabaseMeta implements Cloneable, DatabaseInterfaceEx
 
   @Override
   public String generateColumnAlias( int columnIndex, String suggestedName ) {
-    return "COL" + Integer.toString( columnIndex );
+    return "COL" + columnIndex;
   }
 
   /**

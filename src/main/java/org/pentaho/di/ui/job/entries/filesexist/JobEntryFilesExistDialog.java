@@ -278,7 +278,7 @@ public class JobEntryFilesExistDialog extends JobEntryDialog implements JobEntry
     wlFields.setLayoutData( fdlFields );
 
     int rows = jobEntry.getArguments() == null ? 1
-      : ( jobEntry.getArguments().length == 0 ? 0 : jobEntry.getArguments().length );
+      : (jobEntry.getArguments().length);
 
     final int FieldsRows = rows;
 
@@ -304,7 +304,7 @@ public class JobEntryFilesExistDialog extends JobEntryDialog implements JobEntry
     // Add the file to the list of files...
     SelectionAdapter selA = new SelectionAdapter() {
       public void widgetSelected( SelectionEvent arg0 ) {
-        wFields.add( new String[] { wFilename.getText() } );
+        wFields.add(wFilename.getText());
         wFilename.setText( "" );
         wFields.removeEmptyRows();
         wFields.setRowNums();

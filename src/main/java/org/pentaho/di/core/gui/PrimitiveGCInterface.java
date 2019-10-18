@@ -26,98 +26,98 @@ import java.awt.image.BufferedImage;
 
 public interface PrimitiveGCInterface {
 
-  public enum EColor {
+  enum EColor {
     BACKGROUND, BLACK, WHITE, RED, YELLOW, ORANGE, GREEN, BLUE, MAGENTA, GRAY, LIGHTGRAY, DARKGRAY, LIGHTBLUE, CRYSTAL, HOP_DEFAULT, HOP_OK
   }
 
-  public enum EFont {
+  enum EFont {
     NOTE, GRAPH, SMALL,
   }
 
-  public enum ELineStyle {
+  enum ELineStyle {
     SOLID, DASHDOT, DOT, PARALLEL, DASH
   }
 
-  public enum EImage {
+  enum EImage {
     LOCK, STEP_ERROR, STEP_ERROR_RED, EDIT, CONTEXT_MENU, TRUE, FALSE, ERROR, INFO, TARGET, INPUT, OUTPUT, ARROW, COPY_ROWS,
       UNCONDITIONAL, PARALLEL, BUSY, INJECT, LOAD_BALANCE, CHECKPOINT, DB,
     ARROW_DEFAULT, ARROW_OK, ARROW_ERROR, ARROW_DISABLED, ARROW_CANDIDATE
   }
 
-  public void setLineWidth( int width );
+  void setLineWidth(int width);
 
-  public void setFont( EFont font );
+  void setFont(EFont font);
 
-  public Point textExtent( String text );
+  Point textExtent(String text);
 
-  public Point getDeviceBounds();
+  Point getDeviceBounds();
 
-  public void setBackground( EColor color );
+  void setBackground(EColor color);
 
-  public void setForeground( EColor color );
+  void setForeground(EColor color);
 
-  public void setBackground( int red, int green, int blue );
+  void setBackground(int red, int green, int blue);
 
-  public void setForeground( int red, int green, int blue );
+  void setForeground(int red, int green, int blue);
 
   // public EColor getBackground();
   // public EColor getForeground();
 
-  public void fillRectangle( int x, int y, int width, int height );
+  void fillRectangle(int x, int y, int width, int height);
 
-  public void fillGradientRectangle( int x, int y, int width, int height, boolean vertical );
+  void fillGradientRectangle(int x, int y, int width, int height, boolean vertical);
 
-  public void drawImage( String location, ClassLoader classLoader, int x, int y );
+  void drawImage(String location, ClassLoader classLoader, int x, int y);
 
-  public void drawImage( EImage image, int x, int y );
+  void drawImage(EImage image, int x, int y);
 
-  public void drawImage( EImage image, int x, int y, float magnification );
+  void drawImage(EImage image, int x, int y, float magnification);
 
-  public void drawImage( EImage image, int x, int y, int width, int height, float magnification );
+  void drawImage(EImage image, int x, int y, int width, int height, float magnification);
 
-  public void drawImage( EImage image, int x, int y, float magnification, double angle );
+  void drawImage(EImage image, int x, int y, float magnification, double angle);
 
-  public void drawImage( BufferedImage image, int x, int y );
+  void drawImage(BufferedImage image, int x, int y);
 
-  public void drawLine( int x, int y, int x2, int y2 );
+  void drawLine(int x, int y, int x2, int y2);
 
-  public void setLineStyle( ELineStyle lineStyle );
+  void setLineStyle(ELineStyle lineStyle);
 
-  public void drawRectangle( int x, int y, int width, int height );
+  void drawRectangle(int x, int y, int width, int height);
 
-  public void drawPoint( int x, int y );
+  void drawPoint(int x, int y);
 
-  public void drawText( String text, int x, int y );
+  void drawText(String text, int x, int y);
 
-  public void drawText( String text, int x, int y, boolean transparent );
+  void drawText(String text, int x, int y, boolean transparent);
 
-  public void fillRoundRectangle( int x, int y, int width, int height, int circleWidth, int circleHeight );
+  void fillRoundRectangle(int x, int y, int width, int height, int circleWidth, int circleHeight);
 
-  public void drawRoundRectangle( int x, int y, int width, int height, int circleWidth, int circleHeight );
+  void drawRoundRectangle(int x, int y, int width, int height, int circleWidth, int circleHeight);
 
-  public void fillPolygon( int[] polygon );
+  void fillPolygon(int[] polygon);
 
-  public void drawPolygon( int[] polygon );
+  void drawPolygon(int[] polygon);
 
-  public void drawPolyline( int[] polyline );
+  void drawPolyline(int[] polyline);
 
-  public void setAntialias( boolean antiAlias );
+  void setAntialias(boolean antiAlias);
 
-  public void setTransform( float translationX, float translationY, int shadowsize, float magnification );
+  void setTransform(float translationX, float translationY, int shadowsize, float magnification);
 
-  public void setAlpha( int alpha );
+  void setAlpha(int alpha);
 
-  public void dispose();
+  void dispose();
 
-  public int getAlpha();
+  int getAlpha();
 
-  public void setFont( String fontName, int fontSize, boolean fontBold, boolean fontItalic );
+  void setFont(String fontName, int fontSize, boolean fontBold, boolean fontItalic);
 
-  public Object getImage();
+  Object getImage();
 
-  public Point getImageBounds( EImage eImage );
+  Point getImageBounds(EImage eImage);
 
-  public void switchForegroundBackgroundColors();
+  void switchForegroundBackgroundColors();
 
-  public Point getArea();
+  Point getArea();
 }

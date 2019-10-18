@@ -38,7 +38,7 @@ public interface XulRunner {
    *           Exception thrown if the initialization fails for any reason.
    * 
    */
-  public void initialize() throws XulException;
+  void initialize() throws XulException;
 
   /**
    * Start the application that this runner manages.
@@ -47,7 +47,7 @@ public interface XulRunner {
    *           Exception thrown if the startup fails for any reason.
    * 
    */
-  public void start() throws XulException;
+  void start() throws XulException;
 
   /**
    * Stop the application that this runner manages.
@@ -56,7 +56,7 @@ public interface XulRunner {
    *           Exception thrown if the shutdown fails for any reason.
    * 
    */
-  public void stop() throws XulException;
+  void stop() throws XulException;
 
   /**
    * Add a new container to this runner. Each container represents a series of DOM models and their event handlers.
@@ -65,7 +65,7 @@ public interface XulRunner {
    *          The container to add to the runner.
    * 
    */
-  public void addContainer( XulDomContainer xulDomContainer );
+  void addContainer(XulDomContainer xulDomContainer);
 
   /**
    * Returns the containers assigned to this runner.
@@ -73,6 +73,6 @@ public interface XulRunner {
    * @return a List of the assigned containers.
    * 
    */
-  public List<XulDomContainer> getXulDomContainers();
+  List<XulDomContainer> getXulDomContainers();
 
 }

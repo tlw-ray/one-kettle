@@ -26,11 +26,11 @@ import java.util.List;
 
 public interface IPentahoSystemAdminPlugins {
 
-  public String publish( final IPentahoSession session, final String className );
+  String publish(final IPentahoSession session, final String className);
 
-  public List<IPentahoPublisher> getPublisherList();
+  List<IPentahoPublisher> getPublisherList();
 
-  public Document getPublishersDocument();
+  Document getPublishersDocument();
 
   /**
    * Registers administrative capabilities that can be invoked later via
@@ -39,6 +39,6 @@ public interface IPentahoSystemAdminPlugins {
    * @param administrationPlugins
    *          a list of admin functions to register
    */
-  public void setAdministrationPlugins( List<IPentahoPublisher> administrationPlugins );
+  void setAdministrationPlugins(List<IPentahoPublisher> administrationPlugins);
 
 }

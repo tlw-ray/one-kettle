@@ -35,7 +35,7 @@ public interface IRepositoryAccessVoterManager {
    * 
    * @param voter
    */
-  public void registerVoter( IRepositoryAccessVoter voter );
+  void registerVoter(IRepositoryAccessVoter voter);
 
   /**
    * Evaluate if the current caller has access to the perform given operation on the current repository item
@@ -46,6 +46,6 @@ public interface IRepositoryAccessVoterManager {
    * @param session
    * @return
    */
-  public boolean hasAccess( final RepositoryFile file, final RepositoryFilePermission operation,
-      final RepositoryFileAcl repositoryFileAcl, final IPentahoSession session );
+  boolean hasAccess(final RepositoryFile file, final RepositoryFilePermission operation,
+                    final RepositoryFileAcl repositoryFileAcl, final IPentahoSession session);
 }

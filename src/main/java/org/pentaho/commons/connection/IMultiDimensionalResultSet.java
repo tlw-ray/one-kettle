@@ -23,13 +23,13 @@ public interface IMultiDimensionalResultSet {
    * 
    * @return
    */
-  public Object[] nextFlattened();
+  Object[] nextFlattened();
 
   /**
    * Peeks at the next flattened row. This includes the row headers (if any)
    * 
    * @return
    */
-  public Object[] peekFlattened();
+  Object[] peekFlattened();
 
 }

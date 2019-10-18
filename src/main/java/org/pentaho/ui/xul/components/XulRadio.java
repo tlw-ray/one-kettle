@@ -36,20 +36,20 @@ public interface XulRadio extends XulComponent {
    * @param checked
    *          if true, checks the box, clears it otherwise.
    */
-  public void setSelected( boolean checked );
+  void setSelected(boolean checked);
 
   /**
    * 
    * @return is the box checked?
    */
-  public boolean isSelected();
+  boolean isSelected();
 
   /**
    * The label that appears next to the radio.
    * 
    * @return the radio label.
    */
-  public String getLabel();
+  String getLabel();
 
   /**
    * Sets the label that appears next to the radio.
@@ -57,7 +57,7 @@ public interface XulRadio extends XulComponent {
    * @param label
    *          the radio label that should display.
    */
-  public void setLabel( String label );
+  void setLabel(String label);
 
   /**
    * XUL's attribute is "disabled", thus this acts exactly the opposite of SWT/Swing/AWT. If the property is not
@@ -65,14 +65,14 @@ public interface XulRadio extends XulComponent {
    * 
    * @return boolean true if the control is disabled.
    */
-  public boolean isDisabled();
+  boolean isDisabled();
 
   /**
    * 
    * @param dis
    *          If true, disable this button. Otherwise, attribute should be removed.
    */
-  public void setDisabled( boolean dis );
+  void setDisabled(boolean dis);
 
   /**
    * According to XUL spec, this is the appropriate event to listen to for radio state changes from a user
@@ -83,17 +83,17 @@ public interface XulRadio extends XulComponent {
    * @param method
    *          The method to execute when the radio is checked or unchecked.
    */
-  public void setCommand( final String method );
+  void setCommand(final String method);
 
   /**
    * The value of the radio button.
    * 
    * @return the radio value.
    */
-  public String getValue();
+  String getValue();
 
   /**
    * Sets the value of the radio button.
    */
-  public void setValue( String aValue );
+  void setValue(String aValue);
 }

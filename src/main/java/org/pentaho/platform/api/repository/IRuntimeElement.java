@@ -31,51 +31,51 @@ public interface IRuntimeElement {
   /**
    * @return Returns the parent ID
    */
-  public String getParentId();
+  String getParentId();
 
   /**
    * @param parentId
    *          The parentId to set.
    */
-  public void setParentId( String parentId );
+  void setParentId(String parentId);
 
   /**
    * @return Returns the parent Type
    */
-  public String getParentType();
+  String getParentType();
 
   /**
    * @param parentType
    *          The parent type to set
    */
-  public void setParentType( String parentType );
+  void setParentType(String parentType);
 
   /**
    * @return Returns the instance Id
    */
-  public String getInstanceId();
+  String getInstanceId();
 
   /**
    * @param instanceId
    *          The instance Id to set
    */
-  public void setInstanceId( String instanceId );
+  void setInstanceId(String instanceId);
 
   /**
    * @return Returns the solution Id.
    */
-  public String getSolutionId();
+  String getSolutionId();
 
   /**
    * @param solutionId
    *          The solution Id to set
    */
-  public void setSolutionId( String solutionId );
+  void setSolutionId(String solutionId);
 
   /**
    * @return Returns the revision (updated by Hibernate)
    */
-  public int getRevision();
+  int getRevision();
 
   /**
    * Gets a string property from the Runtime Element.
@@ -84,7 +84,7 @@ public interface IRuntimeElement {
    *          The key of the property
    * @return The value of the property, or NULL if the property doesn't exist.
    */
-  public String getStringProperty( String key );
+  String getStringProperty(String key);
 
   /**
    * Gets a string property from the Runtime Element.
@@ -95,7 +95,7 @@ public interface IRuntimeElement {
    *          The value to return if the property doesn't exist
    * @return The value of the property.
    */
-  public String getStringProperty( String key, String defaultValue );
+  String getStringProperty(String key, String defaultValue);
 
   /**
    * Sets a string property in the Runtime Element. Special implementation note - Null values aren't supported in
@@ -106,7 +106,7 @@ public interface IRuntimeElement {
    * @param value
    *          The value to associate with the key
    */
-  public void setStringProperty( String key, String value );
+  void setStringProperty(String key, String value);
 
   /**
    * Gets a BigDecimal property from the Runtime Element.
@@ -115,7 +115,7 @@ public interface IRuntimeElement {
    *          The key of the property
    * @return The value of the property, or null if the property doesn't exist.
    */
-  public BigDecimal getBigDecimalProperty( String key );
+  BigDecimal getBigDecimalProperty(String key);
 
   /**
    * Gets a BigDecimal property from the Runtime Element.
@@ -126,7 +126,7 @@ public interface IRuntimeElement {
    *          The value to return if the property doesn't exist
    * @return The value of the property, or defaultValue if the property doesn't exist.
    */
-  public BigDecimal getBigDecimalProperty( String key, BigDecimal defaultValue );
+  BigDecimal getBigDecimalProperty(String key, BigDecimal defaultValue);
 
   /**
    * Sets a BigDecimal property in the Runtime Element. Special implementation note - Null values aren't supported
@@ -138,7 +138,7 @@ public interface IRuntimeElement {
    * @param value
    *          The value to associate with the key.
    */
-  public void setBigDecimalProperty( String key, BigDecimal value );
+  void setBigDecimalProperty(String key, BigDecimal value);
 
   /**
    * Gets a Date property from the Runtime Element.
@@ -147,7 +147,7 @@ public interface IRuntimeElement {
    *          The key of the property
    * @return The value of the property, or NULL if the property doesn't exist.
    */
-  public Date getDateProperty( String key );
+  Date getDateProperty(String key);
 
   /**
    * Gets a Date property from the Runtime Element.
@@ -158,7 +158,7 @@ public interface IRuntimeElement {
    *          The value to return if the property doesn't exist
    * @return The value of the property, or defaultValue if the property doesn't exist.
    */
-  public Date getDateProperty( String key, Date defaultValue );
+  Date getDateProperty(String key, Date defaultValue);
 
   /**
    * Sets a Date property in the Runtime Element. Special implementation note - Null values aren't supported in the
@@ -169,7 +169,7 @@ public interface IRuntimeElement {
    * @param value
    *          The value to associate with the key.
    */
-  public void setDateProperty( String key, Date value );
+  void setDateProperty(String key, Date value);
 
   /**
    * Gets a Long property from the Runtime Element.
@@ -180,7 +180,7 @@ public interface IRuntimeElement {
    *          The value to return if the property doesn't exist
    * @return The value of the property, or defaultValue if the property doesn't exist.
    */
-  public Long getLongProperty( String key, Long defaultValue );
+  Long getLongProperty(String key, Long defaultValue);
 
   /**
    * Gets a property from the paramMap as a long using a default value if it doesn't exist in the map
@@ -191,7 +191,7 @@ public interface IRuntimeElement {
    *          The default value if the property doesn't exist in the paramMap.
    * @return The property in the map.
    */
-  public long getLongProperty( String key, long defaultValue );
+  long getLongProperty(String key, long defaultValue);
 
   /**
    * Sets a Long property in the Runtime Element.
@@ -201,7 +201,7 @@ public interface IRuntimeElement {
    * @param value
    *          The value to associate with the key.
    */
-  public void setLongProperty( String key, Long value );
+  void setLongProperty(String key, Long value);
 
   /**
    * Sets a Long property in the Runtime Element. Special implementation note - Null values aren't supported in the
@@ -212,7 +212,7 @@ public interface IRuntimeElement {
    * @param value
    *          The value to associate with the key. Note - A new Long object is constructed and stored.
    */
-  public void setLongProperty( String key, long value );
+  void setLongProperty(String key, long value);
 
   /**
    * Gets a List property from the Runtime Element
@@ -222,7 +222,7 @@ public interface IRuntimeElement {
    * @return The list associated with the key, or NULL if it doesn't exist.
    */
   @SuppressWarnings( "rawtypes" )
-  public List getListProperty( String key );
+  List getListProperty(String key);
 
   /**
    * Gets a Map property from the Runtime Element Special implementation note - Null values aren't supported in the
@@ -233,7 +233,7 @@ public interface IRuntimeElement {
    * @return The Map associated with the key, or NULL if it doesn't exist.
    */
   @SuppressWarnings( "rawtypes" )
-  public Map getMapProperty( String key );
+  Map getMapProperty(String key);
 
   /**
    * Sets a List Property in the Runtime Element
@@ -244,7 +244,7 @@ public interface IRuntimeElement {
    *          The List value to associate with the key.
    */
   @SuppressWarnings( "rawtypes" )
-  public void setListProperty( String key, List value );
+  void setListProperty(String key, List value);
 
   /**
    * Sets a Map Property in the Runtime Element Special implementation note - Null values aren't supported in the
@@ -256,30 +256,30 @@ public interface IRuntimeElement {
    *          The Map value to associate with the key.
    */
   @SuppressWarnings( "rawtypes" )
-  public void setMapProperty( String key, Map value );
+  void setMapProperty(String key, Map value);
 
   /**
    * @return A string containing the XML representation of the Runtime Element
    */
-  public String toXML();
+  String toXML();
 
   /**
    * @return Returns the loggingLevel.
    */
-  public int getLoggingLevel();
+  int getLoggingLevel();
 
   /**
    * @param allowableReadAttributeNames
    *          The names of the attributes that this process is allowed to read.
    */
   @SuppressWarnings( "rawtypes" )
-  public void setAllowableAttributeNames( Collection allowableReadAttributeNames );
+  void setAllowableAttributeNames(Collection allowableReadAttributeNames);
 
   /**
    * @return The set of currently defined parameter names
    */
   @SuppressWarnings( "rawtypes" )
-  public Set getParameterNames();
+  Set getParameterNames();
 
   /**
    * Gets the type of the parameter
@@ -288,16 +288,16 @@ public interface IRuntimeElement {
    *          Parameter name
    * @return String type of the parameter
    */
-  public String getParameterType( String name );
+  String getParameterType(String name);
 
-  public void setLoaded( boolean value );
+  void setLoaded(boolean value);
 
-  public boolean getLoaded();
+  boolean getLoaded();
 
   /**
    * Causes an immediate call to the underlying persistence mechanism's write-now method. For Hibernate, this
    * results in a call to HibernateUtil.flush().
    */
-  public void forceSave();
+  void forceSave();
 
 }

@@ -35,42 +35,42 @@ public interface XulWindow extends XulRoot {
   /**
    * Open the window for display.
    */
-  public void open();
+  void open();
 
   /**
    * Close the window, and return control to the executing program.
    */
-  public void close();
+  void close();
 
   /**
    * 
    * @return
    */
-  public boolean isClosed();
+  boolean isClosed();
 
   /**
    * 
    * @throws XulException
    */
-  public void paste() throws XulException;
+  void paste() throws XulException;
 
   /**
    * 
    * @throws XulException
    */
-  public void copy() throws XulException;
+  void copy() throws XulException;
 
   /**
    * 
    * @param content
    * @throws XulException
    */
-  public void copy( String content ) throws XulException;
+  void copy(String content) throws XulException;
 
   /**
    * 
    * @throws XulException
    */
-  public void cut() throws XulException;
+  void cut() throws XulException;
 
 }

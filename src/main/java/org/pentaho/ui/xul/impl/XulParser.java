@@ -136,7 +136,7 @@ public class XulParser {
 
     try {
       Constructor<?> constructor =
-          c.getConstructor( new Class[] { Element.class, XulComponent.class, XulDomContainer.class, String.class } );
+          c.getConstructor(Element.class, XulComponent.class, XulDomContainer.class, String.class);
       constructorCache.put( className, constructor );
       return constructor;
     } catch ( NoSuchMethodException e1 ) {

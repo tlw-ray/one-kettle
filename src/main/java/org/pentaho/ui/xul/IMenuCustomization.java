@@ -19,36 +19,36 @@ package org.pentaho.ui.xul;
 
 public interface IMenuCustomization {
 
-  public enum CustomizationType {
+  enum CustomizationType {
     INSERT_BEFORE, INSERT_AFTER, FIRST_CHILD, LAST_CHILD, REPLACE, DELETE
-  };
+  }
 
-  public enum ItemType {
+    enum ItemType {
     MENU_ITEM, SUBMENU
-  };
+  }
 
-  public String getLabel();
+    String getLabel();
 
-  public void setLabel( String label );
+  void setLabel(String label);
 
-  public String getAnchorId();
+  String getAnchorId();
 
-  public void setAnchorId( String anchorId );
+  void setAnchorId(String anchorId);
 
-  public String getId();
+  String getId();
 
-  public void setId( String id );
+  void setId(String id);
 
-  public String getCommand();
+  String getCommand();
 
-  public void setCommand( String command );
+  void setCommand(String command);
 
-  public CustomizationType getCustomizationType();
+  CustomizationType getCustomizationType();
 
-  public void setCustomizationType( CustomizationType customizationType );
+  void setCustomizationType(CustomizationType customizationType);
 
-  public ItemType getItemType();
+  ItemType getItemType();
 
-  public void setItemType( ItemType itemType );
+  void setItemType(ItemType itemType);
 
 }

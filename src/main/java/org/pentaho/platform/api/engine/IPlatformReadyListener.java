@@ -36,6 +36,6 @@ public interface IPlatformReadyListener {
    * @throws PluginLifecycleException
    *           if an error occurred
    */
-  public void ready() throws PluginLifecycleException;
+  void ready() throws PluginLifecycleException;
 
 }

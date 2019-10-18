@@ -29,7 +29,7 @@ public enum KCellType {
 
   private String description;
 
-  private KCellType( String description ) {
+  KCellType(String description) {
     this.description = description;
   }
 

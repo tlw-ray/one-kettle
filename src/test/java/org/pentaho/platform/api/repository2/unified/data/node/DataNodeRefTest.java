@@ -42,6 +42,6 @@ public class DataNodeRefTest {
     assertTrue( ref.equals( ref ) );
     assertFalse( ref.equals( null ) );
     assertFalse( ref.equals( new DataNodeRef( "blah" ) ) );
-    assertFalse( ref.equals( new String() ) );
+    assertFalse( ref.equals("") );
   }
 }

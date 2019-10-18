@@ -353,7 +353,7 @@ public class Sleak {
       if ( ( (Transform) object ).isDisposed() ) {
         return;
       }
-      String string = ( (Transform) object ).toString();
+      String string = object.toString();
       gc.drawString( string, 0, 0 );
       return;
     }

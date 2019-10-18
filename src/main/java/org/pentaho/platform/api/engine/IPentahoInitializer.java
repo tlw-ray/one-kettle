@@ -27,6 +27,6 @@ public interface IPentahoInitializer {
    * 
    * @param session
    */
-  public void init( IPentahoSession session );
+  void init(IPentahoSession session);
 
 }

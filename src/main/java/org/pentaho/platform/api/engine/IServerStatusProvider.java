@@ -43,7 +43,7 @@ public interface IServerStatusProvider {
 
   void removeServerStatusChangeListener( IServerStatusChangeListener serverStatusChangeListener );
 
-  public enum ServerStatus {
+  enum ServerStatus {
     DOWN, STARTING, STARTED, STOPPING, ERROR
   }
 

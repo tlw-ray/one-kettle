@@ -260,7 +260,7 @@ public class JobEntrySetVariablesDialog extends JobEntryDialog implements JobEnt
 
     int rows =
       jobEntry.variableName == null
-        ? 1 : ( jobEntry.variableName.length == 0 ? 0 : jobEntry.variableName.length );
+        ? 1 : (jobEntry.variableName.length);
     final int FieldsRows = rows;
 
     ColumnInfo[] colinf =

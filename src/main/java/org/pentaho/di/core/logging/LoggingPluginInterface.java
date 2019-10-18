@@ -28,8 +28,8 @@ public interface LoggingPluginInterface extends KettleLoggingEventListener {
   // public void eventAdded(LoggingEvent event);
   //
 
-  public void init();
+  void init();
 
-  public void dispose();
+  void dispose();
 
 }

@@ -19,13 +19,13 @@ package org.pentaho.ui.xul.components;
 
 public interface XulToolbarbutton extends XulButton {
 
-  public void setDownimage( String img );
+  void setDownimage(String img);
 
-  public String getDownimage();
+  String getDownimage();
 
-  public String getDownimagedisabled();
+  String getDownimagedisabled();
 
-  public void setDownimagedisabled( String img );
+  void setDownimagedisabled(String img);
 
   /**
    * Sets the selected state of the button. If this button is a member of a button group, the other buttons will be
@@ -35,5 +35,5 @@ public interface XulToolbarbutton extends XulButton {
    * @param fireEvent
    *          fire command object on this call
    */
-  public void setSelected( boolean selected, boolean fireEvent );
+  void setSelected(boolean selected, boolean fireEvent);
 }

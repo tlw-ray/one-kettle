@@ -97,7 +97,7 @@ public class TextFileOutputLegacyDialog extends TextFileOutputDialog {
 
   @Override
   public void getData() {
-    wFileIsCommand.setSelection( ( (TextFileOutputLegacyMeta) input ).isFileAsCommand() );
+    wFileIsCommand.setSelection( input.isFileAsCommand() );
     wServletOutput.setSelection( input.isServletOutput() );
     super.getData();
   }
@@ -105,7 +105,7 @@ public class TextFileOutputLegacyDialog extends TextFileOutputDialog {
 
   @Override
   protected void saveInfoInMeta( TextFileOutputMeta tfoi ) {
-    ( (TextFileOutputLegacyMeta) tfoi ).setFileAsCommand( wFileIsCommand.getSelection() );
+    tfoi.setFileAsCommand( wFileIsCommand.getSelection() );
     super.saveInfoInMeta( tfoi );
   }
 

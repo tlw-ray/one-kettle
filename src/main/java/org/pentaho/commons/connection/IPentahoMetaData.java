@@ -30,7 +30,7 @@ public interface IPentahoMetaData {
    *         Multidimensional data will return N x M where N is the number of dimensions and M is the number of columns.
    *         With the 0 index for N representing the innermost dimension.
    */
-  public Object[][] getColumnHeaders();
+  Object[][] getColumnHeaders();
 
   /**
    * @return a 2D grid that represents row headers.
@@ -40,7 +40,7 @@ public interface IPentahoMetaData {
    *         dimension. This method has been moved to IMultiDimensionalMetaData
    */
   @Deprecated
-  public Object[][] getRowHeaders();
+  Object[][] getRowHeaders();
 
   /**
    * Gets the 0-based column number for a specified column header value. If the column header cannot be found -1 is
@@ -51,7 +51,7 @@ public interface IPentahoMetaData {
    * @return The 0-based index of the column
    * @throws Exception
    */
-  public int getColumnIndex( String value );
+  int getColumnIndex(String value);
 
   /**
    * Gets the 0-based column number for a set of column header values. If the column header cannot be found -1 is
@@ -61,7 +61,7 @@ public interface IPentahoMetaData {
    *          The column header value to search for.
    * @return The 0-based index of the column
    */
-  public int getColumnIndex( String[] values );
+  int getColumnIndex(String[] values);
 
   /**
    * Gets the 0-based row number for a specified row header value. If the row header cannot be found -1 is returned. If
@@ -72,7 +72,7 @@ public interface IPentahoMetaData {
    * @return The 0-based index of the row
    * @throws Exception
    */
-  public int getRowIndex( String value );
+  int getRowIndex(String value);
 
   /**
    * Gets the 0-based row number for a set of row header values. If the row header cannot be found -1 is returned. If
@@ -82,12 +82,12 @@ public interface IPentahoMetaData {
    *          The row header value to search for.
    * @return The 0-based index of the row
    */
-  public int getRowIndex( String[] values );
+  int getRowIndex(String[] values);
 
   /**
    * @return Count of columns returned.
    */
-  public int getColumnCount();
+  int getColumnCount();
 
   /**
    * get an attribute from the metadata
@@ -100,5 +100,5 @@ public interface IPentahoMetaData {
    *          the attribute name
    * @return the attribute
    */
-  public Object getAttribute( int rowNo, int columnNo, String attributeName );
+  Object getAttribute(int rowNo, int columnNo, String attributeName);
 }

@@ -302,7 +302,7 @@ public class SharedObjectSyncUtil {
     }
   }
 
-  protected static interface SynchronizationHandler<T extends SharedObjectInterface> {
+  protected interface SynchronizationHandler<T extends SharedObjectInterface> {
 
     List<T> getObjectsForSyncFromJob( JobMeta job );
 

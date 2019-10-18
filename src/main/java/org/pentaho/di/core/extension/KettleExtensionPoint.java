@@ -132,7 +132,7 @@ public enum KettleExtensionPoint {
 
   public String description;
 
-  private KettleExtensionPoint( String id, String description ) {
+  KettleExtensionPoint(String id, String description) {
     this.id = id;
     this.description = description;
   }

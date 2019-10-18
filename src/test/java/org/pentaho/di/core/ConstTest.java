@@ -131,14 +131,14 @@ public class ConstTest extends TestCase {
   @Test
   public void testIsEmptyStringBuffer() {
     assertTrue( Const.isEmpty( (StringBuffer) null ) );
-    assertTrue( Const.isEmpty( new StringBuffer( "" ) ) );
+    assertTrue( Const.isEmpty( new StringBuffer() ) );
     assertFalse( Const.isEmpty( new StringBuffer( "test" ) ) );
   }
 
   @Test
   public void testIsEmptyStringBuilder() {
     assertTrue( Const.isEmpty( (StringBuilder) null ) );
-    assertTrue( Const.isEmpty( new StringBuilder( "" ) ) );
+    assertTrue( Const.isEmpty( new StringBuilder() ) );
     assertFalse( Const.isEmpty( new StringBuilder( "test" ) ) );
   }
 
@@ -1862,7 +1862,7 @@ public class ConstTest extends TestCase {
     sb = new StringBuffer( "short" );
     Const.repl( sb, "long pattern", "replacement" );
     assertEquals( "short", sb.toString() );
-    sb = new StringBuffer( "" );
+    sb = new StringBuffer();
     Const.repl( sb, "anything", "something" );
     assertEquals( "", sb.toString() );
     sb = new StringBuffer( "Replace what looks like a regex '[a-z1-3*+]' with '$1'" );
@@ -1879,7 +1879,7 @@ public class ConstTest extends TestCase {
     sb2 = new StringBuilder( "short" );
     Const.repl( sb2, "long pattern", "replacement" );
     assertEquals( "short", sb2.toString() );
-    sb2 = new StringBuilder( "" );
+    sb2 = new StringBuilder();
     Const.repl( sb2, "anything", "something" );
     assertEquals( "", sb2.toString() );
     sb2 = new StringBuilder( "Replace what looks like a regex '[a-z1-3*+]' with '$1'" );

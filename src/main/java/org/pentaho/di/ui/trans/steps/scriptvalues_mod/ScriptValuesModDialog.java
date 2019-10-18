@@ -666,7 +666,7 @@ public class ScriptValuesModDialog extends BaseStepDialog implements StepDialogI
 
     // Create the drag source on the tree
     DragSource ds = new DragSource( wTree, DND.DROP_MOVE );
-    ds.setTransfer( new Transfer[] { TextTransfer.getInstance() } );
+    ds.setTransfer(TextTransfer.getInstance());
     ds.addDragListener( new DragSourceAdapter() {
 
       public void dragStart( DragSourceEvent event ) {
@@ -678,11 +678,7 @@ public class ScriptValuesModDialog extends BaseStepDialog implements StepDialogI
             event.doit = false;
           } else if ( !item.getData().equals( "Function" ) ) {
             String strInsert = (String) item.getData();
-            if ( strInsert.equals( "jsFunction" ) ) {
-              event.doit = true;
-            } else {
-              event.doit = false;
-            }
+              event.doit = strInsert.equals("jsFunction");
           } else {
             event.doit = false;
           }
@@ -2144,7 +2140,7 @@ public class ScriptValuesModDialog extends BaseStepDialog implements StepDialogI
               case SWT.Verify:
                 String newText = text.getText();
                 String leftText = newText.substring( 0, e.start );
-                String rightText = newText.substring( e.end, newText.length() );
+                String rightText = newText.substring( e.end);
                 GC gc = new GC( text );
                 Point size = gc.textExtent( leftText + e.text + rightText );
                 gc.dispose();

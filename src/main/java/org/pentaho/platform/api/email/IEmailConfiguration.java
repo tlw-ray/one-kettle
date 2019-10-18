@@ -21,51 +21,51 @@
 package org.pentaho.platform.api.email;
 
 public interface IEmailConfiguration {
-  public boolean isAuthenticate();
+  boolean isAuthenticate();
 
-  public void setAuthenticate( final boolean authenticate );
+  void setAuthenticate(final boolean authenticate);
 
-  public boolean isDebug();
+  boolean isDebug();
 
-  public void setDebug( final boolean debug );
+  void setDebug(final boolean debug);
 
-  public String getDefaultFrom();
+  String getDefaultFrom();
 
-  public void setDefaultFrom( final String defaultFrom );
+  void setDefaultFrom(final String defaultFrom);
 
-  public String getFromName();
+  String getFromName();
 
-  public void setFromName( String fromName );
+  void setFromName(String fromName);
 
-  public String getSmtpHost();
+  String getSmtpHost();
 
-  public void setSmtpHost( final String smtpHost );
+  void setSmtpHost(final String smtpHost);
 
-  public Integer getSmtpPort();
+  Integer getSmtpPort();
 
-  public void setSmtpPort( final Integer smtpPort );
+  void setSmtpPort(final Integer smtpPort);
 
-  public String getSmtpProtocol();
+  String getSmtpProtocol();
 
-  public void setSmtpProtocol( final String smtpProtocol );
+  void setSmtpProtocol(final String smtpProtocol);
 
-  public String getUserId();
+  String getUserId();
 
-  public void setUserId( final String userId );
+  void setUserId(final String userId);
 
-  public String getPassword();
+  String getPassword();
 
-  public void setPassword( final String password );
+  void setPassword(final String password);
 
-  public boolean isUseSsl();
+  boolean isUseSsl();
 
-  public void setUseSsl( final boolean useSsl );
+  void setUseSsl(final boolean useSsl);
 
-  public boolean isUseStartTls();
+  boolean isUseStartTls();
 
-  public void setUseStartTls( final boolean useStartTls );
+  void setUseStartTls(final boolean useStartTls);
 
-  public boolean isSmtpQuitWait();
+  boolean isSmtpQuitWait();
 
-  public void setSmtpQuitWait( final boolean smtpQuitWait );
+  void setSmtpQuitWait(final boolean smtpQuitWait);
 }

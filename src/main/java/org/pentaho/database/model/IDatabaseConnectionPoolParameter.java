@@ -22,34 +22,34 @@ public interface IDatabaseConnectionPoolParameter {
   /**
    * @return the defaultValue
    */
-  public String getDefaultValue();
+  String getDefaultValue();
 
   /**
    * @param defaultValue
    *          the defaultValue to set
    */
-  public void setDefaultValue( String defaultValue );
+  void setDefaultValue(String defaultValue);
 
   /**
    * @return the description
    */
-  public String getDescription();
+  String getDescription();
 
   /**
    * @param description
    *          the description to set
    */
-  public void setDescription( String description );
+  void setDescription(String description);
 
   /**
    * @return the parameter
    */
-  public String getParameter();
+  String getParameter();
 
   /**
    * @param parameter
    *          the parameter to set
    */
-  public void setParameter( String parameter );
+  void setParameter(String parameter);
 
 }

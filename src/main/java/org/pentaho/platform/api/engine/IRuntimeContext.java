@@ -43,93 +43,93 @@ public interface IRuntimeContext extends IAuditable, ILogger {
   /**
    * Unused
    */
-  public static final String FEEDBACK_OUTPUT = "feedback-output"; //$NON-NLS-1$
+  String FEEDBACK_OUTPUT = "feedback-output"; //$NON-NLS-1$
 
   /**
    * Indicator of action validation failure
    */
-  public static final int RUNTIME_CONTEXT_VALIDATE_FAIL = 0;
+  int RUNTIME_CONTEXT_VALIDATE_FAIL = 0;
 
   /**
    * Indicator of action validation success
    */
-  public static final int RUNTIME_CONTEXT_VALIDATE_OK = 1;
+  int RUNTIME_CONTEXT_VALIDATE_OK = 1;
 
   /**
    * Indicates that the parameters for an action were able to be resolved.
    */
-  public static final int RUNTIME_CONTEXT_RESOLVE_OK = 2;
+  int RUNTIME_CONTEXT_RESOLVE_OK = 2;
 
   /**
    * Indicates that parameters for an action could not be resolved.
    */
-  public static final int RUNTIME_CONTEXT_RESOLVE_FAIL = 9;
+  int RUNTIME_CONTEXT_RESOLVE_FAIL = 9;
 
   /**
    * When beginning execution of an action sequence, the status starts off as not started.
    */
-  public static final int RUNTIME_STATUS_NOT_STARTED = 3;
+  int RUNTIME_STATUS_NOT_STARTED = 3;
 
   /**
    * Indicator that initialization happened successfully
    */
-  public static final int RUNTIME_STATUS_INITIALIZE_OK = 4;
+  int RUNTIME_STATUS_INITIALIZE_OK = 4;
 
   /**
    * Indicator of initialization failure
    */
-  public static final int RUNTIME_STATUS_INITIALIZE_FAIL = 8;
+  int RUNTIME_STATUS_INITIALIZE_FAIL = 8;
 
   /**
    * As an action sequence begins execution, the status is set to running.
    */
-  public static final int RUNTIME_STATUS_RUNNING = 5;
+  int RUNTIME_STATUS_RUNNING = 5;
 
   /**
    * Indicates that the action executed successfully
    */
-  public static final int RUNTIME_STATUS_SUCCESS = 6;
+  int RUNTIME_STATUS_SUCCESS = 6;
 
   /**
    * Indicator of action failure.
    */
-  public static final int RUNTIME_STATUS_FAILURE = 7;
+  int RUNTIME_STATUS_FAILURE = 7;
 
   /**
    * Indicates an invalid instance ID was passed into the execution of an action sequence
    */
-  public static final int RUNTIME_STATUS_SETUP_FAIL = 10;
+  int RUNTIME_STATUS_SETUP_FAIL = 10;
 
   /**
    * Currently only used as an indicator that BIRT report specification parameters could not be read.
    */
-  public static final int PARAMETERS_FAIL = 1;
+  int PARAMETERS_FAIL = 1;
 
   /**
    * Currently only used as an indicator that BIRT report specification parameters could be read properly.
    */
-  public static final int PARAMETERS_OK = 2;
+  int PARAMETERS_OK = 2;
 
   /**
    * Indicates that parameters are required by an action, and the parameters aren't available so they need to be
    * prompted for.
    */
-  public static final int PARAMETERS_UI_NEEDED = 3;
+  int PARAMETERS_UI_NEEDED = 3;
 
   /**
    * Indicates that no parameter prompts are pending.
    */
-  public static final int PROMPT_NO = 0;
+  int PROMPT_NO = 0;
 
   /**
    * Indicates that parameter prompts are pending.
    */
-  public static final int PROMPT_WAITING = 1;
+  int PROMPT_WAITING = 1;
 
   /**
    * Indicates that we need to prompt immediately for parameters.
    */
-  public static final int PROMPT_NOW = 2;
+  int PROMPT_NOW = 2;
 
   /**
    * Returns the unique context identifier. The handle is created during construction of the
@@ -139,7 +139,7 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    * @return the unique handle.
    * @see RuntimeContext
    */
-  public String getHandle();
+  String getHandle();
 
   /**
    * During execution of an action sequence, returns the IActionSequence#getTitle().
@@ -147,20 +147,20 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    * @return Action sequence title
    * @see IActionSequence#getSequenceTitle()
    */
-  public String getActionTitle();
+  String getActionTitle();
 
   /** Forces the runtime to stop processing Actions and return to prompt */
-  public void promptNow();
+  void promptNow();
 
   /** Sets the prompt flag but continue processing Actions */
-  public void promptNeeded();
+  void promptNeeded();
 
   /**
    * Tells if a component is waiting for a prompt
    * 
    * @return true if a prompt is pending
    */
-  public boolean isPromptPending();
+  boolean isPromptPending();
 
   /**
    * Returns the unique execution instance. This is typically a GUID that can be used to track the entire execution
@@ -168,7 +168,7 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    * 
    * @return unique instance Id
    */
-  public String getInstanceId();
+  String getInstanceId();
 
   /**
    * Sets the current action sequence
@@ -176,9 +176,9 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    * @param actionSequence
    *          The action sequence to validate
    */
-  public void setActionSequence( IActionSequence actionSequence );
+  void setActionSequence(IActionSequence actionSequence);
 
-  public IActionSequence getActionSequence();
+  IActionSequence getActionSequence();
 
   /**
    * Validates the action sequence for consistency
@@ -188,7 +188,7 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    * @throws IllegalStateException
    * @throws ActionSequenceException
    */
-  public void validateSequence( String sequenceName, IExecutionListener execListener ) throws ActionValidationException;
+  void validateSequence(String sequenceName, IExecutionListener execListener) throws ActionValidationException;
 
   /**
    * Executes the action sequence.
@@ -201,7 +201,7 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    * @see IRuntimeContext#RUNTIME_STATUS_FAILURE
    * @see IRuntimeContext#RUNTIME_STATUS_SUCCESS
    */
-  public void executeSequence( IActionCompleteListener listener, IExecutionListener execListener, boolean async )
+  void executeSequence(IActionCompleteListener listener, IExecutionListener execListener, boolean async)
     throws ActionSequenceException;
 
   /**
@@ -209,22 +209,22 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    * 
    * @return the URL Factory
    */
-  public IPentahoUrlFactory getUrlFactory();
+  IPentahoUrlFactory getUrlFactory();
 
   /**
    * @return The path within the solution holding the currently executing action sequence
    */
-  public String getSolutionPath();
+  String getSolutionPath();
 
   /**
    * @return The component in the action seqeuence that's being executed
    */
-  public String getCurrentComponentName();
+  String getCurrentComponentName();
 
   /**
    * @return The session that started execution of the current action sequence
    */
-  public IPentahoSession getSession();
+  IPentahoSession getSession();
 
   /**
    * Writes a message to the audit log.
@@ -241,7 +241,7 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    * @see IAuditable
    * @see org.pentaho.core.audit.MessageTypes
    */
-  public void audit( String messageType, String message, String value, long duration );
+  void audit(String messageType, String message, String value, long duration);
 
   /**
    * Returns the named input parameter. This will search amongst all the input parameter providers (
@@ -253,7 +253,7 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    * @return The parameter
    * @see org.pentaho.platform.api.engine.services.IParameterProvider
    */
-  public IActionParameter getInputParameter( String name );
+  IActionParameter getInputParameter(String name);
 
   /**
    * Returns the named output parameter. This will search amongst all the output parameter providers (
@@ -265,7 +265,7 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    * @return The requested parameter
    * @see org.pentaho.platform.api.engine.services.IParameterProvider
    */
-  public IActionParameter getOutputParameter( String name );
+  IActionParameter getOutputParameter(String name);
 
   /**
    * Gets the named resource definition from the executing action sequence. Throws a <tt>NullPointerException</tt>
@@ -276,7 +276,7 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    * @return The resource if it exists.
    * @see IActionSequenceResource
    */
-  public IActionSequenceResource getResourceDefintion( String name );
+  IActionSequenceResource getResourceDefintion(String name);
 
   /**
    * Gets the value of the specified input parameter. Throws a <tt>NullPointerException</tt> if the parameter is
@@ -287,7 +287,7 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    * @return The <tt>IActionParameter#getValue()</tt>
    * @see IActionParameter
    */
-  public Object getInputParameterValue( String name );
+  Object getInputParameterValue(String name);
 
   /**
    * Gets the value of the specified input parameter as a <code>String</code>. Throws a
@@ -298,7 +298,7 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    * @return The <tt>IActionParameter#getStringValue()</tt>
    * @see IActionParameter
    */
-  public String getInputParameterStringValue( String name );
+  String getInputParameterStringValue(String name);
 
   /**
    * Gets the named resource as an <tt>InputStream</tt>.
@@ -308,7 +308,7 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    * @return The <code>InputStream</code> that contains the resource.
    * @throws FileNotFoundException
    */
-  public InputStream getResourceInputStream( IActionSequenceResource actionResource ) throws FileNotFoundException;
+  InputStream getResourceInputStream(IActionSequenceResource actionResource) throws FileNotFoundException;
 
   /**
    * Gets the named resource as a <tt>DataSource</tt>.
@@ -318,7 +318,7 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    * @return The <code>DataSource</code>
    * @throws FileNotFoundException
    */
-  public IPentahoStreamSource getResourceDataSource( IActionSequenceResource actionResource )
+  IPentahoStreamSource getResourceDataSource(IActionSequenceResource actionResource)
     throws FileNotFoundException;
 
   /**
@@ -328,7 +328,7 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    *          The resource to get from the <code>SolutionRepository</tt>
    * @return The <code>String</code>
    */
-  public String getResourceAsString( IActionSequenceResource actionParameter ) throws IOException;
+  String getResourceAsString(IActionSequenceResource actionParameter) throws IOException;
 
   /**
    * Gets the named resource as a <tt>Document</tt>.
@@ -337,7 +337,7 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    *          The resource to get from the <code>SolutionRepository</tt>
    * @return The <code>DataSource</code>
    */
-  public Document getResourceAsDocument( IActionSequenceResource actionParameter ) throws IOException,
+  Document getResourceAsDocument(IActionSequenceResource actionParameter) throws IOException,
     DocumentException;
 
   /**
@@ -348,7 +348,7 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    * @param output
    *          The value to set the output parameter to
    */
-  public void setOutputValue( String name, Object output );
+  void setOutputValue(String name, Object output);
 
   /**
    * Adds a parameter to the current inputs. A component can be use this to create parameters for internal use or
@@ -359,7 +359,7 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    * @param output
    *          The value to set the temporary parameter to
    */
-  public void addTempParameter( String name, IActionParameter output );
+  void addTempParameter(String name, IActionParameter output);
 
   /**
    * Returns an output stream for writing.
@@ -372,7 +372,7 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    *          The file extension of the output
    * @return OutputStream for writing to
    */
-  public IContentItem getOutputItem( String outputName, String mimeType, String extension );
+  IContentItem getOutputItem(String outputName, String mimeType, String extension);
 
   /**
    * Returns an input stream from an input parameter, if the input parameter is a content item.
@@ -381,7 +381,7 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    *          The name of the parameter
    * @return An InputStream from the content item
    */
-  public InputStream getInputStream( String parameterName );
+  InputStream getInputStream(String parameterName);
 
   /**
    * Get's the content item associated with the parameter, and returns the content item's datasource
@@ -391,25 +391,25 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    * @return The IPentahoStreamSource from the Content Item
    * @see IContentItem#getDataSource()
    */
-  public IPentahoStreamSource getDataSource( String parameterName );
+  IPentahoStreamSource getDataSource(String parameterName);
 
   /**
    * @return a <tt>Set</tt> containing all the inputs in the current action.
    */
   @SuppressWarnings( "rawtypes" )
-  public Set getInputNames();
+  Set getInputNames();
 
   /**
    * @return a <tt>Set</tt> containing the resource names in the action
    */
   @SuppressWarnings( "rawtypes" )
-  public Set getResourceNames();
+  Set getResourceNames();
 
   /**
    * @return a <tt>Set</tt> containing the output names in the current action
    */
   @SuppressWarnings( "rawtypes" )
-  public Set getOutputNames();
+  Set getOutputNames();
 
   /**
    * Does parameter substitution on the input string, searching for all parameter declarations in the input string,
@@ -420,7 +420,7 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    *          The string containing possible parameter references
    * @return String with parameters resolved.
    */
-  public String applyInputsToFormat( String format );
+  String applyInputsToFormat(String format);
 
   /**
    * Does parameter substitution on the input string, searching for all parameter declarations in the input string,
@@ -433,7 +433,7 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    *          for parameters for overriding behavior
    * @return String with parameters resolved.
    */
-  public String applyInputsToFormat( String format, IParameterResolver resolver );
+  String applyInputsToFormat(String format, IParameterResolver resolver);
 
   /**
    * Adds an input parameter to the list of all inputs for the action sequence
@@ -444,12 +444,12 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    *          The parameter to add
    * @see IActionParameter
    */
-  public void addInputParameter( String name, IActionParameter param );
+  void addInputParameter(String name, IActionParameter param);
 
   /**
    * @return true if the current output device allows user feedback (i.e. parameter input forms)
    */
-  public boolean feedbackAllowed();
+  boolean feedbackAllowed();
 
   /**
    * Interfaces to the current output handler to get the content item that is handling feedback (i.e. parameter
@@ -459,7 +459,7 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    * @see IContentItem
    * @see IOutputHandler
    */
-  public IContentItem getFeedbackContentItem();
+  IContentItem getFeedbackContentItem();
 
   /**
    * Interfaces to the current context to get the content items which was generated
@@ -467,7 +467,7 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    * @return The content item for output
    * @see IContentItem
    */
-  public List<IContentItem> getOutputContentItems();
+  List<IContentItem> getOutputContentItems();
 
   /**
    * Interfaces to the current output handler to get the content item that describes the output from this request's
@@ -477,7 +477,7 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    * @see IContentItem
    * @see IOutputHandler
    */
-  public IContentItem getOutputContentItem( String mimeType );
+  IContentItem getOutputContentItem(String mimeType);
 
   /**
    * Interfaces to the current output handler to get the named content item from this request's component
@@ -489,7 +489,7 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    * @see IContentItem
    * @see IOutputHandler
    */
-  public IContentItem getOutputContentItem( String outputName, String mimeType );
+  IContentItem getOutputContentItem(String outputName, String mimeType);
 
   /**
    * Generates a parameter acquisition form for required parameters. This writes directly to the output stream
@@ -498,9 +498,9 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    * @throws ActionSequenceException
    * @see IOutputHandler
    */
-  public void sendFeedbackForm() throws ActionSequencePromptException;
+  void sendFeedbackForm() throws ActionSequencePromptException;
 
-  public void setCreateFeedbackParameterCallback( ICreateFeedbackParameterCallback callback );
+  void setCreateFeedbackParameterCallback(ICreateFeedbackParameterCallback callback);
 
   /**
    * @deprecated
@@ -512,7 +512,7 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    *          The Action Parameter to use as the model for the prompt
    */
   @Deprecated
-  public void createFeedbackParameter( IActionParameter actionParam );
+  void createFeedbackParameter(IActionParameter actionParam);
 
   /**
    * Adds a feedback parameter (essentially a form input field) for a required input.
@@ -525,7 +525,7 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    *          default values for the input field
    * @see SelectionMapper
    */
-  public void createFeedbackParameter( ISelectionMapper selMap, String fieldName, Object defaultValues );
+  void createFeedbackParameter(ISelectionMapper selMap, String fieldName, Object defaultValues);
 
   /**
    * Adds a feedback parameter (essentially a form input field) for a required input.
@@ -540,7 +540,7 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    *          specifies if the feedback parameter is required or not
    * @see SelectionMapper
    */
-  public void createFeedbackParameter( ISelectionMapper selMap, String fieldName, Object defaults, boolean optional );
+  void createFeedbackParameter(ISelectionMapper selMap, String fieldName, Object defaults, boolean optional);
 
   /**
    * Adds a scalar feedback parameter
@@ -557,8 +557,8 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    *          Whether the input field is visible or not
    * @see XForm
    */
-  public void createFeedbackParameter( String fieldName, String displayName, String hint, Object defaultValue,
-      boolean visible );
+  void createFeedbackParameter(String fieldName, String displayName, String hint, Object defaultValue,
+                               boolean visible);
 
   /**
    * Adds a scalar feedback parameter
@@ -577,8 +577,8 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    *          specifies if the feedback parameter is required or not
    * @see XForm
    */
-  public void createFeedbackParameter( String fieldName, String displayName, String hint, Object defaultValue,
-      boolean visible, boolean optional );
+  void createFeedbackParameter(String fieldName, String displayName, String hint, Object defaultValue,
+                               boolean visible, boolean optional);
 
   /**
    * Creates a feedback parameter that uses a list for the values
@@ -600,8 +600,8 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    * @see XForm
    */
   @SuppressWarnings( "rawtypes" )
-  public void createFeedbackParameter( String fieldName, String displayName, String hint, Object defaultValues,
-      List values, Map dispNames, String displayStyle );
+  void createFeedbackParameter(String fieldName, String displayName, String hint, Object defaultValues,
+                               List values, Map dispNames, String displayStyle);
 
   /**
    * Creates a feedback parameter that uses a list for the values
@@ -624,19 +624,19 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    * @see XForm
    */
   @SuppressWarnings( "rawtypes" )
-  public void createFeedbackParameter( String fieldName, String displayName, String hint, Object defaultValues,
-      List values, Map dispNames, String displayStyle, boolean optional );
+  void createFeedbackParameter(String fieldName, String displayName, String hint, Object defaultValues,
+                               List values, Map dispNames, String displayStyle, boolean optional);
 
   /**
    * @return the current status of execution
    */
-  public int getStatus();
+  int getStatus();
 
   /**
    * @return List of messages saved up during execution. This is used to provide failure feedback to the user.
    */
   @SuppressWarnings( "rawtypes" )
-  public List getMessages();
+  List getMessages();
 
   /**
    * Creates a new runtime context that is a child of this instance
@@ -645,7 +645,7 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    *          Should the runtime data be persisted
    * @return Instance id of the new RuntimeContext
    */
-  public String createNewInstance( boolean persisted );
+  String createNewInstance(boolean persisted);
 
   /**
    * Creates a new runtime context that is a child of this instance and sets attributes of the runtime data from
@@ -658,7 +658,7 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    * @return Instance id of the new RuntimeContext
    */
   @SuppressWarnings( "rawtypes" )
-  public String createNewInstance( boolean persisted, Map parameters );
+  String createNewInstance(boolean persisted, Map parameters);
 
   /**
    * Creates a new runtime context that is a child of this instance and sets attributes of the runtime data from
@@ -674,12 +674,12 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    * @return Instance id of the new RuntimeContext
    */
   @SuppressWarnings( "rawtypes" )
-  public String createNewInstance( boolean persisted, Map parameters, boolean forceImmediateWrite );
+  String createNewInstance(boolean persisted, Map parameters, boolean forceImmediateWrite);
 
-  public void dispose();
+  void dispose();
 
   @SuppressWarnings( "rawtypes" )
-  public void dispose( List exceptParameters );
+  void dispose(List exceptParameters);
 
   /**
    * Sets the xsl file to be used to generate the parameter page for the current component. The parameter should be
@@ -689,7 +689,7 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    * @param xsl
    *          The name of the XSL file
    */
-  public void setParameterXsl( String xsl );
+  void setParameterXsl(String xsl);
 
   /**
    * Sets the target window that the content will be displayed in. This name is used at the target in an
@@ -698,13 +698,13 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    * @param target
    *          Window name
    */
-  public void setParameterTarget( String target );
+  void setParameterTarget(String target);
 
   /**
    * Forces the immediate write of runtime data to underlying persistence mechanism. In the case of using Hibernate
    * for the runtime data persistence, this works out to a call to HibernateUtil.flush().
    */
-  public void forceSaveRuntimeData();
+  void forceSaveRuntimeData();
 
   /**
    * Gets the output type prefered by the handler. Values are defined in
@@ -713,7 +713,7 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    * 
    * @return Output type
    */
-  public int getOutputPreference();
+  int getOutputPreference();
 
   /**
    * Sets the output handler for the runtime context
@@ -722,18 +722,18 @@ public interface IRuntimeContext extends IAuditable, ILogger {
    *          The output handler
    * 
    */
-  public void setOutputHandler( IOutputHandler outputHandler );
+  void setOutputHandler(IOutputHandler outputHandler);
 
   /**
    * Sets the default prompt status PROMPT_NO, PROMPT_WAITING, PROMPT_NOW
    * 
    * @param status
    */
-  public void setPromptStatus( int status );
+  void setPromptStatus(int status);
 
-  public IParameterManager getParameterManager();
+  IParameterManager getParameterManager();
 
   @SuppressWarnings( "rawtypes" )
-  public Map getParameterProviders();
+  Map getParameterProviders();
 
 }

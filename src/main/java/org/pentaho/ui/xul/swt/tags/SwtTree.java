@@ -677,7 +677,7 @@ public class SwtTree extends AbstractSwtXulContainer implements XulTree {
     width -= 20;
     double totalFlex = 0;
     for ( XulComponent col : getColumns().getChildNodes() ) {
-      totalFlex += ( (XulTreeCol) col ).getFlex();
+      totalFlex += col.getFlex();
     }
 
     int colIdx = 0;
@@ -686,8 +686,8 @@ public class SwtTree extends AbstractSwtXulContainer implements XulTree {
         break;
       }
       TableColumn c = table.getTable().getColumn( colIdx );
-      int colFlex = ( (XulTreeCol) col ).getFlex();
-      int colWidth = ( (XulTreeCol) col ).getWidth();
+      int colFlex = col.getFlex();
+      int colWidth = col.getWidth();
       if ( totalFlex == 0 ) {
         if ( colWidth > 0 ) {
           c.setWidth( colWidth );
@@ -821,7 +821,7 @@ public class SwtTree extends AbstractSwtXulContainer implements XulTree {
         case EDITABLECOMBOBOX:
           editor = new ComboBoxCellEditor( table.getTable(), new String[] {} );
 
-          final CCombo editableControl = (CCombo) ( (ComboBoxCellEditor) editor ).getControl();
+          final CCombo editableControl = (CCombo) editor.getControl();
           editableControl.addModifyListener( new ModifyListener() {
             public void modifyText( ModifyEvent modifyEvent ) {
               domContainer.invokeLater( new Runnable() {
@@ -842,7 +842,7 @@ public class SwtTree extends AbstractSwtXulContainer implements XulTree {
         default:
           editor = new TextCellEditor( table.getTable() );
 
-          final Text textControl = (Text) ( (TextCellEditor) editor ).getControl();
+          final Text textControl = (Text) editor.getControl();
           textControl.addModifyListener( new ModifyListener() {
             public void modifyText( ModifyEvent modifyEvent ) {
               XulTreeCell cell = getCell( colIdx );
@@ -854,7 +854,7 @@ public class SwtTree extends AbstractSwtXulContainer implements XulTree {
 
       // Create selection listener for comboboxes.
       if ( type == ColumnType.EDITABLECOMBOBOX || type == ColumnType.COMBOBOX ) {
-        final CCombo editableControl = (CCombo) ( (ComboBoxCellEditor) editor ).getControl();
+        final CCombo editableControl = (CCombo) editor.getControl();
         editableControl.addSelectionListener( new SelectionAdapter() {
           @Override
           public void widgetDefaultSelected( SelectionEvent arg0 ) {
@@ -928,9 +928,9 @@ public class SwtTree extends AbstractSwtXulContainer implements XulTree {
 
   public enum SELECTION_MODE {
     SINGLE, CELL, MULTIPLE
-  };
+  }
 
-  public String getSeltype() {
+    public String getSeltype() {
     return selType.toString();
   }
 
@@ -1541,7 +1541,7 @@ public class SwtTree extends AbstractSwtXulContainer implements XulTree {
       Method childrenMethod = null;
 
       try {
-        childrenMethod = element.getClass().getMethod( method, new Class[] {} );
+        childrenMethod = element.getClass().getMethod( method);
       } catch ( NoSuchMethodException e ) {
         logger.debug( "Could not find children binding method for object: " + element.getClass().getSimpleName() );
       }
@@ -1764,7 +1764,7 @@ public class SwtTree extends AbstractSwtXulContainer implements XulTree {
     Collection children = null;
     Method childrenMethod = null;
     try {
-      childrenMethod = obj.getClass().getMethod( childrenMethodProperty, new Class[] {} );
+      childrenMethod = obj.getClass().getMethod( childrenMethodProperty);
     } catch ( NoSuchMethodException e ) {
       if ( obj instanceof Collection ) {
         children = (Collection) obj;
@@ -1864,9 +1864,9 @@ public class SwtTree extends AbstractSwtXulContainer implements XulTree {
   protected Control getDndObject() {
     Control control;
     if ( isHierarchical() ) {
-      control = (Control) tree.getControl();
+      control = tree.getControl();
     } else {
-      control = (Control) table.getControl();
+      control = table.getControl();
     }
     return control;
   }
@@ -2049,7 +2049,7 @@ public class SwtTree extends AbstractSwtXulContainer implements XulTree {
         this.dropVetoerMethod =
             controller.getClass().getMethod(
                 getDropvetoer().substring( getDropvetoer().indexOf( "." ) + 1, getDropvetoer().indexOf( "(" ) ),
-                new Class[] { DropEvent.class } );
+                    DropEvent.class);
         this.dropVetoerController = controller;
       } catch ( XulException e ) {
         e.printStackTrace();
@@ -2130,7 +2130,7 @@ public class SwtTree extends AbstractSwtXulContainer implements XulTree {
 
         try {
           // Consult Vetoer method to see if this is a valid drop operation
-          dropVetoerMethod.invoke( dropVetoerController, new Object[] { event } );
+          dropVetoerMethod.invoke( dropVetoerController, event);
 
         } catch ( InvocationTargetException e ) {
           e.printStackTrace();
@@ -2189,7 +2189,7 @@ public class SwtTree extends AbstractSwtXulContainer implements XulTree {
     property = "get" + ( property.substring( 0, 1 ).toUpperCase() + property.substring( 1 ) );
     Method childrenMethod = null;
     try {
-      childrenMethod = elements.getClass().getMethod( property, new Class[] {} );
+      childrenMethod = elements.getClass().getMethod( property);
     } catch ( NoSuchMethodException e ) {
       // Since this tree is built recursively, when at a leaf it will throw this exception.
       logger.debug( e );

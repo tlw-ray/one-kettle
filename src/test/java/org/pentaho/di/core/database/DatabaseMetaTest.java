@@ -76,7 +76,7 @@ public class DatabaseMetaTest {
   private DatabaseInterface databaseInterface;
 
   @BeforeClass
-  public static void setUpOnce() throws KettlePluginException, KettleException {
+  public static void setUpOnce() throws KettleException {
     // Register Natives to create a default DatabaseMeta
     DatabasePluginType.getInstance().searchPlugins();
     ValueMetaPluginType.getInstance().searchPlugins();

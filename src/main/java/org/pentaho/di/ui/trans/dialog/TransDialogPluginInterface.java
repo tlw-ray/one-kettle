@@ -29,11 +29,11 @@ import org.pentaho.di.core.exception.KettleException;
 import org.pentaho.di.trans.TransMeta;
 
 public interface TransDialogPluginInterface {
-  public void addTab( TransMeta transMeta, Shell shell, CTabFolder tabFolder );
+  void addTab(TransMeta transMeta, Shell shell, CTabFolder tabFolder);
 
-  public void getData( TransMeta transMeta ) throws KettleException;
+  void getData(TransMeta transMeta) throws KettleException;
 
-  public void ok( TransMeta transMeta ) throws KettleException;
+  void ok(TransMeta transMeta) throws KettleException;
 
-  public CTabItem getTab();
+  CTabItem getTab();
 }

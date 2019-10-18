@@ -27,7 +27,7 @@ public interface IPermissionMgr {
   /**
    * TODO mlowery This is really addPermission. Perhaps a method name change?
    */
-  public void setPermission( IPermissionRecipient permRecipient, IPermissionMask permission, Object domainInstance );
+  void setPermission(IPermissionRecipient permRecipient, IPermissionMask permission, Object domainInstance);
 
   /**
    * Returns permission map containing access control entries that are defined directly on this
@@ -37,7 +37,7 @@ public interface IPermissionMgr {
    *          the object for which to fetch permissions
    * @return a map of permissions
    */
-  public Map<IPermissionRecipient, IPermissionMask> getPermissions( Object domainInstance );
+  Map<IPermissionRecipient, IPermissionMask> getPermissions(Object domainInstance);
 
   /**
    * Returns permission map containing access control entries that are defined directly on this
@@ -48,7 +48,7 @@ public interface IPermissionMgr {
    *          the object for which to fetch permissions
    * @return a map of permissions
    */
-  public Map<IPermissionRecipient, IPermissionMask> getEffectivePermissions( Object domainInstance );
+  Map<IPermissionRecipient, IPermissionMask> getEffectivePermissions(Object domainInstance);
 
-  public void setPermissions( Map<IPermissionRecipient, IPermissionMask> acl, Object domainInstance );
+  void setPermissions(Map<IPermissionRecipient, IPermissionMask> acl, Object domainInstance);
 }

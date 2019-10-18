@@ -258,7 +258,7 @@ public class RepositoriesHelper {
     prefRepositoryName = repname;
   }
 
-  public void loginToRepository() throws KettleException, KettleSecurityException {
+  public void loginToRepository() throws KettleException {
     if ( model != null && model.getSelectedRepository() != null ) {
       RepositoryMeta repositoryMeta =
         input.getRepository( model.getRepositoryIndex( model.getSelectedRepository() ) );

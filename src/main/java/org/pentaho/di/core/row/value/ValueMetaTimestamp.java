@@ -66,10 +66,7 @@ public class ValueMetaTimestamp extends ValueMetaDate {
   @Override
   public Date getDate( Object object ) throws KettleValueException {
     Timestamp timestamp = getTimestamp( object );
-    if ( timestamp == null ) {
-      return null;
-    }
-    return timestamp;
+      return timestamp;
   }
 
   @Override
@@ -583,8 +580,8 @@ public class ValueMetaTimestamp extends ValueMetaDate {
   }
 
   @Override
-  public Object readData( DataInputStream inputStream ) throws KettleFileException, KettleEOFException,
-    SocketTimeoutException {
+  public Object readData( DataInputStream inputStream ) throws KettleFileException,
+          SocketTimeoutException {
     try {
       // Is the value NULL?
       if ( inputStream.readBoolean() ) {

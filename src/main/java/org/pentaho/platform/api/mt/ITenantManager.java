@@ -36,8 +36,8 @@ import java.util.Map;
  */
 public interface ITenantManager {
   // ~ Constants
-  public static final String TENANT_ROOT = "isTenantRoot"; //$NON-NLS-1$
-  public static final String TENANT_ENABLED = "isTenantEnabled"; //$NON-NLS-1$
+  String TENANT_ROOT = "isTenantRoot"; //$NON-NLS-1$
+  String TENANT_ENABLED = "isTenantEnabled"; //$NON-NLS-1$
 
   /**
    * @param parentPath

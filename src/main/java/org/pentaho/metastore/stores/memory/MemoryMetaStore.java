@@ -91,7 +91,7 @@ public class MemoryMetaStore extends BaseMetaStore implements IMetaStore {
   }
 
   @Override
-  public void createNamespace( final String namespace ) throws MetaStoreException, MetaStoreNamespaceExistsException {
+  public void createNamespace( final String namespace ) throws MetaStoreException {
     MetaStoreUtil.executeLockedOperation( writeLock, new Callable<Void>() {
 
       @Override
@@ -110,7 +110,7 @@ public class MemoryMetaStore extends BaseMetaStore implements IMetaStore {
   }
 
   @Override
-  public void deleteNamespace( final String namespace ) throws MetaStoreException, MetaStoreDependenciesExistsException {
+  public void deleteNamespace( final String namespace ) throws MetaStoreException {
 
     MetaStoreUtil.executeLockedOperation( writeLock, new Callable<Void>() {
 
@@ -209,7 +209,7 @@ public class MemoryMetaStore extends BaseMetaStore implements IMetaStore {
 
   @Override
   public void createElementType( final String namespace, final IMetaStoreElementType elementType )
-    throws MetaStoreException, MetaStoreElementTypeExistsException {
+    throws MetaStoreException {
     MetaStoreUtil.executeLockedOperation( readLock, new Callable<Void>() {
 
       @Override
@@ -245,7 +245,7 @@ public class MemoryMetaStore extends BaseMetaStore implements IMetaStore {
 
   @Override
   public void deleteElementType( final String namespace, final IMetaStoreElementType elementType )
-    throws MetaStoreException, MetaStoreDependenciesExistsException {
+    throws MetaStoreException {
     MetaStoreUtil.executeLockedOperation( readLock, new Callable<Void>() {
 
       @Override
@@ -327,7 +327,7 @@ public class MemoryMetaStore extends BaseMetaStore implements IMetaStore {
 
   @Override
   public void createElement( final String namespace, final IMetaStoreElementType elementType,
-      final IMetaStoreElement element ) throws MetaStoreException, MetaStoreElementExistException {
+      final IMetaStoreElement element ) throws MetaStoreException {
     MetaStoreUtil.executeLockedOperation( readLock, new Callable<Void>() {
 
       @Override

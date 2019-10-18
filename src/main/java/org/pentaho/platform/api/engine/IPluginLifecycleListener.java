@@ -35,7 +35,7 @@ public interface IPluginLifecycleListener {
    * @throws PluginLifecycleException
    *           if an error occurred
    */
-  public void init() throws PluginLifecycleException;
+  void init() throws PluginLifecycleException;
 
   /**
    * Called after the plugin has been registered with the platform, i.e. all content generators, components, etc.
@@ -44,7 +44,7 @@ public interface IPluginLifecycleListener {
    * @throws PluginLifecycleException
    *           if an error occurred
    */
-  public void loaded() throws PluginLifecycleException;
+  void loaded() throws PluginLifecycleException;
 
   /**
    * Called when the plugin needs to be unloaded. This method should release all resources and return things to a
@@ -53,6 +53,6 @@ public interface IPluginLifecycleListener {
    * @throws PluginLifecycleException
    *           if an error occurred
    */
-  public void unLoaded() throws PluginLifecycleException;
+  void unLoaded() throws PluginLifecycleException;
 
 }

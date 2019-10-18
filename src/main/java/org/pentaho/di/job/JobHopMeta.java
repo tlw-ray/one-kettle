@@ -44,18 +44,17 @@ public class JobHopMeta extends BaseHopMeta<JobEntryCopy> {
   private boolean unconditional;
 
   public JobHopMeta() {
-    this( (JobEntryCopy) null, (JobEntryCopy) null );
-  }
-
-  public JobHopMeta( JobEntryCopy from, JobEntryCopy to ) {
-    this.from = from;
-    this.to = to;
     enabled = true;
     split = false;
     evaluation = true;
     unconditional = false;
     id = null;
+  }
 
+  public JobHopMeta( JobEntryCopy from, JobEntryCopy to ) {
+    this();
+    this.from = from;
+    this.to = to;
     if ( from != null && from.isStart() ) {
       setUnconditional();
     }

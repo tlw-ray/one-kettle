@@ -31,7 +31,7 @@ public enum SwtAlign {
 
   private final int equivalent;
 
-  private SwtAlign( int swtEquivalent ) {
+  SwtAlign(int swtEquivalent) {
     this.equivalent = swtEquivalent;
   }
 

@@ -37,9 +37,9 @@ public class ComboBoxInputDialog {
   Shell dialog;
   boolean okPressed = false;
   Combo rootInput = null;
-  String roots[] = null;
+    String[] roots = null;
   
-  public ComboBoxInputDialog(String title, String text, String roots[], int width, int height) {
+  public ComboBoxInputDialog(String title, String text, String[] roots, int width, int height) {
     this.title = title;
     this.text = text;
     this.width = width;
@@ -90,11 +90,7 @@ public class ComboBoxInputDialog {
     cancel.setText(Messages.getString("ComboBoxInputDialog.cancel")); //$NON-NLS-1$
     SelectionListener listener = new SelectionListener() {
       public void widgetSelected(SelectionEvent e) {
-        if (e.getSource() == ok) {
-          okPressed = true;
-        } else {
-          okPressed = false;
-        }
+          okPressed = e.getSource() == ok;
         enteredText = rootInput.getText();
         dialog.close();
       }

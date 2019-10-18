@@ -29,7 +29,7 @@ import java.util.Map;
  */
 public interface ISolutionEngine extends ILogger {
 
-  public static final String RUNTIME_SOLUTION_NAME = "RuntimeSolution"; //$NON-NLS-1$
+  String RUNTIME_SOLUTION_NAME = "RuntimeSolution"; //$NON-NLS-1$
 
   /**
    * Sets the source for input parameters.
@@ -40,9 +40,9 @@ public interface ISolutionEngine extends ILogger {
    *          instance of a provider
    * @see org.pentaho.platform.api.engine.services.IParameterProvider
    */
-  public void setParameterProvider( String name, IParameterProvider parameterProvider );
+  void setParameterProvider(String name, IParameterProvider parameterProvider);
 
-  public void setCreateFeedbackParameterCallback( ICreateFeedbackParameterCallback callback );
+  void setCreateFeedbackParameterCallback(ICreateFeedbackParameterCallback callback);
 
   /**
    * Executes the action sequence specified in the manner described in the parameters
@@ -72,9 +72,9 @@ public interface ISolutionEngine extends ILogger {
    * @see org.pentaho.platform.api.engine.IRuntimeContext
    */
   @SuppressWarnings( "rawtypes" )
-  public IRuntimeContext execute( String actionPath, String processId, boolean async, boolean instanceEnds,
-      String instanceId, boolean persisted, Map parameterProviderMap, IOutputHandler outputHandler,
-      IActionCompleteListener listener, IPentahoUrlFactory urlFactory, List messages );
+  IRuntimeContext execute(String actionPath, String processId, boolean async, boolean instanceEnds,
+                          String instanceId, boolean persisted, Map parameterProviderMap, IOutputHandler outputHandler,
+                          IActionCompleteListener listener, IPentahoUrlFactory urlFactory, List messages);
 
   /**
    * Executes the action sequence specified
@@ -99,8 +99,8 @@ public interface ISolutionEngine extends ILogger {
    * @see IActionSequence
    */
   @SuppressWarnings( "rawtypes" )
-  public IRuntimeContext execute( IRuntimeContext runtime, String actionPath, String processId, boolean async,
-      boolean instanceEnds, Map parameterProviderMap, IOutputHandler outputHandler );
+  IRuntimeContext execute(IRuntimeContext runtime, String actionPath, String processId, boolean async,
+                          boolean instanceEnds, Map parameterProviderMap, IOutputHandler outputHandler);
 
   /**
    * Executes the in memory action sequence specified
@@ -125,9 +125,9 @@ public interface ISolutionEngine extends ILogger {
    * @see IActionSequence
    */
   @SuppressWarnings( "rawtypes" )
-  public IRuntimeContext execute( String actionSequenceXML, String sequenceName, String processId, boolean async,
-      boolean instanceEnds, String instanceId, boolean persisted, Map parameterProviderMap,
-      IOutputHandler outputHandler, IActionCompleteListener pListener, IPentahoUrlFactory urlFactory, List messages );
+  IRuntimeContext execute(String actionSequenceXML, String sequenceName, String processId, boolean async,
+                          boolean instanceEnds, String instanceId, boolean persisted, Map parameterProviderMap,
+                          IOutputHandler outputHandler, IActionCompleteListener pListener, IPentahoUrlFactory urlFactory, List messages);
 
   /**
    * Sets the action complete listener which will be called when the action is complete
@@ -135,9 +135,9 @@ public interface ISolutionEngine extends ILogger {
    * @param listener
    *          Listener to call back when execution is complete.
    */
-  public void setlistener( IActionCompleteListener listener );
+  void setlistener(IActionCompleteListener listener);
 
-  public void setlistener( IExecutionListener execListener );
+  void setlistener(IExecutionListener execListener);
 
   /**
    * Sets the session in the solution engine
@@ -145,17 +145,17 @@ public interface ISolutionEngine extends ILogger {
    * @param session
    *          The session for this execution
    */
-  public void setSession( IPentahoSession session );
+  void setSession(IPentahoSession session);
 
   /**
    * @return the runtime context being used for this execution.
    */
-  public IRuntimeContext getExecutionContext();
+  IRuntimeContext getExecutionContext();
 
   /**
    * @return Gets the current status from this execution
    */
-  public int getStatus();
+  int getStatus();
 
   /**
    * Initialize the SolutionEngine. This method should be called immediately after object construction, and if
@@ -164,14 +164,14 @@ public interface ISolutionEngine extends ILogger {
    * @param session
    *          the session context for this SolutionEngine
    */
-  public void init( IPentahoSession session );
+  void init(IPentahoSession session);
 
   /**
    * Sets if the promp page should be forced
    * 
    * @param status
    */
-  public void setForcePrompt( boolean forcePrompt );
+  void setForcePrompt(boolean forcePrompt);
 
   /**
    * Sets the xsl file to be used to generate the parameter page for the current component. The parameter should be
@@ -181,6 +181,6 @@ public interface ISolutionEngine extends ILogger {
    * @param xsl
    *          The name of the XSL file
    */
-  public void setParameterXsl( String xsl );
+  void setParameterXsl(String xsl);
 
 }

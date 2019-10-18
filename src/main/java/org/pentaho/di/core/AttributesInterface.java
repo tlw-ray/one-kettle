@@ -32,12 +32,12 @@ public interface AttributesInterface {
    * @param attributesMap
    *          The map of group attributes
    */
-  public void setAttributesMap( Map<String, Map<String, String>> attributesMap );
+  void setAttributesMap(Map<String, Map<String, String>> attributesMap);
 
   /**
    * @return All attributes for all attribute groups in one single map.
    */
-  public Map<String, Map<String, String>> getAttributesMap();
+  Map<String, Map<String, String>> getAttributesMap();
 
   /**
    * Add a map of attributes to an attribute group.
@@ -47,7 +47,7 @@ public interface AttributesInterface {
    * @param attributes
    *          the attributes to add
    */
-  public void setAttributes( String groupName, Map<String, String> attributes );
+  void setAttributes(String groupName, Map<String, String> attributes);
 
   /**
    * Add an attribute to an attribute group
@@ -59,7 +59,7 @@ public interface AttributesInterface {
    * @param value
    *          the value of the attribute
    */
-  public void setAttribute( String groupName, String key, String value );
+  void setAttribute(String groupName, String key, String value);
 
   /**
    * Get an attributes map for a group
@@ -68,7 +68,7 @@ public interface AttributesInterface {
    *          The name of the attributes group to retrieve
    * @return The map representing the attributes group
    */
-  public Map<String, String> getAttributes( String groupName );
+  Map<String, String> getAttributes(String groupName);
 
   /**
    * Get a value for an attribute in an attribute group
@@ -79,6 +79,6 @@ public interface AttributesInterface {
    *          The attribute key
    * @return The attribute value of null if the group of key doesn't exist
    */
-  public String getAttribute( String groupName, String key );
+  String getAttribute(String groupName, String key);
 
 }

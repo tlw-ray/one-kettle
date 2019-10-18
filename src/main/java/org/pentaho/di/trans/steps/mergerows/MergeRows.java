@@ -83,13 +83,9 @@ public class MergeRows extends BaseStep implements StepInterface {
       //rowSetWhenIdentical is use in case the comparison is IDENTICAL.
       //this should be the "Comparison" stream but can be the "Reference" stream for backward compatibility (PDI-736)
       String useRefWhenIdenticalVar = Const.NVL( System.getProperty( Const.KETTLE_COMPATIBILITY_MERGE_ROWS_USE_REFERENCE_STREAM_WHEN_IDENTICAL ), "N" );
-      if ( "N".equalsIgnoreCase( useRefWhenIdenticalVar ) ) {
         //use the reference stream (as per documentation)
-        useRefWhenIdentical = false;
-      } else {
         //use the comparison stream (for backward compatibility)
-        useRefWhenIdentical = true;
-      }
+        useRefWhenIdentical = !"N".equalsIgnoreCase(useRefWhenIdenticalVar);
       data.one = getRowFrom( data.oneRowSet );
       data.two = getRowFrom( data.twoRowSet );
 

@@ -718,7 +718,7 @@ public abstract class AbstractXulLoader implements XulLoader {
         runningTranslatedOutput = ResourceBundleTranslator.translate( runningTranslatedOutput, this.mainBundle );
         try {
           SAXReader rdr = XmlParserFactoryProducer.getSAXReader( null );
-          String upperedIdDoc = this.upperCaseIDAttrs( runningTranslatedOutput.toString() );
+          String upperedIdDoc = this.upperCaseIDAttrs(runningTranslatedOutput);
           doc = rdr.read( new StringReader( upperedIdDoc ) );
         } catch ( DocumentException e ) {
           logger.error( "Error loading XML while applying top level message bundle to overlay file:", e );
@@ -729,7 +729,7 @@ public abstract class AbstractXulLoader implements XulLoader {
     } else {
       try {
         SAXReader rdr = XmlParserFactoryProducer.getSAXReader( null );
-        String upperedIdDoc = this.upperCaseIDAttrs( runningTranslatedOutput.toString() );
+        String upperedIdDoc = this.upperCaseIDAttrs(runningTranslatedOutput);
         doc = rdr.read( new StringReader( upperedIdDoc ) );
       } catch ( DocumentException e ) {
         logger.error( "Error loading XML while applying top level message bundle to overlay file:", e );
@@ -871,9 +871,7 @@ public abstract class AbstractXulLoader implements XulLoader {
 
   @Override
   public void deRegisterClassLoader( Object loader ) {
-    if ( classloaders.contains( loader ) ) {
       classloaders.remove( loader );
-    }
   }
 
   public InputStream getResourceAsStream( String name ) {

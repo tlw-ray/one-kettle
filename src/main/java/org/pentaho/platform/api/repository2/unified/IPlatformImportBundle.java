@@ -125,7 +125,7 @@ public interface IPlatformImportBundle {
    * 
    * @param retainOwnership
    */
-  public abstract void setRetainOwnership( boolean retainOwnership );
+  void setRetainOwnership(boolean retainOwnership);
 
   boolean isApplyAclSettings();
 

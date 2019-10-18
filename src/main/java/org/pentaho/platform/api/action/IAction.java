@@ -52,7 +52,7 @@ public interface IAction {
    * @throws Exception
    *           if there was an error executing the Action
    */
-  public void execute() throws Exception;
+  void execute() throws Exception;
 
   /**
    * Provide the execution status of last Action. For backward compatibility, it is declared as default method

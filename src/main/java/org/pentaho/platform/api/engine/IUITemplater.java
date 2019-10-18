@@ -22,15 +22,15 @@ package org.pentaho.platform.api.engine;
 
 public interface IUITemplater {
 
-  public String processTemplate( String template, String title, String content, IPentahoSession session );
+  String processTemplate(String template, String title, String content, IPentahoSession session);
 
-  public String processTemplate( String template, String title, IPentahoSession session );
+  String processTemplate(String template, String title, IPentahoSession session);
 
-  public String getTemplate( String templateName, IPentahoSession session );
+  String getTemplate(String templateName, IPentahoSession session);
 
-  public String[] breakTemplate( String templateName, String title, IPentahoSession session );
+  String[] breakTemplate(String templateName, String title, IPentahoSession session);
 
-  public String[] breakTemplateString( String template, String title, IPentahoSession session );
+  String[] breakTemplateString(String template, String title, IPentahoSession session);
 
-  public void setHeaderContent( String headerContent );
+  void setHeaderContent(String headerContent);
 }

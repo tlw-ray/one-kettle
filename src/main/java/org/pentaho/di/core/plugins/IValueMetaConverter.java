@@ -36,10 +36,10 @@ public interface IValueMetaConverter {
    * @param value the source value to be converted
    * @return An object representing the value converted to targetMetaType.  This value is suitable to use for
    */
-  public Object convertFromSourceToTargetDataType( int sourceValueMetaType, int targetValueMetaType, Object value )
+  Object convertFromSourceToTargetDataType(int sourceValueMetaType, int targetValueMetaType, Object value)
     throws ValueMetaConversionException;
 
-  public void setDatePattern( SimpleDateFormat datePattern );
+  void setDatePattern(SimpleDateFormat datePattern);
 
 
 }

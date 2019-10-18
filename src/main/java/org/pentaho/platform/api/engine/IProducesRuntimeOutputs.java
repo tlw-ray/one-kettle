@@ -28,6 +28,6 @@ import java.util.Map;
 @Deprecated
 public interface IProducesRuntimeOutputs {
 
-  public Map<String, Object> getOutputs();
+  Map<String, Object> getOutputs();
 
 }

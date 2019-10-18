@@ -40,7 +40,7 @@ public interface MessageHandler extends Handler {
    * @param key
    * @return
    */
-  public String getString( String key );
+  String getString(String key);
 
   /**
    * get a key from the defined package bundle, by key
@@ -49,7 +49,7 @@ public interface MessageHandler extends Handler {
    * @param key
    * @return
    */
-  public String getString( String packageName, String key );
+  String getString(String packageName, String key);
 
   /**
    * get a key from the defined package bundle, by key
@@ -59,7 +59,7 @@ public interface MessageHandler extends Handler {
    * @param parameters
    * @return
    */
-  public String getString( String packageName, String key, String... parameters );
+  String getString(String packageName, String key, String... parameters);
 
   /**
    * Get a string from the defined package bundle, by key and by a resource class
@@ -70,5 +70,5 @@ public interface MessageHandler extends Handler {
    * @param parameters
    * @return
    */
-  public String getString( String packageName, String key, Class<?> resourceClass, String... parameters );
+  String getString(String packageName, String key, Class<?> resourceClass, String... parameters);
 }

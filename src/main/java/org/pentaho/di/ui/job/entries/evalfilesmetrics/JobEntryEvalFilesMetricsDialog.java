@@ -544,7 +544,7 @@ public class JobEntryEvalFilesMetricsDialog extends JobEntryDialog implements Jo
     wlFields.setLayoutData( fdlFields );
 
     int rows = jobEntry.getSourceFileFolder() == null ? 1
-      : ( jobEntry.getSourceFileFolder().length == 0 ? 0 : jobEntry.getSourceFileFolder().length );
+      : (jobEntry.getSourceFileFolder().length);
     final int FieldsRows = rows;
 
     ColumnInfo[] colinf =
@@ -580,7 +580,7 @@ public class JobEntryEvalFilesMetricsDialog extends JobEntryDialog implements Jo
     // Add the file to the list of files...
     SelectionAdapter selA = new SelectionAdapter() {
       public void widgetSelected( SelectionEvent arg0 ) {
-        wFields.add( new String[] { wSourceFileFolder.getText(), wWildcard.getText() } );
+        wFields.add(wSourceFileFolder.getText(), wWildcard.getText());
         wSourceFileFolder.setText( "" );
 
         wWildcard.setText( "" );

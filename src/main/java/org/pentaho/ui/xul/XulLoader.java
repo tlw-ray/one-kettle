@@ -42,7 +42,7 @@ public interface XulLoader {
    *           Exception thrown if errors encountered getting an instance of the parser.
    */
   // TODO: use a generic Document interface instead of Object
-  public XulDomContainer loadXul( Object xulDocument ) throws IllegalArgumentException, XulException;
+  XulDomContainer loadXul(Object xulDocument) throws IllegalArgumentException, XulException;
 
   /**
    * Loads a XUL document fragment into a container, building the necessary model, impl and event handling.
@@ -57,7 +57,7 @@ public interface XulLoader {
    *           Exception thrown if errors encountered getting an instance of the parser.
    */
   // TODO: use a generic Document interface instead of Object
-  public XulDomContainer loadXulFragment( Object xulDocument ) throws IllegalArgumentException, XulException;
+  XulDomContainer loadXulFragment(Object xulDocument) throws IllegalArgumentException, XulException;
 
   /**
    * Loads a XUL document into a container, building the necessary model, impl and event handling.
@@ -74,7 +74,7 @@ public interface XulLoader {
    * @throws XulException
    *           Exception thrown if errors encountered getting an instance of the parser.
    */
-  public XulDomContainer loadXul( String resource ) throws IllegalArgumentException, XulException;
+  XulDomContainer loadXul(String resource) throws IllegalArgumentException, XulException;
 
   /**
    * Loads a XUL document into a container, building the necessary model, impl and event handling.
@@ -92,7 +92,7 @@ public interface XulLoader {
    * @throws XulException
    *           Exception thrown if errors encountered getting an instance of the parser.
    */
-  public XulDomContainer loadXul( String resource, Object bundle ) throws XulException;
+  XulDomContainer loadXul(String resource, Object bundle) throws XulException;
 
   /**
    * Loads a XUL document fragment into a container, building the necessary model, impl and event handling.
@@ -109,7 +109,7 @@ public interface XulLoader {
    * @throws XulException
    *           Exception thrown if errors encountered getting an instance of the parser.
    */
-  public XulDomContainer loadXulFragment( String resource ) throws IllegalArgumentException, XulException;
+  XulDomContainer loadXulFragment(String resource) throws IllegalArgumentException, XulException;
 
   /**
    * Loads a XUL document fragment into a container, building the necessary model, impl and event handling.
@@ -127,7 +127,7 @@ public interface XulLoader {
    * @throws XulException
    *           Exception thrown if errors encountered getting an instance of the parser.
    */
-  public XulDomContainer loadXulFragment( String resource, Object bundle ) throws XulException;
+  XulDomContainer loadXulFragment(String resource, Object bundle) throws XulException;
 
   /**
    * Support methed for creating XulComponents programatically at runtime (event handlers)
@@ -138,7 +138,7 @@ public interface XulLoader {
    * @throws XulException
    *           Exception thrown if parser cannot handle tag
    */
-  public XulComponent createElement( String elementName ) throws XulException;
+  XulComponent createElement(String elementName) throws XulException;
 
   /**
    * 
@@ -148,16 +148,16 @@ public interface XulLoader {
    *          name of element to check
    * @return boolean value indicating element has been registered
    */
-  public boolean isRegistered( String elementName );
+  boolean isRegistered(String elementName);
 
-  public void register( String tagName, String className );
+  void register(String tagName, String className);
 
   /**
    * Returns the location of the root Xul file.
    * 
    * @return Directory location as String
    */
-  public String getRootDir();
+  String getRootDir();
 
   /**
    * Sets the root directory from which the loader will attempt to locate includes / overlays.
@@ -165,14 +165,14 @@ public interface XulLoader {
    * @param str
    *          root classpath directory
    */
-  public void setRootDir( String str );
+  void setRootDir(String str);
 
   /**
    * Provides a running application the ability to get a new XulLoader instance of their runtime flavor
    * 
    * @return XulLoader instance
    */
-  public XulLoader getNewInstance() throws XulException;
+  XulLoader getNewInstance() throws XulException;
 
   /**
    * Accommodates those objects that require a parenting on construction. Set the root parent before parsing.
@@ -180,16 +180,16 @@ public interface XulLoader {
    * @param context
    *          root context
    */
-  public void setOuterContext( Object context );
+  void setOuterContext(Object context);
 
-  public void processOverlay( String overlaySrc, org.pentaho.ui.xul.dom.Document targetDocument,
-      XulDomContainer container ) throws XulException;
+  void processOverlay(String overlaySrc, org.pentaho.ui.xul.dom.Document targetDocument,
+                      XulDomContainer container) throws XulException;
 
-  public void processOverlay( String overlaySrc, org.pentaho.ui.xul.dom.Document targetDocument,
-      XulDomContainer container, Object resourceBundle ) throws XulException;
+  void processOverlay(String overlaySrc, org.pentaho.ui.xul.dom.Document targetDocument,
+                      XulDomContainer container, Object resourceBundle) throws XulException;
 
-  public void removeOverlay( String overlaySrc, org.pentaho.ui.xul.dom.Document targetDocument,
-      XulDomContainer container ) throws XulException;
+  void removeOverlay(String overlaySrc, org.pentaho.ui.xul.dom.Document targetDocument,
+                     XulDomContainer container) throws XulException;
 
   // TODO: create wrapper.
   void registerClassLoader( Object loader );

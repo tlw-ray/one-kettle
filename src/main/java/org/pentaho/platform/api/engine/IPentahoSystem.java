@@ -22,44 +22,44 @@ package org.pentaho.platform.api.engine;
 
 public interface IPentahoSystem {
 
-  public int getLoggingLevel();
+  int getLoggingLevel();
 
-  public void setLoggingLevel( int loggingLevel );
+  void setLoggingLevel(int loggingLevel);
 
-  public IPentahoSystemStartupActions getStartupActions();
+  IPentahoSystemStartupActions getStartupActions();
 
-  public void setStartupActions( IPentahoSystemStartupActions startupActions );
+  void setStartupActions(IPentahoSystemStartupActions startupActions);
 
-  public ISystemSettings getSystemSettingsService();
+  ISystemSettings getSystemSettingsService();
 
-  public void setSystemSettingsService( ISystemSettings systemSettingsService );
+  void setSystemSettingsService(ISystemSettings systemSettingsService);
 
-  public IPentahoObjectFactory getPentahoObjectFactory();
+  IPentahoObjectFactory getPentahoObjectFactory();
 
-  public void setPentahoObjectFactory( IPentahoObjectFactory pentahoObjectFactory );
+  void setPentahoObjectFactory(IPentahoObjectFactory pentahoObjectFactory);
 
-  public IApplicationContext getApplicationContext();
+  IApplicationContext getApplicationContext();
 
-  public void setApplicationContext( IApplicationContext applicationContext );
+  void setApplicationContext(IApplicationContext applicationContext);
 
-  public IPentahoSystemAdminPlugins getAdminPlugins();
+  IPentahoSystemAdminPlugins getAdminPlugins();
 
-  public void setAdminPlugins( IPentahoSystemAdminPlugins adminPlugins );
+  void setAdminPlugins(IPentahoSystemAdminPlugins adminPlugins);
 
-  public IPentahoSystemListeners getSystemListeners();
+  IPentahoSystemListeners getSystemListeners();
 
-  public void setSystemListeners( IPentahoSystemListeners systemListeners );
+  void setSystemListeners(IPentahoSystemListeners systemListeners);
 
-  public IPentahoSystemAclHelper getPentahoSystemAclHelper();
+  IPentahoSystemAclHelper getPentahoSystemAclHelper();
 
-  public void setPentahoSystemAclHelper( IPentahoSystemAclHelper pentahoSystemAclHelper );
+  void setPentahoSystemAclHelper(IPentahoSystemAclHelper pentahoSystemAclHelper);
 
-  public IPentahoSystemInitializer getPentahoSystemInitializer();
+  IPentahoSystemInitializer getPentahoSystemInitializer();
 
-  public void setPentahoSystemInitializer( IPentahoSystemInitializer pentahoSystemInitializer );
+  void setPentahoSystemInitializer(IPentahoSystemInitializer pentahoSystemInitializer);
 
-  public IPentahoSystemHelper getPentahoSystemHelper();
+  IPentahoSystemHelper getPentahoSystemHelper();
 
-  public void setPentahoSystemHelper( IPentahoSystemHelper pentahoSystemHelper );
+  void setPentahoSystemHelper(IPentahoSystemHelper pentahoSystemHelper);
 
 }

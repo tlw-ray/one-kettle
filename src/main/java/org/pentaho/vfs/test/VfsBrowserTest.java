@@ -26,7 +26,7 @@ import org.eclipse.swt.widgets.Shell;
 import org.pentaho.vfs.ui.VfsBrowser;
 
 public class VfsBrowserTest {
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     FileSystemManager fsManager = null;
     FileObject rootFile = null;
     try {

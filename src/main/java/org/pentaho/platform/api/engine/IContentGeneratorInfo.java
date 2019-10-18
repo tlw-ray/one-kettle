@@ -25,26 +25,26 @@ package org.pentaho.platform.api.engine;
  */
 public interface IContentGeneratorInfo {
 
-  public String getDescription();
+  String getDescription();
 
-  public String getId();
+  String getId();
 
   /**
    * @deprecated URL is determined by the system
    */
   @Deprecated
-  public String getUrl();
+  String getUrl();
 
-  public String getTitle();
+  String getTitle();
 
-  public String getType();
+  String getType();
 
   /**
    * @deprecated file info generators or solution file meta providers are now associated with content types, not
    *             content generators. This method is not called from within the platform.
    */
   @Deprecated
-  public String getFileInfoGeneratorClassname();
+  String getFileInfoGeneratorClassname();
 
-  public String getClassname();
+  String getClassname();
 }

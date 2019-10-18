@@ -2095,11 +2095,7 @@ public class TableView extends Composite {
         editButton( row, rownr, colnr );
         break;
       case ColumnInfo.COLUMN_TYPE_TEXT_BUTTON:
-        if ( columns[colnr - 1].shouldRenderTextVarButton() ) {
-          isTextButton = true;
-        } else {
-          isTextButton = false;
-        }
+          isTextButton = columns[colnr - 1].shouldRenderTextVarButton();
         editText( row, rownr, colnr, selectText, extra, columns[colnr - 1] );
         break;
       default:

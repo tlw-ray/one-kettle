@@ -666,9 +666,9 @@ public class SelectValuesDialog extends BaseStepDialog implements StepDialogInte
             ? BaseMessages.getString( PKG, "System.Combo.Yes" ) : BaseMessages.getString(
               PKG, "System.Combo.No" ) );
         item
-          .setText( index++, change.getDateFormatLocale() == null ? "" : change.getDateFormatLocale().toString() );
+          .setText( index++, change.getDateFormatLocale() == null ? "" : change.getDateFormatLocale());
         item.setText( index++, change.getDateFormatTimeZone() == null ? "" : change
-          .getDateFormatTimeZone().toString() );
+          .getDateFormatTimeZone());
         item
           .setText( index++, change.isLenientStringToNumber()
             ? BaseMessages.getString( PKG, "System.Combo.Yes" ) : BaseMessages.getString(
@@ -774,12 +774,12 @@ public class SelectValuesDialog extends BaseStepDialog implements StepDialogInte
 
       change.setConversionMask( item.getText( index++ ) );
       // If DateFormatLenient is anything but Yes (including blank) then it is false
-      change.setDateFormatLenient( item.getText( index++ ).equalsIgnoreCase(
-        BaseMessages.getString( PKG, "System.Combo.Yes" ) ) ? true : false );
+      change.setDateFormatLenient(item.getText(index++).equalsIgnoreCase(
+              BaseMessages.getString(PKG, "System.Combo.Yes")));
       change.setDateFormatLocale( item.getText( index++ ) );
       change.setDateFormatTimeZone( item.getText( index++ ) );
-      change.setLenientStringToNumber( item.getText( index++ ).equalsIgnoreCase(
-        BaseMessages.getString( PKG, "System.Combo.Yes" ) ) ? true : false );
+      change.setLenientStringToNumber(item.getText(index++).equalsIgnoreCase(
+              BaseMessages.getString(PKG, "System.Combo.Yes")));
       change.setEncoding( item.getText( index++ ) );
       change.setDecimalSymbol( item.getText( index++ ) );
       change.setGroupingSymbol( item.getText( index++ ) );

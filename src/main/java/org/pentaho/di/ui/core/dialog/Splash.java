@@ -125,8 +125,7 @@ public class Splash {
             sb.append( line + System.getProperty( "line.separator" ) );
           }
         } catch ( Exception ex ) {
-          sb.append( "" );
-          log.logError( BaseMessages.getString( PKG, "SplashDialog.LicenseTextNotFound" ), ex );
+            log.logError( BaseMessages.getString( PKG, "SplashDialog.LicenseTextNotFound" ), ex );
         }
         Calendar cal = Calendar.getInstance();
         String licenseText = String.format( sb.toString(), cal );

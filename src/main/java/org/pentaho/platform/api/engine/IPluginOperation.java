@@ -28,13 +28,13 @@ public interface IPluginOperation {
    * 
    * @return The operation id
    */
-  public String getId();
+  String getId();
 
   /**
    * Gets the resource perspective to launch for this operation
    * 
    * @return The operation command
    */
-  public String getPerspective();
+  String getPerspective();
 
 }

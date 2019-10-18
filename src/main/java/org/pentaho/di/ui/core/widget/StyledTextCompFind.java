@@ -205,7 +205,7 @@ public class StyledTextCompFind extends org.eclipse.swt.widgets.Dialog {
     if ( optForward.getSelection() ) {
       start = textString.indexOf( searchString, offset );
       if ( ( start < 0 ) && btnWrapSearch.getSelection() ) {
-        start = textString.indexOf( searchString, 0 );
+        start = textString.indexOf( searchString);
       }
     } else if ( text.getSelectionRange().y > searchString.length() ) {
       start = textString.lastIndexOf( searchString, offset - 1 );

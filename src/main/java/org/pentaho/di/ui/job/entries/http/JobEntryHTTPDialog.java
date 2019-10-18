@@ -734,8 +734,8 @@ public class JobEntryHTTPDialog extends JobEntryDialog implements JobEntryDialog
     wHeadersComp.setLayout( HeadersLayout );
 
     int rows =
-      jobEntry.getHeaderName() == null ? 1 : ( jobEntry.getHeaderName().length == 0 ? 0 : jobEntry
-        .getHeaderName().length );
+      jobEntry.getHeaderName() == null ? 1 : (jobEntry
+              .getHeaderName().length);
 
     colinf =
       new ColumnInfo[] {
@@ -852,10 +852,10 @@ public class JobEntryHTTPDialog extends JobEntryDialog implements JobEntryDialog
     wTargetFile.setEnabled( !wRunEveryRow.getSelection() );
     wlDateTimeAdded.setEnabled( !wRunEveryRow.getSelection() );
     wDateTimeAdded.setEnabled( !wRunEveryRow.getSelection() );
-    wlAppend.setEnabled( wRunEveryRow.getSelection() ? false : !wDateTimeAdded.getSelection() );
-    wAppend.setEnabled( wRunEveryRow.getSelection() ? false : !wDateTimeAdded.getSelection() );
-    wlTargetExt.setEnabled( wRunEveryRow.getSelection() ? false : wDateTimeAdded.getSelection() );
-    wTargetExt.setEnabled( wRunEveryRow.getSelection() ? false : wDateTimeAdded.getSelection() );
+    wlAppend.setEnabled(!wRunEveryRow.getSelection() && !wDateTimeAdded.getSelection());
+    wAppend.setEnabled(!wRunEveryRow.getSelection() && !wDateTimeAdded.getSelection());
+    wlTargetExt.setEnabled(!wRunEveryRow.getSelection() && wDateTimeAdded.getSelection());
+    wTargetExt.setEnabled(!wRunEveryRow.getSelection() && wDateTimeAdded.getSelection());
   }
 
   public void dispose() {
@@ -945,8 +945,8 @@ public class JobEntryHTTPDialog extends JobEntryDialog implements JobEntryDialog
     jobEntry.setUploadFilename( wUploadFile.getText() );
 
     jobEntry.setTargetFilename( wRunEveryRow.getSelection() ? "" : wTargetFile.getText() );
-    jobEntry.setFileAppended( wRunEveryRow.getSelection() ? false : wAppend.getSelection() );
-    jobEntry.setDateTimeAdded( wRunEveryRow.getSelection() ? false : wDateTimeAdded.getSelection() );
+    jobEntry.setFileAppended(!wRunEveryRow.getSelection() && wAppend.getSelection());
+    jobEntry.setDateTimeAdded(!wRunEveryRow.getSelection() && wDateTimeAdded.getSelection());
     jobEntry.setTargetFilenameExtension( wRunEveryRow.getSelection() ? "" : wTargetExt.getText() );
     jobEntry.setAddFilenameToResult( wAddFilenameToResult.getSelection() );
 

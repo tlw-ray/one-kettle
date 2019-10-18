@@ -80,7 +80,7 @@ public class LogMessage implements LogMessageInterface {
     // Derive the subject from the registry
     //
     LoggingObjectInterface loggingObject = LoggingRegistry.getInstance().getLoggingObject( logChannelId );
-    boolean detailedLogTurnOn = "Y".equals( EnvUtil.getSystemProperty( Const.KETTLE_LOG_MARK_MAPPINGS ) ) ? true : false;
+    boolean detailedLogTurnOn = "Y".equals(EnvUtil.getSystemProperty(Const.KETTLE_LOG_MARK_MAPPINGS));
     if ( loggingObject != null ) {
       if ( !detailedLogTurnOn ) {
         subject = loggingObject.getObjectName();

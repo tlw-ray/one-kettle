@@ -22,14 +22,14 @@ import org.pentaho.ui.xul.components.XulTreeCol;
 
 public interface XulTreeCols extends XulContainer {
 
-  public boolean isHierarchical();
+  boolean isHierarchical();
 
-  public XulTree getTree();
+  XulTree getTree();
 
-  public void addColumn( XulTreeCol column );
+  void addColumn(XulTreeCol column);
 
-  public XulTreeCol getColumn( int index );
+  XulTreeCol getColumn(int index);
 
-  public int getColumnCount();
+  int getColumnCount();
 
 }

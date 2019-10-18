@@ -101,7 +101,7 @@ public class PartitionSettingsTest {
 
   @Test
   public void defaultSelectedSchemaIndexIsFoundBySchemaName() throws Exception {
-    PartitionSchema schema = new PartitionSchema( "qwerty", Collections.<String>emptyList() );
+    PartitionSchema schema = new PartitionSchema( "qwerty", Collections.emptyList() );
     StepPartitioningMeta meta = mock( StepPartitioningMeta.class );
     when( meta.getPartitionSchema() ).thenReturn( schema );
     when( stepMeta.getStepPartitioningMeta() ).thenReturn( meta );
@@ -127,7 +127,7 @@ public class PartitionSettingsTest {
 
   @Test
   public void defaultSelectedSchemaIndexIsNilWhenNotFoundBySchemaName() throws Exception {
-    PartitionSchema schema = new PartitionSchema( "asdfg", Collections.<String>emptyList() );
+    PartitionSchema schema = new PartitionSchema( "asdfg", Collections.emptyList() );
     StepPartitioningMeta meta = mock( StepPartitioningMeta.class );
     when( meta.getPartitionSchema() ).thenReturn( schema );
     when( stepMeta.getStepPartitioningMeta() ).thenReturn( meta );
@@ -140,7 +140,7 @@ public class PartitionSettingsTest {
 
   @Test
   public void metaIsUpdated() {
-    PartitionSchema schema = new PartitionSchema( "1", Collections.<String>emptyList() );
+    PartitionSchema schema = new PartitionSchema( "1", Collections.emptyList() );
 
     StepPartitioningMeta meta = mock( StepPartitioningMeta.class );
     when( stepMeta.getStepPartitioningMeta() ).thenReturn( meta );
@@ -160,7 +160,7 @@ public class PartitionSettingsTest {
 
   @Test
   public void metaIsNotUpdatedWithNameless() {
-    PartitionSchema schema = new PartitionSchema( null, Collections.<String>emptyList() );
+    PartitionSchema schema = new PartitionSchema( null, Collections.emptyList() );
 
     StepPartitioningMeta meta = mock( StepPartitioningMeta.class );
     when( stepMeta.getStepPartitioningMeta() ).thenReturn( meta );

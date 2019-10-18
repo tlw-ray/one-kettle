@@ -1431,8 +1431,8 @@ public class MailInputDialog extends BaseStepDialog implements StepDialogInterfa
       input.getBatchSize() == null
         ? String.valueOf( MailInputMeta.DEFAULT_BATCH_SIZE )
         : input.getBatchSize().toString() );
-    wStartMessage.setText( input.getStart() == null ? "" : input.getStart().toString() );
-    wEndMessage.setText( input.getEnd() == null ? "" : input.getEnd().toString() );
+    wStartMessage.setText( input.getStart() == null ? "" : input.getStart());
+    wEndMessage.setText( input.getEnd() == null ? "" : input.getEnd());
     wIgnoreFieldErrors.setSelection( input.isStopOnError() );
     setBatchSettingsEnabled();
 
@@ -1813,7 +1813,7 @@ public class MailInputDialog extends BaseStepDialog implements StepDialogInterfa
     // Clear Fields Grid
     wFields.removeAll();
     for ( int i = 0; i < MailInputField.ColumnDesc.length; i++ ) {
-      wFields.add( new String[] { MailInputField.ColumnDesc[i], MailInputField.ColumnDesc[i] } );
+      wFields.add(MailInputField.ColumnDesc[i], MailInputField.ColumnDesc[i]);
     }
 
     wFields.removeEmptyRows();

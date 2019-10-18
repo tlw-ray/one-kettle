@@ -305,11 +305,11 @@ public abstract class AbstractXulDomContainer implements XulDomContainer {
           return m.invoke( evt, args );
         } catch ( NoSuchMethodException e ) {
           // Try to execute a version of the method that does not require arguments
-          Method m = evt.getClass().getMethod( methodName, new Class[0] );
+          Method m = evt.getClass().getMethod( methodName);
           return m.invoke( evt );
         }
       } else {
-        Method m = evt.getClass().getMethod( methodName, new Class[0] );
+        Method m = evt.getClass().getMethod( methodName);
         return m.invoke( evt, args );
       }
     } catch ( Exception e ) {
@@ -416,9 +416,7 @@ public abstract class AbstractXulDomContainer implements XulDomContainer {
 
   @Override
   public void deRegisterClassLoader(Object loader) {
-    if ( classloaders.contains( loader ) ) {
       classloaders.remove( loader);
-    }
     this.xulLoader.deRegisterClassLoader( loader );
   }
 

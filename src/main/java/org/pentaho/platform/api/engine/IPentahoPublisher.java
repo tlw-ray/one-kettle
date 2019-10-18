@@ -42,16 +42,16 @@ public interface IPentahoPublisher {
    * @return message indicating success or failure. This message is shown back to the user that requested the
    *         publish.
    */
-  public String publish( IPentahoSession session, int loggingLevel );
+  String publish(IPentahoSession session, int loggingLevel);
 
   /**
    * @return The name of the publisher. This name is displayed in the Publish JSP
    */
-  public String getName();
+  String getName();
 
   /**
    * @return The description of the publisher. This string is displayed in the Publish JSP
    */
-  public String getDescription();
+  String getDescription();
 
 }

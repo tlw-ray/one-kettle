@@ -22,9 +22,9 @@ package org.pentaho.platform.api.util;
 
 public interface IVersionHelper {
 
-  public String getVersionInformation();
+  String getVersionInformation();
 
   @SuppressWarnings( "rawtypes" )
-  public String getVersionInformation( Class clazz );
+  String getVersionInformation(Class clazz);
 
 }

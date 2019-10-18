@@ -22,18 +22,18 @@ import org.pentaho.ui.xul.components.XulTreeCell;
 
 public interface XulTreeRow extends XulContainer {
 
-  public void addCell( XulTreeCell cell );
+  void addCell(XulTreeCell cell);
 
-  public void addCellText( int index, String text );
+  void addCellText(int index, String text);
 
-  public void makeCellEditable( int index );
+  void makeCellEditable(int index);
 
-  public void remove();
+  void remove();
 
-  public XulTreeCell getCell( int index );
+  XulTreeCell getCell(int index);
 
-  public int getSelectedColumnIndex();
+  int getSelectedColumnIndex();
 
-  public void setParentTreeItem( XulTreeItem item );
+  void setParentTreeItem(XulTreeItem item);
 
 }

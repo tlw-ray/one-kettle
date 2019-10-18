@@ -25,24 +25,24 @@ import java.util.Map;
 
 public interface ISelectionMapper {
 
-  public String getDisplayStyle();
+  String getDisplayStyle();
 
-  public String getSelectionDisplayName();
+  String getSelectionDisplayName();
 
-  public String getSelectionNameForValue( String val );
-
-  @SuppressWarnings( "rawtypes" )
-  public List getSelectionValues();
+  String getSelectionNameForValue(String val);
 
   @SuppressWarnings( "rawtypes" )
-  public Map getSelectionNameMap();
+  List getSelectionValues();
 
-  public boolean hasValue( String value );
+  @SuppressWarnings( "rawtypes" )
+  Map getSelectionNameMap();
 
-  public int selectionCount();
+  boolean hasValue(String value);
 
-  public String getValueAt( int index );
+  int selectionCount();
 
-  public String toString();
+  String getValueAt(int index);
+
+  String toString();
 
 }

@@ -21,23 +21,23 @@ import org.pentaho.ui.xul.XulComponent;
 
 public interface XulFileUpload extends XulComponent {
 
-  public String getAction();
+  String getAction();
 
-  public void setAction( String action );
+  void setAction(String action);
 
-  public void setOnUploadSuccess( String method );
+  void setOnUploadSuccess(String method);
 
-  public void setOnUploadFailure( String method );
+  void setOnUploadFailure(String method);
 
-  public String getOnUploadSuccess();
+  String getOnUploadSuccess();
 
-  public String getOnUploadFailure();
+  String getOnUploadFailure();
 
-  public String getSeletedFile();
+  String getSeletedFile();
 
-  public void setSelectedFile( String name );
+  void setSelectedFile(String name);
 
-  public void submit();
+  void submit();
 
-  public void addParameter( String name, String value );
+  void addParameter(String name, String value);
 }

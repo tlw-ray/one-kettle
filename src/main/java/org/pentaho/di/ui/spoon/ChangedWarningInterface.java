@@ -34,7 +34,7 @@ public interface ChangedWarningInterface {
    * @return The decision of the user: SWT.YES; SWT.NO; SWT.CANCEL
    * @throws Exception
    */
-  public int show() throws Exception;
+  int show() throws Exception;
 
-  public int show( String fileName ) throws Exception;
+  int show(String fileName) throws Exception;
 }

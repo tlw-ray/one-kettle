@@ -39,16 +39,16 @@ public interface XulComponent extends Element, XulEventSource {
    * 
    * @return the impl control that represents this XUL component under the covers.
    */
-  public Object getManagedObject();
+  Object getManagedObject();
 
-  public void setManagedObject( Object managed );
+  void setManagedObject(Object managed);
 
   /**
    * The name is the tag name that this component corresponds to in XUL XML.
    * 
    * @return the XUL tag name.
    */
-  public String getName();
+  String getName();
 
   /**
    * Every element in XUL can have a unique id
@@ -56,13 +56,13 @@ public interface XulComponent extends Element, XulEventSource {
    * @param id
    *          sets the component's id
    */
-  public void setId( String id );
+  void setId(String id);
 
   /**
    * 
    * @return the id for this component.
    */
-  public String getId();
+  String getId();
 
   /**
    * From the XUL specification: http://www.xulplanet.com/references/elemref/ref_XULElement.html#attr_flex
@@ -75,7 +75,7 @@ public interface XulComponent extends Element, XulEventSource {
    * 
    * @return the flex value for this component
    */
-  public int getFlex();
+  int getFlex();
 
   /**
    * This field makes sense only relative to the values of its siblings. NOTE that if only one sibling has a flex
@@ -83,7 +83,7 @@ public interface XulComponent extends Element, XulEventSource {
    * 
    * @param flex
    */
-  public void setFlex( int flex );
+  void setFlex(int flex);
 
   /**
    * Sets the method that will be invoked when this component loses focus. Also hooks up any listeners for this
@@ -92,43 +92,43 @@ public interface XulComponent extends Element, XulEventSource {
    * @param method
    *          the method to execute when the focus is lost.
    */
-  public void setOnblur( String method );
+  void setOnblur(String method);
 
   /**
    * Gets the method that will be invoked when this component loses focus. Also hooks up any listeners for this
    * event.
    */
-  public String getOnblur();
+  String getOnblur();
 
   /**
    * Set the width of this control
    * 
    */
-  public void setWidth( int width );
+  void setWidth(int width);
 
   /**
    * Returns the width of the component
    * 
    * @return the component's width
    */
-  public int getWidth();
+  int getWidth();
 
   /**
    * Set the height of the component
    * 
    */
-  public void setHeight( int height );
+  void setHeight(int height);
 
   /**
    * Returns the height of the component
    * 
    * @return the component's height
    */
-  public int getHeight();
+  int getHeight();
 
-  public void addPropertyChangeListener( PropertyChangeListener listener );
+  void addPropertyChangeListener(PropertyChangeListener listener);
 
-  public void removePropertyChangeListener( PropertyChangeListener listener );
+  void removePropertyChangeListener(PropertyChangeListener listener);
 
   /**
    * Sets the enablement state of the component
@@ -137,7 +137,7 @@ public interface XulComponent extends Element, XulEventSource {
    *          sets this components enabled state
    * 
    */
-  public void setDisabled( boolean disabled );
+  void setDisabled(boolean disabled);
 
   /**
    * XUL's attribute is "disabled", thus this acts exactly the opposite of SWT/Swing/AWT. If the property is not
@@ -145,51 +145,51 @@ public interface XulComponent extends Element, XulEventSource {
    * 
    * @return boolean true if the control is disabled.
    */
-  public boolean isDisabled();
+  boolean isDisabled();
 
-  public void setTooltiptext( String tooltip );
+  void setTooltiptext(String tooltip);
 
-  public String getTooltiptext();
+  String getTooltiptext();
 
-  public void setBgcolor( String bgcolor );
+  void setBgcolor(String bgcolor);
 
-  public String getBgcolor();
+  String getBgcolor();
 
-  public void setPadding( int padding );
+  void setPadding(int padding);
 
-  public int getPadding();
+  int getPadding();
 
-  public void setSpacing( int spacing );
+  void setSpacing(int spacing);
 
-  public int getSpacing();
+  int getSpacing();
 
-  public void adoptAttributes( XulComponent component );
+  void adoptAttributes(XulComponent component);
 
-  public String getInsertbefore();
+  String getInsertbefore();
 
-  public void setInsertbefore( String id );
+  void setInsertbefore(String id);
 
-  public String getInsertafter();
+  String getInsertafter();
 
-  public void setInsertafter( String id );
+  void setInsertafter(String id);
 
-  public int getPosition();
+  int getPosition();
 
-  public void setPosition( int pos );
+  void setPosition(int pos);
 
-  public boolean getRemoveelement();
+  boolean getRemoveelement();
 
-  public void setRemoveelement( boolean flag );
+  void setRemoveelement(boolean flag);
 
-  public boolean isVisible();
+  boolean isVisible();
 
-  public void setVisible( boolean visible );
+  void setVisible(boolean visible);
 
   /**
    * Called by the parser when the document is fully parsed. Some implementations require knowledge of parents
    * above the document, or only behave properly when an unbroken chain to the root is in place.
    */
-  public void onDomReady();
+  void onDomReady();
 
   /**
    * Specifies the alignment of children when the size of the container is greater than the size of it's children.
@@ -197,41 +197,41 @@ public interface XulComponent extends Element, XulEventSource {
    * @param align
    *          one of [start, center, end].
    */
-  public void setAlign( String align );
+  void setAlign(String align);
 
   /**
    * Returns the alignment of children.
    * 
    * @return String specifying the alignment [start, center, end].
    */
-  public String getAlign();
+  String getAlign();
 
   /**
    * Sets the ID of the popup menu to show on context action (right-click, etc)
    * 
    * @param id
    */
-  public void setContext( String id );
+  void setContext(String id);
 
-  public String getContext();
+  String getContext();
 
   /**
    * Sets the ID of the popup menu to show when control is right-clicked. (drop-downs)
    * 
    * @param id
    */
-  public void setPopup( String id );
+  void setPopup(String id);
 
-  public String getPopup();
+  String getPopup();
 
   /**
    * Sets the ID of the menu to show when the control is clicked
    * 
    * @param id
    */
-  public void setMenu( String id );
+  void setMenu(String id);
 
-  public String getMenu();
+  String getMenu();
 
   /**
    * Sets the ondrag event handler, also notifies the element that it should be draggable
@@ -239,9 +239,9 @@ public interface XulComponent extends Element, XulEventSource {
    * @param ondrag
    *          the controller method to call.
    */
-  public void setOndrag( String ondrag );
+  void setOndrag(String ondrag);
 
-  public String getOndrag();
+  String getOndrag();
 
   /**
    * Sets the drageffect value for dnd (move and copy currently supported) When specified, this should use the pen:
@@ -250,9 +250,9 @@ public interface XulComponent extends Element, XulEventSource {
    * @param drageffect
    *          move or copy
    */
-  public void setDrageffect( String drageffect );
+  void setDrageffect(String drageffect);
 
-  public String getDrageffect();
+  String getDrageffect();
 
   /**
    * Sets the ondrop event handler, also notifies the element that it should accept drop events.
@@ -260,13 +260,13 @@ public interface XulComponent extends Element, XulEventSource {
    * @param ondrop
    *          the controller method to call.
    */
-  public void setOndrop( String ondrop );
+  void setOndrop(String ondrop);
 
-  public String getOndrop();
+  String getOndrop();
 
-  public void setDropvetoer( String dropVetoMethod );
+  void setDropvetoer(String dropVetoMethod);
 
-  public String getDropvetoer();
+  String getDropvetoer();
 
-  public void setBindingProvider( BindingProvider bindingProvider );
+  void setBindingProvider(BindingProvider bindingProvider);
 }

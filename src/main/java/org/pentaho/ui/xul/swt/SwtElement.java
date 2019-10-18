@@ -114,7 +114,7 @@ public class SwtElement extends AbstractXulComponent {
     if ( this instanceof XulRoot == false ) {
       if ( mo != null ) {
         if ( mo instanceof Control ) {
-          if ( ( (Control) mo ) != getManagedObject() && getManagedObject() instanceof Composite ) {
+          if ( mo != getManagedObject() && getManagedObject() instanceof Composite ) {
             ( (Control) mo ).setParent( (Composite) getManagedObject() );
           }
         } else if ( mo instanceof Viewer ) {
@@ -319,7 +319,7 @@ public class SwtElement extends AbstractXulComponent {
       // opposite direction of the orientation.
 
       if ( ( (XulComponent) swtChild ).getAlign() != null ) {
-        SwtAlign swtAlign = SwtAlign.valueOf( ( (XulContainer) swtChild ).getAlign().toString() );
+        SwtAlign swtAlign = SwtAlign.valueOf(( (XulContainer) swtChild ).getAlign());
 
         if ( orient.equals( Orient.HORIZONTAL ) ) {
 
@@ -668,7 +668,7 @@ public class SwtElement extends AbstractXulComponent {
 
     DropTarget target = new DropTarget( getDndObject(), DND.DROP_COPY | DND.DROP_MOVE | DND.DROP_DEFAULT );
 
-    target.setTransfer( new Transfer[] { SwtDndTypeTransfer.getInstance() } );
+    target.setTransfer(SwtDndTypeTransfer.getInstance());
 
     target.addDropListener( new DropTargetListener() {
       public void dragEnter( DropTargetEvent arg0 ) {

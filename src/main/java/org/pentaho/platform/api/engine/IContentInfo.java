@@ -36,7 +36,7 @@ public interface IContentInfo {
    * 
    * @return file extension
    */
-  public String getExtension();
+  String getExtension();
 
   /**
    * The title of this content type as presented to the user Implementors of this interface should provide
@@ -44,7 +44,7 @@ public interface IContentInfo {
    * 
    * @return title
    */
-  public String getTitle();
+  String getTitle();
 
   /**
    * The description of this content type as presented to the user Implementors of this interface should provide
@@ -52,7 +52,7 @@ public interface IContentInfo {
    * 
    * @return title
    */
-  public String getDescription();
+  String getDescription();
 
   /**
    * The mime-type of the generated content e.g. 'text/html'
@@ -61,33 +61,33 @@ public interface IContentInfo {
    * @deprecated Don't Use - this is way too early to know the mime type
    */
   @Deprecated
-  public String getMimeType();
+  String getMimeType();
 
   /**
    * Returns a list of the operations that are available for this content type
    * 
    * @return the available plugin operations
    */
-  public List<IPluginOperation> getOperations();
+  List<IPluginOperation> getOperations();
 
   /**
    * Returns an url to an icon for this content type
    * 
    * @return
    */
-  public String getIconUrl();
+  String getIconUrl();
 
   /**
    * flags used by import handler to determine if this extension can be used
    * 
    * @return
    */
-  public boolean canImport();
+  boolean canImport();
 
   /**
    * flags used by export handler to determine if this extension can be used
    * 
    * @return
    */
-  public boolean canExport();
+  boolean canExport();
 }

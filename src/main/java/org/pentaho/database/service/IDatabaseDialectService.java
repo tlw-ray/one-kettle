@@ -25,18 +25,18 @@ import org.pentaho.database.model.IDatabaseType;
 
 public interface IDatabaseDialectService {
 
-  public void registerDatabaseDialect( IDatabaseDialect databaseDialect );
+  void registerDatabaseDialect(IDatabaseDialect databaseDialect);
 
-  public void registerDatabaseDialect( IDatabaseDialect databaseDialect, boolean validateClassExists );
+  void registerDatabaseDialect(IDatabaseDialect databaseDialect, boolean validateClassExists);
 
-  public IDatabaseDialect getDialect( IDatabaseType databaseType );
+  IDatabaseDialect getDialect(IDatabaseType databaseType);
 
-  public IDatabaseDialect getDialect( IDatabaseConnection connection );
+  IDatabaseDialect getDialect(IDatabaseConnection connection);
 
-  public List<IDatabaseDialect> getDatabaseDialects();
+  List<IDatabaseDialect> getDatabaseDialects();
 
-  public List<IDatabaseType> getDatabaseTypes();
+  List<IDatabaseType> getDatabaseTypes();
 
-  public boolean validateJdbcDriverClassExists( String classname );
+  boolean validateJdbcDriverClassExists(String classname);
 
 }

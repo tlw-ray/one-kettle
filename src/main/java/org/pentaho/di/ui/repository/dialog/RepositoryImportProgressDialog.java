@@ -148,7 +148,7 @@ public class RepositoryImportProgressDialog extends Dialog implements ProgressMo
     wClose = new Button( shell, SWT.PUSH );
     wClose.setText( BaseMessages.getString( PKG, "System.Button.Close" ) );
 
-    BaseStepDialog.positionBottomButtons( shell, new Button[] { wClose }, Const.MARGIN, (Control) null );
+    BaseStepDialog.positionBottomButtons( shell, new Button[] { wClose }, Const.MARGIN, null);
 
     wClose.setEnabled( false );
     wClose.addSelectionListener( new SelectionAdapter() {

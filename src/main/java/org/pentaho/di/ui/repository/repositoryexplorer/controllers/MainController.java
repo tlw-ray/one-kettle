@@ -137,9 +137,7 @@ public class MainController extends AbstractXulEventHandler implements DialogCon
   }
 
   public void removeDialogListener( DialogListener<Object> listener ) {
-    if ( listeners.contains( listener ) ) {
       listeners.remove( listener );
-    }
   }
 
   public void hideDialog() {

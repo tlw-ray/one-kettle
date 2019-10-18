@@ -21,7 +21,7 @@ import org.pentaho.ui.xul.XulContainer;
 
 public interface XulToolbar extends XulContainer {
 
-  public enum ToolbarMode {
+  enum ToolbarMode {
     ICONS, TEXT, FULL
   }
 

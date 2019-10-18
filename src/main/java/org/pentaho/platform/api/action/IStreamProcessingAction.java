@@ -39,6 +39,6 @@ public interface IStreamProcessingAction extends IAction {
    * @param inputStream
    *          the input stream
    */
-  public void setInputStream( InputStream inputStream );
+  void setInputStream(InputStream inputStream);
 
 }

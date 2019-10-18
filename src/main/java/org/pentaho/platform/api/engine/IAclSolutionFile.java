@@ -40,5 +40,5 @@ public interface IAclSolutionFile extends ISolutionFile, IAclHolder {
    * @return <tt>Set</tt> of IAclSolutionFile objects
    */
   @SuppressWarnings( "rawtypes" )
-  public Set getChildrenFiles();
+  Set getChildrenFiles();
 }

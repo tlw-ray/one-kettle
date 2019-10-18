@@ -559,7 +559,7 @@ public class AddSequenceDialog extends BaseStepDialog implements StepDialogInter
   private void activeSequence() {
     boolean useDatabase = wUseDatabase.getSelection();
     DatabaseMeta databaseMeta = transMeta.findDatabase( wConnection.getText() );
-    wbSequence.setEnabled( databaseMeta == null ? false : useDatabase && databaseMeta.supportsSequences() );
+    wbSequence.setEnabled(databaseMeta != null && (useDatabase && databaseMeta.supportsSequences()));
   }
 
   private void getSequences() {
@@ -579,7 +579,7 @@ public class AddSequenceDialog extends BaseStepDialog implements StepDialogInter
 
           String d = dialog.open();
           if ( d != null ) {
-            wSeqname.setText( Const.NVL( d.toString(), "" ) );
+            wSeqname.setText( Const.NVL(d, "" ) );
           }
 
         } else {
@@ -619,7 +619,7 @@ public class AddSequenceDialog extends BaseStepDialog implements StepDialogInter
               BaseMessages.getString( PKG, "AddSequenceDialog.SelectSequence.Message" ) );
           String d = dialog.open();
           if ( d != null ) {
-            wSchema.setText( Const.NVL( d.toString(), "" ) );
+            wSchema.setText( Const.NVL(d, "" ) );
           }
 
         } else {

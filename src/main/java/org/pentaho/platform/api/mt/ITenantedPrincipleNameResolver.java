@@ -37,7 +37,7 @@ public interface ITenantedPrincipleNameResolver {
    * @param principleId Principle ID.
    * @return Returns tenant that corresponds to the id.
    */
-  public ITenant getTenant( String principleId );
+  ITenant getTenant(String principleId);
 
   /**
    * Extracts the principle name from the principleId.
@@ -45,7 +45,7 @@ public interface ITenantedPrincipleNameResolver {
    * @param principleId Principle ID.
    * @return Returns principle name that matches the principle ID.
    */
-  public String getPrincipleName( String principleId );
+  String getPrincipleName(String principleId);
 
   /**
    * Constructs a principle ID from tenant and principle name.
@@ -54,7 +54,7 @@ public interface ITenantedPrincipleNameResolver {
    * @param principalName Name of the principle.
    * @return Returns Unique ID for the specified principle name and tenant across all the tenants. 
    */
-  public String getPrincipleId( ITenant tenant, String principalName );
+  String getPrincipleId(ITenant tenant, String principalName);
 
   /**
    * Returns flag indicating that principleId is a valid tenanted string.
@@ -62,5 +62,5 @@ public interface ITenantedPrincipleNameResolver {
    * @param principleId ID of the principle.
    * @return Teturns True if the ID provided is a valid principle ID.
    */
-  public boolean isValid( String principleId );
+  boolean isValid(String principleId);
 }

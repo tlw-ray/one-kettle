@@ -27,32 +27,32 @@ import java.util.ArrayList;
 
 public interface IPluginPerspective extends Serializable {
 
-  public String getId();
+  String getId();
 
-  public void setId( String id );
+  void setId(String id);
 
-  public String getTitle();
+  String getTitle();
 
-  public void setTitle( String title );
+  void setTitle(String title);
 
-  public String getContentUrl();
+  String getContentUrl();
 
-  public void setContentUrl( String contentUrl );
+  void setContentUrl(String contentUrl);
 
-  public String getResourceBundleUri();
+  String getResourceBundleUri();
 
-  public void setResourceBundleUri( String uri );
+  void setResourceBundleUri(String uri);
 
-  public ArrayList<XulOverlay> getOverlays();
+  ArrayList<XulOverlay> getOverlays();
 
-  public void setOverlays( ArrayList<XulOverlay> overlays );
+  void setOverlays(ArrayList<XulOverlay> overlays);
 
-  public int getLayoutPriority();
+  int getLayoutPriority();
 
-  public void setLayoutPriority( int layoutPriority );
+  void setLayoutPriority(int layoutPriority);
 
-  public ArrayList<String> getRequiredSecurityActions();
+  ArrayList<String> getRequiredSecurityActions();
 
-  public void setRequiredSecurityActions( ArrayList<String> actions );
+  void setRequiredSecurityActions(ArrayList<String> actions);
 
 }

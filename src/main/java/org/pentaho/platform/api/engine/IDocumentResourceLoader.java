@@ -27,6 +27,6 @@ import java.io.InputStream;
 
 public interface IDocumentResourceLoader extends URIResolver, EntityResolver {
 
-  public InputStream loadXsl( String name );
+  InputStream loadXsl(String name);
 
 }

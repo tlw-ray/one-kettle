@@ -281,7 +281,7 @@ public class TeradataDatabaseDialect extends AbstractDatabaseDialect {
    * @see org.pentaho.database.dialect.IDatabaseDialect#getLimitClause(int)
    */
   public String getLimitClause( int nrRows ) {
-    return " sample " + Integer.toString( nrRows );
+    return " sample " + nrRows;
   }
 
   

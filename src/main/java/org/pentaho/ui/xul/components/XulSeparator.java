@@ -25,7 +25,7 @@ import org.pentaho.ui.xul.XulComponent;
  * todo: support class, orient attribute
  */
 public interface XulSeparator extends XulComponent {
-  public void setOrient( String orient );
+  void setOrient(String orient);
 
-  public String getOrient();
+  String getOrient();
 }

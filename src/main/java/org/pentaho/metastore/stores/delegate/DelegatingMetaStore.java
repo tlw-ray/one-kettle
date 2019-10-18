@@ -177,7 +177,7 @@ public class DelegatingMetaStore implements IMetaStore {
   }
 
   @Override
-  public void createNamespace( String namespace ) throws MetaStoreException, MetaStoreNamespaceExistsException {
+  public void createNamespace( String namespace ) throws MetaStoreException {
     IMetaStore metaStore = getWriteMetaStore();
     metaStore.createNamespace( namespace );
   }
@@ -236,8 +236,7 @@ public class DelegatingMetaStore implements IMetaStore {
   }
 
   @Override
-  public void createElementType( String namespace, IMetaStoreElementType elementType ) throws MetaStoreException,
-    MetaStoreElementTypeExistsException {
+  public void createElementType( String namespace, IMetaStoreElementType elementType ) throws MetaStoreException {
     IMetaStore metaStore = getWriteMetaStore();
     metaStore.createElementType( namespace, elementType );
   }
@@ -249,8 +248,7 @@ public class DelegatingMetaStore implements IMetaStore {
   }
 
   @Override
-  public void deleteElementType( String namespace, IMetaStoreElementType elementType ) throws MetaStoreException,
-    MetaStoreDependenciesExistsException {
+  public void deleteElementType( String namespace, IMetaStoreElementType elementType ) throws MetaStoreException {
     IMetaStore metaStore = getWriteMetaStore();
     metaStore.deleteElementType( namespace, elementType );
   }
@@ -316,7 +314,7 @@ public class DelegatingMetaStore implements IMetaStore {
 
   @Override
   public void createElement( String namespace, IMetaStoreElementType elementType, IMetaStoreElement element )
-    throws MetaStoreException, MetaStoreElementExistException {
+    throws MetaStoreException {
     getWriteMetaStore().createElement( namespace, elementType, element );
   }
 

@@ -39,7 +39,7 @@ public interface IConfiguredPojo {
    * 
    * @return List of configuration settings paths
    */
-  public Set<String> getConfigSettingsPaths();
+  Set<String> getConfigSettingsPaths();
 
   /**
    * Sets the configuration settings that were requested via a call to getConfigSettingsPaths(). The keys of the
@@ -49,6 +49,6 @@ public interface IConfiguredPojo {
    * @param props
    * @return
    */
-  public boolean configure( Map<String, String> props );
+  boolean configure(Map<String, String> props);
 
 }

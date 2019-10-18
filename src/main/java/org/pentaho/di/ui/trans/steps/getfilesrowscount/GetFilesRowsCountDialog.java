@@ -769,9 +769,8 @@ public class GetFilesRowsCountDialog extends BaseStepDialog implements StepDialo
     // Add the file to the list of files...
     SelectionAdapter selA = new SelectionAdapter() {
       public void widgetSelected( SelectionEvent arg0 ) {
-        wFilenameList.add( new String[] {
-          wFilename.getText(), wFilemask.getText(), wExcludeFilemask.getText(),
-          GetFilesRowsCountMeta.RequiredFilesCode[0], GetFilesRowsCountMeta.RequiredFilesCode[0] } );
+        wFilenameList.add(wFilename.getText(), wFilemask.getText(), wExcludeFilemask.getText(),
+                GetFilesRowsCountMeta.RequiredFilesCode[0], GetFilesRowsCountMeta.RequiredFilesCode[0]);
         wFilename.setText( "" );
         wFilemask.setText( "" );
         wExcludeFilemask.setText( "" );
@@ -973,10 +972,9 @@ public class GetFilesRowsCountDialog extends BaseStepDialog implements StepDialo
     if ( in.getFileName() != null ) {
       wFilenameList.removeAll();
       for ( int i = 0; i < in.getFileName().length; i++ ) {
-        wFilenameList.add( new String[] {
-          in.getFileName()[i], in.getFileMask()[i], in.getExludeFileMask()[i],
-          in.getRequiredFilesDesc( in.getFileRequired()[i] ),
-          in.getRequiredFilesDesc( in.getIncludeSubFolders()[i] ) } );
+        wFilenameList.add(in.getFileName()[i], in.getFileMask()[i], in.getExludeFileMask()[i],
+                in.getRequiredFilesDesc( in.getFileRequired()[i] ),
+                in.getRequiredFilesDesc( in.getIncludeSubFolders()[i] ));
       }
       wFilenameList.removeEmptyRows();
       wFilenameList.setRowNums();

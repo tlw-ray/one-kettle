@@ -33,5 +33,5 @@ public interface IPentahoSystemExitPoint {
   /**
    * Perform any system cleanup actions after the thread executes.
    */
-  public void systemExitPoint();
+  void systemExitPoint();
 }

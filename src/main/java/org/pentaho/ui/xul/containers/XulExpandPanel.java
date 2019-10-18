@@ -24,7 +24,7 @@ import org.pentaho.ui.xul.XulContainer;
  * the label is clicked
  */
 public interface XulExpandPanel extends XulContainer {
-  public static final String ELEMENT_NAME = "expandpanel";
+  String ELEMENT_NAME = "expandpanel";
 
   void setExpanded( boolean isExpanded );
 
