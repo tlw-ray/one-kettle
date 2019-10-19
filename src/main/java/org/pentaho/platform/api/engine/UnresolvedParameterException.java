@@ -24,7 +24,7 @@ import org.pentaho.actionsequence.dom.IActionDefinition;
 
 public class UnresolvedParameterException extends ActionSequenceException {
   /**
-   * 
+   *
    */
   private static final long serialVersionUID = -2676655593926463813L;
   private String parameterName;

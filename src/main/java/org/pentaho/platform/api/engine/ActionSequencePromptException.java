@@ -25,7 +25,7 @@ import org.pentaho.actionsequence.dom.IActionDefinition;
 public class ActionSequencePromptException extends ActionSequenceException {
 
   /**
-   * 
+   *
    */
   private static final long serialVersionUID = 757868320776336597L;
 

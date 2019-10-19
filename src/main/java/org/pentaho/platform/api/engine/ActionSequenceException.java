@@ -32,7 +32,7 @@ import java.util.Date;
 
 public class ActionSequenceException extends Exception {
   /**
-   * 
+   *
    */
   private static final long serialVersionUID = -2301587142420194146L;
 
@@ -82,7 +82,7 @@ public class ActionSequenceException extends Exception {
 
   /**
    * A convenience method for extracting all knowable information from an {@link IActionDefinition}
-   * 
+   *
    * @param msg
    * @param cause
    * @param sessionName
@@ -101,7 +101,7 @@ public class ActionSequenceException extends Exception {
 
   /**
    * A convenience method for extracting all knowable information from an {@link IActionDefinition}
-   * 
+   *
    * @param msg
    * @param sessionName
    * @param instanceId

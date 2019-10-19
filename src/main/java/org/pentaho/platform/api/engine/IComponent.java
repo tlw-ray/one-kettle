@@ -36,7 +36,7 @@ public interface IComponent extends IAuditable, ILogger {
 
   /**
    * Initialize the Component. This method is typically called on construction.
-   * 
+   *
    * @return returns true if the Component initialized successfully, otherwise returns false
    */
   boolean init();
@@ -44,7 +44,7 @@ public interface IComponent extends IAuditable, ILogger {
   /**
    * Validate that the Component has all the necessary inputs, outputs and resources it needs to execute
    * successfully. Also may validate a schema here.
-   * 
+   *
    * @return one of IRuntimeContext validation conditions
    * @see org.pentaho.platform.api.engine.IRuntimeContext
    */
@@ -52,7 +52,7 @@ public interface IComponent extends IAuditable, ILogger {
 
   /**
    * Perform the Component execution; logic for what this Component does goes here.
-   * 
+   *
    * @return one of IRuntimeContext execution conditions
    * @see org.pentaho.platform.api.engine.IRuntimeContext
    */
@@ -60,7 +60,7 @@ public interface IComponent extends IAuditable, ILogger {
 
   /**
    * Allows the component to perform any cleanup after the execution of the action.
-   * 
+   *
    */
   void done();
 
